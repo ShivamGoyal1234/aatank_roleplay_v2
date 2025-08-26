@@ -1,0 +1,121 @@
+.decorate .itemlist {
+	position: absolute;
+	bottom: 0;
+	left: 30.8vw;
+	overflow: visible;
+	border-left: 0.1vw var(--color-00000014) solid;
+	width: calc(100% - 30vw);
+	height: 14vw;
+	padding-left: 0.45vw;
+	background: var(--color-d3d0d04d);
+}
+
+.decorate .itemlist .itemcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3vw;
+	align-items: flex-start;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: calc(100% - 0.5vw);
+	height: calc(100% - 0.9vw);
+	padding: 0.45vw 0;
+}
+
+.decorate .itemlist .itemcontainer::-webkit-scrollbar {
+	display: block;
+	width: 0.45vw;
+}
+
+.decorate .itemlist .itemcontainer::-webkit-scrollbar-track {
+	background: var(--color-ffffff3a);
+}
+
+.decorate .itemlist .itemcontainer::-webkit-scrollbar-thumb {
+	box-shadow: 0 0 1vw var(--color-00000048);
+	border-radius: 1vw;
+	height: 1vw;
+	background: var(--color-ffffff);
+}
+
+.decorate .itemlist .itemcontainer::-webkit-scrollbar-thumb:hover {
+	background: var(--color-ffffff);
+}
+
+.decorate .itemlist .itemcontainer .box {
+	border: 0.36vh transparent solid;
+	border-radius: 1rem;
+	height: 8.02vh;
+	aspect-ratio: 1/1;
+	padding: 1.37vh;
+	background: linear-gradient( 180deg, var(--color-EEEEEE) 0%, var(--color-B7D6E8) 100% );
+	box-shadow: 0px 0.36vh 2.22vh 0px rgba(0,0,0,0.68);
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	position: relative;
+}
+
+.decorate .itemlist .itemcontainer .box.selected {
+	background: var(--color-00A3FF);
+	box-shadow: 0px 0px 5px 1px var(--color-00A3FF);
+}
+
+.decorate .itemlist .itemcontainer .box img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 5vw;
+	height: 5vw;
+	pointer-events: none;
+}
+
+.box-details {
+	z-index: 1;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 0.25vw;
+	margin: 5%;
+}
+
+.box-details i {
+	color: #2b2b2b;
+	width: 0.85vw;
+	height: 0.85vw;
+	padding: 0.25vw;
+	border-radius: 1vw;
+	background-color: #f0f0f0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1rem;
+}
+
+.box-details-variations {
+	background-color: whitesmoke !important;
+}
+
+.box-details-gardrobe {
+	background-color: var(--color-F4BFFF) !important;
+}
+
+.box-details-stash {
+	background-color: var(--color-ABF6AB) !important;
+}
+
+.box-details-drug {
+	background-color: rgb(117, 117, 117) !important;
+}
+
+#br-interior {
+	margin-top: 2.5vh  !important;
+	margin-bottom: .5vh  !important;
+}
+
+#toggle_public_btn {
+	height: 15vh;
+} 

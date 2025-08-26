@@ -1,0 +1,776 @@
+/* 
+
+    BUY BUSINESS
+    
+*/
+
+.buy-business {
+    display: none;
+
+    overflow: hidden;
+    opacity: 0.95;
+}
+
+.buy-business .center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-business .menu {
+    position: relative;
+
+    width: 30em;
+    height: 40em;
+    background: var(--menu-background);
+    border-radius: 12px;
+}
+
+.buy-business .header-name {
+    position: relative;
+    display: flex;
+    color: white;
+    padding-inline: 1em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 0.5em;
+    height: fit-content;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.buy-business .info-business {
+    padding-inline: 2em;
+    margin-top: 1em;
+    height: 29em;
+    color: white;
+    overflow: auto;
+    -webkit-mask-image: -webkit-gradient(linear, left 70%, left 100%, from(rgb(0 0 0)), to(rgb(0 0 0 / 0%)));
+    padding-bottom: 4em;
+}
+
+.buy-business .info-business .name,
+.buy-business .info-business .parking_spaces,
+.buy-business .info-business .price {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.buy-business .info-business .name>span,
+.buy-business .info-business .parking_spaces>span,
+.buy-business .info-business .price>span {
+    color: white;
+    font-weight: 600;
+}
+
+.buy-business .info-business .informations {
+    margin-top: 1em;
+}
+
+.buy-business .info-business>div>div {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.buy-business .info-business>div>div>div {
+    font-weight: 200;
+    font-size: 0.8em;
+    margin-left: 1.2em;
+}
+
+.buy-business .purchase-business {
+    position: relative;
+    display: flex;
+    color: white;
+    padding-inline: 1em;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-inline: auto;
+    top: 0.4em;
+    height: 1.75em;
+    font-size: 1.5em;
+    font-weight: 600;
+    background: var(--main-color);
+    border-radius: 0.4em;
+    cursor: pointer;
+    ;
+    transition: 0.25s;
+}
+
+.buy-business .purchase-business:hover {
+    background: var(--main-color-hover);
+}
+
+.buy-business .purchase-business:active {
+    background: var(--main-color-active);
+}
+
+
+/* 
+
+    MANAGEMENT
+    
+*/
+
+.management-menu {
+    display: none;
+    z-index: 0;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 7em;
+    width: 80em;
+    height: 50em;
+    background: var(--menu-background);
+    color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0px 0px 4em #0d0d0d8c;
+    animation: scaleIn 0.2s;
+}
+
+.management-menu::before,
+.management-menu::after {
+    content: "";
+    position: absolute;
+    width: 70rem;
+    height: 50rem;
+    border-radius: 50%;
+    opacity: .1;
+    z-index: 1;
+    background: radial-gradient(var(--main-color) 10%, transparent 70%);
+}
+
+.management-menu::before {
+    transform: translate(-50%, -50%);
+    top: 0rem;
+    left: 10em;
+}
+
+.management-menu::after {
+    transform: translate(50%, 50%);
+    bottom: 0rem;
+    right: 10em;
+}
+
+.management-menu>.header {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    height: 3.5em;
+    padding-inline: 1.0em;
+}
+
+.management-menu>.header .store-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.management-menu>.header .store-name>span {
+    font-weight: 300;
+    color: gray;
+    font-size: 0.8em;
+    margin-left: 0.5em;
+}
+
+.management-menu>.header .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: var(--border-radius);
+    background: var(--back-btn-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.management-menu>.header .close:hover {
+    background: var(--back-btn-color-hover);
+}
+
+.management-menu .menu {
+    position: relative;
+    display: grid;
+    grid-template-columns: 15em auto;
+    column-gap: 1em;
+    width: 100%;
+    height: 93%;
+    padding: 1em;
+    z-index: 100;
+}
+
+.management-menu .menu .side-bar {
+    position: relative;
+    width: 15em;
+    /* height: 100%; */
+    height: 44.5em;
+    padding: 0.6em;
+    background: var(--submenu-background);
+    border-radius: 0.5em;
+}
+
+.management-menu .menu .side-bar>.button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    background: var(--submenu-background);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.management-menu .menu .side-bar>.button.selected {
+    background: var(--submenu-background-selected);
+}
+
+.management-menu .menu .side-bar>.button>.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    border-radius: 0.5em;
+    max-height: 3em;
+    height: 3em;
+    min-height: 3em;
+    max-width: 3em;
+    width: 3em;
+    min-width: 3em;
+}
+
+.management-menu .menu .side-bar>.button.selected>.icon-box {
+    background: var(--main-color-active);
+}
+
+.management-menu .menu .side-bar>.button>.icon-box>i {
+    font-size: 1.35em;
+}
+
+.management-menu .menu .side-bar>.button>.name {
+    margin-left: 0.75em;
+    width: 10em;
+}
+
+.management-menu .menu .side-bar>.button>.name>.title {
+    margin-bottom: 0;
+    font-weight: 700;
+
+}
+
+.management-menu .menu .side-bar>.button>.name>.description {
+    margin-bottom: 0;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: rgb(197, 197, 197);
+    line-height: 1.0;
+}
+
+.management-menu .menu .main {
+    position: relative;
+    height: 44.5em;
+    border-radius: 0.5em;
+    background: var(--submenu-background);
+}
+
+
+/*
+
+    MAIN
+    
+*/
+.management-menu div[data-type="main"] {
+    display: none;
+    position: relative;
+    padding-top: 1.5em;
+    padding-inline: 1.5em;
+    overflow: hidden;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    height: 98%;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"],
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="total-earned"],
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="free-spaces"],
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="occupied-spaces"],
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"],
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] {
+    position: absolute;
+    right: 1em;
+    overflow: hidden;
+    width: 16.5em;
+    background: var(--submenu-background-selected);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="balance"] {
+    position: absolute;
+    overflow: hidden;
+    background: var(--submenu-background-selected);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 1em;
+    left: 1em;
+    width: 22em;
+    height: 8.5em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="balance"] {
+    width: 29.5em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="total-earned"] {
+    left: 24em;
+    width: 19.5em;
+    height: 8.5em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="total-earned"] {
+    width: 29.5em;
+    right: 1em;
+    left: auto;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"] {
+    width: 16.5em;
+    height: 12.5em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="prices"] {
+    display: none;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element {
+    display: grid;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>label {
+    line-height: 1.0;
+    font-weight: 600;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>label>span {
+    font-size: 0.7em;
+    color: #c9c9c9;
+    display: block;
+    font-weight: 400;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>div {
+    display: flex;
+    align-items: center;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>div>input {
+    border-radius: 0.3em 0em 0em 0.3em;
+    outline: none;
+    z-index: 5000;
+    background: #63636c69;
+    border: none;
+    border-right: 0;
+    width: 9em;
+    height: 1.8em;
+    color: white;
+    padding-inline: 0.4em;
+    font-weight: 500;
+    backdrop-filter: blur(3px);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>div>div {
+    text-align: center;
+    width: 100%;
+    background: var(--main-color);
+    color: var(--primary-text-color);
+    line-height: 1.0;
+    font-weight: 600;
+    height: 1.8em;
+    z-index: 500;
+    border-radius: 0em 0.3em 0.3em 0em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>div>div:hover {
+    background: var(--main-color-hover);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="prices"]>.element>div>div>div:active {
+    background: var(--main-color-active);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="free-spaces"] {
+    height: 5.5em;
+    margin-top: 13.5em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="free-spaces"] {
+    margin-top: 9.5em;
+    height: 6.5em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="occupied-spaces"] {
+    height: 5.5em;
+    margin-top: 20em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="occupied-spaces"] {
+    margin-top: 17em;
+    height: 6.5em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] {
+    height: 7.5em;
+    margin-top: 26.5em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] {
+    margin-top: 24.5em;
+    height: 8.5em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] {
+    height: 7.5em;
+    margin-top: 35em;
+}
+.management-menu.noPricesManagement div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] {
+    margin-top: 34em;
+    height: 8.5em;
+}
+
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] .title,
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] .title {
+    font-size: 1.7em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] .buttons,
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] .buttons {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 5;
+    padding: 1em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] .btn.red>p,
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] .btn.red>p {
+    margin-bottom: 0em !important;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] .btn.red,
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] .btn.red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 2em;
+    color: #fffffff3;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    background: var(--close-color);
+    border-radius: 6px;
+    transition: all 0.25s ease 0s;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] .btn.red:hover,
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] .btn.red:hover {
+    background: var(--close-color-hover);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="resell"] .btn.red:active,
+.management-menu div[data-type="main"]>div>.side-boxes>.box[data-type="sell"] .btn.red:active {
+    background: var(--close-color-active);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box>i {
+    position: absolute;
+    z-index: 0;
+    font-size: 10em;
+    opacity: 0.2;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 15px #00000040;
+    transform: skew(-25deg, 25deg);
+    top: -0.1em;
+    right: 0.2em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box>.header {
+    z-index: 5;
+    font-size: 1em;
+    font-weight: 300;
+    color: rgb(183, 183, 183);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.box>.title {
+    z-index: 5;
+    line-height: 1;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list {
+    position: absolute;
+    left: 1em;
+    top: 10.5em;
+    width: 42.5em;
+    height: 33em;
+    background: var(--submenu-background-selected);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list>.header {
+    z-index: 5;
+    font-size: 1em;
+    font-weight: 300;
+    color: rgb(183, 183, 183);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list>.title {
+    z-index: 5;
+    margin-top: 0.4em;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0em;
+    line-height: 0.8;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list>.parking-spaces {
+    overflow-y: overlay;
+    margin-top: 1em;
+    height: 27em;
+    border-radius: 0.4em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list>.parking-spaces>table {
+    width: 100%;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list>.parking-spaces>table>thead {
+    background: var(--submenu-background-selected);
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list .table-first {
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    padding-left: 1em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list .table-last {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    padding-right: 1em;
+}
+
+.management-menu div[data-type="main"]>div>.side-boxes>.parking-spaces-list>.parking-spaces>table tbody>tr {
+    height: 3em
+}
+
+
+/*
+
+    EMPLOYEES
+
+*/
+.management-menu div[data-type="history-sales"] {
+    display: none;
+    padding: 1em;
+    height: 100%;
+}
+
+.management-menu div[data-type="history-sales"]>div {
+    position: relative;
+    height: 100%;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 43em;
+    height: 100%;
+    background: var(--submenu-background-selected);
+    border-radius: 0.5em;
+    padding: 1em;
+    overflow: auto;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list {
+    width: 100% !important;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list>table {
+    width: 100%;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list>table thead {
+    background: var(--submenu-background-selected);
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list .table-first {
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    padding-left: 1em;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list .table-last {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    padding-right: 1em;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list>table thead .center {
+    text-align: center;
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list>table tbody>tr {
+    height: 3em
+}
+
+.management-menu div[data-type="history-sales"]>div .history-list>table tbody div {
+    padding-inline: 1.0em;
+    padding-block: 0.1em;
+    width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+/*
+
+    MANAGEMENT
+
+*/
+/* .management-menu div[data-type="boss-management"] {
+    display: none;
+    padding: 1em;
+} */
+
+.management-menu div[data-type="main"] .box[data-type="balance"] .close-balance.isVisible {
+    display: flex !important;
+}
+
+.management-menu div[data-type="main"] .box[data-type="balance"] .close-balance {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: var(--border-radius);
+    background: var(--back-btn-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.management-menu div[data-type="main"] .box[data-type="balance"] .close-balance:hover {
+    background: var(--back-btn-color-hover);
+}
+
+.management-menu div[data-type="main"] .box[data-type="balance"] .close-balance.isAnyVal {
+    background: var(--ok-color);
+}
+
+.management-menu div[data-type="main"] .box[data-type="balance"] .close-balance.isAnyVal:hover {
+    background: var(--ok-color-hover);
+}
+
+.management-menu div[data-type="main"] .box[data-type="balance"] .close-balance.isAnyVal:active {
+    background: var(--ok-color-active);
+}
+
+.management-menu div[data-type="main"] div[data-type="balance"] .buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 5;
+}
+
+.management-menu div[data-type="main"] div[data-type="balance"] .buttons>.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 2em;
+    background: var(--main-color);
+    color: var(--primary-text-color);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.25s;
+}
+
+.management-menu div[data-type="main"] div[data-type="balance"] .buttons>.btn:hover {
+    background: var(--main-color-hover);
+}
+
+.management-menu div[data-type="main"] div[data-type="balance"] .buttons>.btn:active {
+    background: var(--main-color-active);
+}
+
+.management-menu div[data-type="main"] div[data-type="balance"] .buttons>.btn p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.management-menu div[data-type="main"] .box[data-type="balance"] input[data-input="deposit"],
+.management-menu div[data-type="main"] .box[data-type="balance"] input[data-input="withdraw"] {
+    display: none;
+    width: 37.5em;
+    height: 2em;
+    z-index: 5;
+    padding-inline: 0.5em;
+    border-radius: 0.4em;
+    border: 1px solid rgba(255, 255, 255, 0.70);
+    outline: none;
+    backdrop-filter: blur(12px);
+    background: var(--submenu-background-selected);
+    color: white;
+}
+
+/* .management-menu div[data-type="boss-management"]>div>.box>.buttons>.btn.red {
+    background: var(--danger-color);
+}
+
+.management-menu div[data-type="boss-management"]>div>.box>.buttons>.btn.red:hover {
+    background: var(--danger-color-hover);
+}
+
+.management-menu div[data-type="boss-management"]>div>.box>.buttons>.btn.red:active {
+    background: var(--danger-color-active);
+} */
+
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f20f;
+}
+
+/* ANIMATIONS */
+
+@keyframes scaleIn {
+    0% {
+        scale: 0.5;
+    }
+
+    100% {
+        scale: 1.0;
+    }
+}

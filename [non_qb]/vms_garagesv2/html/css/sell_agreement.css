@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+
+.agreement .select2-container--default .select2-selection--single,
+.resell .select2-container--default .select2-selection--single {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 0.15em dotted black !important;
+}
+
+.resell,
+.agreement {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.resell > div,
+.agreement>div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resell .card,
+.agreement .card {
+    background: #f8f8f8;
+    width: 40em;
+    height: 55em;
+    padding: 5em 2em;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.resell .card_second,
+.agreement .card_second {
+    position: absolute;
+    rotate: 4deg;
+    z-index: -5;
+}
+
+.resell .card .close,
+.agreement .card .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 0.4em;
+    background: var(--close-color);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    color: white;
+    transition: 0.2s;
+}
+
+.resell .card .close:hover,
+.agreement .card .close:hover {
+    background: var(--close-color-hover);
+}
+
+.resell .card .center,
+.agreement .card .center {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+.resell .card .paragraph,
+.agreement .card .paragraph {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.resell .card .signatures,
+.agreement .card .signatures {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 3em;
+    width: -webkit-fill-available;
+    left: 0;
+    margin-inline: 3em;
+}
+
+.resell .card .signatures .seller,
+.agreement .card .signatures .seller {
+    width: 15em;
+}
+
+.resell .card .signatures .buyer,
+.agreement .card .signatures .buyer {
+    margin-top: auto;
+    width: 15em;
+}
+
+.resell .card .signatures .dots,
+.agreement .card .signatures .dots {
+    font-size: 2em;
+    text-align: center;
+}
+
+.resell .card ol>li {
+    margin-bottom: 0.4em;
+}
+
+.resell .card input,
+.resell .card select,
+.agreement .card input,
+.agreement .card select {
+    width: 10em;
+    border: 0;
+    border-bottom: 0.15em dotted black;
+    border-radius: 0;
+    background: transparent;
+}
+
+.resell .card input:focus,
+.resell .card select:focus,
+.agreement .card input:focus,
+.agreement .card select:focus {
+    outline: none;
+}
+
+.resell .card input.required,
+.resell .card select.required,
+.agreement .card input.required,
+.agreement .card select.required {
+    border-color: red;
+}
+
+.resell .card .signature,
+.agreement .card .signature {
+    font-family: 'Freehand', cursive;
+    position: absolute;
+    bottom: 0.5em;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    width: inherit;
+    white-space: pre-line;
+    line-height: 1;
+}
+
+.resell .card .signatures .signature-text,
+.agreement .card .signatures .signature-text {
+    position: absolute;
+    font-size: 1.1em;
+    text-align: center;
+    width: inherit;
+    font-weight: 500;
+    margin-top: 0.3em;
+}
+
+.agreement .card #date {
+    width: fit-content;
+    position: absolute;
+    top: 1.8em;
+    scale: 0.85;
+}
+
+.agreement .card #date>div {
+    font-weight: 600;
+}
+
+.agreement .card #date>p {
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.8;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.resell .card #give_invoice,
+.agreement .card #give_invoice {
+    display: flex;
+    margin-bottom: 2em;
+    background: var(--main-color);
+    color: var(--primary-text-color);
+    font-weight: 600;
+    height: 3.5em;
+    border-radius: 0.3em;
+    align-items: center;
+    padding-inline: 1em;
+    justify-content: center;
+    transition: all 0.2s;
+    opacity: 0.0;
+    z-index: -500;
+    text-align: center;
+}
+
+.resell .card #give_invoice:hover,
+.agreement .card #give_invoice:hover {
+    background: var(--main-color-hover);
+}
+
+.resell .card #give_invoice:active,
+.agreement .card #give_invoice:active {
+    background: var(--main-color-active);
+}
+
+.resell .card #resell_make_signature_seller,
+.agreement .card #make_signature_seller {
+    width: 15em;
+    position: absolute;
+    bottom: 0;
+    height: 4em;
+    opacity: 0.1;
+    border-radius: 0.3em;
+    background: var(--main-color);
+}
+
+.resell .card #resell_make_signature_buyer,
+.agreement .card #make_signature_buyer {
+    width: 15em;
+    position: absolute;
+    bottom: 0;
+    height: 4em;
+    opacity: 0.1;
+    border-radius: 0.3em;
+    background: var(--main-color);
+}

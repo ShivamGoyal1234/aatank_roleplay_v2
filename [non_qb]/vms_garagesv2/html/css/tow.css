@@ -1,0 +1,194 @@
+.tow-menu {
+    display: none;
+    color: white;
+    overflow: hidden;
+    opacity: 0.95;
+}
+
+.tow-menu>.center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tow-menu>.center>.menu {
+    position: relative;
+    overflow: hidden;
+    width: 27.5em;
+    height: 39em;
+    background: var(--menu-background);
+    border-radius: 12px;
+    transition: height 0.2s;
+}
+
+.tow-menu>.center>.menu>.header {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    height: 3.5em;
+    padding-inline: 1.0em;
+    border-radius: 0.3em 0.3em 0em 0em;
+}
+
+.tow-menu>.center>.menu>.header>p.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.tow-menu > .center > .menu > .header > .close {
+    height: 1.8em;
+    width: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--close-color);
+    border-radius: 0.3em;
+    font-weight: 600;
+    font-size: 1em;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.tow-menu > .center > .menu > .header > .close:hover {
+    background: var(--close-color-hover);
+}
+
+.tow-menu > .center > .menu > .header > .close:active {
+    background: var(--close-color-active);
+}
+
+.tow-menu > .center > .menu > .data {
+    padding-inline: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    height: 36.5em;
+    overflow: auto;
+    overflow-y: overlay;
+}
+
+.tow-menu > .center > .menu > .data > .plate-title,
+.tow-menu > .center > .menu > .data > .impound-title,
+.tow-menu > .center > .menu > .data > .fine-title,
+.tow-menu > .center > .menu > .data > .fine-amount-title {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+
+.tow-menu > .center > .menu > .data > .plate > input {
+    width: 100%;
+    height: 2em;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-inline: 0.5em;
+    background: #ffffff7a;
+    color: #404040;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.tow-menu > .center > .menu > .data > .impound > input {
+    width: 100%;
+    height: 2em;
+    color: rgb(64, 64, 64);
+    padding-inline: 0.5em;
+    background: rgba(255, 255, 255, 0.48);
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 0.3em;
+}
+
+.tow-menu > .center > .menu > .data > .impound .select2-container {
+    width: 100% !important;
+}
+
+.tow-menu > .center > .menu > .data > .impound .select2-selection .select2-selection--single {
+    height: 1.8em !important;
+}
+
+.tow-menu > .center > .menu > .data > .impound .select2-container--default .select2-selection--single {
+    border: none;
+}
+
+.tow-menu > .center > .menu > .data > .fine > textarea {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 500;
+    height: 8em;
+    min-height: 8em;
+    max-height: 8em;
+    resize: none;
+    border-radius: 0.3em;
+    padding-inline: 0.5em;
+    padding-block: 0.3em;
+}
+
+.tow-menu > .center > .menu > .data > .fine-amount {
+    display: flex;
+}
+
+.tow-menu > .center > .menu > .data > .fine-amount > input {
+    width: 100%;
+    height: 2em;
+    font-size: 1em;
+    padding-inline: 0.5em;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 0.4em 0em 0em 0.4em;
+}
+
+.tow-menu > .center > .menu > .data > .fine-amount > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    min-width: 2em;
+    max-width: 2em;
+    height: 2em;
+    min-height: 2em;
+    max-height: 2em;
+
+    background: #ffffff;
+    border-left: 1px solid #0000001f;
+    color: #00000047;
+
+    border-radius: 0em 0.4em 0.4em 0em;
+}
+
+.tow-menu > .center .menu .submit-tow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 21em;
+    left: 1em;
+    bottom: 1em;
+    text-align: center;
+    background: var(--main-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 0.3em;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.tow-menu > .center .menu .submit-tow:hover {
+    background: var(--main-color-hover);
+}
+
+.tow-menu > .center .menu .submit-tow:active {
+    background: var(--main-color-active);
+}

@@ -1,0 +1,241 @@
+.parking-rent {
+    display: none;
+    color: white;
+    overflow: hidden;
+    opacity: 0.95;
+}
+
+.parking-rent>.center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+}
+
+.parking-rent>.center>.menu {
+    position: relative;
+    overflow: hidden;
+    width: 25em;
+    height: 33em;
+    background: var(--menu-background);
+    border-radius: 12px;
+    transition: height 0.2s;
+}
+
+.parking-rent>.center>.menu.your-space-info {
+    height: 37.5em !important;
+}
+
+.parking-rent>.center>.menu .your-space-info {
+    display: none;
+}
+
+.parking-rent>.center>.menu.your-space-info .your-space-info {
+    display: block;
+}
+
+.parking-rent>.center>.menu>#yours,
+.parking-rent>.center>.menu>#rented,
+.parking-rent>.center>.menu>#free {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    right: -1.6em;
+    rotate: 45deg;
+    width: 7em;
+    text-align: center;
+    z-index: 5000;
+    top: 1em;
+    height: 1.75em;
+    line-height: 1.75;
+    font-weight: 600;
+}
+
+.parking-rent>.center>.menu>#yours {
+    background: #3197dba6;
+    box-shadow: 0px 0px 5em #3197dba6;
+}
+
+.parking-rent>.center>.menu>#rented {
+    background: #db3131a6;
+    box-shadow: 0px 0px 5em #db3131a6;
+}
+
+.parking-rent>.center>.menu>#free {
+    background: #31db31a6;
+    box-shadow: 0px 0px 5em #31db31b0;
+}
+
+.parking-rent>.center>.menu>.header {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    height: 3.5em;
+    padding-inline: 1.0em;
+    border-radius: 0.3em 0.3em 0em 0em;
+}
+
+.parking-rent>.center>.menu>.header>p.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+
+.parking-rent>.center>.menu>.data {
+    padding-inline: 1em;
+    margin-top: 1.0em;
+    margin-bottom: 1.5em;
+}
+
+.parking-rent>.center>.menu>.data>.description>.name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8em;
+    font-size: 1.05em;
+    font-weight: 700;
+}
+
+.parking-rent>.center>.menu>.data>.description>.cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.parking-rent>.center>.menu>.data>.description>.cost>div {
+    padding: 0.1em 0.7em;
+    font-weight: 700;
+    font-size: 1.15em !important;
+    background: var(--main-color);
+    border-radius: 0.3em;
+}
+
+.parking-rent>.center>.menu>.data>hr.first-line {
+    bottom: 3.5em;
+    width: 130%;
+    margin-left: -10%;
+}
+
+.parking-rent>.center>.menu>.data>.rent-data {
+    margin-top: 1.5em;
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.name {
+    display: flex;
+    align-items: center;
+    font-size: 1.05em;
+    font-weight: 700;
+    line-height: 0.7;
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.description {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-bottom: 0.8em;
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.rent-days {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    gap: 1em;
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.rent-days>div {
+    background: var(--main-color);
+    height: 2.5em;
+    line-height: 2.5;
+    font-weight: 600;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.rent-days>div:hover {
+    background: var(--main-color-hover);
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.rent-days>div:active {
+    background: var(--main-color-active);
+}
+
+.parking-rent>.center>.menu>.data>.rent-data>.rent-days>div.selected {
+    background: var(--main-color-active);
+}
+
+
+.parking-rent>.center>.menu>.data>hr.second-line {
+    position: absolute;
+    width: 100%;
+    bottom: 3.5em;
+    left: 0;
+}
+
+
+.parking-rent>.center>.menu>.data>.buttons {
+    display: flex;
+    position: absolute;
+    bottom: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parking-rent>.center>.menu>.data>.buttons>#left,
+.parking-rent>.center>.menu>.data>.buttons>#right {
+    cursor: pointer;
+    width: 4.5em;
+    height: 2.5em;
+    border-radius: 0.4em;
+    background: var(--main-color);
+    text-align: center;
+    line-height: 2.5;
+    font-size: 1em;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.parking-rent>.center>.menu>.data>.buttons>#left:hover,
+.parking-rent>.center>.menu>.data>.buttons>#right:hover {
+    background: var(--main-color-hover);
+}
+
+.parking-rent>.center>.menu>.data>.buttons>#left:active,
+.parking-rent>.center>.menu>.data>.buttons>#right:active {
+    background: var(--main-color-active);
+}
+
+.parking-rent>.center>.menu>.data>.buttons>#rent {
+    cursor: pointer;
+    width: 13em;
+    text-align: center;
+    line-height: 2.5;
+    font-weight: 600;
+    margin-inline: 0.5em;
+    background: var(--main-color);
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.parking-rent>.center>.menu>.data>.buttons>#rent:hover {
+    background: var(--main-color-hover);
+}
+
+.parking-rent>.center>.menu>.data>.buttons>#rent:active {
+    background: var(--main-color-active);
+}
+
+
+
+/* .parking-rent {} */

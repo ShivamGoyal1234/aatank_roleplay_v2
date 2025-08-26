@@ -1,0 +1,3474 @@
+@font-face {
+    font-family: "Acrom";
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../font/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../font/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../font/Inter-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal";
+    src: url("../font/ZabalDEMO-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal Bold";
+    src: url("../font/ZabalDEMO-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Oswald-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Light";
+    src: url("../font/Oswald-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Bold";
+    src: url("../font/Oswald-Bold.ttf") format("opentype");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    /* z-index: 999; */
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.generalDailyTasks {
+    height: 100%;
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-image: url("/html/images/BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.leftImageArea {
+    /* background-color: red; */
+    z-index: 1;
+    position: absolute;
+    height: 74%;
+    bottom: 0;
+    width: 38%;
+    background-image: url("/html/images/char.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rightTaskSection {
+    z-index: 2;
+    /* background-color: rgba(255, 0, 0, 0.078); */
+    position: absolute;
+    height: 87%;
+    width: 73%;
+    margin-left: 28%;
+    bottom: 0;
+    overflow: visible;
+}
+
+.rightAreaTopSection {
+    display: flex;
+    /* background-color: rgba(0, 0, 255, 0.061); */
+    height: 10%;
+    margin-left: 3%;
+}
+
+.titleArea {
+    display: flex;
+    height: 100%;
+    max-width: 50%;
+    font-family: "Oswald";
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 65px;
+    line-height: 100px;
+}
+
+.title1 {
+    margin-right: 1rem;
+}
+
+.descArea {
+    /* background-color: rebeccapurple; */
+    margin-left: 2rem;
+    margin-top: 2.3rem;
+    color: rgba(255, 255, 255, 0.38);
+    font-family: Oswald;
+    max-width: 43%;
+}
+
+.rightAreaTaskSection {
+    margin-top: 1.5%;
+    /* padding-top: 2%; */
+    /* background-color: rgba(0, 0, 255, 0.342); */
+    overflow: visible;
+    height: 87%;
+    width: 93%;
+    padding-left: 3%;
+    padding-right: 0.5%;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 1.5%;
+    overflow-y: scroll;
+}
+
+.taskItem {
+    display: flex;
+    /* margin-bottom: 1rem; */
+    width: 49%;
+    height: 24%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 78px rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(11.5px);
+    border-radius: 5px;
+}
+
+.taskItem:first-child {
+    /* margin-top: 2%; */
+}
+
+.taskItem.firstTask {
+    /* position: absolute; */
+    /* top: -3%; */
+    width: 99.5%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(111, 255, 203, 0.53);
+    box-shadow: 0px 0px 78px rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(11.5px);
+    border-radius: 5px;
+}
+
+.rightImageArea {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35%;
+    width: 20%;
+    /* background-color: red; */
+    background-image: url("/html/images/money.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+*::-webkit-scrollbar {
+    width: 13px;
+    border-radius: 7px;
+    scroll-padding: 50px 0 0 50px;
+}
+
+*::-webkit-scrollbar-track {
+    scroll-padding: 50px 0 0 50px;
+
+    height: 4px;
+    border-radius: 7px;
+    scroll-margin-top: 10rem;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+*::-webkit-scrollbar-thumb {
+    scroll-padding: 50px 0 0 50px;
+
+    padding-top: 10rem;
+    /* height: 6px; */
+    /* width: 1px; */
+    padding: 5px;
+    border-radius: 7px;
+    border: 3px solid rgba(0, 0, 0, 0.55);
+    background: rgba(97, 186, 165, 0.4);
+}
+
+.taskItemImageSection.first {
+    z-index: 987;
+    width: 15%;
+    height: 100%;
+    background: radial-gradient(95.43% 95.43% at 102.61% 106.74%, rgba(10, 255, 167, 0.3) 0%, rgba(10, 255, 167, 0) 100%);
+    border-right: 3px solid rgba(10, 255, 167, 0.19);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.second {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(255, 10, 10, 0.19) 0%, rgba(255, 10, 10, 0) 100%);
+    border-right: 2px solid rgba(255, 10, 10, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.thirt {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(10, 108, 255, 0.19) 0%, rgba(10, 108, 255, 0) 100%);
+    border-right: 2px solid rgba(10, 108, 255, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.four {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(255, 10, 201, 0.19) 0%, rgba(255, 10, 201, 0) 100%);
+    border-right: 2px solid rgba(255, 10, 201, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.four img {
+    z-index: 987987;
+    position: relative;
+    height: 110%;
+    width: 115%;
+    bottom: 8%;
+    right: 11%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.five {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(255, 216, 10, 0.19) 0%, rgba(255, 216, 10, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-right: 2px solid rgba(255, 216, 10, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.five img {
+    z-index: 987987;
+    position: relative;
+    height: 115%;
+    width: 118%;
+    bottom: 10%;
+    right: 11%;
+    object-fit: contain;
+}
+
+.taskItemImageSection img {
+    z-index: 987987;
+    position: relative;
+    height: 106%;
+    width: 116.4%;
+    bottom: 3.9%;
+    right: 15%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.second img {
+    z-index: 987987;
+    position: relative;
+    height: 120%;
+    width: 125%;
+    bottom: 4.5%;
+    right: 23%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.thirt img {
+    z-index: 987987;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: -1.1%;
+    right: 5%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.seven {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-right: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.seven img {
+    z-index: 987987;
+    position: relative;
+    height: 115%;
+    width: 115%;
+    bottom: 2.5%;
+    right: 8.4%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.six {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-right: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.six img {
+    z-index: 987987;
+    position: relative;
+    height: 135%;
+    width: 135%;
+    bottom: 8.4%;
+    right: 17.4%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.eight {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(92, 76, 76, 0.19) 0%, rgba(180, 13, 13, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-right: 2px solid rgba(168, 31, 31, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.eight img {
+    z-index: 987987;
+    position: relative;
+    height: 105%;
+    width: 105%;
+    bottom: 3.7%;
+    right: 1.4%;
+    object-fit: contain;
+}
+
+.taskItemImageSection.nine {
+    z-index: 987;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(106.25% 106.25% at 100% 100%, rgba(92, 76, 76, 0.19) 0%, rgba(180, 13, 13, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-right: 2px solid rgba(168, 31, 31, 0.19);
+    backdrop-filter: blur(11.5px);
+    border-radius: 1px;
+}
+
+.taskItemImageSection.nine img {
+    z-index: 987987;
+    position: relative;
+    height: 118%;
+    width: 115%;
+    bottom: 17.4%;
+    right: 7%;
+    object-fit: contain;
+}
+
+.inTaskLeftArea {
+    /* background-color: rgba(255, 0, 0, 0.182); */
+    width: 58%;
+    margin-left: 5%;
+    font-family: Oswald;
+    color: #000000d6;
+}
+
+.inTaskLeftArea.small {
+    /* background-color: rgba(255, 0, 0, 0.182); */
+    width: 35%;
+    margin-left: 5%;
+    font-family: Oswald;
+    color: #000000d6;
+}
+
+.inTaskTitle {
+    text-transform: uppercase;
+    margin-top: 3%;
+    color: #ffffff;
+    font-size: 35px;
+    text-shadow: 0px 0px 38px rgba(255, 255, 255, 0.7);
+}
+
+.inTaskTitle.small {
+    margin-top: 11%;
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 0px 0px 38px rgba(255, 255, 255, 0.7);
+}
+
+.inTaskDesc {
+    margin-top: 0.3%;
+    /* background-color: red; */
+    max-width: 100%;
+    font-size: 16px;
+    max-height: 25%;
+    overflow: auto;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.inTaskDesc.small {
+    margin-top: 0.3%;
+    /* background-color: red; */
+    font-size: 12px;
+    max-width: 100%;
+    max-height: 25%;
+    overflow: auto;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.inTaskDesc::-webkit-scrollbar {
+    width: 0px;
+}
+
+.inTaskButtonReward {
+    width: 22%;
+    overflow: hidden;
+    margin-top: 3%;
+    height: 15.5%;
+    background: rgba(255, 236, 170, 0.26);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* box-shadow: 0px 0px 48px rgba(255, 217, 82, 0.55); */
+    border-radius: 40px;
+}
+
+.inTaskButtonReward.small {
+    width: 65%;
+    overflow: hidden;
+    margin-top: 12%;
+    height: 15.5%;
+    background: #ffd952;
+    background: rgba(255, 236, 170, 0.26);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* box-shadow: 0px 0px 48px rgba(255, 217, 82, 0.55); */
+    border-radius: 40px;
+}
+
+.inTaskButtonReward.active {
+    /* width: 22%; */
+    overflow: hidden;
+    margin-top: 3%;
+    height: 15.5%;
+    background: #ffd952;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 48px rgba(255, 217, 82, 0.55);
+    border-radius: 40px;
+}
+
+.inTaskButtonReward.small.active {
+    /* width: 45%; */
+    overflow: hidden;
+    margin-top: 12%;
+    height: 15.5%;
+    background: #ffd952;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 48px rgba(255, 217, 82, 0.55);
+    border-radius: 40px;
+}
+
+.inButtonRewardText {
+    /* margin-top: 2.2%; */
+    font-size: 10px;
+    text-align: center;
+}
+.inButtonRewardPrice {
+    font-family: Zabal Bold;
+    text-align: center;
+    font-size: 15px;
+    margin-top: -2%;
+    margin-left: -5%;
+}
+
+.inButtonRewardText.small {
+    margin-top: 2.2%;
+    font-size: 8px;
+    text-align: center;
+}
+.inButtonRewardPrice.small {
+    font-family: Zabal Bold;
+    text-align: center;
+    font-size: 13px;
+    margin-top: -2%;
+    margin-left: -5%;
+}
+
+.inTaskRightArea {
+    /* background-color: rgba(0, 0, 255, 0.118); */
+    width: 22%;
+}
+
+.inTaskRightArea.small {
+    /* background-color: rgba(0, 0, 255, 0.118); */
+    width: 30%;
+}
+
+.startMissionButton {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    display: block;
+    color: #5bff93;
+    border: 1px solid #5bff93;
+    box-shadow: 0px 0px 25px 12px rgba(91, 255, 147, 0.09);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 27%;
+    margin-left: 10%;
+    width: 60%;
+    cursor: pointer;
+    line-height: 2.8rem;
+    height: 23%;
+    transition-duration: 0.25s;
+}
+
+.startMissionButton.small {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+    text-transform: uppercase;
+    display: block;
+    color: #5bff93;
+    border: 1px solid #5bff93;
+    box-shadow: 0px 0px 25px 12px rgb(91 255 147 / 9%);
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 37%;
+    margin-left: 15%;
+    width: 70%;
+    cursor: pointer;
+    line-height: 2.2rem;
+    height: 18%;
+    transition-duration: 0.25s;
+}
+
+.startMissionButton.lock {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    display: block;
+    color: rgba(255, 255, 255, 0.63);
+    border: 1px solid rgba(216, 255, 229, 0.46);
+    box-shadow: 0px 0px 17.7808px 8.53476px rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 27%;
+    margin-left: 10%;
+    width: 60%;
+    cursor: pointer;
+    line-height: 2.8rem;
+    height: 23%;
+    transition-duration: 0.25s;
+}
+
+.startMissionButton.small.lock {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27px;
+    text-transform: uppercase;
+    display: block;
+    color: rgba(255, 255, 255, 0.63);
+    border: 1px solid rgba(216, 255, 229, 0.46);
+    box-shadow: 0px 0px 17.7808px 8.53476px rgba(255, 255, 255, 0.09);
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 37%;
+    margin-left: 15%;
+    width: 70%;
+    line-height: 2.3rem;
+    height: 18%;
+    transition-duration: 0.25s;
+}
+
+.startMissionButton.small.lock:hover {
+    color: rgba(255, 255, 255, 0.63);
+    background: #5bff9200;
+}
+
+.startMissionButton.lock:hover {
+    color: rgba(255, 255, 255, 0.63);
+    background: #5bff9200;
+}
+
+.startMissionButton:hover {
+    background: #5bff93;
+    color: black;
+}
+
+.taskStartPriceText {
+    font-family: Zabal;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-left: 10.5%;
+    margin-top: 2%;
+    width: 60%;
+    text-align: center;
+    /* background-color: red; */
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.taskPrice {
+    font-family: "Oswald";
+    font-style: normal;
+    /* font-weight: 500; */
+    font-size: 15px;
+    /* line-height: 22px; */
+    text-transform: uppercase;
+    margin-left: 10.5%;
+    /* background-color: red; */
+    width: 60%;
+    margin-top: 0.5%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.93);
+}
+
+.taskStartPriceText.small {
+    font-family: Zabal;
+    font-size: 8px;
+    text-transform: uppercase;
+    margin-left: 15%;
+    margin-top: 2.3%;
+    width: 70%;
+    text-align: center;
+    /* background-color: red; */
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.taskPrice.small {
+    font-family: "Oswald";
+    font-style: normal;
+    /* font-weight: 500; */
+    font-size: 14px;
+    /* line-height: 22px; */
+    text-transform: uppercase;
+    margin-left: 15%;
+    /* background-color: red; */
+    width: 70%;
+    margin-top: 0.5%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.93);
+}
+
+.willPaySection {
+    display: none;
+
+    z-index: 987;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.willPayMain {
+    position: absolute;
+    height: 23%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    margin-left: -15%;
+    margin-top: -10%;
+    background: rgba(255, 255, 255, 0.42);
+    border: 3px solid rgba(164, 255, 189, 0.52);
+    box-shadow: 0px 0px 106px 27px rgba(255, 255, 255, 0.39);
+    backdrop-filter: blur(31px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 6px;
+}
+
+.cancelSection {
+    display: none;
+
+    z-index: 987;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cancelMain {
+    position: absolute;
+    height: 23%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    margin-left: -15%;
+    margin-top: -10%;
+    background: rgba(255, 255, 255, 0.42);
+    border: 3px solid rgba(164, 255, 189, 0.52);
+    box-shadow: 0px 0px 106px 27px rgba(255, 255, 255, 0.39);
+    backdrop-filter: blur(31px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 6px;
+}
+
+.youllpayTextArea {
+    display: flex;
+    /* margin: 1rem; */
+    /* background-color: red; */
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 127.2%;
+    /* or 57px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: rgba(0, 0, 0, 0.55);
+    /* height: 20%; */
+    margin-top: 3%;
+}
+
+.cancelpayTextArea {
+    display: flex;
+    /* margin: 1rem; */
+    /* background-color: red; */
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 127.2%;
+    /* or 57px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: rgba(0, 0, 0, 0.55);
+    /* height: 20%; */
+    margin-top: 3%;
+}
+
+.payAmount {
+    color: #72da96;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.beginTheTaskText {
+    text-align: center;
+    font-family: "Zabal Bold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 90.2%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.cancelTheTaskText {
+    text-align: center;
+    font-family: "Zabal Bold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 90.2%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.infoSection {
+    margin-top: 1.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.infoText {
+    margin-left: 1%;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#infoIcon {
+    color: rgba(0, 0, 0, 0.704);
+}
+
+.payButtonArea {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    height: 27%;
+    margin-top: 4%;
+    width: 100%;
+}
+
+.cancelButtonArea {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    height: 27%;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.payAreaButton {
+    text-align: center;
+    /* line-height: 4rem; */
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 240.2%;
+    width: 40%;
+    height: 90%;
+    /* or 38px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000aa;
+    cursor: pointer;
+    background: #f98b8b;
+    box-shadow: 0px 0px 49px rgba(249, 139, 139, 0.28);
+    border-radius: 5px;
+}
+
+.cancelAreaButton {
+    text-align: center;
+    /* line-height: 4rem; */
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 240.2%;
+    width: 40%;
+    height: 90%;
+    /* or 38px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000aa;
+    cursor: pointer;
+    background: #f98b8b;
+    box-shadow: 0px 0px 49px rgba(249, 139, 139, 0.28);
+    border-radius: 5px;
+}
+
+.cancelAreaButton:not(:last-child) {
+    margin-right: 2%;
+}
+
+#acceptButton {
+    background: #3ae288;
+    box-shadow: 0px 0px 49px rgba(58, 226, 136, 0.49);
+}
+
+#acceptButton:hover {
+    background: #3ae288;
+    box-shadow: 0px 0px 73px rgba(58, 226, 136, 0.78);
+    color: black;
+}
+
+#cancelButton:hover {
+    background: #f98b8b;
+    box-shadow: 0px 0px 73px rgba(249, 139, 139, 0.78);
+    color: black;
+}
+
+#resumeMissionButton {
+    background: #3ae288;
+    box-shadow: 0px 0px 49px rgba(58, 226, 136, 0.49);
+}
+
+#resumeMissionButton:hover {
+    background: #3ae288;
+    box-shadow: 0px 0px 73px rgba(58, 226, 136, 0.78);
+    color: black;
+}
+
+#cancelMissionButton:hover {
+    background: #f98b8b;
+    box-shadow: 0px 0px 73px rgba(249, 139, 139, 0.78);
+    color: black;
+}
+
+.payAreaButton:not(:last-child) {
+    margin-right: 2%;
+}
+
+.radialArea {
+    /* background-color: rgba(255, 0, 0, 0.078); */
+    height: 70%;
+    width: 35%;
+    margin-top: -7%;
+    margin-left: 20%;
+}
+
+.radialArea.small {
+    /* background-color: rgba(255, 0, 0, 0.078); */
+    height: 70%;
+    width: 41%;
+    margin-top: 3%;
+    margin-left: 33%;
+}
+
+.radialText {
+    color: white;
+    font-family: Oswald;
+    font-size: 25px;
+}
+
+.radialTextSmall {
+    color: white;
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+.cancelMissionButton {
+    background: #fb7f7f;
+    border-radius: 5px;
+    width: 50%;
+    height: 18%;
+    text-align: center;
+    line-height: 2.3rem;
+    /* border: 2px solid #fb7f7f; */
+    margin-top: -2.1rem;
+    margin-left: 2.2rem;
+    font-family: Oswald;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.getRewardButton {
+    background: #87fb7fe9;
+    border-radius: 5px;
+    width: 50%;
+    height: 18%;
+    text-align: center;
+    line-height: 2.3rem;
+    /* border: 2px solid #fb7f7f; */
+    margin-top: -2.1rem;
+    margin-left: 2.2rem;
+    font-family: Oswald;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.getRewardButton.small {
+    background: #87fb7fe9;
+    border-radius: 5px;
+    width: 68%;
+    height: 15%;
+    text-align: center;
+    line-height: 1.9rem;
+    /* border: 2px solid #fb7f7f; */
+    margin-top: -3.2rem;
+    margin-left: 2.2rem;
+    font-family: Oswald;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.getRewardButton:hover {
+    background: #87fb7f;
+    box-shadow: 0px 0px 21px rgba(129, 251, 127, 0.57);
+    border-radius: 5px;
+}
+
+.cancelMissionButton.small {
+    background: #fb7f7f;
+    border-radius: 5px;
+    width: 68%;
+    height: 15%;
+    text-align: center;
+    line-height: 1.9rem;
+    /* border: 2px solid #fb7f7f; */
+    margin-top: -3.2rem;
+    margin-left: 2.2rem;
+    font-family: Oswald;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cancelMissionButton:hover {
+    background: #fb7f7f;
+    box-shadow: 0px 0px 21px rgba(251, 127, 127, 0.57);
+    border-radius: 5px;
+}
+
+.remainingArea.small {
+    /* background-color: red; */
+    height: 20%;
+    width: 100%;
+    display: flex;
+    /* justify-content: right; */
+    justify-content: flex-end;
+    margin-left: -8%;
+    margin-top: 5%;
+    text-align: end;
+    /* flex-direction: end; */
+}
+
+#remainingClockIcon {
+    color: #ffffffd8;
+    font-size: 19px;
+    margin-top: 2%;
+}
+
+.remainingTextArea {
+    font-family: Oswald;
+    margin-left: 4%;
+    /* background-color: blue; */
+}
+
+.remainingText {
+    font-size: 8px;
+    color: #ffffffbb;
+}
+
+.divRemainingTimeText {
+    /* justify-content: flex-start; */
+    /* background-color: red; */
+    text-align: left;
+    color: #fffffff8;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 13px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 48%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.2rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 2.2rem;
+        font-family: Oswald;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -0.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 0.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 5%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 5%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 5.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -0.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 100%;
+        bottom: 13.4%;
+        right: 0%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: -74px;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 1200px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 15px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 48%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.3rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -3.1rem;
+        margin-left: 1.8rem;
+        font-family: Oswald;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -9.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: -6.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -9.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: -4%;
+        right: 9%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: -3%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: -1.6%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -8.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: -5.3%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 103%;
+        bottom: 6.4%;
+        right: 1%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: -222px;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 1024px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 15px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.3rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 2.2rem;
+        font-family: Oswald;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -2.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 0.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 4%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 4%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 5.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -0.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 100%;
+        bottom: 13.4%;
+        right: 0%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 900px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 11px;
+        margin-top: -4%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 49%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 1.9rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 1.5rem;
+        font-family: Oswald;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 73%;
+        width: 33%;
+        margin-top: -7%;
+        margin-left: 19%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: 3.9%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 4.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 8%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 10%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 8.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: 2.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 13px;
+        margin-top: -5%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 49%;
+        font-size: 13px;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 32px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 14px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 1.9rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 1.6rem;
+        font-family: Oswald;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 71%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -1.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 0.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 5%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 5%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 4.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -1.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: -65px;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1400px) and (max-height: 1050px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 14px;
+        margin-top: -3%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 44%;
+        font-size: 13px;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 33px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.3rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -3.1rem;
+        margin-left: 1.7rem;
+        font-family: Oswald;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -9.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: -5.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -9.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: -3%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: -3%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: -1.6%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -8.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: -4.3%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 100%;
+        bottom: 4.4%;
+        right: 0%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: -197px;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 14px;
+        margin-top: -10%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 32px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 1.6rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -1.1rem;
+        margin-left: 1.6rem;
+        font-family: Oswald;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: 3.9%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 4.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 8%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 10%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 8.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: 2.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 15px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 60%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.3rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -3.1rem;
+        margin-left: 1rem;
+        font-family: Oswald;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -11.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: -8.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -11.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: -6%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: -5%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 134%;
+        bottom: -3.6%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -10.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: -7.3%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 100%;
+        bottom: 0.4%;
+        right: 0%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: -219px;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 960px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 13px;
+        margin-top: -5%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+        font-size: 11px;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 33px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 59%;
+        height: 18%;
+        text-align: center;
+        line-height: 2rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.9rem;
+        margin-left: 1.1rem;
+        font-family: Oswald;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: -9.1%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: -6.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -9.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: -4%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: -3%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: -0.6%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: -7.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: -5.3%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 100%;
+        bottom: 4.4%;
+        right: 0%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: -181px;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 15px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.3rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 2.2rem;
+        font-family: Oswald;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: 3.9%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 4.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 8%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 10%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 8.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: 2.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 15px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 35px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 16px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 20px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.3rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 2.2rem;
+        font-family: Oswald;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: 3.9%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 4.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 8%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 10%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 8.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: 2.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 15px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 43%;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 44px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 21px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 30px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 12px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 18px;
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 2.9rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -2.1rem;
+        margin-left: 2.8rem;
+        font-family: Oswald;
+        font-size: 21px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: 3.9%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 4.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 8%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 10%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 8.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: 2.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .startMissionButton.small {
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 27px;
+        text-transform: uppercase;
+        display: block;
+        color: #5bff93;
+        border: 1px solid #5bff93;
+        box-shadow: 0px 0px 25px 12px rgb(91 255 147 / 9%);
+        border-radius: 7px;
+        text-align: center;
+        margin-top: 37%;
+        margin-left: 15%;
+        width: 70%;
+        cursor: pointer;
+        line-height: 2.7rem;
+        height: 18%;
+        transition-duration: 0.25s;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+    .titleArea {
+        display: flex;
+        height: 100%;
+        max-width: 50%;
+        font-family: "Oswald";
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 100px;
+    }
+    .inButtonRewardPrice {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 28px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .descArea {
+        /* background-color: rebeccapurple; */
+        margin-left: 2rem;
+        margin-top: 2.3rem;
+        color: rgba(255, 255, 255, 0.38);
+        font-family: Oswald;
+        max-width: 70%;
+        font-size: 29px;
+    }
+    .inTaskTitle {
+        text-transform: uppercase;
+        margin-top: 3%;
+        color: #ffffff;
+        font-size: 59px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        max-width: 100%;
+        font-size: 37px;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .inTaskTitle.small {
+        margin-top: 11%;
+        color: #ffffff;
+        font-size: 42px;
+        text-shadow: 0px 0px 38px rgb(255 255 255 / 70%);
+    }
+    .inTaskDesc.small {
+        margin-top: 0.3%;
+        /* background-color: red; */
+        font-size: 16px;
+        max-width: 100%;
+        max-height: 25%;
+        overflow: auto;
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 29px;
+    }
+    .cancelMissionButton {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 50%;
+        height: 18%;
+        text-align: center;
+        line-height: 4.2rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -3.1rem;
+        margin-left: 4.8rem;
+        font-family: Oswald;
+        font-size: 32px;
+        cursor: pointer;
+    }
+    .radialArea {
+        /* background-color: rgba(255, 0, 0, 0.078); */
+        height: 70%;
+        width: 35%;
+        margin-top: -7%;
+        margin-left: 20%;
+    }
+    .taskItemImageSection img {
+        z-index: 987987;
+        position: relative;
+        height: 106%;
+        width: 116.4%;
+        bottom: 3.9%;
+        right: 15%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.second img {
+        z-index: 987987;
+        position: relative;
+        height: 120%;
+        width: 125%;
+        bottom: 4.5%;
+        right: 23%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.thirt img {
+        z-index: 987987;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: -1.1%;
+        right: 5%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.four img {
+        z-index: 987987;
+        position: relative;
+        height: 110%;
+        width: 115%;
+        bottom: 8%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.five img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 118%;
+        bottom: 10%;
+        right: 11%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.six img {
+        z-index: 987987;
+        position: relative;
+        height: 135%;
+        width: 135%;
+        bottom: 8.4%;
+        right: 17.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.seven img {
+        z-index: 987987;
+        position: relative;
+        height: 115%;
+        width: 115%;
+        bottom: 2.5%;
+        right: 8.4%;
+        object-fit: contain;
+    }
+    .taskItemImageSection.eight img {
+        z-index: 987987;
+        position: relative;
+        height: 105%;
+        width: 105%;
+        bottom: 3.7%;
+        right: 1.4%;
+        object-fit: contain;
+    }
+
+    .taskItemImageSection.nine img {
+        z-index: 987987;
+        position: relative;
+        height: 118%;
+        width: 115%;
+        bottom: 17.4%;
+        right: 7%;
+        object-fit: contain;
+    }
+    .startMissionButton.small {
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 27px;
+        text-transform: uppercase;
+        display: block;
+        color: #5bff93;
+        border: 1px solid #5bff93;
+        box-shadow: 0px 0px 25px 12px rgb(91 255 147 / 9%);
+        border-radius: 7px;
+        text-align: center;
+        margin-top: 37%;
+        margin-left: 15%;
+        width: 70%;
+        cursor: pointer;
+        line-height: 4.2rem;
+        height: 18%;
+        transition-duration: 0.25s;
+    }
+    .leftImageArea {
+        /* background-color: red; */
+        z-index: 1;
+        position: absolute;
+        height: 74%;
+        bottom: 0;
+        width: 38%;
+        background-image: url(/html/images/char.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .cancelMissionButton.small {
+        background: #fb7f7f;
+        border-radius: 5px;
+        width: 68%;
+        height: 15%;
+        text-align: center;
+        line-height: 3.5rem;
+        /* border: 2px solid #fb7f7f; */
+        margin-top: -6.2rem;
+        margin-left: 5rem;
+        font-family: Oswald;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .inButtonRewardPrice.small {
+        font-family: Zabal Bold;
+        text-align: center;
+        font-size: 26px;
+        margin-top: -2%;
+        margin-left: -5%;
+    }
+    .inButtonRewardText.small {
+        margin-top: 2.2%;
+        font-size: 21px;
+        text-align: center;
+    }
+    .taskStartPriceText.small {
+        font-family: Zabal;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-left: 15%;
+        margin-top: 2.3%;
+        width: 70%;
+        text-align: center;
+        /* background-color: red; */
+        color: rgba(255, 255, 255, 0.61);
+    }
+    .taskPrice.small {
+        font-family: "Oswald";
+        font-style: normal;
+        /* font-weight: 500; */
+        font-size: 36px;
+        /* line-height: 22px; */
+        text-transform: uppercase;
+        margin-left: 15%;
+        /* background-color: red; */
+        width: 70%;
+        margin-top: 0.5%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.93);
+    }
+    .remainingText {
+        font-size: 26px;
+        color: #ffffffbb;
+    }
+    .divRemainingTimeText {
+        /* justify-content: flex-start; */
+        /* background-color: red; */
+        text-align: left;
+        color: #fffffff8;
+        font-size: 30px;
+    }
+    .inButtonRewardText {
+        /* margin-top: 2.2%; */
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.notifySection {
+    display: none;
+    z-index: 987;
+    position: absolute;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+}
+
+.notifyMain {
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 25px;
+    background-color: rgba(255, 0, 0, 0.67);
+    padding: 0.5rem;
+}
+
+.collectedSection {
+    display: none;
+    z-index: 987;
+    position: absolute;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+}
+
+.collectedMain {
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 25px;
+    background-color: rgba(98, 255, 0, 0.67);
+    padding: 0.5rem;
+}

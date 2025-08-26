@@ -1,0 +1,820 @@
+.parking-creator {
+    display: none;
+    overflow: hidden;
+    color: var(--primary-text-color);
+}
+
+.parking-creator>.center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parking-creator>.center>div {
+    position: relative;
+    width: 68em;
+    height: 50em;
+    background: var(--menu-background);
+    border-radius: 12px;
+}
+
+.parking-creator>.center>div>.header {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 1em 1em 0em 0em;
+    height: 3.5em;
+    padding-inline: 1.0em;
+}
+
+.parking-creator>.center>div>.header>.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.parking-creator>.center>div>.header>.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: var(--border-radius);
+    background: var(--back-btn-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.parking-creator>.center>div>.header>.close:hover {
+    background: var(--back-btn-color-hover);
+}
+
+.parking-creator>.center>div>.header>.close>i {
+    color: white;
+    opacity: 0.5;
+}
+
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage"],
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage_menu"],
+.parking-creator>.center>div>#main-menu>div[data-type="garage"],
+.parking-creator>.center>div>#main-menu>div[data-type="garage_interior"],
+.parking-creator>.center>div>#main-menu>div[data-type="parking"] {
+    position: absolute;
+    width: 18em;
+    margin-top: 1em;
+    padding: 1em;
+    height: 36em;
+    border-radius: 0.5em;
+    background: rgba(255, 255, 255, 0.09);
+    border: 2px solid #ffffff1c;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage"]:before,
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage_menu"]:before,
+.parking-creator>.center>div>#main-menu>div[data-type="garage"]:before,
+.parking-creator>.center>div>#main-menu>div[data-type="garage_interior"]:before,
+.parking-creator>.center>div>#main-menu>div[data-type="parking"]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #101010 10%, transparent 100%) !important;
+    z-index: 1;
+    border-radius: 0.3em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage"].selected,
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage_menu"].selected,
+.parking-creator>.center>div>#main-menu>div[data-type="garage"].selected,
+.parking-creator>.center>div>#main-menu>div[data-type="garage_interior"].selected,
+.parking-creator>.center>div>#main-menu>div[data-type="parking"].selected {
+    border: 2px solid var(--main-color);
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage"] {
+    margin-left: 1em;
+    height: 11em;
+    width: 22em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage"] > .info {
+    background-image: url(/html/images/housing_garage.webp);
+    background-size: 160%;
+    background-position: 50% 50%;
+    border-radius: 0.3em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage_menu"] {
+    margin-left: 1em;
+    height: 11em;
+    width: 22em;
+    margin-top: 13em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="house_garage_menu"] > .info {
+    background-image: url(/html/images/housing_garage_menu.webp);
+    background-size: 150%;
+    background-position: 20% 55%;
+    border-radius: 0.3em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="garage"] {
+    margin-left: 24em;
+    height: 23em;
+    width: 21em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="garage"] > .info {
+    background-image: url(/html/images/garage.webp);
+    background-size: 230%;
+    background-position: 48%;
+    border-radius: 0.3em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="garage_interior"] {
+    margin-left: 1em;
+    height: 17em;
+    bottom: 4.5em;
+    width: 44em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="garage_interior"] > .info {
+    background-image: url(/html/images/interior_garage.webp);
+    background-size: 170%;
+    background-position: 35% 82%;
+    border-radius: 0.3em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="parking"] {
+    margin-right: 1em;
+    right: 0px;
+    width: 21em;
+    height: 41em;
+}
+
+.parking-creator>.center>div>#main-menu>div[data-type="parking"] > .info {
+    background-image: url(/html/images/parking.webp);
+    background-size: 180%;
+    background-position: 50% 280%;
+    border-radius: 0.3em;
+}
+
+.parking-creator>.center>div>#main-menu>div>.info {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    padding: 1em;
+    gap: 0.5em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: end;
+}
+
+.parking-creator>.center>div>#main-menu>div>.info>i {
+    font-size: 2em;
+    z-index: 500;
+    text-shadow: #000000d1 2px 2px 12px;
+}
+
+.parking-creator>.center>div>#main-menu>div>.info>span {
+    font-size: 1.2em;
+    font-weight: 700;
+    z-index: 500;
+    text-shadow: #000000d1 2px 2px 12px;
+}
+
+.parking-creator .help {
+    width: 100%;
+    padding-block: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 0.9em;
+    border-radius: 0.5em;
+    padding-right: 1em;
+    padding-left: 0.5em;
+    opacity: 0.9;
+}
+
+.parking-creator .help.yellow {
+    background: #ffd40014;
+    border: 1px solid #ffd40030;
+}
+
+.parking-creator .help.blue {
+    background: #197cc314;
+    border: 1px solid #197cc330;
+}
+
+.parking-creator .help > i {
+    font-size: 1.8em;
+    width: 2.4em;
+    text-align: center;
+}
+
+.parking-creator .help.yellow > i {
+    color: #ffc800;
+    text-shadow: 0px 0px 25px #ffcd178c;
+}
+
+.parking-creator .help.blue > i {
+    color: #29a6ff;
+    text-shadow: 0px 0px 25px #247cbb;
+}
+
+.parking-creator .help > div {
+    font-weight: 600;
+}
+
+.parking-creator .help.yellow > div {
+    color: #ffc800;
+}
+
+.parking-creator .help.blue > div {
+    color: #29a6ff;
+}
+
+
+.parking-creator>.center>div>#main-menu>.button,
+.parking-creator>.center>div>#parking-menu>.button,
+.parking-creator>.center>div>#garage-menu>.button,
+.parking-creator>.center>div>#house-garage-menu>.button,
+.parking-creator>.center>div>#house-garage-menu-menu>.button,
+.parking-creator>.center>div>#garage-interior-menu>.button {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding-inline: 1em;
+    height: 2em;
+    background: var(--main-color);
+    color: var(--primary-text-color);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.25s;
+}
+
+.parking-creator>.center>div>#main-menu>.button:hover,
+.parking-creator>.center>div>#parking-menu>.button:hover,
+.parking-creator>.center>div>#garage-menu>.button:hover,
+.parking-creator>.center>div>#house-garage-menu>.button:hover,
+.parking-creator>.center>div>#house-garage-menu-menu>.button:hover,
+.parking-creator>.center>div>#garage-interior-menu>.button:hover {
+    background: var(--main-color-hover);
+}
+
+.parking-creator>.center>div>#main-menu>.button:active,
+.parking-creator>.center>div>#parking-menu>.button:active,
+.parking-creator>.center>div>#garage-menu>.button:active,
+.parking-creator>.center>div>#house-garage-menu>.button:active,
+.parking-creator>.center>div>#house-garage-menu-menu>.button:active,
+.parking-creator>.center>div>#garage-interior-menu>.button:active {
+    background: var(--main-color-active);
+}
+
+.parking-creator>.center>div>#main-menu>.button p,
+.parking-creator>.center>div>#parking-menu>.button p,
+.parking-creator>.center>div>#garage-menu>.button p,
+.parking-creator>.center>div>#house-garage-menu>.button p,
+.parking-creator>.center>div>#house-garage-menu-menu>.button p,
+.parking-creator>.center>div>#garage-interior-menu>.button p {
+    color: var(--primary-text-color);
+    margin-bottom: 0;
+}
+
+
+.parking-creator>.center>div>#parking-menu>.settings,
+.parking-creator>.center>div>#garage-menu>.settings,
+.parking-creator>.center>div>#house-garage-menu>.settings,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings,
+.parking-creator>.center>div>#garage-interior-menu>.settings {
+    padding: 1em;
+    /* height: 37.5em; */
+    height: 42.5em;
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+
+.parking-creator>.center>div>#house-garage-menu>.settings,
+.parking-creator>.center>div>#garage-interior-menu>.settings {
+    height: auto;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings .section-label,
+.parking-creator>.center>div>#garage-menu>.settings .section-label,
+.parking-creator>.center>div>#house-garage-menu>.settings>.section-label,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings .section-label,
+.parking-creator>.center>div>#garage-interior-menu>.settings>.section-label {
+    display: flex;
+    gap: 0.5em;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings .section-label>.label,
+.parking-creator>.center>div>#garage-menu>.settings .section-label>.label,
+.parking-creator>.center>div>#house-garage-menu>.settings>.section-label>.label,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings .section-label>.label,
+.parking-creator>.center>div>#garage-interior-menu>.settings>.section-label>.label {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section,
+.parking-creator>.center>div>#parking-menu>.settings #company-section,
+.parking-creator>.center>div>#parking-menu>.settings #gang-section,
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section,
+
+.parking-creator>.center>div>#house-garage-menu-menu>.settings #vehicles-limit-section,
+
+.parking-creator>.center>div>#garage-menu>.settings #company-section,
+.parking-creator>.center>div>#garage-menu>.settings #gang-section,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section {
+    opacity: 0.4;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section.active,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section.active,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section.active,
+.parking-creator>.center>div>#parking-menu>.settings #company-section.active,
+.parking-creator>.center>div>#parking-menu>.settings #gang-section.active,
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section.active,
+
+.parking-creator>.center>div>#house-garage-menu-menu>.settings #vehicles-limit-section.active,
+
+.parking-creator>.center>div>#garage-menu>.settings #company-section.active,
+.parking-creator>.center>div>#garage-menu>.settings #gang-section.active,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section.active,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section.active {
+    opacity: 1.0;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section,
+.parking-creator>.center>div>#parking-menu>.settings>#groups-restrictions-section,
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section,
+.parking-creator>.center>div>#house-garage-menu>.settings>#routingbucket-section,
+.parking-creator>.center>div>#garage-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#groups-restrictions-section,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#garage-settings-section,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#routingbucket-section
+{
+    display: grid;
+    gap: 1em;
+    grid-template-rows: min-content;
+    margin-bottom: 1em;
+}
+
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section {
+    margin-top: -1em;
+}
+
+.parking-creator>.center>div>#garage-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-settings-section,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#garage-settings-section,
+.parking-creator>.center>div>#parking-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section,
+.parking-creator>.center>div>#parking-menu>.settings>#groups-restrictions-section,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#main-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section,
+.parking-creator>.center>div>#garage-menu>.settings>#groups-restrictions-section {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>.check-area-occupied-settings-label,
+.parking-creator>.center>div>#garage-menu>.settings>.check-area-occupied-settings-label {
+    width: 100%;
+    position: relative;
+    height: 4em;
+    padding: 1em;
+    background: var(--submenu-background);
+    border-radius: 0.3em;
+    border: 1px solid var(--submenu-background-selected);
+    margin-top: -1em;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section,
+.parking-creator>.center>div>#house-garage-menu>.settings>#routingbucket-section,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#routingbucket-section,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#main-settings-section>div,
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section>div,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section>div,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div,
+.parking-creator>.center>div>#parking-menu>.settings>#groups-restrictions-section>div,
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#main-settings-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-settings-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#groups-restrictions-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section>div,
+.parking-creator>.center>div>#house-garage-menu>.settings>#routingbucket-section>div,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#main-settings-section>div,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#garage-settings-section>div,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#main-settings-section>div,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#routingbucket-section>div {
+    position: relative;
+    height: fit-content;
+    padding: 1em;
+    height: 12em;
+    background: var(--submenu-background);
+    border-radius: 0.3em;
+    border: 1px solid var(--submenu-background-selected);
+}
+
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#garage-settings-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-settings-section>div,
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section>div {
+    height: 8em !important;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#main-settings-section>div>p,
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section>div>p,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section>div>p,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div>p,
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section>div>p,
+.parking-creator>.center>div>#garage-menu>.settings>#main-settings-section>div>p,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-settings-section>div>p,
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section>div>p,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section>div>p,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section>div>p,
+.parking-creator>.center>div>#house-garage-menu>.settings>#routingbucket-section>div>p,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#main-settings-section>div>p,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#garage-settings-section>div>p,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#main-settings-section>div>p,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#routingbucket-section>div>p {
+    font-weight: 700;
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#main-settings-section>div>span,
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section>div>span,
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section>div>span,
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div>span,
+.parking-creator>.center>div>#parking-menu>.settings #company-section>div>span,
+.parking-creator>.center>div>#parking-menu>.settings #gang-section>div>span,
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings>#main-settings-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-settings-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings>#garage2-settings-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings #company-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings #gang-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section>div>span,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section>div>span,
+.parking-creator>.center>div>#house-garage-menu>.settings>#routingbucket-section>div>span,
+
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#main-settings-section>div>span,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>#garage-settings-section>div>span,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings #vehicles-limit-section>div>span,
+
+.parking-creator>.center>div>#garage-interior-menu>.settings>#main-settings-section>div>span,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#routingbucket-section>div>span {
+    display: block;
+    color: var(--secondary-text-color);
+    font-size: 0.9em;
+    letter-spacing: -0.4px;
+    line-height: 0.9;
+    margin-top: 0.5em;
+}
+
+.parking-creator>.center>div .settings .configure
+{
+    position: absolute;
+    width: fit-content;
+    padding: 0.2em;
+    color: var(--primary-text-color);
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    padding-inline: 1em;
+    background: var(--main-color);
+    border-radius: 6px;
+    transition: all 0.25s ease 0s;
+    bottom: 1em;
+}
+
+.parking-creator>.center>div .settings .configure:hover
+{
+    background: var(--main-color-hover);
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#rent-section .tagify {
+    width: 19em;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>div>div>select,
+.parking-creator>.center>div>#parking-menu>.settings>div>div>input,
+
+.parking-creator>.center>div>#house-garage-menu>.settings>div>div>input,
+
+.parking-creator>.center>div>#garage-interior-menu>.settings>div>div>select,
+.parking-creator>.center>div>#garage-interior-menu>.settings>div>div>input,
+
+.parking-creator>.center>div>#garage-menu>.settings>div>div>select,
+.parking-creator>.center>div>#garage-menu>.settings>div>div>input,
+
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>div>div>select,
+.parking-creator>.center>div>#house-garage-menu-menu>.settings>div>div input
+{
+    position: absolute;
+    bottom: 1em;
+    width: 19em;
+    height: 3em;
+    z-index: 5;
+    padding-inline: 0.5em;
+    border-radius: 0.4em;
+    border: 1px solid rgb(255 255 255 / 15%);
+    background: var(--submenu-background-selected);
+    color: white;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div>.anim-dict-label {
+    display: block;
+    margin-top: 0.5em;
+    color: var(--secondary-text-color);
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div>#anim-dict {
+    left: 1em;
+    bottom: 5em;
+    height: 2em;
+    width: 19.5em;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div>.anim-name-label {
+    display: block;
+    margin-top: 2.5em;
+    color: var(--secondary-text-color);
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#npc-section>div>#anim-name {
+    position: absolute;
+    height: 2em;
+    bottom: 1em;
+    left: 1em;
+    width: 19.5em;
+}
+
+
+
+.checkbox-wrapper-7 .tgl {
+    display: none;
+}
+
+.checkbox-wrapper-7 .tgl,
+.checkbox-wrapper-7 .tgl:after,
+.checkbox-wrapper-7 .tgl:before,
+.checkbox-wrapper-7 .tgl *,
+.checkbox-wrapper-7 .tgl *:after,
+.checkbox-wrapper-7 .tgl *:before,
+.checkbox-wrapper-7 .tgl+.tgl-btn {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-7 .tgl::-moz-selection,
+.checkbox-wrapper-7 .tgl:after::-moz-selection,
+.checkbox-wrapper-7 .tgl:before::-moz-selection,
+.checkbox-wrapper-7 .tgl *::-moz-selection,
+.checkbox-wrapper-7 .tgl *:after::-moz-selection,
+.checkbox-wrapper-7 .tgl *:before::-moz-selection,
+.checkbox-wrapper-7 .tgl+.tgl-btn::-moz-selection,
+.checkbox-wrapper-7 .tgl::selection,
+.checkbox-wrapper-7 .tgl:after::selection,
+.checkbox-wrapper-7 .tgl:before::selection,
+.checkbox-wrapper-7 .tgl *::selection,
+.checkbox-wrapper-7 .tgl *:after::selection,
+.checkbox-wrapper-7 .tgl *:before::selection,
+.checkbox-wrapper-7 .tgl+.tgl-btn::selection {
+    background: none;
+}
+
+.checkbox-wrapper-7 .tgl+.tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    scale: 0.8;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-wrapper-7 .tgl+.tgl-btn:after,
+.checkbox-wrapper-7 .tgl+.tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+
+.checkbox-wrapper-7 .tgl+.tgl-btn:after {
+    left: 0;
+}
+
+.checkbox-wrapper-7 .tgl+.tgl-btn:before {
+    display: none;
+}
+
+.checkbox-wrapper-7 .tgl:checked+.tgl-btn:after {
+    left: 50%;
+}
+
+.checkbox-wrapper-7 .tgl-ios+.tgl-btn {
+    background: #fbfbfb;
+    border-radius: 2em;
+    padding: 2px;
+    transition: all 0.4s ease;
+    /* border: 1px solid #e8eae9; */
+}
+
+.checkbox-wrapper-7 .tgl-ios+.tgl-btn:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.checkbox-wrapper-7 .tgl-ios+.tgl-btn:hover:after {
+    will-change: padding;
+}
+
+.checkbox-wrapper-7 .tgl-ios+.tgl-btn:active {
+    box-shadow: inset 0 0 0 2em #e8eae9;
+}
+
+.checkbox-wrapper-7 .tgl-ios+.tgl-btn:active:after {
+    padding-right: 0.8em;
+}
+
+.checkbox-wrapper-7 .tgl-ios:checked+.tgl-btn {
+    background: var(--main-color);
+}
+
+.checkbox-wrapper-7 .tgl-ios:checked+.tgl-btn:active {
+    box-shadow: none;
+}
+
+.checkbox-wrapper-7 .tgl-ios:checked+.tgl-btn:active:after {
+    margin-left: -0.8em;
+}
+
+
+.content p {
+    font-size: 15px;
+}
+
+.content ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7px;
+    margin: 12px 0;
+    border-radius: 5px;
+    border: 1px solid #a6a6a6;
+}
+
+.content ul li {
+    color: #333;
+    margin: 4px 3px;
+    list-style: none;
+    border-radius: 5px;
+    background: #F2F2F2;
+    padding: 5px 8px 5px 10px;
+    border: 1px solid #e3e1e1;
+}
+
+.content ul li i {
+    height: 20px;
+    width: 20px;
+    color: #808080;
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #dfdfdf;
+    justify-content: center;
+}
+
+.content ul input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.wrapper .details {
+    justify-content: space-between;
+}
+
+.details button {
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 9px 15px;
+    border-radius: 5px;
+    background: #5372F0;
+    transition: background 0.3s ease;
+}
+
+.details button:hover {
+    background: #2c52ed;
+}
+
+
+.tagify {
+    --tag-pad: 0.1em 0.25em !important;
+    --tags-disabled-bg: var(--submenu-background-selected) !important;
+    --tag-hover: rgb(211 203 255) !important;
+    --tag-border-radius: 4px;
+    
+    position: absolute !important;
+    bottom: 1em;
+    width: 16em;
+    z-index: 5;
+    padding-inline: 0.5em;
+    border-radius: 0.4em;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background: var(--submenu-background-selected);
+    color: white;
+    height: fit-content !important;
+    max-height: 7.2em !important;
+    overflow: overlay !important;
+    overflow-y: hidden;
+}
+
+.tagify__input {
+    min-width: 0 !important;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#allowed-models-section > div > .tagify,
+.parking-creator>.center>div>#garage-menu>.settings>#predefined-models-section > div > .tagify,
+.parking-creator>.center>div>#garage-menu>.settings>#garage-allowed-models-section > div > .tagify {
+    width: 64em !important;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings #company-section > div > .tagify,
+.parking-creator>.center>div>#parking-menu>.settings #gang-section > div > .tagify,
+.parking-creator>.center>div>#garage-menu>.settings #company-section > div > .tagify,
+.parking-creator>.center>div>#garage-menu>.settings #gang-section > div > .tagify {
+    width: 30.4em !important;
+}
+
+.parking-creator>.center>div>#parking-menu>.settings>#parkingmeter-section input {
+    width: 30em;
+}
+
+.parking-creator>.center>div>#house-garage-menu>.settings>#routingbucket-section > div > input,
+.parking-creator>.center>div>#garage-interior-menu>.settings>#routingbucket-section > div > input {
+    width: 64em !important;
+}

@@ -1,0 +1,24 @@
+{
+    "error" : "Error", 
+    "success" : "Success", 
+    "info" : "Info", 
+    "RequiredJob" : "Invalid access!",
+    "Noone" : "Suspect must stand near mugshot!",
+    "Fillingup" : "Filling up board",
+    "Evidence" : "Evidence Storage",
+    "EvidenceEmpty" : "Evidence storage is empty",
+    "EvidenceReport" : "Mugshot Evidence",
+    "ChangeName" : "Change Name",
+    "ChangeDOB" : "Change DOB",
+    "ChangeDescription" : "Change Description",
+    "ChangeInfo" : "Mugshot - Change Info",
+    "DeleteEvidence" : "Delete Evidence",
+    "Change" : "Change",
+    "YourChange" : "Your change here",
+    "SearchInfo" : "Mugshot - Search",
+    "MugshotDeleted" : "Mugshot deleted",
+    "MugshotChanged" : "Mugshot changed",
+    "MugshotFill" : "You must fill all info",
+    "Search" : "Search"
+}
+

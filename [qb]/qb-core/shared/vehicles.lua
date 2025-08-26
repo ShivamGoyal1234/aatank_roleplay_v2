@@ -1,0 +1,786 @@
+QBShared = QBShared or {}
+QBShared.Vehicles = QBShared.Vehicles or {}
+
+local Vehicles = {
+               { model = 'brioso',        name = 'Brioso R/A',                    brand = 'Grotti',       price = 45000,  category = 'compacts',    shop = 'cardealer', class = 'D',     seats = 2,  weight = 50 },
+    { model = 'prairie',       name = 'Prairie',                       brand = 'Bollokan',     price = 42000,   category = 'compacts',    shop = 'cardealer', class = 'D',     seats = 2,  weight = 50 },
+    { model = 'issi3',         name = 'Issi Classic',                  brand = 'Weeny',        price = 65000,  category = 'compacts',    shop = 'cardealer', class = 'D',     seats = 2,  weight = 50 },
+    { model = 'dilettante',    name = 'Dilettante',                    brand = 'Karin',        price = 55000,  category = 'compacts',    shop = 'cardealer', class = 'E',     seats = 2,  weight = 50 },
+    { model = 'club',          name = 'Club',                          brand = 'BF',           price = 65000,  category = 'compacts',    shop = 'cardealer', class = 'D',     seats = 2,  weight = 50 },
+    { model = 'issi2',         name = 'Issi',                          brand = 'Weeny',        price = 68000,   category = 'compacts',    shop = 'cardealer', class = 'D',     seats = 2,  weight = 50 },
+    { model = 'kanjo',         name = 'Blista Kanjo',                  brand = 'Dinka',        price = 58000,  category = 'compacts',    shop = 'cardealer', class = 'D',     seats = 2,  weight = 50 },
+
+
+    { model = 'cinquemila',    name = 'Lampadati',                     brand = 'Cinquemila',   price = 520000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+    { model = 'stafford',      name = 'Stafford',                      brand = 'Enus',         price = 2700000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+    { model = 'superd',        name = 'Super Diamond',                 brand = 'Enus',         price = 2500000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+    { model = 'schafter2',     name = 'Schafter',                      brand = 'Benefactor',   price = 165000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+    { model = 'deity',         name = 'Deity',                         brand = 'Enus',         price = 500000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+    { model = 'cog55',         name = 'Cognoscenti 55',                brand = 'Enus',         price = 190000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+    { model = 'asterope',      name = 'Asterope',                      brand = 'Karin',        price = 145000,  category = 'sedans',      shop = 'cardealer', class = 'D',     seats = 4,  weight = 50 },
+
+
+    { model = 'baller4',       name = 'Baller LE LWB',                 brand = 'Gallivanter',  price = 500000,  category = 'suvs',        shop = 'cardealer', class = 'D' },
+    { model = 'contender',     name = 'Contender',                     brand = 'Vapid',        price = 2000000, category = 'suvs',        shop = 'cardealer', class = 'D' },
+    { model = 'baller8',       name = 'Baller ST-D',                   brand = 'Gallivanter',  price = 720000,  category = 'suvs',        shop = 'cardealer', class = 'D' },
+    { model = 'iwagen',        name = 'Obey',                          brand = 'I-Wagen',      price = 585000,  category = 'suvs',        shop = 'cardealer', class = 'E',     seats = 4,  weight = 50 },
+    { model = 'toros',         name = 'Toros',                         brand = 'Pegassi',      price = 900000,  category = 'suvs',        shop = 'cardealer', class = 'D' },
+    { model = 'xls',           name = 'XLS',                           brand = 'Benefactor',   price = 220000,  category = 'suvs',        shop = 'cardealer', class = 'D' },
+    { model = 'vivanite',      name = 'Vivanite',                      brand = 'Karin',        price = 300000,  category = 'suvs',        shop = 'cardealer', class = 'E' },
+
+
+    { model = 'exemplar',      name = 'Exemplar',                      brand = 'Dewbauchee',   price = 210000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+    { model = 'windsor2',      name = 'Windsor Drop',                  brand = 'Enus',         price = 400000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+    { model = 'f620',          name = 'F620',                          brand = 'Ocelot',       price = 260000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+    { model = 'felon2',        name = 'Felon GT',                      brand = 'Lampadati',    price = 150000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+    { model = 'fr36',          name = 'FR36',                          brand = 'Fathom',       price = 235000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+    { model = 'zion2',         name = 'Zion Cabrio',                   brand = 'Übermacht',    price = 170000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+    { model = 'cogcabrio',     name = 'Cognoscenti Cabrio',            brand = 'Enus',         price = 220000,  category = 'coupes',      shop = 'cardealer', class = 'D' },
+
+
+    { model = 'dominator3',    name = 'Dominator GTX',                 brand = 'Vapid',        price = 1200000,  category = 'muscle',      shop = 'cardealer', class = 'D' },
+    { model = 'dominator9',    name = 'Dominator GT',                  brand = 'Vapid',        price = 1500000, category = 'muscle',      shop = 'cardealer', class = 'D' },
+    { model = 'dominator7',    name = 'Dominator ASP',                 brand = 'Vapid',        price = 350000, category = 'muscle',      shop = 'cardealer', class = 'D' },
+    { model = 'vigero3',       name = 'Vigero ZX Convertible',         brand = 'Declasse',     price = 1300000, category = 'muscle',      shop = 'cardealer', class = 'D' },
+    { model = 'hotknife',      name = 'Hotknife',                      brand = 'Vapid',        price = 2300000, category = 'muscle',      shop = 'cardealer', class = 'D' },
+    { model = 'buccaneer',     name = 'Buccaneer',                     brand = 'Albany',       price = 195000,  category = 'muscle',      shop = 'cardealer', class = 'D' },
+    { model = 'buffalo4',      name = 'Buffalo STX',                   brand = 'Bravado',      price = 700000,  category = 'muscle',      shop = 'cardealer', class = 'D' },
+
+
+    { model = 'btype2',        name = 'Franken Stange',                brand = 'Albany',       price = 1800000, category = 'classics',    shop = 'cardealer', class = 'D' },
+    { model = 'turismo2',      name = 'Turismo Classic',               brand = 'Grotti',       price = 450000, category = 'classics',    shop = 'cardealer', class = 'D' },
+    { model = 'stinger',       name = 'Stinger',                       brand = 'Grotti',       price = 180000,  category = 'classics',    shop = 'cardealer', class = 'D' },
+    { model = 'jb700',         name = 'JB 700',                        brand = 'Dewbauchee',   price = 340000, category = 'classics',    shop = 'cardealer', class = 'D' },  
+    { model = 'cheetah2',      name = 'Cheetah Classic',               brand = 'Grotti',       price = 500000, category = 'classics',    shop = 'cardealer', class = 'D' },
+    { model = 'coquette',      name = 'Coquette',                      brand = 'Invetero',     price = 210000, category = 'classics',    shop = 'cardealer', class = 'D' },
+    { model = 'ztype',         name = 'Z-Type',                        brand = 'Truffade',     price = 1500000, category = 'classics',    shop = 'cardealer', class = 'D' },
+
+
+    { model = 'vectre',        name = 'Vectre',                        brand = 'Emperor',      price = 800000, category = 'sports',      shop = 'cardealer', class = 'B' },
+    { model = 'comet2',        name = 'Comet',                         brand = 'Pfister',      price = 350000, category = 'sports',      shop = 'cardealer', class = 'B' },
+    { model = 'sultan',        name = 'Sultan',                        brand = 'Karin',        price = 210000, category = 'sports',      shop = 'cardealer', class = 'B' },
+    { model = 'jester3',       name = 'Jester Classic',                brand = 'Dinka',        price = 550000, category = 'sports',      shop = 'cardealer', class = 'B' },
+    { model = 'paragon',       name = 'Paragon',                       brand = 'Enus',         price = 400000, category = 'sports',      shop = 'cardealer', class = 'B' },
+    { model = 'buffalo',       name = 'Buffalo',                       brand = 'Bravado',      price = 240000, category = 'sports',      shop = 'cardealer', class = 'B' },
+    { model = 'vstr',          name = 'V-STR',                         brand = 'Albany',       price = 290000, category = 'sports',      shop = 'cardealer', class = 'B' },
+
+
+    { model = 'cyclone',       name = 'Cyclone',                       brand = 'Coil',         price = 3000000, category = 'super',       shop = 'cardealer', class = 'A' },
+    { model = 'bullet',        name = 'Bullet',                        brand = 'Vapid',        price = 1500000, category = 'super',       shop = 'cardealer', class = 'A' },
+    { model = 'xa21',          name = 'XA-21',                         brand = 'Ocelot',       price = 3500000, category = 'super',       shop = 'cardealer', class = 'A' },
+    { model = 'tyrus',         name = 'Tyrus',                         brand = 'Progen',       price = 2300000, category = 'super',       shop = 'cardealer', class = 'A' },
+    { model = 'infernus',      name = 'Infernus',                      brand = 'Pegassi',      price = 2000000, category = 'super',       shop = 'cardealer', class = 'A' },
+    { model = 'prototipo',     name = 'X80 Proto',                     brand = 'Grotti',       price = 4000000, category = 'super',       shop = 'cardealer', class = 'A' },
+    { model = 'champion',      name = 'Champion',                      brand = 'Dewbauchee',   price = 460000, category = 'super',       shop = 'cardealer', class = 'A' },
+
+
+    { model = 'bodhi2',        name = 'Bodhi',                         brand = 'Canis',        price = 120000,   category = 'offroad',     shop = 'cardealer', class = 'D' },
+    { model = 'sandking',      name = 'Sandking XL',                   brand = 'Vapid',        price = 160000,   category = 'offroad',     shop = 'cardealer', class = 'D' },
+    { model = 'winky',         name = 'Winky',                         brand = 'Vapid',        price = 240000,   category = 'offroad',     shop = 'cardealer', class = 'F' },
+    { model = 'vagrant',       name = 'Vagrant',                       brand = 'Maxwell',      price = 250000,  category = 'offroad',     shop = 'cardealer', class = 'D' },
+    { model = 'rancherxl',     name = 'Rancher XL',                    brand = 'Declasse',     price = 180000,   category = 'offroad',     shop = 'cardealer', class = 'D' },
+    { model = 'bfinjection',   name = 'Bf Injection',                  brand = 'Annis',        price = 190000,   category = 'offroad',     shop = 'cardealer', class = 'D' },
+    { model = 'patriot3',      name = 'Patriot Military',              brand = 'Mil-Spec',     price = 260000,  category = 'offroad',     shop = 'cardealer', class = 'D' },
+
+
+    { model = 'bison',         name = 'Bison',                         brand = 'Bravado',      price = 40000,   category = 'vans',        shop = 'cardealer', class = 'D' },
+    { model = 'burrito3',      name = 'Burrito',                       brand = 'Declasse',     price = 30000,   category = 'vans',        shop = 'cardealer', class = 'D' },
+    { model = 'rumpo',         name = 'Rumpo',                         brand = 'Bravado',      price = 31000,   category = 'vans',        shop = 'cardealer', class = 'D' },
+    { model = 'journey',       name = 'Journey',                       brand = 'Zirconium',    price = 90000,   category = 'vans',        shop = 'cardealer', class = 'F' },
+    { model = 'speedo',        name = 'Speedo',                        brand = 'Vapid',        price = 25000,   category = 'vans',        shop = 'cardealer', class = 'D' },
+    { model = 'surfer2',       name = 'surfer 2',                      brand = 'BF',           price = 45000,   category = 'vans',        shop = 'cardealer', class = 'F' },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    { model = 'blista',        name = 'Blista',                        brand = 'Dinka',        price = 13000,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'asbo',          name = 'Asbo',                          brand = 'Maxwell',      price = 4000,    category = 'compacts',    shop = 'none', },
+    { model = 'dilettante2',   name = 'Dilettante Patrol',             brand = 'Karin',        price = 12000,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+
+
+
+    { model = 'panto',         name = 'Panto',                         brand = 'Benefactor',   price = 3200,    category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+
+    { model = 'rhapsody',      name = 'Rhapsody',                      brand = 'Declasse',     price = 10000,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'brioso2',       name = 'Brioso 300',                    brand = 'Grotti',       price = 12000,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'weevil',        name = 'Weevil',                        brand = 'BF',           price = 9000,    category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'issi7',         name = 'Issi Sport',                    brand = 'Weeny',        price = 100000,  category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'blista2',       name = 'Blista Compact',                brand = 'Dinka',        price = 18950,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'blista3',       name = 'Blista Go Go Monkey',           brand = 'Dinka',        price = 15000,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'brioso3',       name = 'Brioso 300 Widebody',           brand = 'Grotti',       price = 125000,  category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'boor',          name = 'Boor',                          brand = 'Karin',        price = 23000,   category = 'compacts',    shop = 'none',     seats = 2,         weight = 50 },
+
+    -- Sedans (1)
+    { model = 'asea',          name = 'Asea',                          brand = 'Declasse',     price = 2500,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+
+
+    { model = 'cognoscenti',   name = 'Cognoscenti',                   brand = 'Enus',         price = 22500,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'emperor',       name = 'Emperor',                       brand = 'Albany',       price = 4250,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'fugitive',      name = 'Fugitive',                      brand = 'Cheval',       price = 20000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'glendale',      name = 'Glendale',                      brand = 'Benefactor',   price = 3400,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'glendale2',     name = 'Glendale Custom',               brand = 'Benefactor',   price = 12000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'ingot',         name = 'Ingot',                         brand = 'Vulcar',       price = 4999,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'intruder',      name = 'Intruder',                      brand = 'Karin',        price = 11250,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'premier',       name = 'Premier',                       brand = 'Declasse',     price = 12000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'primo',         name = 'Primo',                         brand = 'Albany',       price = 5000,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'primo2',        name = 'Primo Custom',                  brand = 'Albany',       price = 14500,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'regina',        name = 'Regina',                        brand = 'Dundreary',    price = 7000,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+
+    { model = 'stanier',       name = 'Stanier',                       brand = 'Vapid',        price = 19000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'stratum',       name = 'Stratum',                       brand = 'Zirconium',    price = 15000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'stretch',       name = 'Stretch',                       brand = 'Dundreary',    price = 19000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+
+    { model = 'surge',         name = 'Surge',                         brand = 'Cheval',       price = 20000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'tailgater',     name = 'Tailgater',                     brand = 'Obey',         price = 22000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'warrener',      name = 'Warrener',                      brand = 'Vulcar',       price = 4000,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'washington',    name = 'Washington',                    brand = 'Albany',       price = 7000,    category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'tailgater2',    name = 'Tailgater S',                   brand = 'Obey',         price = 51000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+
+
+    { model = 'astron',        name = 'Astron',                        brand = 'Pfister',      price = 150000,  category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'baller7',       name = 'Baller ST',                     brand = 'Gallivanter',  price = 145000,  category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'comet7',        name = 'Comet',                         brand = 'S2 Cabrio',    price = 25000,   category = 'sedans',      shop = 'none',     seats = 2,         weight = 50 },
+
+    { model = 'jubilee',       name = 'Jubilee',                       brand = 'Enus',         price = 485000,  category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'oracle',        name = 'Oracle',                        brand = 'Übermacht',    price = 22000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+
+    { model = 'warrener2',     name = 'Warrener HKR',                  brand = 'Vulcar',       price = 30000,   category = 'sedans',      shop = 'none',     seats = 2,         weight = 50 },
+    { model = 'rhinehart',     name = 'Rhinehart',                     brand = 'Übermacht',    price = 105000,  category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'eudora',        name = 'Eudora',                        brand = 'Willard',      price = 17000,   category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+    { model = 'asterope2',     name = 'Asterope GZ',                   brand = 'Karin',        price = 459000,  category = 'sedans',      shop = 'none',     seats = 4,         weight = 50 },
+
+    -- SUV (2)
+    { model = 'baller',        name = 'Baller',                        brand = 'Gallivanter',  price = 22000,   category = 'suvs',        shop = 'none',},
+    { model = 'baller2',       name = 'Baller II',                     brand = 'Gallivanter',  price = 15000,   category = 'suvs',        shop = 'none',},
+    { model = 'baller3',       name = 'Baller LE',                     brand = 'Gallivanter',  price = 15000,   category = 'suvs',        shop = 'none',},
+
+    { model = 'bjxl',          name = 'BeeJay XL',                     brand = 'Karin',        price = 19000,   category = 'suvs',        shop = 'none',},
+    { model = 'cavalcade',     name = 'Cavalcade',                     brand = 'Albany',       price = 14000,   category = 'suvs',        shop = 'none',},
+    { model = 'cavalcade2',    name = 'Cavalcade II',                  brand = 'Albany',       price = 16500,   category = 'suvs',        shop = 'none',},
+
+    { model = 'dubsta',        name = 'Dubsta',                        brand = 'Benefactor',   price = 19000,   category = 'suvs',        shop = 'none',},
+    { model = 'dubsta2',       name = 'Dubsta Luxury',                 brand = 'Benefactor',   price = 19500,   category = 'suvs',        shop = 'none',},
+    { model = 'fq2',           name = 'FQ2',                           brand = 'Fathom',       price = 18500,   category = 'suvs',        shop = 'none',},
+    { model = 'granger',       name = 'Granger',                       brand = 'Declasse',     price = 22000,   category = 'suvs',        shop = 'none',},
+    { model = 'gresley',       name = 'Gresley',                       brand = 'Bravado',      price = 25000,   category = 'suvs',        shop = 'none',},
+    { model = 'habanero',      name = 'Habanero',                      brand = 'Emperor',      price = 20000,   category = 'suvs',        shop = 'none',},
+    { model = 'huntley',       name = 'Huntley S',                     brand = 'Enus',         price = 24500,   category = 'suvs',        shop = 'none',},
+    { model = 'landstalker',   name = 'Landstalker',                   brand = 'Dundreary',    price = 12000,   category = 'suvs',        shop = 'none',},
+    { model = 'landstalker2',  name = 'Landstalker XL',                brand = 'Dundreary',    price = 26000,   category = 'suvs',        shop = 'none',},
+    { model = 'novak',         name = 'Novak',                         brand = 'Lampadati',    price = 70000,   category = 'suvs',        shop = 'none',},
+    { model = 'patriot',       name = 'Patriot',                       brand = 'Mammoth',      price = 21000,   category = 'suvs',        shop = 'none',},
+    { model = 'patriot2',      name = 'Patriot Stretch',               brand = 'Mammoth',      price = 21000,   category = 'suvs',        shop = 'none',},
+    { model = 'radi',          name = 'Radius',                        brand = 'Vapid',        price = 18000,   category = 'suvs',        shop = 'none',},
+    { model = 'rebla',         name = 'Rebla GTS',                     brand = 'Übermacht',    price = 21000,   category = 'suvs',        shop = 'none',},
+    { model = 'rocoto',        name = 'Rocoto',                        brand = 'Obey',         price = 13000,   category = 'suvs',        shop = 'none',},
+    { model = 'seminole',      name = 'Seminole',                      brand = 'Canis',        price = 20000,   category = 'suvs',        shop = 'none',},
+    { model = 'seminole2',     name = 'Seminole Frontier',             brand = 'Canis',        price = 13000,   category = 'suvs',        shop = 'none',},
+    { model = 'serrano',       name = 'Serrano',                       brand = 'Benefactor',   price = 48000,   category = 'suvs',        shop = 'none',},
+
+    { model = 'granger2',      name = 'Granger 3600LX',                brand = 'Declasse',     price = 221000,  category = 'suvs',        shop = 'none',},
+
+    { model = 'aleutian',      name = 'Aleutian',                      brand = 'Vapid',        price = 183500,  category = 'suvs',        shop = 'none',},
+
+    { model = 'cavalcade3',    name = 'Cavalcade XL',                  brand = 'Albany',       price = 166500,  category = 'suvs',        shop = 'none',},
+    { model = 'dorado',        name = 'Dorado',                        brand = 'Bravado',      price = 137500,  category = 'suvs',        shop = 'none',},
+
+
+    -- Coupes (3)
+
+
+
+    { model = 'felon',         name = 'Felon',                         brand = 'Lampadati',    price = 31000,   category = 'coupes',      shop = 'none',},
+
+    { model = 'jackal',        name = 'Jackal',                        brand = 'Ocelot',       price = 19000,   category = 'coupes',      shop = 'none',},
+    { model = 'oracle2',       name = 'Oracle XS',                     brand = 'Übermacht',    price = 28000,   category = 'coupes',      shop = 'none',},
+    { model = 'sentinel',      name = 'Sentinel',                      brand = 'Übermacht',    price = 30000,   category = 'coupes',      shop = 'none',},
+    { model = 'sentinel2',     name = 'Sentinel XS',                   brand = 'Übermacht',    price = 33000,   category = 'coupes',      shop = 'none',},
+    { model = 'windsor',       name = 'Windsor',                       brand = 'Enus',         price = 27000,   category = 'coupes',      shop = 'none',},
+
+    { model = 'zion',          name = 'Zion',                          brand = 'Übermacht',    price = 22000,   category = 'coupes',      shop = 'none',},
+
+    { model = 'previon',       name = 'Previon',                       brand = 'Karin',        price = 149000,  category = 'coupes',      shop = 'none',},
+
+    { model = 'futo',          name = 'Futo',                          brand = 'Karin',        price = 17500,   category = 'coupes',      shop = 'none',},
+    { model = 'sentinel3',     name = 'Sentinel Classic',              brand = 'Übermacht',    price = 70000,   category = 'coupes',      shop = 'none',},
+    { model = 'kanjosj',       name = 'Kanjo SJ',                      brand = 'Dinka',        price = 143000,  category = 'coupes',      shop = 'none',},
+    { model = 'postlude',      name = 'Postlude',                      brand = 'Dinka',        price = 90000,   category = 'coupes',      shop = 'none',},
+    { model = 'tahoma',        name = 'Tahoma Coupe',                  brand = 'Declasse',     price = 12000,   category = 'coupes',      shop = 'none',},
+    { model = 'broadway',      name = 'Broadway',                      brand = 'Classique',    price = 20000,   category = 'coupes',      shop = 'none',},
+
+
+    -- Muscle (4)
+    { model = 'blade',         name = 'Blade',                         brand = 'Vapid',        price = 23500,   category = 'muscle',      shop = 'none',},
+
+    { model = 'buccaneer2',    name = 'Buccaneer Rider',               brand = 'Albany',       price = 24500,   category = 'muscle',      shop = 'none',},
+    { model = 'chino',         name = 'Chino',                         brand = 'Vapid',        price = 5000,    category = 'muscle',      shop = 'none',},
+    { model = 'chino2',        name = 'Chino Luxe',                    brand = 'Vapid',        price = 8000,    category = 'muscle',      shop = 'none',},
+    { model = 'clique',        name = 'Clique',                        brand = 'Vapid',        price = 20000,   category = 'muscle',      shop = 'none',},
+    { model = 'coquette3',     name = 'Coquette BlackFin',             brand = 'Invetero',     price = 180000,  category = 'muscle',      shop = 'none',},
+    { model = 'deviant',       name = 'Deviant',                       brand = 'Schyster',     price = 70000,   category = 'muscle',      shop = 'none',},
+    { model = 'dominator',     name = 'Dominator',                     brand = 'Vapid',        price = 62500,   category = 'muscle',      shop = 'none',},
+    { model = 'dominator2',    name = 'Pißwasser Dominator',           brand = 'Vapid',        price = 50000,   category = 'muscle',      shop = 'none',},
+
+    { model = 'dominator4',    name = 'Dominator Arena',               brand = 'Vapid',        price = 200000,  category = 'muscle',      shop = 'none',},
+
+    { model = 'dominator8',    name = 'Dominator GTT',                 brand = 'Vapid',        price = 80000,   category = 'muscle',      shop = 'none',},
+    { model = 'dukes',         name = 'Dukes',                         brand = 'Imponte',      price = 23500,   category = 'muscle',      shop = 'none',},
+    { model = 'dukes2',        name = 'Duke O\'Death',                 brand = 'Imponte',      price = 60000,   category = 'muscle',      shop = 'none',},
+    { model = 'dukes3',        name = 'Beater Dukes',                  brand = 'Imponte',      price = 45000,   category = 'muscle',      shop = 'none',},
+    { model = 'faction',       name = 'Faction',                       brand = 'Willard',      price = 17000,   category = 'muscle',      shop = 'none',},
+    { model = 'faction2',      name = 'Faction Rider',                 brand = 'Willard',      price = 19000,   category = 'muscle',      shop = 'none',},
+    { model = 'faction3',      name = 'Faction Custom Donk',           brand = 'Willard',      price = 35000,   category = 'muscle',      shop = 'none',},
+    { model = 'ellie',         name = 'Ellie',                         brand = 'Vapid',        price = 42250,   category = 'muscle',      shop = 'none',},
+    { model = 'gauntlet',      name = 'Gauntlet',                      brand = 'Bravado',      price = 28500,   category = 'muscle',      shop = 'none',},
+    { model = 'gauntlet2',     name = 'Redwood Gauntlet',              brand = 'Bravado',      price = 70000,   category = 'muscle',      shop = 'none',},
+    { model = 'gauntlet3',     name = 'Classic Gauntlet',              brand = 'Bravado',      price = 75000,   category = 'muscle',      shop = 'none',},
+    { model = 'gauntlet4',     name = 'Gauntlet Hellfire',             brand = 'Bravado',      price = 80000,   category = 'muscle',      shop = 'none',},
+    { model = 'gauntlet5',     name = 'Gauntlet Classic Custom',       brand = 'Bravado',      price = 120000,  category = 'muscle',      shop = 'none',},
+    { model = 'hermes',        name = 'Hermes',                        brand = 'Albany',       price = 535000,  category = 'muscle',      shop = 'none',},
+
+    { model = 'hustler',       name = 'Hustler',                       brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'impaler',       name = 'Impaler',                       brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'impaler2',      name = 'Impaler Arena',                 brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'impaler3',      name = 'Impaler Future Shock',          brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'impaler4',      name = 'Impaler Nightmare',             brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'imperator',     name = 'Imperator Arena',               brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'imperator2',    name = 'imperator Future Shock',        brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'imperator3',    name = 'Imperator Nightmare',           brand = 'Vapid',        price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'lurcher',       name = 'Lurcher',                       brand = 'Bravado',      price = 21000,   category = 'muscle',      shop = 'none',},
+    { model = 'nightshade',    name = 'Nightshade',                    brand = 'Imponte',      price = 70000,   category = 'muscle',      shop = 'none',},
+    { model = 'phoenix',       name = 'Phoenix',                       brand = 'Imponte',      price = 65000,   category = 'muscle',      shop = 'none',},
+    { model = 'picador',       name = 'Picador',                       brand = 'Cheval',       price = 20000,   category = 'muscle',      shop = 'none',},
+    { model = 'ratloader2',    name = 'Ratloader',                     brand = 'Ratloader2',   price = 20000,   category = 'muscle',      shop = 'none',},
+    { model = 'ruiner',        name = 'Ruiner',                        brand = 'Imponte',      price = 29000,   category = 'muscle',      shop = 'none',},
+    { model = 'ruiner2',       name = 'Ruiner 2000',                   brand = 'Imponte',      price = 50000,   category = 'muscle',      shop = 'none',},
+    { model = 'sabregt',       name = 'Sabre GT Turbo',                brand = 'Declasse',     price = 23000,   category = 'muscle',      shop = 'none',},
+    { model = 'sabregt2',      name = 'Sabre GT Turbo Custom',         brand = 'Declasse',     price = 26500,   category = 'muscle',      shop = 'none',},
+    { model = 'slamvan',       name = 'Slam Van',                      brand = 'Vapid',        price = 30000,   category = 'muscle',      shop = 'none',},
+    { model = 'slamvan2',      name = 'Lost Slam Van',                 brand = 'Vapid',        price = 90000,   category = 'muscle',      shop = 'none',},
+    { model = 'slamvan3',      name = 'Slam Van Custom',               brand = 'Vapid',        price = 17000,   category = 'muscle',      shop = 'none',},
+    { model = 'stalion',       name = 'Stallion',                      brand = 'Declasse',     price = 33000,   category = 'muscle',      shop = 'none',},
+    { model = 'stalion2',      name = 'Stallion Burgershot',           brand = 'Declasse',     price = 40000,   category = 'muscle',      shop = 'none',},
+    { model = 'tampa',         name = 'Tampa',                         brand = 'Declasse',     price = 24500,   category = 'muscle',      shop = 'none',},
+    { model = 'tulip',         name = 'Tulip',                         brand = 'Declasse',     price = 80000,   category = 'muscle',      shop = 'none',},
+    { model = 'vamos',         name = 'Vamos',                         brand = 'Declasse',     price = 30000,   category = 'muscle',      shop = 'none',},
+    { model = 'vigero',        name = 'Vigero',                        brand = 'Declasse',     price = 39500,   category = 'muscle',      shop = 'none',},
+    { model = 'virgo',         name = 'Virgo',                         brand = 'Albany',       price = 22000,   category = 'muscle',      shop = 'none',},
+    { model = 'virgo2',        name = 'Virgo Custom Classic',          brand = 'Dundreary',    price = 21000,   category = 'muscle',      shop = 'none',},
+    { model = 'virgo3',        name = 'Virgo Classic',                 brand = 'Dundreary',    price = 21000,   category = 'muscle',      shop = 'none',},
+    { model = 'voodoo',        name = 'Voodoo',                        brand = 'Declasse',     price = 13000,   category = 'muscle',      shop = 'none',},
+    { model = 'yosemite',      name = 'Yosemite',                      brand = 'Declasse',     price = 19500,   category = 'muscle',      shop = 'none',},
+    { model = 'yosemite2',     name = 'Yosemite Drift',                brand = 'Declasse',     price = 55000,   category = 'muscle',      shop = 'none',},
+
+    { model = 'manana',        name = 'Manana',                        brand = 'Albany',       price = 12800,   category = 'muscle',      shop = 'none',},
+    { model = 'manana2',       name = 'Manana Custom',                 brand = 'Albany',       price = 24000,   category = 'muscle',      shop = 'none',},
+    { model = 'tampa2',        name = 'Drift Tampa',                   brand = 'Declasse',     price = 80000,   category = 'muscle',      shop = 'none',},
+    { model = 'ruiner4',       name = 'Ruiner ZZ-8',                   brand = 'Imponte',      price = 85000,   category = 'muscle',      shop = 'none',},
+    { model = 'vigero2',       name = 'Vigero ZX',                     brand = 'Declasse',     price = 105000,  category = 'muscle',      shop = 'none',},
+    { model = 'weevil2',       name = 'Weevil Custom',                 brand = 'BF',           price = 95000,   category = 'muscle',      shop = 'none',},
+    { model = 'buffalo5',      name = 'Buffalo EVX',                   brand = 'Bravado',      price = 214000,  category = 'muscle',      shop = 'none',},
+    { model = 'tulip2',        name = 'Tulip M-100',                   brand = 'Declasse',     price = 80000,   category = 'muscle',      shop = 'none',},
+    { model = 'clique2',       name = 'Clique Wagon',                  brand = 'Vapid',        price = 102500,  category = 'muscle',      shop = 'none',},
+    { model = 'brigham',       name = 'Brigham',                       brand = 'Albany',       price = 149900,  category = 'muscle',      shop = 'none',},
+    { model = 'greenwood',     name = 'Greenwood',                     brand = 'Bravado',      price = 105000,  category = 'muscle',      shop = 'none',},
+
+    { model = 'impaler6',      name = 'Impaler LX',                    brand = 'Declasse',     price = 146500,  category = 'muscle',      shop = 'none',},
+
+
+    -- Sports Classic (5)
+    { model = 'ardent',        name = 'Ardent',                        brand = 'Ocelot',       price = 30000,   category = 'classics',    shop = 'none',},
+    { model = 'btype',         name = 'Roosevelt',                     brand = 'Albany',       price = 75000,   category = 'classics',    shop = 'none',},
+
+    { model = 'btype3',        name = 'Roosevelt Valor',               brand = 'Albany',       price = 63000,   category = 'classics',    shop = 'none',},
+    { model = 'casco',         name = 'Casco',                         brand = 'Lampadati',    price = 100000,  category = 'classics',    shop = 'none',},
+    { model = 'deluxo',        name = 'Deluxo',                        brand = 'Imponte',      price = 55000,   category = 'classics',    shop = 'none',},
+    { model = 'dynasty',       name = 'Dynasty',                       brand = 'Weeny',        price = 25000,   category = 'classics',    shop = 'none',},
+    { model = 'fagaloa',       name = 'Fagaloa',                       brand = 'Vulcar',       price = 13000,   category = 'classics',    shop = 'none',},
+    { model = 'feltzer3',      name = 'Stirling GT',                   brand = 'Benefactor',   price = 115000,  category = 'classics',    shop = 'none',},
+    { model = 'gt500',         name = 'GT500',                         brand = 'Grotti',       price = 130000,  category = 'classics',    shop = 'none',},
+    { model = 'infernus2',     name = 'Infernus Classic',              brand = 'Pegassi',      price = 245000,  category = 'classics',    shop = 'none',},
+
+    { model = 'jb7002',        name = 'JB 700W',                       brand = 'Dewbauchee',   price = 40000,   category = 'classics',    shop = 'none',},
+    { model = 'mamba',         name = 'Mamba',                         brand = 'Declasse',     price = 140000,  category = 'classics',    shop = 'none',},
+    { model = 'michelli',      name = 'Michelli GT',                   brand = 'Lampadati',    price = 30000,   category = 'classics',    shop = 'none',},
+    { model = 'monroe',        name = 'Monroe',                        brand = 'Pegassi',      price = 115000,  category = 'classics',    shop = 'none',},
+    { model = 'nebula',        name = 'Nebula',                        brand = 'Vulcar',       price = 22000,   category = 'classics',    shop = 'none',},
+    { model = 'peyote',        name = 'Peyote',                        brand = 'Vapid',        price = 23500,   category = 'classics',    shop = 'none',},
+    { model = 'peyote3',       name = 'Peyote Custom',                 brand = 'Vapid',        price = 48000,   category = 'classics',    shop = 'none',},
+    { model = 'pigalle',       name = 'Pigalle',                       brand = 'Lampadati',    price = 92000,   category = 'classics',    shop = 'none',},
+    { model = 'rapidgt3',      name = 'Rapid GT Classic',              brand = 'Dewbauchee',   price = 90000,   category = 'classics',    shop = 'none',},
+    { model = 'retinue',       name = 'Retinue',                       brand = 'Vapid',        price = 32000,   category = 'classics',    shop = 'none',},
+    { model = 'retinue2',      name = 'Retinue MKII',                  brand = 'Vapid',        price = 38000,   category = 'classics',    shop = 'none',},
+    { model = 'savestra',      name = 'Savestra',                      brand = 'Annis',        price = 67000,   category = 'classics',    shop = 'none',},
+
+    { model = 'stingergt',     name = 'Stinger GT',                    brand = 'Grotti',       price = 70000,   category = 'classics',    shop = 'none',},
+    { model = 'stromberg',     name = 'Stromberg',                     brand = 'Ocelot',       price = 80000,   category = 'classics',    shop = 'none',},
+    { model = 'swinger',       name = 'Swinger',                       brand = 'Ocelot',       price = 221000,  category = 'classics',    shop = 'none',},
+    { model = 'torero',        name = 'Torero',                        brand = 'Pegassi',      price = 84000,   category = 'classics',    shop = 'none',},
+    { model = 'tornado',       name = 'Tornado',                       brand = 'Declasse',     price = 21000,   category = 'classics',    shop = 'none',},
+    { model = 'tornado2',      name = 'Tornado Convertible',           brand = 'Declasse',     price = 22000,   category = 'classics',    shop = 'none',},
+    { model = 'tornado5',      name = 'Tornado Custom',                brand = 'Declasse',     price = 22000,   category = 'classics',    shop = 'none',},
+
+    { model = 'viseris',       name = 'Viseris',                       brand = 'Lampadati',    price = 210000,  category = 'classics',    shop = 'none',},
+    { model = 'z190',          name = '190Z',                          brand = 'Karin',        price = 78000,   category = 'classics',    shop = 'none',},
+
+    { model = 'zion3',         name = 'Zion Classic',                  brand = 'Übermacht',    price = 45000,   category = 'classics',    shop = 'none',},
+    { model = 'cheburek',      name = 'Cheburek',                      brand = 'Rune',         price = 7000,    category = 'classics',    shop = 'none',},
+    { model = 'toreador',      name = 'Toreador',                      brand = 'Pegassi',      price = 50000,   category = 'classics',    shop = 'none',},
+    { model = 'peyote2',       name = 'Peyote Gasser',                 brand = 'Vapid',        price = 40000,   category = 'classics',    shop = 'none',},
+    { model = 'coquette2',     name = 'Coquette Classic',              brand = 'Invetero',     price = 165000,  category = 'classics',    shop = 'none',},
+
+    -- Sports (6)
+    { model = 'alpha',         name = 'Alpha',                         brand = 'Albany',       price = 53000,   category = 'sports',      shop = 'none',},
+    { model = 'banshee',       name = 'Banshee',                       brand = 'Bravado',      price = 56000,   category = 'sports',      shop = 'none',},
+    { model = 'bestiagts',     name = 'Bestia GTS',                    brand = 'Grotti',       price = 37000,   category = 'sports',      shop = 'none',},
+
+    { model = 'buffalo2',      name = 'Buffalo S',                     brand = 'Bravado',      price = 24500,   category = 'sports',      shop = 'none',},
+    { model = 'carbonizzare',  name = 'Carbonizzare',                  brand = 'Grotti',       price = 155000,  category = 'sports',      shop = 'none',},
+
+    { model = 'comet3',        name = 'Comet Retro Custom',            brand = 'Pfister',      price = 175000,  category = 'sports',      shop = 'none',},
+    { model = 'comet4',        name = 'Comet Safari',                  brand = 'Pfister',      price = 110000,  category = 'sports',      shop = 'none',},
+    { model = 'comet5',        name = 'Comet SR',                      brand = 'Pfister',      price = 155000,  category = 'sports',      shop = 'none',},
+
+    { model = 'coquette4',     name = 'Coquette D10',                  brand = 'Invetero',     price = 220000,  category = 'sports',      shop = 'none',},
+    { model = 'drafter',       name = '8F Drafter',                    brand = 'Obey',         price = 80000,   category = 'sports',      shop = 'none',},
+    { model = 'elegy',         name = 'Elegy Retro Custom',            brand = 'Annis',        price = 145000,  category = 'sports',      shop = 'none',},
+    { model = 'elegy2',        name = 'Elegy RH8',                     brand = 'Annis',        price = 150000,  category = 'sports',      shop = 'none',},
+    { model = 'feltzer2',      name = 'Feltzer',                       brand = 'Benefactor',   price = 97000,   category = 'sports',      shop = 'none',},
+    { model = 'flashgt',       name = 'Flash GT',                      brand = 'Vapid',        price = 48000,   category = 'sports',      shop = 'none',},
+    { model = 'furoregt',      name = 'Furore GT',                     brand = 'Lampadati',    price = 78000,   category = 'sports',      shop = 'none',},
+    { model = 'gb200',         name = 'GB 200',                        brand = 'Vapid',        price = 140000,  category = 'sports',      shop = 'none',},
+    { model = 'komoda',        name = 'Komoda',                        brand = 'Lampadati',    price = 55000,   category = 'sports',      shop = 'none',},
+    { model = 'imorgon',       name = 'Imorgon',                       brand = 'Överflöd',     price = 120000,  category = 'sports',      shop = 'none',},
+    { model = 'italigto',      name = 'Itali GTO',                     brand = 'Progen',       price = 260000,  category = 'sports',      shop = 'none',},
+    { model = 'jugular',       name = 'Jugular',                       brand = 'Ocelot',       price = 80000,   category = 'sports',      shop = 'none',},
+    { model = 'jester',        name = 'Jester',                        brand = 'Dinka',        price = 132250,  category = 'sports',      shop = 'none',},
+    { model = 'jester2',       name = 'Jester Racecar',                brand = 'Dinka',        price = 210000,  category = 'sports',      shop = 'none',},
+
+    { model = 'khamelion',     name = 'Khamelion',                     brand = 'Hijak',        price = 90000,   category = 'sports',      shop = 'none',},
+    { model = 'kuruma',        name = 'Kuruma',                        brand = 'Karin',        price = 72000,   category = 'sports',      shop = 'none',},
+    { model = 'kuruma2',       name = 'kuruma2',                       brand = 'Karin2',       price = 72000,   category = 'sports',      shop = 'none',},
+    { model = 'locust',        name = 'Locust',                        brand = 'Ocelot',       price = 200000,  category = 'sports',      shop = 'none',},
+    { model = 'lynx',          name = 'Lynx',                          brand = 'Ocelot',       price = 150000,  category = 'sports',      shop = 'none',},
+    { model = 'massacro',      name = 'Massacro',                      brand = 'Dewbauchee',   price = 110000,  category = 'sports',      shop = 'none',},
+    { model = 'massacro2',     name = 'Massacro Racecar',              brand = 'Dewbauchee',   price = 80000,   category = 'sports',      shop = 'none',},
+    { model = 'neo',           name = 'Neo',                           brand = 'Vysser',       price = 230000,  category = 'sports',      shop = 'none',},
+    { model = 'neon',          name = 'Neon',                          brand = 'Pfister',      price = 220000,  category = 'sports',      shop = 'none',},
+    { model = 'ninef',         name = '9F',                            brand = 'Obey',         price = 95000,   category = 'sports',      shop = 'none',},
+    { model = 'ninef2',        name = '9F Cabrio',                     brand = 'Obey',         price = 105000,  category = 'sports',      shop = 'none',},
+    { model = 'omnis',         name = 'Omnis',                         brand = 'Wow',          price = 90000,   category = 'sports',      shop = 'none',},
+
+    { model = 'pariah',        name = 'Pariah',                        brand = 'Ocelot',       price = 90000,   category = 'sports',      shop = 'none',},
+    { model = 'penumbra',      name = 'Penumbra',                      brand = 'Maibatsu',     price = 22000,   category = 'sports',      shop = 'none',},
+    { model = 'penumbra2',     name = 'Penumbra FF',                   brand = 'Maibatsu',     price = 30000,   category = 'sports',      shop = 'none',},
+    { model = 'rapidgt',       name = 'Rapid GT',                      brand = 'Dewbauchee',   price = 86000,   category = 'sports',      shop = 'none',},
+    { model = 'rapidgt2',      name = 'Rapid GT Convertible',          brand = 'Dewbauchee',   price = 92000,   category = 'sports',      shop = 'none',},
+    { model = 'raptor',        name = 'Raptor',                        brand = 'BF',           price = 90000,   category = 'sports',      shop = 'none',},
+    { model = 'revolter',      name = 'Revolter',                      brand = 'Übermacht',    price = 95000,   category = 'sports',      shop = 'none',},
+    { model = 'ruston',        name = 'Ruston',                        brand = 'Hijak',        price = 130000,  category = 'sports',      shop = 'none',},
+    { model = 'schafter3',     name = 'Schafter V12',                  brand = 'Benefactor',   price = 35000,   category = 'sports',      shop = 'none',},
+    { model = 'schafter4',     name = 'Schafter LWB',                  brand = 'Benefactor',   price = 21000,   category = 'sports',      shop = 'none',},
+    { model = 'schlagen',      name = 'Schlagen GT',                   brand = 'Benefactor',   price = 160000,  category = 'sports',      shop = 'none',},
+    { model = 'schwarzer',     name = 'Schwartzer',                    brand = 'Benefactor',   price = 47000,   category = 'sports',      shop = 'none',},
+    { model = 'seven70',       name = 'Seven-70',                      brand = 'Dewbauchee',   price = 140000,  category = 'sports',      shop = 'none',},
+    { model = 'specter',       name = 'Specter',                       brand = 'Dewbauchee',   price = 160000,  category = 'sports',      shop = 'none',},
+    { model = 'streiter',      name = 'Streiter',                      brand = 'Benefactor',   price = 40000,   category = 'sports',      shop = 'none',},
+    { model = 'sugoi',         name = 'Sugoi',                         brand = 'Dinka',        price = 85000,   category = 'sports',      shop = 'none',},
+
+    { model = 'sultan2',       name = 'Sultan Custom',                 brand = 'Karin',        price = 55000,   category = 'sports',      shop = 'none',},
+    { model = 'surano',        name = 'Surano',                        brand = 'Benefactor',   price = 80000,   category = 'sports',      shop = 'none',},
+    { model = 'tropos',        name = 'Tropos Rallye',                 brand = 'Lampadati',    price = 65000,   category = 'sports',      shop = 'none',},
+    { model = 'verlierer2',    name = 'Verlierer',                     brand = 'Bravado',      price = 90500,   category = 'sports',      shop = 'none',},
+
+    { model = 'italirsx',      name = 'Itali RSX',                     brand = 'Progen',       price = 260000,  category = 'sports',      shop = 'none',},
+    { model = 'zr350',         name = 'ZR350',                         brand = 'Annis',        price = 38000,   category = 'sports',      shop = 'none',},
+    { model = 'calico',        name = 'Calico GTF',                    brand = 'Karin',        price = 39000,   category = 'sports',      shop = 'none',},
+    { model = 'futo2',         name = 'Futo GTX',                      brand = 'Karin',        price = 39000,   category = 'sports',      shop = 'none',},
+    { model = 'euros',         name = 'Euros',                         brand = 'Annis',        price = 80000,   category = 'sports',      shop = 'none',},
+    { model = 'jester4',       name = 'Jester RR',                     brand = 'Dinka',        price = 240000,  category = 'sports',      shop = 'none',},
+    { model = 'remus',         name = 'Remus',                         brand = 'Annis',        price = 48000,   category = 'sports',      shop = 'none',},
+    { model = 'comet6',        name = 'Comet S2',                      brand = 'Pfister',      price = 230000,  category = 'sports',      shop = 'none',},
+    { model = 'growler',       name = 'Growler',                       brand = 'Pfister',      price = 205000,  category = 'sports',      shop = 'none',},
+
+    { model = 'cypher',        name = 'Cypher',                        brand = 'Übermacht',    price = 155000,  category = 'sports',      shop = 'none',},
+    { model = 'sultan3',       name = 'Sultan Classic Custom',         brand = 'Karin',        price = 56000,   category = 'sports',      shop = 'none',},
+    { model = 'rt3000',        name = 'RT3000',                        brand = 'Dinka',        price = 65000,   category = 'sports',      shop = 'none',},
+    { model = 'sultanrs',      name = 'Sultan RS',                     brand = 'Karin',        price = 76500,   category = 'sports',      shop = 'none',},
+    { model = 'visione',       name = 'Visione',                       brand = 'Grotti',       price = 750000,  category = 'sports',      shop = 'none',},
+
+    { model = 'stingertt',     name = 'Itali GTO Stinger TT',          brand = 'Maibatsu',     price = 238000,  category = 'sports',      shop = 'none',},
+    { model = 'omnisegt',      name = 'Omnis e-GT',                    brand = 'Obey',         price = 185000,  category = 'sports',      shop = 'none',},
+    { model = 'sentinel4',     name = 'Sentinel Classic Widebody',     brand = 'Übermacht',    price = 140000,  category = 'sports',      shop = 'none',},
+    { model = 'sm722',         name = 'SM722',                         brand = 'Benefactor',   price = 125000,  category = 'sports',      shop = 'none',},
+    { model = 'tenf',          name = '10F',                           brand = 'Obey',         price = 185000,  category = 'sports',      shop = 'none',},
+    { model = 'tenf2',         name = '10F Widebody',                  brand = 'Obey',         price = 215000,  category = 'sports',      shop = 'none',},
+    { model = 'everon2',       name = 'Everon Hotring',                brand = 'Karin',        price = 80000,   category = 'sports',      shop = 'none',},
+    { model = 'issi8',         name = 'Issi Rally',                    brand = 'Weeny',        price = 10000,   category = 'sports',      shop = 'none',},
+    { model = 'corsita',       name = 'Corsita',                       brand = 'Lampadati',    price = 90000,   category = 'sports',      shop = 'none',},
+    { model = 'gauntlet6',     name = 'Hotring Hellfire',              brand = 'Bravado',      price = 181000,  category = 'sports',      shop = 'none',},
+    { model = 'coureur',       name = 'La Coureuse',                   brand = 'Penaud',       price = 199000,  category = 'sports',      shop = 'none',},
+    { model = 'r300',          name = '300R',                          brand = 'Annis',        price = 56000,   category = 'sports',      shop = 'none',},
+    { model = 'panthere',      name = 'Panthere',                      brand = 'Toundra',      price = 55000,   category = 'sports',      shop = 'none',},
+
+    -- Super (7)
+    { model = 'adder',         name = 'Adder',                         brand = 'Truffade',     price = 280000,  category = 'super',       shop = 'none',},
+    { model = 'autarch',       name = 'Autarch',                       brand = 'Överflöd',     price = 224000,  category = 'super',       shop = 'none',},
+    { model = 'banshee2',      name = 'Banshee 900R',                  brand = 'Bravado',      price = 120000,  category = 'super',       shop = 'none',},
+    { model = 'champion',      name = 'Champion',                      brand = 'Dewbauchee',   price = 460000,  category = 'super',       shop = 'none',},
+    { model = 'cheetah',       name = 'Cheetah',                       brand = 'Grotti',       price = 214000,  category = 'super',       shop = 'none',},
+
+    { model = 'entity2',       name = 'Entity XXR',                    brand = 'Överflöd',     price = 164000,  category = 'super',       shop = 'none',},
+    { model = 'entityxf',      name = 'Entity XF',                     brand = 'Överflöd',     price = 180000,  category = 'super',       shop = 'none',},
+    { model = 'emerus',        name = 'Emerus',                        brand = 'Progen',       price = 220000,  category = 'super',       shop = 'none',},
+    { model = 'fmj',           name = 'FMJ',                           brand = 'Vapid',        price = 125000,  category = 'super',       shop = 'none',},
+    { model = 'furia',         name = 'Furia',                         brand = 'Grotti',       price = 230000,  category = 'super',       shop = 'none',},
+    { model = 'gp1',           name = 'GP1',                           brand = 'Progen',       price = 110000,  category = 'super',       shop = 'none',},
+
+    { model = 'italigtb',      name = 'Itali GTB',                     brand = 'Progen',       price = 170000,  category = 'super',       shop = 'none',},
+    { model = 'italigtb2',     name = 'Itali GTB Custom',              brand = 'Progen',       price = 250000,  category = 'super',       shop = 'none',},
+    { model = 'krieger',       name = 'Krieger',                       brand = 'Benefactor',   price = 222000,  category = 'super',       shop = 'none',},
+    { model = 'le7b',          name = 'RE-7B',                         brand = 'Annis',        price = 260000,  category = 'super',       shop = 'none',},
+    { model = 'nero',          name = 'Nero',                          brand = 'Truffade',     price = 200000,  category = 'super',       shop = 'none',},
+    { model = 'nero2',         name = 'Nero Custom',                   brand = 'Truffade',     price = 260000,  category = 'super',       shop = 'none',},
+    { model = 'osiris',        name = 'Osiris',                        brand = 'Pegassi',      price = 220000,  category = 'super',       shop = 'none',},
+    { model = 'penetrator',    name = 'Penetrator',                    brand = 'Ocelot',       price = 130000,  category = 'super',       shop = 'none',},
+    { model = 'pfister811',    name = '811',                           brand = 'Pfister',      price = 220000,  category = 'super',       shop = 'none',},
+
+    { model = 'reaper',        name = 'Reaper',                        brand = 'Pegassi',      price = 100000,  category = 'super',       shop = 'none',},
+    { model = 's80',           name = 'S80RR',                         brand = 'Annis',        price = 205000,  category = 'super',       shop = 'none',},
+    { model = 'sc1',           name = 'SC1',                           brand = 'Übermacht',    price = 90000,   category = 'super',       shop = 'none',},
+    { model = 'sheava',        name = 'ETR1',                          brand = 'Emperor',      price = 220000,  category = 'super',       shop = 'none',},
+    { model = 't20',           name = 'T20',                           brand = 'Progen',       price = 1650000, category = 'super',       shop = 'none',},
+    { model = 'taipan',        name = 'Taipan',                        brand = 'Cheval',       price = 1850000, category = 'super',       shop = 'none',},
+    { model = 'tempesta',      name = 'Tempesta',                      brand = 'Pegassi',      price = 120000,  category = 'super',       shop = 'none',},
+    { model = 'tezeract',      name = 'Tezeract',                      brand = 'Pegassi',      price = 220000,  category = 'super',       shop = 'none',},
+    { model = 'thrax',         name = 'Thrax',                         brand = 'Truffade',     price = 180000,  category = 'super',       shop = 'none',},
+    { model = 'tigon',         name = 'Tigon',                         brand = 'Lampadati',    price = 240000,  category = 'super',       shop = 'none',},
+    { model = 'turismor',      name = 'Turismo R',                     brand = 'Grotti',       price = 140000,  category = 'super',       shop = 'none',},
+    { model = 'tyrant',        name = 'Tyrant',                        brand = 'Överflöd',     price = 2100000, category = 'super',       shop = 'none',},
+
+    { model = 'vacca',         name = 'Vacca',                         brand = 'Pegassi',      price = 105000,  category = 'super',       shop = 'none',},
+    { model = 'vagner',        name = 'Vagner',                        brand = 'Dewbauchee',   price = 1660000, category = 'super',       shop = 'none',},
+    { model = 'voltic',        name = 'Voltic',                        brand = 'Coil',         price = 120000,  category = 'super',       shop = 'none',},
+    { model = 'voltic2',       name = 'Rocket Voltic',                 brand = 'Coil',         price = 9830400, category = 'super',       shop = 'none',},
+
+    { model = 'zentorno',      name = 'Zentorno',                      brand = 'Pegassi',      price = 340000,  category = 'super',       shop = 'none',},
+    { model = 'zorrusso',      name = 'Zorrusso',                      brand = 'Pegassi',      price = 277000,  category = 'super',       shop = 'none',},
+    { model = 'ignus',         name = 'Ignus',                         brand = 'Pegassi',      price = 1120000, category = 'super',       shop = 'none',},
+    { model = 'zeno',          name = 'Zeno',                          brand = 'Överflöd',     price = 1350000, category = 'super',       shop = 'none',},
+    { model = 'deveste',       name = 'Deveste',                       brand = 'Principe',     price = 234000,  category = 'super',       shop = 'none',},
+    { model = 'lm87',          name = 'LM87',                          brand = 'Benefactor',   price = 155000,  category = 'super',       shop = 'none',},
+    { model = 'torero2',       name = 'Torero XO',                     brand = 'Pegassi',      price = 245000,  category = 'super',       shop = 'none',},
+    { model = 'entity3',       name = 'Entity MT',                     brand = 'Overflod',     price = 200000,  category = 'super',       shop = 'none',},
+    { model = 'virtue',        name = 'Virtue',                        brand = 'Ocelot',       price = 72000,   category = 'super',       shop = 'none',},
+    { model = 'turismo3',      name = 'Turismo Omaggio',               brand = 'Grotti',       price = 284500,  category = 'super',       shop = 'none',},
+
+    -- Motorcycles (8)
+    { model = 'akuma',         name = 'Akuma',                         brand = 'Dinka',        price = 55000,   category = 'motorcycles', shop = 'none',},
+    { model = 'avarus',        name = 'Avarus',                        brand = 'LCC',          price = 20000,   category = 'motorcycles', shop = 'none',},
+    { model = 'bagger',        name = 'Bagger',                        brand = 'WMC',          price = 13500,   category = 'motorcycles', shop = 'none',},
+    { model = 'bati',          name = 'Bati 801',                      brand = 'Pegassi',      price = 24000,   category = 'motorcycles', shop = 'none',},
+    { model = 'bati2',         name = 'Bati 801RR',                    brand = 'Pegassi',      price = 19000,   category = 'motorcycles', shop = 'none',},
+    { model = 'bf400',         name = 'BF400',                         brand = 'Nagasaki',     price = 22000,   category = 'motorcycles', shop = 'none',},
+    { model = 'carbonrs',      name = 'Carbon RS',                     brand = 'Nagasaki',     price = 22000,   category = 'motorcycles', shop = 'none',},
+    { model = 'chimera',       name = 'Chimera',                       brand = 'Nagasaki',     price = 21000,   category = 'motorcycles', shop = 'none',},
+    { model = 'cliffhanger',   name = 'Cliffhanger',                   brand = 'Western',      price = 28500,   category = 'motorcycles', shop = 'none',},
+    { model = 'daemon',        name = 'Daemon',                        brand = 'WMC',          price = 14000,   category = 'motorcycles', shop = 'none',},
+    { model = 'daemon2',       name = 'Daemon Custom',                 brand = 'Western',      price = 23000,   category = 'motorcycles', shop = 'none',},
+    { model = 'defiler',       name = 'Defiler',                       brand = 'Shitzu',       price = 30000,   category = 'motorcycles', shop = 'none',},
+    { model = 'deathbike',     name = 'Deathbike Apocalypse',          brand = 'Deathbike',    price = 30000,   category = 'motorcycles', shop = 'none',},
+    { model = 'deathbike2',    name = 'Deathbike Future Shock',        brand = 'Deathbike',    price = 30000,   category = 'motorcycles', shop = 'none',},
+    { model = 'deathbike3',    name = 'Deathbike Nightmare',           brand = 'Deathbike',    price = 30000,   category = 'motorcycles', shop = 'none',},
+    { model = 'diablous',      name = 'Diablous',                      brand = 'Principe',     price = 30000,   category = 'motorcycles', shop = 'none',},
+    { model = 'diablous2',     name = 'Diablous Custom',               brand = 'Principe',     price = 38000,   category = 'motorcycles', shop = 'none',},
+    { model = 'double',        name = 'Double-T',                      brand = 'Dinka',        price = 28000,   category = 'motorcycles', shop = 'none',},
+    { model = 'enduro',        name = 'Enduro',                        brand = 'Dinka',        price = 5500,    category = 'motorcycles', shop = 'none',},
+    { model = 'esskey',        name = 'Esskey',                        brand = 'Pegassi',      price = 12000,   category = 'motorcycles', shop = 'none',},
+    { model = 'faggio',        name = 'Faggio Sport',                  brand = 'Pegassi',      price = 2000,    category = 'motorcycles', shop = 'none',},
+    { model = 'faggio2',       name = 'Faggio',                        brand = 'Pegassi',      price = 1900,    category = 'motorcycles', shop = 'none',},
+    { model = 'faggio3',       name = 'Faggio Mod',                    brand = 'Pegassi',      price = 2500,    category = 'motorcycles', shop = 'none',},
+    { model = 'fcr',           name = 'FCR 1000',                      brand = 'Pegassi',      price = 5000,    category = 'motorcycles', shop = 'none',},
+    { model = 'fcr2',          name = 'FCR 1000 Custom',               brand = 'Pegassi',      price = 19000,   category = 'motorcycles', shop = 'none',},
+    { model = 'gargoyle',      name = 'Gargoyle',                      brand = 'Western',      price = 32000,   category = 'motorcycles', shop = 'none',},
+    { model = 'hakuchou',      name = 'Hakuchou',                      brand = 'Shitzu',       price = 17000,   category = 'motorcycles', shop = 'none',},
+    { model = 'hakuchou2',     name = 'Hakuchou Drag',                 brand = 'Shitzu',       price = 45000,   category = 'motorcycles', shop = 'none',},
+    { model = 'hexer',         name = 'Hexer',                         brand = 'LCC',          price = 16000,   category = 'motorcycles', shop = 'none',},
+    { model = 'innovation',    name = 'Innovation',                    brand = 'LLC',          price = 33500,   category = 'motorcycles', shop = 'none',},
+    { model = 'lectro',        name = 'Lectro',                        brand = 'Principe',     price = 28000,   category = 'motorcycles', shop = 'none',},
+    { model = 'manchez',       name = 'Manchez',                       brand = 'Maibatsu',     price = 8300,    category = 'motorcycles', shop = 'none',},
+    { model = 'nemesis',       name = 'Nemesis',                       brand = 'Principe',     price = 20000,   category = 'motorcycles', shop = 'none',},
+    { model = 'nightblade',    name = 'Nightblade',                    brand = 'WMC',          price = 23000,   category = 'motorcycles', shop = 'none',},
+    { model = 'oppressor',     name = 'Oppressor',                     brand = 'Pegassi',      price = 9999999, category = 'motorcycles', shop = 'none',},
+    { model = 'pcj',           name = 'PCJ-600',                       brand = 'Shitzu',       price = 15000,   category = 'motorcycles', shop = 'none',},
+    { model = 'ratbike',       name = 'Rat Bike',                      brand = 'Western',      price = 3000,    category = 'motorcycles', shop = 'none',},
+    { model = 'ruffian',       name = 'Ruffian',                       brand = 'Pegassi',      price = 25000,   category = 'motorcycles', shop = 'none',},
+    { model = 'sanchez',       name = 'Sanchez Livery',                brand = 'Maibatsu',     price = 5300,    category = 'motorcycles', shop = 'none',},
+    { model = 'sanchez2',      name = 'Sanchez',                       brand = 'Maibatsu',     price = 5300,    category = 'motorcycles', shop = 'none',},
+    { model = 'sanctus',       name = 'Sanctus',                       brand = 'LCC',          price = 35000,   category = 'motorcycles', shop = 'none',},
+    { model = 'shotaro',       name = 'Shotaro',                       brand = 'Nagasaki',     price = 320000,  category = 'motorcycles', shop = 'none',},
+    { model = 'sovereign',     name = 'Sovereign',                     brand = 'WMC',          price = 8000,    category = 'motorcycles', shop = 'none',},
+    { model = 'stryder',       name = 'Stryder',                       brand = 'Nagasaki',     price = 50000,   category = 'motorcycles', shop = 'none',},
+    { model = 'thrust',        name = 'Thrust',                        brand = 'Dinka',        price = 22000,   category = 'motorcycles', shop = 'none',},
+    { model = 'vader',         name = 'Vader',                         brand = 'Shitzu',       price = 7200,    category = 'motorcycles', shop = 'none',},
+    { model = 'vindicator',    name = 'Vindicator',                    brand = 'Dinka',        price = 19000,   category = 'motorcycles', shop = 'none',},
+    { model = 'vortex',        name = 'Vortex',                        brand = 'Pegassi',      price = 31000,   category = 'motorcycles', shop = 'none',},
+    { model = 'wolfsbane',     name = 'Wolfsbane',                     brand = 'Western',      price = 14000,   category = 'motorcycles', shop = 'none',},
+    { model = 'zombiea',       name = 'Zombie Bobber',                 brand = 'Western',      price = 28000,   category = 'motorcycles', shop = 'none',},
+    { model = 'zombieb',       name = 'Zombie Chopper',                brand = 'Western',      price = 27000,   category = 'motorcycles', shop = 'none',},
+    { model = 'manchez2',      name = 'Manchez Scout',                 brand = 'Maibatsu',     price = 14000,   category = 'motorcycles', shop = 'none',},
+    { model = 'shinobi',       name = 'Shinobi',                       brand = 'Nagasaki',     price = 25000,   category = 'motorcycles', shop = 'none',},
+    { model = 'reever',        name = 'Reever',                        brand = 'Western',      price = 25000,   category = 'motorcycles', shop = 'none',},
+    { model = 'manchez3',      name = 'Manchez Scout Classic',         brand = 'Maibatsu',     price = 15000,   category = 'motorcycles', shop = 'none',},
+    { model = 'powersurge',    name = 'Powersurge',                    brand = 'Western',      price = 7000,    category = 'motorcycles', shop = 'none',},
+
+    -- Off-Road (9)
+
+    { model = 'bifta',         name = 'Bifta',                         brand = 'Annis',        price = 15500,   category = 'offroad',     shop = 'none',},
+    { model = 'blazer',        name = 'Blazer',                        brand = 'Annis',        price = 7500,    category = 'offroad',     shop = 'none',},
+    { model = 'blazer2',       name = 'Blazer Lifeguard',              brand = 'Nagasaki',     price = 7000,    category = 'offroad',     shop = 'none',},
+    { model = 'blazer3',       name = 'Blazer Hot Rod',                brand = 'Nagasaki',     price = 7000,    category = 'offroad',     shop = 'none',},
+    { model = 'blazer4',       name = 'Blazer Sport',                  brand = 'Annis',        price = 9250,    category = 'offroad',     shop = 'none',},
+    { model = 'blazer5',       name = 'Blazer Aqua',                   brand = 'Nagasaki',     price = 40000,   category = 'offroad',     shop = 'none',},
+    { model = 'brawler',       name = 'Brawler',                       brand = 'Annis',        price = 40000,   category = 'offroad',     shop = 'none',},
+    { model = 'caracara',      name = 'Caracara',                      brand = 'Vapid',        price = 60000,   category = 'offroad',     shop = 'none',},
+    { model = 'caracara2',     name = 'Caracara 4x4',                  brand = 'Vapid',        price = 80000,   category = 'offroad',     shop = 'none',},
+    { model = 'dubsta3',       name = 'Dubsta 6x6',                    brand = 'Annis',        price = 34000,   category = 'offroad',     shop = 'none',},
+    { model = 'dune',          name = 'Dune Buggy',                    brand = 'Annis',        price = 14000,   category = 'offroad',     shop = 'none',},
+    { model = 'everon',        name = 'Everon',                        brand = 'Karin',        price = 60000,   category = 'offroad',     shop = 'none',},
+    { model = 'freecrawler',   name = 'Freecrawler',                   brand = 'Canis',        price = 24000,   category = 'offroad',     shop = 'none',},
+    { model = 'hellion',       name = 'Hellion',                       brand = 'Annis',        price = 38000,   category = 'offroad',     shop = 'none',},
+    { model = 'kalahari',      name = 'Kalahari',                      brand = 'Canis',        price = 14000,   category = 'offroad',     shop = 'none',},
+    { model = 'kamacho',       name = 'Kamacho',                       brand = 'Canis',        price = 50000,   category = 'offroad',     shop = 'none',},
+    { model = 'mesa3',         name = 'Mesa Merryweather',             brand = 'Canis',        price = 400000,  category = 'offroad',     shop = 'none',},
+    { model = 'outlaw',        name = 'Outlaw',                        brand = 'Nagasaki',     price = 15000,   category = 'offroad',     shop = 'none',},
+
+    { model = 'rebel2',        name = 'Rebel',                         brand = 'Vapid',        price = 20000,   category = 'offroad',     shop = 'none',},
+    { model = 'riata',         name = 'Riata',                         brand = 'Vapid',        price = 380000,  category = 'offroad',     shop = 'none',},
+
+    { model = 'sandking2',     name = 'Sandking SWB',                  brand = 'Vapid',        price = 38000,   category = 'offroad',     shop = 'none',},
+    { model = 'trophytruck',   name = 'Trophy Truck',                  brand = 'Vapid',        price = 60000,   category = 'offroad',     shop = 'none',},
+    { model = 'trophytruck2',  name = 'Desert Raid',                   brand = 'Vapid',        price = 80000,   category = 'offroad',     shop = 'none',},
+
+    { model = 'verus',         name = 'Verus',                         brand = 'Dinka',        price = 20000,   category = 'offroad',     shop = 'none',},
+
+    { model = 'yosemite3',     name = 'Yosemite Rancher',              brand = 'Declasse',     price = 425000,  category = 'offroad',     shop = 'none',},
+    { model = 'mesa',          name = 'Mesa',                          brand = 'Canis',        price = 12000,   category = 'offroad',     shop = 'none',},
+    { model = 'ratel',         name = 'Ratel',                         brand = 'Vapid',        price = 199000,  category = 'offroad',     shop = 'none',},
+    { model = 'l35',           name = 'Walton L35',                    brand = 'Declasse',     price = 167000,  category = 'offroad',     shop = 'none',},
+    { model = 'monstrociti',   name = 'MonstroCiti',                   brand = 'Maibatsu',     price = 48000,   category = 'offroad',     shop = 'none',},
+    { model = 'draugur',       name = 'Draugur',                       brand = 'Declasse',     price = 99000,   category = 'offroad',     shop = 'none',},
+    { model = 'terminus',      name = 'Terminus',                      brand = 'Canis',        price = 187750,  category = 'offroad',     shop = 'none',},
+
+    -- Industrial (10)
+    { model = 'guardian',      name = 'Guardian',                      brand = 'Vapid',        price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'mixer2',        name = 'Mixer II',                      brand = 'HVY',          price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'tiptruck2',     name = 'Tipper II',                     brand = 'Brute',        price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'tiptruck',      name = 'Tipper',                        brand = 'Brute',        price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'rubble',        name = 'Rubble',                        brand = 'Jobuilt',      price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'mixer',         name = 'Mixer',                         brand = 'HVY',          price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'flatbed',       name = 'Flatbed Truck',                 brand = 'MTL',          price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'dump',          name = 'Dump Truck',                    brand = 'HVY',          price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'bulldozer',     name = 'Dozer',                         brand = 'HVY',          price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'handler',       name = 'Dock Handler',                  brand = 'HVY',          price = 30000,   category = 'industrial',  shop = 'none',},
+    { model = 'cutter',        name = 'Cutter',                        brand = 'HVY',          price = 30000,   category = 'industrial',  shop = 'none',},
+
+    -- Utility (11)
+    { model = 'slamtruck',     name = 'Slam Truck',                    brand = 'Vapid',        price = 100000,  category = 'utility',     shop = 'none',},
+    { model = 'caddy3',        name = 'Caddy (Bunker)',                brand = 'Nagasaki',     price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'caddy2',        name = 'Caddy (Civilian)',              brand = 'Nagasaki',     price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'caddy3',        name = 'Caddy (Golf)',                  brand = 'Nagasaki',     price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'utillitruck',   name = 'Utility Truck (Cherry Picker)', brand = 'Brute',        price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'utillitruck2',  name = 'Utility Truck (Van)',           brand = 'Brute',        price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'utillitruck3',  name = 'Utility Truck (Contender)',     brand = 'Vapid',        price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'tractor',       name = 'Tractor',                       brand = 'Stanley',      price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'tractor2',      name = 'Fieldmaster',                   brand = 'Stanley',      price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'tractor3',      name = 'Fieldmaster',                   brand = 'Stanley',      price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'towtruck',      name = 'Tow Truck (Large)',             brand = 'Vapid',        price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'towtruck2',     name = 'Tow Truck (Small)',             brand = 'Vapid',        price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'scrap',         name = 'Scrap Truck',                   brand = 'Vapid',        price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'sadler',        name = 'Sadler',                        brand = 'Vapid',        price = 20000,   category = 'utility',     shop = 'none',},
+    { model = 'ripley',        name = 'Ripley',                        brand = 'HVY',          price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'mower',         name = 'Lawn Mower',                    brand = 'Jacksheepe',   price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'forklift',      name = 'Forklift',                      brand = 'HVY',          price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'docktug',       name = 'Docktug',                       brand = 'HVY',          price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'airtug',        name = 'Airtug',                        brand = 'HVY',          price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'trailers5',     name = 'Trailer (Christmas)',           brand = 'Unknown',      price = 30000,   category = 'utility',     shop = 'none',},
+    { model = 'tvtrailer2',    name = 'Trailer (TV)',                  brand = 'Unknown',      price = 30000,   category = 'utility',     shop = 'none',},
+
+    -- Vans (12)
+
+    { model = 'bobcatxl',      name = 'Bobcat XL Open',                brand = 'Vapid',        price = 13500,   category = 'vans',        shop = 'none',},
+
+    { model = 'gburrito2',     name = 'Burrito Custom',                brand = 'Declasse',     price = 11500,   category = 'vans',        shop = 'none',},
+
+    { model = 'minivan',       name = 'Minivan',                       brand = 'Vapid',        price = 7000,    category = 'vans',        shop = 'none',},
+    { model = 'minivan2',      name = 'Minivan Custom',                brand = 'Vapid',        price = 10000,   category = 'vans',        shop = 'none',},
+    { model = 'paradise',      name = 'Paradise',                      brand = 'Bravado',      price = 9000,    category = 'vans',        shop = 'none',},
+    { model = 'rumpo3',        name = 'Rumpo Custom',                  brand = 'Bravado',      price = 19500,   category = 'vans',        shop = 'none',},
+
+    { model = 'speedo4',       name = 'Speedo Custom',                 brand = 'Vapid',        price = 15000,   category = 'vans',        shop = 'none',},
+    { model = 'surfer',        name = 'Surfer',                        brand = 'BF',           price = 9000,    category = 'vans',        shop = 'none',},
+    { model = 'youga3',        name = 'Youga Classic 4x4',             brand = 'Bravado',      price = 15000,   category = 'vans',        shop = 'none',},
+    { model = 'youga',         name = 'Youga',                         brand = 'Bravado',      price = 8000,    category = 'vans',        shop = 'none',},
+    { model = 'youga2',        name = 'Youga Classic',                 brand = 'Bravado',      price = 14500,   category = 'vans',        shop = 'none',},
+    { model = 'youga4',        name = 'Youga Custom',                  brand = 'Bravado',      price = 85000,   category = 'vans',        shop = 'none',},
+    { model = 'moonbeam',      name = 'Moonbeam',                      brand = 'Declasse',     price = 13000,   category = 'vans',        shop = 'none',},
+    { model = 'moonbeam2',     name = 'Moonbeam Custom',               brand = 'Declasse',     price = 15000,   category = 'vans',        shop = 'none',},
+    { model = 'boxville',      name = 'Boxville LSDWP',                brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'boxville2',     name = 'Boxville Go Postal',            brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'boxville3',     name = 'Boxville Humane Labs',          brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'boxville4',     name = 'Boxville Post OP',              brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'boxville5',     name = 'Armored Boxville',              brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'pony',          name = 'Pony',                          brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'pony2',         name = 'Pony (Smoke on the water)',     brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+
+    { model = 'surfer3',       name = 'Surfer Custom',                 brand = 'BF',           price = 15000,   category = 'vans',        shop = 'none',},
+    { model = 'speedo5',       name = 'Speedo Custom',                 brand = 'Vapid',        price = 238000,  category = 'vans',        shop = 'none',},
+    { model = 'mule2',         name = 'Mule',                          brand = 'Maibatsu',     price = 40000,   category = 'vans',        shop = 'none',},
+    { model = 'mule3',         name = 'Mule',                          brand = 'Maibatsu',     price = 40000,   category = 'vans',        shop = 'none',},
+    { model = 'taco',          name = 'Taco Truck',                    brand = 'Brute',        price = 45000,   category = 'vans',        shop = 'none',},
+    { model = 'boxville6',     name = 'Boxville (LSDS)',               brand = 'Brute',        price = 47500,   category = 'vans',        shop = 'none',},
+
+    -- Cycles (13)
+    { model = 'bmx',           name = 'BMX',                           brand = 'Bike',         price = 160,     category = 'cycles',      shop = 'none',},
+    { model = 'cruiser',       name = 'Cruiser',                       brand = 'Bike',         price = 510,     category = 'cycles',      shop = 'none',},
+    { model = 'fixter',        name = 'Fixter',                        brand = 'Bike',         price = 225,     category = 'cycles',      shop = 'none',},
+    { model = 'scorcher',      name = 'Scorcher',                      brand = 'Bike',         price = 280,     category = 'cycles',      shop = 'none',},
+    { model = 'tribike',       name = 'Whippet Race Bike',             brand = 'Bike',         price = 500,     category = 'cycles',      shop = 'none',},
+    { model = 'tribike2',      name = 'Endurex Race Bike',             brand = 'Bike',         price = 700,     category = 'cycles',      shop = 'none',},
+    { model = 'tribike3',      name = 'Tri-Cycles Race Bike',          brand = 'Bike',         price = 520,     category = 'cycles',      shop = 'none',},
+    { model = 'inductor',      name = 'Inductor',                      brand = 'Coil',         price = 5000,    category = 'cycles',      shop = 'none',},
+    { model = 'inductor2',     name = 'Junk Energy Inductor',          brand = 'Coil',         price = 5000,    category = 'cycles',      shop = 'none',},
+
+    -- Service (17)
+    { model = 'brickade',      name = 'Brickade',                      brand = 'MTL',          price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'brickade2',     name = 'Brickade 6x6',                  brand = 'MTL',          price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'pbus2',         name = 'Festival Bus',                  brand = 'Unknown',      price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'wastelander',   name = 'Wastelander',                   brand = 'MTL',          price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'rallytruck',    name = 'Dune',                          brand = 'MTL',          price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'metrotrain',    name = 'Metro Train',                   brand = 'Unknown',      price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'freight',       name = 'Freight Train',                 brand = 'Unknown',      price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'cablecar',      name = 'Cable Car',                     brand = 'Unknown',      price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'trash',         name = 'Trashmaster',                   brand = 'JoBuilt',      price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'trash2',        name = 'Trashmaster',                   brand = 'JoBuilt',      price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'tourbus',       name = 'Tour Bus',                      brand = 'Brute',        price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'taxi',          name = 'Taxi',                          brand = 'Vapid',        price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'rentalbus',     name = 'Rental Shuttle Bus',            brand = 'Brute',        price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'coach',         name = 'Dashound',                      brand = 'Brute',        price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'bus',           name = 'Bus',                           brand = 'Brute',        price = 100000,  category = 'service',     shop = 'none',},
+    { model = 'airbus',        name = 'Airport Bus',                   brand = 'Brute',        price = 100000,  category = 'service',     shop = 'none',},
+
+    -- Commercial (20)
+    { model = 'cerberus',      name = 'Apocalypse Cerberus',           brand = 'MTL',          price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'pounder2',      name = 'Pounder Custom',                brand = 'MTL',          price = 55000,   category = 'commercial',  shop = 'none',},
+    { model = 'mule4',         name = 'Mule Custom',                   brand = 'Maibatsu',     price = 40000,   category = 'commercial',  shop = 'none',},
+    { model = 'phantom3',      name = 'Phantom Custom',                brand = 'Jobuilt',      price = 110000,  category = 'commercial',  shop = 'none',},
+    { model = 'hauler2',       name = 'Hauler Custom',                 brand = 'Jobuilt',      price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'phantom2',      name = 'Phantom Wedge',                 brand = 'Jobuilt',      price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'mule5',         name = 'Mule (Heist)',                  brand = 'Maibatsu',     price = 40000,   category = 'commercial',  shop = 'none',},
+    { model = 'stockade',      name = 'Stockade',                      brand = 'Brute',        price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'pounder',       name = 'Pounder',                       brand = 'MTL',          price = 55000,   category = 'commercial',  shop = 'none',},
+    { model = 'phantom',       name = 'Phantom',                       brand = 'Jobuilt',      price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'packer',        name = 'Packer',                        brand = 'MTL',          price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'mule',          name = 'Mule',                          brand = 'Maibatsu',     price = 40000,   category = 'commercial',  shop = 'none',},
+    { model = 'hauler',        name = 'Hauler',                        brand = 'Jobuilt',      price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'biff',          name = 'Biff',                          brand = 'Brute',        price = 100000,  category = 'commercial',  shop = 'none',},
+    { model = 'benson',        name = 'Benson',                        brand = 'Vapid',        price = 55000,   category = 'commercial',  shop = 'none',},
+    { model = 'benson2',       name = 'Benson (Cluckin Bell)',         brand = 'Vapid',        price = 55000,   category = 'commercial',  shop = 'none',},
+    { model = 'phantom4',      name = 'Phantom (Christmas)',           brand = 'Vapid',        price = 100000,  category = 'commercial',  shop = 'none',},
+
+    -- Open Wheel (22)
+    { model = 'openwheel2',    name = 'DR1',                           brand = 'Declasse',     price = 100000,  category = 'openwheel',   shop = 'none',},
+    { model = 'openwheel1',    name = 'BR8',                           brand = 'Benefactor',   price = 100000,  category = 'openwheel',   shop = 'none',},
+    { model = 'formula2',      name = 'R88',                           brand = 'Ocelot',       price = 100000,  category = 'openwheel',   shop = 'none',},
+    { model = 'formula',       name = 'PR4',                           brand = 'Progen',       price = 100000,  category = 'openwheel',   shop = 'none',},
+
+    --- EDM 
+    { model = '2ncsbmwm8',     name = 'M8',                            brand = 'BMW',          price = 0,       category = 'coupes',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = '16charger',     name = 'SRT Charger H1000',             brand = 'DOGE',         price = 0,       category = 'muscle',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = '17mansorypnmr', name = 'Turbo E-Hybrid',                brand = 'PORCHE',       price = 0,       category = 'sedans',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = '18performante', name = 'Huracan Athens',                brand = 'LAMBORGHINI',  price = 0,       category = 'super',       type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = '20xb7',         name = 'Alpina XB7',                    brand = 'BMW',          price = 0,       category = 'suvs',        type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'autobio',       name = 'AutoBiography',                 brand = 'RANGE ROVER',  price = 0,       category = 'suvs',        type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'ben17',         name = 'Continental Supersports ISR',   brand = 'BENTLY',       price = 0,       category = 'super',       type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'centuria',      name = 'Chiron',                        brand = 'BUGATTI',      price = 0,       category = 'super',       type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'dawnonyx',      name = 'Dawn',                          brand = 'ROLES ROYALS', price = 0,       category = 'coupes',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'gmcev2',        name = 'Hummer EV',                     brand = 'GMC',          price = 0,       category = 'offroad',     type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'kln',           name = 'Cullinan',                      brand = 'ROLES ROYALS', price = 0,       category = 'suvs',        type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'oycdefender',   name = 'Defender',                      brand = 'LAND ROVER',   price = 0,       category = 'offroad',     type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'wraith',        name = 'Wraith',                        brand = 'ROLES ROYALS', price = 0,       category = 'coupes',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'terzo',         name = 'Terzo Millennio',               brand = 'LAMBORGHINI',  price = 0,       category = 'super',       type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'zm_rocket900',  name = 'Brabus Rocket 900 Edition',     brand = 'MERCIDIZE',    price = 0,       category = 'sedans',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'DL_G900',       name = 'AMG G900',                      brand = 'MERCIDIZE',    price = 0,       category = 'suvs',        type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'mach1',         name = 'Shelby Super Snake',            brand = 'FORD MUSTANG', price = 0,       category = 'muscle',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'rmodgtr',       name = 'GT-R',                          brand = 'NISSAN',       price = 0,       category = 'sports',      type = 'automobile',   shop = 'fmpdm', class = 'S' },
+    { model = 'g63',           name = 'AMG G63',                       brand = 'MERCIDIZE',    price = 0,       category = 'suvs',        type = 'automobile',   shop = 'fmpdm', class = 'S' },
+
+
+    --- GOv 
+    { model = 'van_killer',    name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'comni_killer',  name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'vapid_killer',  name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'Rebla_killer',  name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'Astron_killer', name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'bravado_killer', name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'lampadati_killer', name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'Motor1_killer',    name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'Motor2_killer',    name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'vapidtruck_killer', name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+    { model = 'Declasse_killer',   name = 'Van 1',                         brand = 'Police',       price = 0,       category = 'police',      type = 'automobile',    shop = 'none',   class = 'GOV' },
+
+    { model = 'Killer_ems2',       name = 'Gallivanter',                   brand = 'EMS',          price = 0,       category = 'ems',         type = 'automobile', shop = 'none',   class = 'GOV' },
+    { model = 'Killer_ems3',       name = 'Ocelot',                        brand = 'EMS',          price = 0,       category = 'ems',         type = 'automobile', shop = 'none',   class = 'GOV' },
+    { model = 'Killer_ems4',       name = 'Coil',                          brand = 'EMS',          price = 0,       category = 'ems',         type = 'automobile', shop = 'none',   class = 'GOV' },
+    { model = 'Killer_ems5',       name = 'Vapid',                         brand = 'EMS',          price = 0,       category = 'ems',         type = 'automobile', shop = 'none',   class = 'GOV' },
+    { model = 'Killer_ems6',       name = 'Van',                           brand = 'EMS',          price = 0,       category = 'ems',         type = 'automobile', shop = 'none',   class = 'GOV' },
+
+    { model = 'baller5',       name = 'Baller LE (Armored)',           brand = 'Gallivanter',  price = 78000,   category = 'suvs',        shop = 'none',class = 'GOV'},
+    { model = 'baller6',       name = 'Baller LE LWB (Armored)',       brand = 'Gallivanter',  price = 82000,   category = 'suvs',        shop = 'none',class = 'GOV'},
+
+
+
+
+
+
+
+}
+
+QBShared.VehicleHashes = QBShared.VehicleHashes or {}
+for i = 1, #Vehicles do
+    local hash = joaat(Vehicles[i].model)
+    QBShared.Vehicles[Vehicles[i].model] = {
+        spawncode = Vehicles[i].model,
+        name = Vehicles[i].name,
+        brand = Vehicles[i].brand,
+        model = Vehicles[i].model,
+        price = Vehicles[i].price,
+        category = Vehicles[i].category,
+        class = Vehicles[i].class,
+        hash = hash,
+        type = Vehicles[i].type,
+        shop = Vehicles[i].shop
+    }
+    QBShared.VehicleHashes[hash] = QBShared.Vehicles[Vehicles[i].model]
+end

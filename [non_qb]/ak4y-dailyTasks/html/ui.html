@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="willPaySection">
+            <div class="willPayMain">
+                <div class="youllpayTextArea">
+                    <div class="youllPayText">YOU WILL PAY</div>
+                    <div class="payAmount">$10000</div>
+                    <div class="toText">TO</div>
+                </div>
+                <div class="beginTheTaskText">BEGIN THE TASK?</div>
+                <div class="infoSection">
+                    <i id="infoIcon" class="fa-solid fa-circle-info"></i>
+                    <div class="infoText">WHEN YOU COMPLETE THE MISSION YOU WILL GET REWARD</div>
+                </div>
+                <div class="payButtonArea">
+                    <div class="payAreaButton" id="cancelButton">CANCEL</div>
+                    <div class="payAreaButton" id="acceptButton">ACCEPT</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cancelSection">
+            <div class="cancelMain">
+                <div class="cancelpayTextArea">
+                    <div class="cancelWontText">IF YOU CANCEL THE MISSION</div>
+                </div>
+                <div class="cancelTheTaskText">YOU WONT GET BACK THE MONEY YOU INVESTED</div>
+                <div class="cancelButtonArea">
+                    <div class="cancelAreaButton" id="resumeMissionButton">Resume mission</div>
+                    <div class="cancelAreaButton" id="cancelMissionButton">Cancel mission</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notifySection">
+            <div class="notifyMain">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, beatae?</div>
+        </div>
+
+        <div class="collectedSection">
+            <div class="collectedMain">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, beatae?</div>
+        </div>
+
+        <div class="generalDailyTasks">
+            <div class="leftImageArea"></div>
+            <div class="rightImageArea"></div>
+            <div class="rightTaskSection">
+                <div class="rightAreaTopSection">
+                    <div class="titleArea">
+                        <div class="title1">AK4Y</div>
+                        <div class="title2">DAILY TASK</div>
+                    </div>
+                    <div class="descArea">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nihil praesentium voluptatum enim expedita unde dolore mollitia
+                        officia! Rem amet vel iure optio maxime similique.
+                    </div>
+                </div>
+                <div class="rightAreaTaskSection">
+                    <div class="taskItem firstTask">
+                        <div class="taskItemImageSection first">
+                            <img src="./images/Group10.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea">
+                            <div class="inTaskTitle">TASK #1</div>
+                            <div class="inTaskDesc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem? Rerum esse perspiciatis eligendi
+                                deserunt illum odio eaque est!
+                            </div>
+                            <div class="inTaskButtonReward">
+                                <div class="inButtonRewardText">REWARD :</div>
+                                <div class="inButtonRewardPrice">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea">
+                            <!-- <div class="startMissionButton">START MISSION</div>
+                            <div class="taskStartPriceText">TASK START PRICE</div>
+                            <div class="taskPrice">$10000</div> -->
+                            <div class="remainingArea small">
+                                <i id="remainingClockIcon" class="fa-solid fa-clock"></i>
+                                <div class="remainingTextArea">
+                                    <div class="remainingText">REMAINING TIME</div>
+                                    <div class="divRemainingTimeText">12h 05m 11s</div>
+                                </div>
+                            </div>
+                            <div class="radialArea">
+                                <div id="progressBarBig"></div>
+                            </div>
+                            <div class="cancelMissionButton">CANCEL MISSION</div>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <div class="taskItemImageSection second">
+                            <img src="./images/Group11.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #2</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <!-- <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div> -->
+                            <div class="remainingArea small">
+                                <i id="remainingClockIcon" class="fa-solid fa-clock"></i>
+                                <div class="remainingTextArea">
+                                    <div class="remainingText">REMAINING TIME</div>
+                                    <div class="divRemainingTimeText">12h 05m 11s</div>
+                                </div>
+                            </div>
+                            <div class="radialArea small">
+                                <div id="progressBarSmall"></div>
+                            </div>
+                            <div class="cancelMissionButton small">CANCEL MISSION</div>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <div class="taskItemImageSection thirt">
+                            <img src="./images/Group12.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #3</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <div class="taskItemImageSection four">
+                            <img src="./images/Group13.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #4</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <div class="taskItemImageSection five">
+                            <img src="./images/Group14.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #5</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <div class="taskItemImageSection six">
+                            <img src="./images/Group16.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #6</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <div class="taskItemImageSection seven">
+                            <img src="./images/Group17.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #7</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemImageSection eight">
+                            <img src="./images/Group18.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #8</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemImageSection nine">
+                            <img src="./images/Group19.png" alt="" />
+                        </div>
+                        <div class="inTaskLeftArea small">
+                            <div class="inTaskTitle small">TASK #9</div>
+                            <div class="inTaskDesc small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est dolorem?</div>
+                            <div class="inTaskButtonReward small">
+                                <div class="inButtonRewardText small">REWARD :</div>
+                                <div class="inButtonRewardPrice small">$25000</div>
+                            </div>
+                        </div>
+                        <div class="inTaskRightArea small">
+                            <div class="startMissionButton small">START MISSION</div>
+                            <div class="taskStartPriceText small">TASK START PRICE</div>
+                            <div class="taskPrice small">$10000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="js/progressbar.js"></script>
+        <script src="js/app.js?v=1"></script>
+    </body>
+</html>

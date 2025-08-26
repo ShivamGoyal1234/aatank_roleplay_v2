@@ -1,0 +1,150 @@
+[
+    {
+        "value": 1,
+        "type": "spamDelayTime"
+    },
+    {
+        "type": "dispatchExclusion",
+        "coords": [
+            {
+                "radius": 10.0,
+                "coord": {
+                    "x": -600.775146484375,
+                    "z": 81.9029769897461,
+                    "y": 272.6715393066406
+                },
+                "name": "New Zonews"
+            },
+            {
+                "radius": 10.0,
+                "coord": {
+                    "x": -200.74237060546876,
+                    "z": 92.10496520996094,
+                    "y": 244.34527587890626
+                },
+                "name": "Deletezz"
+            },
+            {
+                "radius": 1.5,
+                "coord": {
+                    "x": 567.1376342773438,
+                    "z": 59.99911499023437,
+                    "y": 2492.0830078125
+                },
+                "name": "Disable Zone"
+            },
+            {
+                "radius": 8.0,
+                "coord": {
+                    "x": 796.8374633789063,
+                    "z": 26.5867691040039,
+                    "y": -1355.5433349609376
+                },
+                "name": "Test"
+            },
+            {
+                "radius": 17.5,
+                "coord": {
+                    "x": 145.7800445556641,
+                    "z": 54.46246337890625,
+                    "y": -190.6647491455078
+                },
+                "name": "NoAlertArea"
+            }
+        ]
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police"
+        ],
+        "type": "shooting"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "Vehicle"
+        ],
+        "type": "vehicletheft"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police"
+        ],
+        "type": "explosion"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police"
+        ],
+        "type": "ShopRobbery"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police"
+        ],
+        "type": "houseRobbery"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "ambulance"
+        ],
+        "type": "emsWorkerInjured"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "ambulance",
+            "police"
+        ],
+        "type": "civilianInjured"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police",
+            "ambulance"
+        ],
+        "type": "DeathNotifications"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police"
+        ],
+        "type": "vehicleAlarm"
+    },
+    {
+        "state": false,
+        "receivers": [
+            "police"
+        ],
+        "type": "fighting"
+    },
+    {
+        "state": false,
+        "receivers": [
+            "police"
+        ],
+        "type": "vehiclespeed"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "police"
+        ],
+        "type": "vehicleshooting"
+    },
+    {
+        "state": true,
+        "receivers": [
+            "Hant",
+            "test"
+        ],
+        "type": "hunting"
+    }
+]

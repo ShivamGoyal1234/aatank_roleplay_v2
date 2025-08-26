@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Forge Jobs</title>
+</head>
+
+<body>
+  <div class="forge-jobs active">
+    <div class="overlay"></div>
+    <div class="heading">
+      <h1 class="heading__title">
+        <span class="heading__name" data-i18n="headingName">MINING</span><em>job</em>
+      </h1>
+      <p class="heading__subtitle">
+        Find everything you need about the job here:
+        <span>get the tools</span>, gather <span>resources</span>, process
+        them, and <span>sell</span> for the best price!
+      </p>
+    </div>
+    <div class="nav">
+      <div class="nav__buttons">
+        <button class="nav__button active" data-i18n="navBtn1">Home</button>
+        <button class="nav__button" data-i18n="navBtn2">Tool</button>
+        <button class="nav__button" data-i18n="navBtn3">Market</button>
+        <button class="nav__button" data-i18n="navBtn4">Missions</button>
+      </div>
+      <button class="nav__close">X</button>
+    </div>
+    <div class="menu">
+      <div class="menu__block active">
+        <div class="profile">
+          <div class="profile__block">
+            <div class="profile__col">
+              <div class="profile__level">
+                <span id="user-level-circle">5</span>
+                <svg class="svg">
+                  <circle class="circle" cx="50%" cy="50%" r="1.25rem" />
+                </svg>
+              </div>
+            </div>
+            <div class="profile__col">
+              <span>Your current level is: <strong id="currentLevel">5</strong></span>
+              <div class="profile__col-text">
+                <span id="currentXp"><small>1800</small><em>xp</em>
+                </span>
+                <small>/</small>
+                <span id="requiredXp">10000<em>xp</em>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="profile__block">
+            <div class="profile__col">
+              <span>Heisem</span>
+              <span><em>Berganez</em></span>
+            </div>
+            <div class="profile__col">
+              <img class="profile__avatar" src="assets/images/avatar.png" alt="Avatar" />
+            </div>
+          </div>
+        </div>
+        <!-- Instructions -->
+        <div class="instructions">
+          <div class="instruction">
+            <div class="instruction__top">
+              <img src="assets/svgs/tool.svg" alt="Tool" />
+              <div class="instruction__text">
+                Go to the <span>gathering points</span> in the areas marked on
+                the map and mine as many rocks as you want.
+              </div>
+            </div>
+            <div class="instruction__bottom">
+              <div class="instruction__bottom-bg">
+                <img src="assets/images/instructions/1-1.png" alt="Instruction background" />
+              </div>
+              <button class="instruction__button" data-i18n="instructionBtn">
+                Mark on the map
+              </button>
+            </div>
+          </div>
+          <div class="instruction">
+            <div class="instruction__top">
+              <img src="assets/svgs/settings.svg" alt="Settings" />
+              <div class="instruction__text">
+                Then you'll need to <span>wash those stones</span> in the
+                washing area to better reveal the minerals hidden inside.
+              </div>
+            </div>
+            <div class="instruction__bottom">
+              <div class="instruction__bottom-bg">
+                <img src="assets/images/instructions/1-2.png" alt="Instruction background" />
+              </div>
+              <button class="instruction__button" data-i18n="instructionBtn">
+                Mark on the map
+              </button>
+            </div>
+          </div>
+          <div class="instruction">
+            <div class="instruction__top">
+              <img src="assets/svgs/factory.svg" alt="Factory" />
+              <div class="instruction__text">
+                Once your stones are washed, take them to the
+                <span>machine to transform</span> and sell them.
+              </div>
+            </div>
+            <div class="instruction__bottom">
+              <div class="instruction__bottom-bg">
+                <img src="assets/images/instructions/1-3.png" alt="Instruction background" />
+              </div>
+              <button class="instruction__button" data-i18n="instructionBtn">
+                Mark on the map
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu__block">
+        <div class="title">
+          <div class="title__inner">
+            <span data-i18n="toolsTitle">BUY YOUR TOOL</span>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="tools">
+          <div class="tool" id="1">
+            <img class="tool__image" src="assets/images/tools/1.png" alt="Tool" />
+            <div class="tool__content">
+              <div class="tool__title">
+                <span class="tool__level">LVL 1</span>
+                <span class="tool__name">PICKAXE</span>
+              </div>
+              <div class="tool__price">$150</div>
+              <button class="tool__button" data-i18n="toolBtn">Buy</button>
+            </div>
+            <div class="popup">
+              <div class="popup__inner">
+                <div class="popup__block">
+                  <div class="popup__title">ARE YOU SURE?</div>
+                </div>
+                <div class="popup__block">
+                  <div class="popup__buttons">
+                    <button>Yes</button>
+                    <button>No</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tool__status">
+              <span>No Level</span>
+            </div>
+          </div>
+          <div class="tool disabled" id="2">
+            <img class="tool__image" src="assets/images/tools/1.png" alt="Tool" />
+            <div class="tool__content">
+              <div class="tool__title">
+                <span class="tool__level">LVL 5</span>
+                <span class="tool__name">PICKAXE</span>
+              </div>
+              <div class="tool__price">$300</div>
+              <button class="tool__button" data-i18n="toolBtn">Buy</button>
+            </div>
+            <div class="popup">
+              <div class="popup__inner">
+                <div class="popup__block">
+                  <div class="popup__title">ARE YOU SURE?</div>
+                </div>
+                <div class="popup__block">
+                  <div class="popup__buttons">
+                    <button>Yes</button>
+                    <button>No</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tool__status">
+              <span>No Level</span>
+            </div>
+          </div>
+          <div class="tool disabled" id="3">
+            <img class="tool__image" src="assets/images/tools/1.png" alt="Tool" />
+            <div class="tool__content">
+              <div class="tool__title">
+                <span class="tool__level">LVL 5</span>
+                <span class="tool__name">PICKAXE</span>
+              </div>
+              <div class="tool__price">$300</div>
+              <button class="tool__button" data-i18n="toolBtn">Buy</button>
+            </div>
+            <div class="popup">
+              <div class="popup__inner">
+                <div class="popup__block">
+                  <div class="popup__title">ARE YOU SURE?</div>
+                </div>
+                <div class="popup__block">
+                  <div class="popup__buttons">
+                    <button>Yes</button>
+                    <button>No</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tool__status">
+              <span>No Level</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu__block">
+        <div class="title">
+          <div class="title__inner">
+            <span data-i18n="marketTitle">SELL THE GOODS</span>
+          </div>
+        </div>
+        <!-- Market -->
+        <div class="market">
+          <div class="market__content">
+            <div class="market__item active" id="1" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 1</span>
+            </div>
+            <div class="market__item" id="2" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 2</span>
+            </div>
+            <div class="market__item" id="3" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 3</span>
+            </div>
+            <div class="market__item" id="4" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 4</span>
+            </div>
+            <div class="market__item" id="5" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 5</span>
+            </div>
+            <div class="market__item" id="6" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 6</span>
+            </div>
+            <div class="market__item" id="7" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 7</span>
+            </div>
+            <div class="market__item" id="8" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 8</span>
+            </div>
+            <div class="market__item" id="9" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 9</span>
+            </div>
+            <div class="market__item" id="10" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 10</span>
+            </div>
+            <div class="market__item" id="11" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 11</span>
+            </div>
+            <div class="market__item" id="12" data-wholesaleprice="4" data-retailprice="8" data-quantity="36">
+              <img src="assets/images/product.png" alt="Product" />
+              <span>Item Bar 12</span>
+            </div>
+          </div>
+          <div class="market__bottom">
+            <div class="market__bottom-text">
+              <span data-i18n="marketItemName">You have selected</span>
+              <em id="marketItem-name">Item Bar 1</em>
+            </div>
+            <div class="market__button active">
+              <div class="market__button-circle">
+                $<span id="wholesale-circle">4</span><em>u</em>
+              </div>
+              <div class="market__button-rectangle" id="wholesale-button">
+                <strong>WHOLESALE</strong> (<span id="wholesale-quantity-box">5</span>
+                /<span id="wholesale-limit-box">1500</span>)
+              </div>
+            </div>
+            <div class="market__button">
+              <div class="market__button-circle">
+                $<span id="retail-circle">8</span><em>u</em>
+              </div>
+              <div class="market__button-rectangle" id="retail-button">
+                <strong>RETAIL</strong> (<span id="retail-quantity-box">5</span>
+                /<span id="retail-limit-box">5</span>)
+              </div>
+            </div>
+          </div>
+          <div class="popup">
+            <div class="popup__inner">
+              <div class="popup__block">
+                <div class="popup__title">ARE YOU SURE?</div>
+                <div class="popup__text">
+                  You will get as a benefit:
+                  <span>$<span id="total-price-box">2000</span></span>
+                </div>
+              </div>
+              <div class="popup__block">
+                <div class="popup__buttons">
+                  <button>Yes</button>
+                  <button>No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu__block">
+        <div class="title">
+          <div class="title__inner">
+            <span data-i18n="missionsTitle">Some Missions</span>
+          </div>
+        </div>
+        <!-- Missions -->
+        <div class="missions">
+          <div class="missions__content">
+            <div class="mission" id="1">
+              <div class="mission__xp">
+                <img src="assets/svgs/gift.svg" alt="Gift" />
+                <span>1000<strong>xp</strong></span>
+              </div>
+              <div class="mission__name">MINE<span>10 STONES</span></div>
+              <button class="mission__button" data-i18n="missionBtn">
+                Claim
+              </button>
+              <div class="mission__count">10/<strong>10</strong></div>
+            </div>
+            <div class="mission disabled" id="2">
+              <div class="mission__xp">
+                <img src="assets/svgs/gift.svg" alt="Gift" />
+                <span>3000<strong>xp</strong></span>
+              </div>
+              <div class="mission__name">MINE <span>35 STONES</span></div>
+              <button class="mission__button" data-i18n="missionBtn">
+                Claim
+              </button>
+              <div class="mission__count">10/<strong>35</strong></div>
+            </div>
+            <div class="mission disabled" id="3">
+              <div class="mission__xp">
+                <img src="assets/svgs/gift.svg" alt="Gift" />
+                <span>3000<strong>xp</strong></span>
+              </div>
+              <div class="mission__name">Wash <span>10 STONES</span></div>
+              <button class="mission__button" data-i18n="missionBtn">
+                Claim
+              </button>
+              <div class="mission__count">0/<strong>10</strong></div>
+            </div>
+            <div class="mission disabled" id="4">
+              <div class="mission__xp">
+                <img src="assets/svgs/gift.svg" alt="Gift" />
+                <span>3000<strong>xp</strong></span>
+              </div>
+              <div class="mission__name">MINE <span>35 STONES</span></div>
+              <button class="mission__button" data-i18n="missionBtn">
+                Claim
+              </button>
+              <div class="mission__count">10/<strong>35</strong></div>
+            </div>
+            <div class="mission disabled" id="5">
+              <div class="mission__xp">
+                <img src="assets/svgs/gift.svg" alt="Gift" />
+                <span>3000<strong>xp</strong></span>
+              </div>
+              <div class="mission__name">Wash <span>10 STONES</span></div>
+              <button class="mission__button" data-i18n="missionBtn">
+                Claim
+              </button>
+              <div class="mission__count">0/<strong>10</strong></div>
+            </div>
+          </div>
+          <div class="missions__bottom">
+            <div class="missions__bottom-text">
+              These missions are <span>random</span> and
+              <span>change periodically</span>. If you don't claim these
+              missions in time, you will lose your progress.
+            </div>
+            <div class="missions__nextChallenge">
+              <div class="missions__nextChallenge-text" data-i18n="challengeText">
+                TIME FOR THE <br />
+                <span>NEXT CHANGE:</span>
+              </div>
+              <div class="timer">
+                <div class="timer__hours">72</div>
+                :
+                <div class="timer__minutes">25</div>
+                <small class="timer__unit">H</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.15.2/i18next.min.js"
+    integrity="sha512-8ANNUVMWPf6aWGXZqDhS4OXJWBCRxfjlW7lKfupuiG1FZah0ST6LiI2qnEb1L5mp05v/+0hn3s2FO4EwIbIgfA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/8.0.0/i18nextBrowserLanguageDetector.min.js"
+    integrity="sha512-8/RTkAM23B3lQzi6fmPs+Yf9qhIHzrzRpeSZsBsQ8OEmo95mbVp+68dB647VDCuyQIBbF+OIbS9b30aTWUkoog=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

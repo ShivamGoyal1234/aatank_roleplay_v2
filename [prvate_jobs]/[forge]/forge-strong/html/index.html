@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forge Strong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * { 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+    body { display: none; }
+    
+    /* Entrance/Exit Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOutDown {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(20px); }
+    }
+    .fade-in { animation: fadeInUp 0.5s ease forwards; }
+    .fade-out { animation: fadeOutDown 0.5s ease forwards; }
+    
+    /* Electric Shock Animation for failure */
+    @keyframes electricShock {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+      20%, 40%, 60%, 80% { transform: translateX(3px); }
+    }
+    .electric-shock { 
+      animation: electricShock 0.7s ease-in-out 1;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;
+    }
+    
+    /* Shake Animation for when fill is >=50% */
+    @keyframes shake {
+      0% { transform: translate(0, 0) translateZ(0); }
+      25% { transform: translate(2px, 0) translateZ(0); }
+      50% { transform: translate(-2px, 0) translateZ(0); }
+      75% { transform: translate(2px, 0) translateZ(0); }
+      100% { transform: translate(0, 0) translateZ(0); }
+    }
+    .shaking { animation: shake 0.3s ease-in-out infinite; }
+    
+    /* Main Container */
+    .strong-container {
+      position: fixed;
+      width: 400px;
+      bottom: 50px;
+      left: 50%;
+      margin-left: -200px;
+      background: linear-gradient(to bottom, rgba(20, 20, 20, 0.95), rgba(0, 0, 0, 0.98));
+      border-radius: 15px;
+      padding: 20px 20px 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      will-change: transform;
+      transform: translateZ(0);
+    }
+    .strong-header {
+      color: #fff;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .strong-instruction {
+      color: #ddd;
+      font-size: 0.95em;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Progress Bar Styles */
+    .strong-progress-container {
+      position: relative;
+      width: 100%;
+      height: 24px;
+      background: linear-gradient(to bottom, #1a1a1a, #222);
+      border: 2px solid #333;
+      border-radius: 12px;
+      margin: 20px auto;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    /* Target Zone: black with low opacity and white border, on top of the fill bar */
+    .strong-target-zone {
+      position: absolute;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 2px solid rgba(255, 255, 255, 0.4);
+      border-right: 2px solid rgba(255, 255, 255, 0.4);
+      z-index: 2;
+    }
+    /* Fill Indicator: changes color as it fills */
+    .strong-fill {
+      position: absolute;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(to right, #ff9500, #ff5e3a);
+      box-shadow: 0 0 10px rgba(255, 94, 58, 0.5);
+      transition: width 0.1s;
+      z-index: 1;
+    }
+    
+    /* Timer Display: modern design with clock icon */
+    .timer {
+      font-size: 0.95em;
+      color: #f1f1f1;
+      background: linear-gradient(to right, rgba(255,69,58,0.15), rgba(255,69,58,0.3));
+      border: 1px solid rgba(255,69,58,0.4);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      margin: 15px auto 10px;
+      width: 85px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .timer span { 
+      margin-left: 6px;
+    }
+    
+    /* Final Result Message */
+    .result {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 0;
+      padding: 8px;
+      border-radius: 8px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .result.visible {
+      opacity: 1;
+      max-height: 40px;
+      margin-top: 5px;
+    }
+    .result.success {
+      color: #4cff4c;
+      background: rgba(76, 255, 76, 0.1);
+      border: 1px solid rgba(76, 255, 76, 0.3);
+    }
+    .result.fail {
+      color: #ff4444;
+      background: rgba(255, 68, 68, 0.1);
+      border: 1px solid rgba(255, 68, 68, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="strong-container fade-in" id="strongContainer">
+    <div class="strong-header" id="strongHeader">Forge Strong</div>
+    <div class="strong-instruction" id="strongInstruction">
+      Press <strong>[SPACE]</strong> rapidly to fill the bar and keep it within the target.
+    </div>
+    <div class="strong-progress-container" id="progressContainer">
+      <div class="strong-fill" id="fillIndicator"></div>
+      <div class="strong-target-zone" id="targetZone"></div>
+    </div>
+    <div class="timer" id="timerDisplay">
+      <span>⏱</span><span>10.0s</span>
+    </div>
+    <div class="result" id="finalResult"></div>
+  </div>
+  
+  <script>
+    /* =======================================
+       GLOBAL CONFIGURATION AND VARIABLES
+       ======================================= */
+    let difficultyLevel = 1;           // 1: easy, 2: medium, 3: hard
+    let holdTimeRequired = 10000;      // 10 seconds (in ms)
+    let keyIncrement;                  // Impulse per key press (set per difficulty)
+    let decayRate;                     // Decay rate (set per difficulty)
+    const progressBarMax = 300;        // Maximum width of the progress bar in pixels
+    let targetZoneWidth;               // Width of the target zone (varies with difficulty)
+    let targetZoneLeft;                // Left position of the target zone
+    
+    /* Game state variables */
+    let fillLevel = 0;
+    let gameState = "running";         // Running until timer expires
+    let startTime = null;              // Time when UI opens
+    let lastTimestamp = null;
+    let animationFrame;
+    let gameActive = false;
+    
+    /* Variables for discrete key presses and fast decay */
+    let lastKeyPressTime = 0;          // Time (ms) of the last valid key press
+    
+    /* DOM Elements */
+    const container = document.getElementById("strongContainer");
+    const header = document.getElementById("strongHeader");
+    const instruction = document.getElementById("strongInstruction");
+    const targetZoneElem = document.getElementById("targetZone");
+    const fillIndicator = document.getElementById("fillIndicator");
+    const finalResult = document.getElementById("finalResult");
+    const timerDisplay = document.getElementById("timerDisplay");
+    
+    // Array to store pending timeouts (to cancel on restart)
+    let pendingTimeouts = [];
+    function clearPendingTimeouts() {
+      pendingTimeouts.forEach(timeout => clearTimeout(timeout));
+      pendingTimeouts = [];
+    }
+    
+    /* =======================================
+       GAME INITIALIZATION
+       ======================================= */
+    function initGame() {
+      clearPendingTimeouts();
+      fillLevel = 0;
+      gameState = "running";
+      startTime = performance.now();
+      lastTimestamp = null;
+      finalResult.innerHTML = "";
+      finalResult.classList.remove("visible", "success", "fail");
+      timerDisplay.children[1].innerText = (holdTimeRequired / 1000).toFixed(1) + "s";
+      container.style.transform = "";
+      container.classList.remove("electric-shock");
+      
+      // Set key impulse and decay rate based on difficulty
+      if (difficultyLevel === 1) {
+        keyIncrement = 10;
+        targetZoneWidth = 100;
+        decayRate = 10;
+      } else if (difficultyLevel === 2) {
+        keyIncrement = 8;
+        targetZoneWidth = 70;
+        decayRate = 15;
+      } else {
+        keyIncrement = 6;
+        targetZoneWidth = 40;
+        decayRate = 20;
+      }
+      
+      // Randomly position the target zone near the end (70% to 90% of progress bar)
+      const minLeft = Math.floor(progressBarMax * 0.7);
+      const maxLeft = progressBarMax - targetZoneWidth - 10;
+      targetZoneLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft;
+      
+      targetZoneElem.style.left = targetZoneLeft + "px";
+      targetZoneElem.style.width = targetZoneWidth + "px";
+      
+      // Reset fill indicator
+      fillIndicator.style.width = "0px";
+      
+      // Initialize lastKeyPressTime so that decay starts normally
+      lastKeyPressTime = performance.now();
+      
+      gameActive = true;
+      window.addEventListener("keydown", onKeyDown);
+      animationFrame = requestAnimationFrame(updateGame);
+    }
+    
+    /* =======================================
+       KEY PRESS HANDLING (DISCRETE TAPS ONLY)
+       ======================================= */
+    function onKeyDown(e) {
+      if (!gameActive || gameState === "finished") return;
+      if (e.code === "Space" && !e.repeat) {
+        e.preventDefault();
+        // Record the time of this valid key press
+        lastKeyPressTime = performance.now();
+        // Increase the fill level
+        fillLevel += keyIncrement;
+        if (fillLevel > progressBarMax) fillLevel = progressBarMax;
+        updateFillIndicator();
+        
+        // Immediate fail if fill level exceeds the right end of the target zone
+        if (fillLevel > targetZoneLeft + targetZoneWidth) {
+          finishGame(false);
+        }
+      }
+    }
+    
+    function updateFillIndicator() {
+      fillIndicator.style.width = fillLevel + "px";
+      
+      // Change color based on fill percentage
+      const fillPercent = fillLevel / progressBarMax;
+      if (fillPercent < 0.5) {
+        fillIndicator.style.background = "green";
+      } else if (fillPercent < 0.7) {
+        fillIndicator.style.background = "yellow";
+      } else if (fillPercent < 0.9) {
+        fillIndicator.style.background = "orange";
+      } else {
+        fillIndicator.style.background = "red";
+      }
+    }
+    
+    /* =======================================
+       GAME LOOP WITH FAST DECAY AND SHAKE EFFECT
+       ======================================= */
+    function updateGame(timestamp) {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const delta = (timestamp - lastTimestamp) / 1000; // seconds
+      lastTimestamp = timestamp;
+      
+      // Increase decay if no key press for more than 500ms
+      let effectiveDecay = decayRate;
+      if (timestamp - lastKeyPressTime > 500) {
+        effectiveDecay = decayRate * 3;
+      }
+      
+      fillLevel -= effectiveDecay * delta;
+      if (fillLevel < 0) fillLevel = 0;
+      updateFillIndicator();
+      
+      // Apply shaking effect from yellow (>=50%) onward
+      const fillPercent = fillLevel / progressBarMax;
+      if (fillPercent >= 0.5) {
+        container.classList.add("shaking");
+      } else {
+        container.classList.remove("shaking");
+      }
+      
+      // Immediate fail if fill level overshoots the target zone
+      if (fillLevel > targetZoneLeft + targetZoneWidth) {
+        finishGame(false);
+        return;
+      }
+      
+      // Update timer display
+      const elapsed = timestamp - startTime;
+      const remainingTime = Math.max(0, holdTimeRequired - elapsed);
+      timerDisplay.children[1].innerText = (remainingTime / 1000).toFixed(1) + "s";
+      
+      // If timer has expired, check if fill level is within the target zone
+      if (remainingTime <= 0) {
+        finishGame(fillLevel >= targetZoneLeft && fillLevel <= targetZoneLeft + targetZoneWidth);
+        return;
+      }
+      
+      animationFrame = requestAnimationFrame(updateGame);
+    }
+    
+    /* =======================================
+       GAME FINISH HANDLER
+       ======================================= */
+    function finishGame(success) {
+      gameState = "finished";
+      gameActive = false;
+      window.removeEventListener("keydown", onKeyDown);
+      cancelAnimationFrame(animationFrame);
+      container.style.transform = "";
+      container.classList.remove("shaking");
+      
+      if (success) {
+        finalResult.innerHTML = "Success!";
+        finalResult.classList.add("visible", "success");
+        sendCallback(true);
+        pendingTimeouts.push(setTimeout(() => {
+          exitUI();
+        }, 3000));
+      } else {
+        container.classList.add("electric-shock");
+        finalResult.innerHTML = "Fail!";
+        finalResult.classList.add("visible", "fail");
+        sendCallback(false);
+        pendingTimeouts.push(setTimeout(() => {
+          container.classList.remove("electric-shock");
+          exitUI();
+        }, 3000));
+      }
+    }
+    
+    /* =======================================
+       NUI CLIENT COMMUNICATION
+       ======================================= */
+    window.addEventListener("message", function(event) {
+      const data = event.data;
+      if (data.action === "ui") {
+        if (data.toggle) {
+          clearPendingTimeouts();
+          document.body.style.display = "block";
+          container.classList.remove("fade-out");
+          container.classList.add("fade-in");
+          
+          header.textContent = data.title || "Forge Strong";
+          difficultyLevel = data.difficulty || 1;
+          holdTimeRequired = data.holdTime || 10000;
+          
+          initGame();
+        } else {
+          exitUI();
+        }
+      }
+    });
+    
+    function exitUI() {
+      container.classList.remove("fade-in");
+      container.classList.add("fade-out");
+      pendingTimeouts.push(setTimeout(() => {
+        container.classList.remove("electric-shock");
+        document.body.style.display = "none";
+      }, 1200));
+    }
+    
+    function sendCallback(success) {
+      fetch(`https://${GetParentResourceName()}/callback`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=UTF-8" },
+        body: JSON.stringify({ success: success })
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+.paystation {
+    display: none;
+    color: white;
+    overflow: hidden;
+    opacity: 0.95;
+}
+
+.paystation .center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paystation .menu {
+    position: relative;
+    width: 30em;
+    height: 35em;
+    background: var(--menu-background);
+    border-radius: 12px;
+}
+
+.paystation .menu .header {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    height: 3.5em;
+    padding-inline: 1.0em;
+}
+
+.paystation .menu .header .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.paystation .menu .header .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: var(--border-radius);
+    background: var(--back-btn-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.paystation .menu .header .close:hover {
+    background: var(--back-btn-color-hover);
+}
+
+.paystation .menu .data {
+    padding: 1em;
+}
+
+.paystation .menu .data>.text {
+    opacity: 0.8;
+}
+
+/* .paystation .menu .data > .description {
+
+} */
+
+.paystation .menu .data>.description>.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+}
+
+.paystation .menu .data>.description>.cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.paystation .menu .data>.description>.cost>div {
+    padding: 0.1em 0.7em;
+    font-weight: 700;
+    font-size: 1.15em !important;
+    background: var(--main-color);
+    border-radius: 0.3em;
+}
+
+.paystation .menu .data>.license-plate {
+    line-height: 1;
+    margin-top: 2em;
+}
+
+.paystation .menu .data>.license-plate>.text {
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+
+.paystation .menu .data>.license-plate>.plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1.0;
+    margin-top: 1em;
+}
+
+.paystation .menu .data>.license-plate>.plate>input.license-plate {
+    height: 2.5em;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: monospace;
+    border-radius: 0.1em;
+    border-width: 0em;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin-block: 0.5em;
+    padding-top: 0.3em;
+    position: absolute;
+    background: transparent;
+    width: 5.1em;
+    font-size: 5.5em;
+}
+
+.paystation .menu .data>.license-plate>.plate>img {
+    width: 28em;
+}
+
+.paystation .menu .data>.find-by-plate {
+    text-align: center;
+    height: 3em;
+    background: var(--main-color);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 0.3em;
+    position: absolute;
+    width: 23em;
+    left: 1em;
+    bottom: 1em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.paystation .menu .data>.find-by-plate:hover {
+    background: var(--main-color-hover);
+}
+
+.paystation .menu .data>.find-by-plate:active {
+    background: var(--main-color-active);
+}
+
+
+.paystation .parking-ticket {
+    display: none;
+    position: relative;
+    font-family: 'Fake Receipt', sans-serif;
+    color: #262626;
+    width: 30em;
+    height: 34em;
+    background: rgb(243, 243, 243);
+    border-radius: 3px;
+}
+
+.paystation .parking-ticket>.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2.5em;
+}
+
+.paystation .parking-ticket>.header>i {
+    font-size: 2em;
+    margin-left: 0.09em;
+    color: #323232
+}
+
+.paystation .parking-ticket>.header>span {}
+
+.paystation .parking-ticket .bar {
+    width: 100%;
+    text-align: center;
+}
+
+.paystation .parking-ticket .bar.top {
+    margin-top: 1em;
+}
+
+.paystation .parking-ticket .bar.bottom {}
+
+.paystation .parking-ticket .data {
+    padding-inline: 3em;
+    padding-block: 0.5em;
+}
+
+.paystation .parking-ticket .data>#title {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 800;
+}
+
+.paystation .parking-ticket .data>#vehicle {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.paystation .parking-ticket .data>#hours {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.paystation .parking-ticket .data>#date {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.paystation .parking-ticket .data>#date>span {
+    margin-left: 1em;
+}
+
+.paystation .parking-ticket .data>#from {
+    margin-top: 0.5em;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .paystation .parking-ticket .data > #from > span {
+
+} */
+
+.paystation .parking-ticket .data>#from>span>span {
+    margin-left: 1em;
+}
+
+.paystation .parking-ticket .data>#to {
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .paystation .parking-ticket .data > #to > span {
+
+} */
+
+.paystation .parking-ticket .data>#to>span>span {
+    margin-left: 1em;
+}
+
+.paystation .parking-ticket .data>#to-paid {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.paystation .parking-ticket .buttons {
+    display: flex;
+    margin-inline: auto;
+    gap: 1em;
+    padding: 2em;
+    text-align: center;
+}
+
+.paystation .parking-ticket .buttons>.pay_cash,
+.paystation .parking-ticket .buttons>.pay_bank {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-block: 0.5em;
+    padding-inline: 1.5em;
+    color: white;
+    border: 2px solid transparent;
+    background: rgb(82 112 255 / 77%);
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.paystation .parking-ticket .buttons>.pay_cash:hover,
+.paystation .parking-ticket .buttons>.pay_bank:hover {
+    scale: 1.05;
+    background: rgb(82 112 255 / 100%);
+}
+
+.paystation .parking-ticket .buttons>.cancel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-block: 0.5em;
+    padding-inline: 1.5em;
+    color: rgb(82 112 255 / 77%);
+    border: 2px solid rgb(82 112 255 / 77%);
+    background: transparent;
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.paystation .parking-ticket .buttons>.cancel:hover {
+    scale: 1.05;
+    color: rgb(82 112 255 / 100%);
+    border: 2px solid rgb(82 112 255 / 100%);
+}

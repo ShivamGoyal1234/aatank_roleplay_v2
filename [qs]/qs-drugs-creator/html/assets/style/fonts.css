@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Crimson';
+	src: url("../fonts/CrimsonFont.ttf");
+}
+
+@font-face {
+	font-family: 'Hindi Light';
+	src: url("../fonts/LightHindiFont.ttf");
+}
+
+@font-face {
+	font-family: 'Hindi';
+	src: url("../fonts/MediumHindiFont.ttf");
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url("../fonts/SourceSansFont.ttf");
+}
+
+@font-face {
+	font-family: 'Sims';
+	src: url("../fonts/SimsFont.woff2");
+}
+
+@font-face {
+	font-family: 'Britania';
+	src: url("../fonts/Britania-Sign.ttf");
+}

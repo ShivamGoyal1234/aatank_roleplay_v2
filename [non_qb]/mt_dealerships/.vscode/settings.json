@@ -1,0 +1,42 @@
+{
+    "Lua.diagnostics.globals": [
+        "openCatalogue",
+        "lib",
+        "cache",
+        "testVehicle",
+        "locale",
+        "buyVehicle",
+        "createBlip",
+        "loadModel",
+        "createSphereZoneTarget",
+        "createEntityTarget",
+        "managementMenu",
+        "notify",
+        "hideTextUI",
+        "spawnVehicle",
+        "qbx",
+        "createShowroomVehicle",
+        "getPlayerJob",
+        "QBX",
+        "isPlayerJobBoss",
+        "openMenu",
+        "generatePlate",
+        "getPlayersFromCoords",
+        "openDashboard",
+        "MySQL",
+        "addAccountMoney",
+        "removeAccountMoney",
+        "getAccountMoney",
+        "createLog",
+        "addVehicleToGarage",
+        "vehicle",
+        "description",
+        "removeVehicleKeys",
+        "createDealerships",
+        "spawnObj",
+        "currentImportData"
+    ],
+    "Lua.diagnostics.disable": [
+        "param-type-mismatch"
+    ]
+}

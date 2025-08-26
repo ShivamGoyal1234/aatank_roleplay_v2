@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css">
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/e5864653ea.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+      <canvas id="faceCanvas" style="display:none;"></canvas>
+
+ <div id="power-container" style="display: none;">
+        <div id="power-bar">
+            <div id="power-fill"></div>
+        </div>
+  </div>
+  <div class="container">
+    <img src="../html/images/ellipse.png" class="ellipse" alt="">
+    <div class="index">
+      <div class="section-header">
+        <h2>NEARBY PLAYERS <img style="margin-left: 10px;" src="../html/images/user.png" alt="">
+        </h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+      </div>
+      <div class="player-list">
+        <div class="player-card active">
+          <img src="../html/images/face.png" alt="">
+          <div class="player-info">
+            <div class="name">John Doe</div>
+            <div class="role">Police Officer</div>
+          </div>
+        </div>
+        <div class="player-card">
+          <img src="../html/images/face.png" alt="">
+          <div class="player-info">
+            <div class="name">Sam Francis</div>
+            <div class="role">Civil</div>
+          </div>
+        </div>
+        <div class="player-card">
+          <img src="../html/images/face.png" alt="">
+          <div class="player-info">
+            <div class="name">Ernesto Fazekas</div>
+            <div class="role" style="color: #ff6e6e;">Bad Guy</div>
+          </div>
+        </div>
+        <div class="player-card">
+          <img src="../html/images/face.png" alt="">
+          <div class="player-info">
+            <div class="name">Young Drew</div>
+            <div class="role">Police Officer</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Crime Input Panel</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="crime-label">
+          <span>Type of Crime</span>
+          <div class="line"></div>
+        </div>
+        <div class="crime-type-selector">
+          <div class="crime-type selected">
+            <span class="icon">
+              <img src="../html/images/weapon.png" alt="">
+            </span>
+            <span class="label">Assault</span>
+          </div>
+          <div class="crime-options">
+            <div class="crime-option">Theft</div>
+            <div class="crime-option">Fight</div>
+            <div class="crime-option">Fraud</div>
+            <div class="crime-option">Murder</div>
+            <div class="crime-option">Drug Offense</div>
+            <div class="crime-option">Kidnapping</div>
+            <div class="crime-option">Bullying</div>
+            <div class="crime-option">Traffic Violation</div>
+            <div class="crime-option">Smuggling</div>
+          </div>
+        </div>
+        <div class="severity-levels">
+          <span class="low">Low</span>
+          <span class="medium">Medium</span>
+          <span class="high">High</span>
+        </div>
+        <div class="time-box">
+          <input type="number" class="time-input" placeholder="10" />
+        </div>
+        <div class="notes-wrapper">
+          <textarea class="notes-input" maxlength="100"></textarea>
+          <div class="placeholder-text">NOTES</div>
+        </div>
+        <div class="confirm-button">Confirm Button</div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-decorations">
+                <span class="decor-line"></span>
+                <span class="decor-line"></span>
+                <span class="decor-line"></span>
+            </div>
+            <img src="../html/images/top-bg.png" alt="Prison Logo" class="logo">
+            <h1>LIST OF CURRENT PRISONERS</h1>
+            <div class="header-decorations">
+                <span class="decor-line"></span>
+                <span class="decor-line"></span>
+                <span class="decor-line"></span>
+            </div>
+            <button class="esc-button">ESC</button>
+        </header>
+
+        <main class="main-content">
+            <section class="prisoner-list-section">
+                <div class="filter-bar">
+                  <div class="search-input-wrapper">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Filter by name">
+                  </div>
+                  <span class="filter-label" data-sort="time-left">Time Remaining</span>
+                  <span class="filter-label" data-sort="cell">Cell</span>
+                </div>
+                <div class="prisoner-table-container">
+                    <div class="table-header">
+                        <span class="header-item name-col">NAME</span>
+                        <span class="header-item id-col">ID</span>
+                        <span class="header-item time-left-col">TIME LEFT</span>
+                        <span class="header-item crime-type-col">CRIME TYPE</span>
+                    </div>
+                    <div class="table-body">
+                        <div class="table-row">
+                            <span class="row-item name-col">John Doe</span>
+                            <span class="row-item id-col">5212</span>
+                            <span class="row-item time-left-col">2 days left</span>
+                            <span class="row-item crime-type-col">Drug Trafficking</span>
+                        </div>
+                        <div class="table-row active">
+                            <span class="row-item name-col">John Smith</span>
+                            <span class="row-item id-col">24</span>
+                            <span class="row-item time-left-col">3 months left</span>
+                            <span class="row-item crime-type-col">Robbery</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="row-item name-col">John Doe</span>
+                            <span class="row-item id-col">5212</span>
+                            <span class="row-item time-left-col">2 days left</span>
+                            <span class="row-item crime-type-col">Drug Trafficking</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="row-item name-col">John Doe</span>
+                            <span class="row-item id-col">5212</span>
+                            <span class="row-item time-left-col">2 days left</span>
+                            <span class="row-item crime-type-col">Drug Trafficking</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="row-item name-col">John Doe</span>
+                            <span class="row-item id-col">5212</span>
+                            <span class="row-item time-left-col">2 days left</span>
+                            <span class="row-item crime-type-col">Drug Trafficking</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="row-item name-col">John Doe</span>
+                            <span class="row-item id-col">5212</span>
+                            <span class="row-item time-left-col">2 days left</span>
+                            <span class="row-item crime-type-col">Drug Trafficking</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="row-item name-col">John Doe</span>
+                            <span class="row-item id-col">5212</span>
+                            <span class="row-item time-left-col">2 days left</span>
+                            <span class="row-item crime-type-col">Drug Trafficking</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          <section class="prisoner-details-section">
+              <div class="top-details-container">
+                  <div class="prisoner-image-placeholder">
+                      <img src="../html/images/crime.png" alt="John Smith">
+                  </div>
+                  <div class="prisoner-name-crime">
+                      <h2>JOHN SMITH</h2>
+                      <hr class="detail-separator">
+                      <div class="detail-block crime-block">
+                          <h3>CRIME DETAILS</h3>
+                          <p class="crime-type">ROBBERY</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="detail-block">
+                  <h3>TIME REMAINING</h3>
+                  <p class="time-remaining">1 YEAR, 2 MONTHS</p>
+              </div>
+              <div class="detail-block notes-block">
+                  <h3>NOTES FROM ARRESTING OFFICER</h3>
+                  <p class="notes-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+              <button class="release-prisoner-button">Release Prisoner</button>
+          </section>
+        </main>
+    </div>
+
+
+
+<div class="main-widget-container">
+  <img src="../html/images/time.png" class="main-widget-icon" alt="Time Icon">
+  <div class="main-widget-header">
+        <div class="main-widget-title-section">
+            <h2 class="main-widget-title">REMAINING TIME</h2>
+            <p class="main-widget-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="main-widget-timer">25:34</div>
+    </div>
+    <div class="main-widget-progress-bar-wrapper">
+        </div>
+    <div class="main-widget-task-list">
+        <div class="main-widget-task-item main-widget-task-red">
+            <span class="main-widget-task-name">Washing Dishes</span>
+            <span class="main-widget-task-count">1/2</span>
+        </div>
+        <div class="main-widget-task-item main-widget-task-blue">
+            <span class="main-widget-task-name">Exercise</span>
+            <span class="main-widget-task-count">2/4</span>
+        </div>
+        <div class="main-widget-task-item main-widget-task-green">
+            <span class="main-widget-task-name">Poop Cleaning</span>
+            <span class="main-widget-task-count">4/4</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="prisoner-widget-container">
+    <div class="prisoner-widget-header">
+        <h2 class="prisoner-widget-title">List of Available Prisoners</h2>
+        <p class="prisoner-widget-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="prisoner-widget-timer-section">
+        <div class="prisoner-widget-time-info">
+            <div class="prisoner-widget-timer-icon"></div>
+            <div class="prisoner-widget-timer-text">TIME</div>
+        </div>
+        <div class="prisoner-widget-timer-value">14:22</div>
+    </div>
+    <div class="prisoner-list-wrapper">
+        <ul class="prisoner-list">
+            </ul>
+    </div>
+    <div class="visit-status-message" style="display: none;"></div>
+</div>
+
+
+<div class="dialog-widget-container">
+    <div class="dialog-widget-header">
+        <h2 class="dialog-widget-title">List of Available Prisoners</h2>
+        <p class="dialog-widget-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="dialog-widget-content">
+        <div class="dialog-widget-prisoner-info">
+            <span class="dialog-widget-prisoner-name">
+        </div>
+        <div class="dialog-widget-actions">
+            <button class="dialog-widget-button dialog-widget-accept-button">ACCEPT</button>
+            <button class="dialog-widget-button dialog-widget-reject-button">REJECT</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="notebook-container">
+    <div class="notebook-binding">
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+        <div class="binding-hole"></div>
+    </div>
+    <div class="notebook-page">
+        <div class="notebook-header">
+            <h2 class="notebook-title">PRISONER NOTEBOOK</h2>
+        </div>
+        <div class="notebook-content">
+            <textarea class="notebook-textarea" placeholder="This is dummy text"></textarea>
+            <div class="notebook-lines">
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+                <div class="notebook-line"></div>
+            </div>
+        </div>
+        <div class="notebook-footer">
+            <button class="notebook-button notebook-save-button">SAVE</button>
+            <button class="notebook-button notebook-cancel-button">CANCEL</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="casino-widget-container">
+  <img src="../html/images/dice-left.png" class="casino-widget-dice-left-img" alt="Dice Left">
+  <img src="../html/images/dice-right.png" class="casino-widget-dice-right-img " alt="Dice Right">
+    <div class="casino-header">
+        <span class="casino-esc-button">ESC</span>
+    </div>
+    <div class="casino-title-section">
+        <h2 class="casino-title">PRISON GAMBLING CASINO</h2>
+        <p class="casino-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+   <div class="casino-game-area">
+    <div class="casino-player-info casino-player-left">
+      <div class="player-identity-wrapper">
+         <div class="casino-player-avatar">
+              <img src="../html/images/face.png" alt="Player Avatar">
+              <span class="casino-player-name left-player">John Doee</span>
+          </div>
+      </div>
+      <div class="casino-winner-text" style="display: none;">WINNER!</div>
+    </div>
+    <div class="casino-dice-area">
+        <div class="casino-dice-circle">
+            <div class="casino-dice-ring casino-dice-ring-outer"></div>
+            <div class="casino-dice-ring casino-dice-ring-inner"></div>
+            <div class="casino-dice-wrapper">
+                <div class="casino-die-one"></div>
+                <div class="casino-die-two"></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="border-left:none;" class="casino-player-info casino-player-right">
+        <div  class="player-identity-wrapper"> 
+          <div class="casino-player-avatar">
+            <img src="../html/images/face.png" alt="Player Avatar">
+            <span class="casino-player-name right-player">Sam Francis</span>
+          </div>
+        </div> 
+        <div class="casino-winner-text" style="display: none;">WINNER!</div> </div>
+    </div>
+    <button class="casino-roll-button">Roll Dice</button>
+</div>
+
+
+
+
+<div class="minigame-wrapper">
+      <div class="minigame-inner">
+          <div class="header-line"></div>
+          <h1>DIG TUNNEL</h1>
+          <p class="description">Press the button as fast as you can and dig quickly.The faster, the better.</p>
+          <div class="progress-section">
+              <div class="progress-bar-container-new">
+                  <div class="progress-boxes">
+                      </div>
+              </div>
+              <div class="press-here-button">Click Here</div>
+          </div>
+      </div>
+</div>
+
+ <div class="game-container">
+    <div class="text-box">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color: #00ffd0; font-family: 'Orbitron', sans-serif; font-size: 48px; letter-spacing: 2px; position: relative;">
+              <span style="display: block; height: 2px; width: 60px; background-color: #00ffd0; margin: 0 auto 10px;"></span>
+              UNLOCK DOOR
+            </h1>
+            <p style="color: #bbb; font-family: 'Arial', sans-serif; font-size: 14px; margin-top: -10px;">
+              Try not to move the rod outside the electric line. <br> You may be electrocuted or caught, so be careful.
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="game-area">
+      <div class="zone zone1"></div>
+      <div class="zone zone2"></div>
+      <div class="zone zone3"></div>
+      <div class="zone zone4"></div>
+      <canvas id="danger-canvas"></canvas>
+      <div class="svg-holder" id="svg-holder">
+        <svg id="player-svg" xmlns="http://www.w3.org/2000/svg" width="200" height="29" viewBox="0 0 213 29" fill="none">
+          <path d="M0 7.35821C0 3.29438 3.38097 0 7.55162 0H53.3055C57.4762 0 60.8571 3.29438 60.8571 7.35821V21.6418C60.8571 25.7056 57.4762 29 53.3055 29H7.55162C3.38097 29 0 25.7056 0 21.6418V7.35821Z" fill="white"/>
+          <path d="M134.888 9.52236L59.0803 9.52236L59.0806 20.3663C127.933 20.3663 137.706 20.3663 142.592 21.4253C147.479 22.4844 160.805 29.6493 172.577 28.3507C179.567 27.5796 199.546 25.9348 210.648 25.2438C211.971 25.1614 213 24.0948 213 22.803C213 21.4573 211.887 20.3663 210.506 20.3663H182.571C167.645 20.3663 159.301 16.3484 153.068 13.158C147.474 10.2952 141.206 9.52236 134.888 9.52236Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+<script src="./script.js" type="text/javascript"></script>

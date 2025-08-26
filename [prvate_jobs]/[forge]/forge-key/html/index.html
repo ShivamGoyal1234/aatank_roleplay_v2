@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Forge Key</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+    body { display: none; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOutDown {
+      from { opacity: 1; transform: translateY(0); }
+      to   { opacity: 0; transform: translateY(20px); }
+    }
+    .fade-in { animation: fadeInUp 0.5s ease forwards; }
+    .fade-out { animation: fadeOutDown 0.5s ease forwards; }
+
+    @keyframes electricShock {
+      0%,100% { transform: translateX(0); }
+      10%,30%,50%,70%,90% { transform: translateX(-3px); }
+      20%,40%,60%,80% { transform: translateX(3px); }
+    }
+    .electric-shock {
+      animation: electricShock 0.7s ease-in-out 1;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;
+    }
+
+    /* Container */
+    .key-container {
+      position: fixed;
+      width: 340px;
+      bottom: 50px;
+      left: 50%;
+      margin-left: -170px;
+      background: linear-gradient(to bottom, rgba(20, 20, 20, 0.95), rgba(0, 0, 0, 0.98));
+      border-radius: 15px;
+      padding: 15px 15px 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      will-change: transform;
+      transform: translateZ(0);
+    }
+
+    .key-header {
+      color: #fff;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .key-instruction {
+      color: #ddd;
+      font-size: 0.9em;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Canvas */
+    #circleCanvas {
+      display: block;
+      margin: 3px auto;
+      height: 150px;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    /* Result */
+    .result {
+      font-size: 1em;
+      font-weight: bold;
+      margin: 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      line-height: 1.4;
+      max-width: 100%;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    .result.visible {
+      opacity: 1;
+      max-height: 60px;
+      margin: 12px 8px 4px;
+    }
+
+    .result.success {
+      color: #4cff4c;
+      background: rgba(76, 255, 76, 0.1);
+      border: 1px solid rgba(76, 255, 76, 0.3);
+    }
+
+    .result.fail {
+      color: #ff4444;
+      background: rgba(255, 68, 68, 0.1);
+      border: 1px solid rgba(255, 68, 68, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="key-container fade-in" id="keyContainer">
+    <!-- Default text is "Forge Key," but we'll override via JS if a custom title is passed -->
+    <div class="key-header" id="keyHeader">Forge Key</div>
+    <div class="key-instruction">Press the correct key while the line is in the arc.</div>
+    <canvas id="circleCanvas" width="170" height="170"></canvas>
+    <div class="result" id="resultMessage"></div>
+  </div>
+
+  <script>
+    /****************************************
+     *       GLOBAL VARIABLES
+     ****************************************/
+    const canvas = document.getElementById("circleCanvas");
+    const ctx = canvas.getContext("2d");
+    const cx = canvas.width / 2, cy = canvas.height / 2;
+
+    // Circle sizes
+    const outerRadius = 35, lineLength = 35;
+
+    // Difficulty-related
+    let difficulty = 1;
+    let speed = 100;
+    let arcSize = 90;
+    let arcStart = 0;
+    let indicatorAngle = 0;
+    let lastTimestamp = null;
+    let expectedKey = "E";
+
+    // UI references
+    const keyContainer = document.getElementById("keyContainer");
+    const resultMessageElem = document.getElementById("resultMessage");
+    const keyHeaderElem = document.getElementById("keyHeader");
+
+    // Animation frame
+    let animationFrame = null;
+
+    /****************************************
+     *        CLEANUP & INIT
+     ****************************************/
+    function cleanup() {
+      cancelAnimationFrame(animationFrame);
+      window.removeEventListener("keydown", onKeyPress);
+      lastTimestamp = null;
+      indicatorAngle = 0;
+    }
+
+    function initForgeKey(newDifficulty) {
+      cleanup();
+      difficulty = newDifficulty || 1;
+
+      // Difficulty settings
+      if (difficulty === 1) {
+        expectedKey = "E";
+        speed = 100;
+        arcSize = 90;
+      } else if (difficulty === 2) {
+        const mediumKeys = ["A","S","D","F","G"];
+        expectedKey = mediumKeys[Math.floor(Math.random() * mediumKeys.length)];
+        speed = 150;
+        arcSize = 60;
+      } else {
+        const hardKeys = ["Q","W","Z","X","C","V","B","N","M","1","2","3","4","5","6"];
+        expectedKey = hardKeys[Math.floor(Math.random() * hardKeys.length)];
+        speed = 200;
+        arcSize = 30;
+      }
+
+      arcStart = Math.random() * 360;
+
+      resultMessageElem.innerHTML = "";
+      resultMessageElem.classList.remove("visible", "success", "fail");
+
+      window.addEventListener("keydown", onKeyPress);
+      animationFrame = requestAnimationFrame(updateFrame);
+    }
+
+    /****************************************
+     *        KEY PRESS HANDLER
+     ****************************************/
+    function onKeyPress(e) {
+      if (e.key.toUpperCase() === expectedKey.toUpperCase()) {
+        isAngleInArc(indicatorAngle, arcStart, arcSize) ? handleSuccess() : handleFail();
+      } else {
+        handleFail();
+      }
+    }
+
+    /****************************************
+     *          RENDERING
+     ****************************************/
+    function drawCircleGame() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Outer ring with gradient
+      const gradient = ctx.createLinearGradient(cx - outerRadius, cy - outerRadius, cx + outerRadius, cy + outerRadius);
+      gradient.addColorStop(0, '#2a2a2a');
+      gradient.addColorStop(1, '#3a3a3a');
+      
+      ctx.beginPath();
+      ctx.lineWidth = 8;
+      ctx.strokeStyle = gradient;
+      ctx.arc(cx, cy, outerRadius, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      // Target arc with glow
+      ctx.shadowColor = 'rgba(255, 202, 40, 0.5)';
+      ctx.shadowBlur = 10;
+      drawArcSegment(cx, cy, outerRadius, arcStart, arcSize, '#ffca28');
+      ctx.shadowBlur = 0;
+
+      // Rotating line with gradient
+      const rad = toRadians(indicatorAngle - 90);
+      const x2 = cx + lineLength * Math.cos(rad);
+      const y2 = cy + lineLength * Math.sin(rad);
+      
+      const lineGradient = ctx.createLinearGradient(cx, cy, x2, y2);
+      lineGradient.addColorStop(0, '#ffa726');
+      lineGradient.addColorStop(1, '#ff9100');
+      
+      ctx.beginPath();
+      ctx.strokeStyle = lineGradient;
+      ctx.lineWidth = 4;
+      ctx.lineCap = 'round';
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+
+      // Center key with modern style
+      drawCenterKey(expectedKey);
+    }
+
+    function drawArcSegment(cx, cy, radius, startDeg, degSize, color) {
+      const startRad = toRadians(startDeg - 90);
+      const endRad = toRadians(startDeg + degSize - 90);
+      ctx.beginPath();
+      ctx.lineWidth = 8;
+      ctx.strokeStyle = color;
+      ctx.lineCap = 'round';
+      ctx.arc(cx, cy, radius, startRad, endRad);
+      ctx.stroke();
+    }
+
+    function drawCenterKey(keyChar) {
+      // Key background with gradient
+      const keyGradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, 20);
+      keyGradient.addColorStop(0, '#424242');
+      keyGradient.addColorStop(1, '#212121');
+      
+      ctx.beginPath();
+      ctx.fillStyle = keyGradient;
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+      ctx.shadowBlur = 8;
+      ctx.arc(cx, cy, 20, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Key border
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.lineWidth = 2;
+      ctx.arc(cx, cy, 20, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      // Key text with shadow
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 16px Poppins, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+      ctx.shadowBlur = 4;
+      ctx.fillText(keyChar.toUpperCase(), cx, cy);
+      ctx.shadowBlur = 0;
+    }
+
+    /****************************************
+     *        ANIMATION LOOP
+     ****************************************/
+    function updateFrame(timestamp) {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const delta = (timestamp - lastTimestamp) / 1000;
+      lastTimestamp = timestamp;
+
+      indicatorAngle += speed * delta;
+      if (indicatorAngle >= 360) {
+        handleFail();
+        return;
+      }
+
+      drawCircleGame();
+      animationFrame = requestAnimationFrame(updateFrame);
+    }
+
+    /****************************************
+     *          ANGLE CHECK
+     ****************************************/
+    function isAngleInArc(angle, arcStartDeg, arcSizeDeg) {
+      let arcEndDeg = arcStartDeg + arcSizeDeg;
+      if (arcEndDeg >= 360) arcEndDeg -= 360;
+      if (arcStartDeg <= arcEndDeg) {
+        return angle >= arcStartDeg && angle <= arcEndDeg;
+      } else {
+        return angle >= arcStartDeg || angle <= arcEndDeg;
+      }
+    }
+
+    function toRadians(deg) {
+      return (deg * Math.PI) / 180;
+    }
+
+    /****************************************
+     *      SUCCESS / FAIL HANDLERS
+     ****************************************/
+    function handleSuccess() {
+      cleanup();
+      resultMessageElem.innerHTML = "Success!";
+      resultMessageElem.classList.add("visible", "success");
+      setTimeout(() => {
+        exitForgeKeyUI();
+        sendForgeKeyResult(true);
+      }, 1500);
+    }
+
+    function handleFail() {
+      cleanup();
+      keyContainer.classList.add("electric-shock");
+      resultMessageElem.innerHTML = "Failed!";
+      resultMessageElem.classList.add("visible", "fail");
+      setTimeout(() => {
+        keyContainer.classList.remove("electric-shock");
+        exitForgeKeyUI();
+        sendForgeKeyResult(false);
+      }, 1500);
+    }
+
+    /****************************************
+     *       SHOW / EXIT UI
+     ****************************************/
+    function showForgeKeyUI(newDifficulty, newTitle) {
+      // If a custom title is provided, override the default
+      keyHeaderElem.textContent = newTitle || "Forge Key";
+
+      document.body.style.display = "block";
+      keyContainer.classList.remove("fade-out");
+      keyContainer.classList.add("fade-in");
+      initForgeKey(newDifficulty);
+    }
+
+    function exitForgeKeyUI() {
+      keyContainer.classList.remove("fade-in");
+      keyContainer.classList.add("fade-out");
+      setTimeout(() => { document.body.style.display = "none"; }, 800);
+    }
+
+    /****************************************
+     *       SEND RESULT
+     ****************************************/
+    function sendForgeKeyResult(success) {
+      fetch(`https://${GetParentResourceName()}/forgeKeyResult`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=UTF-8" },
+        body: JSON.stringify({ success: success }),
+      });
+    }
+
+    /****************************************
+     *       LISTEN FOR MESSAGES
+     ****************************************/
+    window.addEventListener("message", (event) => {
+      const data = event.data;
+      if (data.action === "startForgeKey") {
+        showForgeKeyUI(data.difficulty, data.title);
+      } else if (data.action === "exitForgeKey") {
+        exitForgeKeyUI();
+      }
+    });
+
+    /****************************************
+     *       EXPORTED FUNCTION
+     ****************************************/
+    /**
+     * Launch the Forge Key minigame with a custom difficulty and title.
+     * @param {number}   difficulty 1=easy,2=medium,3=hard
+     * @param {string}   title      Optional custom title to display
+     * @param {function} callback   Called when the minigame ends
+     */
+    window.forgeKeyStart = function (difficulty, title, callback) {
+      const originalSendResult = sendForgeKeyResult;
+      sendForgeKeyResult = function (success) {
+        originalSendResult(success);
+        if (typeof callback === "function") {
+          callback(success);
+        }
+      };
+      showForgeKeyUI(difficulty, title);
+    };
+  </script>
+</body>
+</html>

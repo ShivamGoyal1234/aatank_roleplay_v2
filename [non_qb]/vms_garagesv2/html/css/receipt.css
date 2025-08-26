@@ -1,0 +1,120 @@
+/*
+
+    Receipt
+
+*/
+
+.receipt {
+    display: none;
+    font-family: 'Fake Receipt', sans-serif !important;
+    position: absolute;
+    right: 5em;
+    top: 12em;
+}
+
+.receipt-texts {
+    position: absolute;
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.receipt-texts > .header-label {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.receipt-texts > .header-tuning {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.receipt-texts > .legend {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-texts > .list {
+    max-height: 25em;
+    overflow: auto;
+    margin-block: 1em;
+}
+
+.receipt-texts > .list > .plate,
+.receipt-texts > .list > .impounded_by {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-texts > .list > .fine {
+    margin-top: 1em;
+}
+
+.receipt-texts > .list > .fine > div {
+    font-weight: 600;
+}
+
+.receipt-texts > .list > .fine > div > span {
+    display: block;
+    font-weight: 100;
+}
+
+
+.receipt-texts > .total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-texts > .total .total-discounted {
+    text-decoration: line-through;
+    color:rgba(0, 0, 0, 0.65) !important;
+}
+
+.receipt-texts > .buttons {
+    display: flex;
+    margin-inline: auto;
+}
+
+.receipt-texts > .buttons > .pay_cash,
+.receipt-texts > .buttons > .pay_bank {
+    padding-block: 0.5em;
+    padding-inline: 1.5em;
+    margin-left: auto;
+    margin-right: 1em;
+    color: white;
+    border: 2px solid transparent;
+    background: rgb(82 112 255 / 77%);
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.receipt-texts > .buttons > .pay_cash:hover,
+.receipt-texts > .buttons > .pay_bank:hover {
+    scale: 1.05;
+    background: rgb(82 112 255 / 100%);
+}
+
+.receipt-texts > .buttons > .cancel {
+    padding-block: 0.5em;
+    padding-inline: 1.5em;
+    margin-right: auto;
+    margin-left: 1em;
+    color: rgb(82 112 255 / 77%);
+    border: 2px solid rgb(82 112 255 / 77%);
+    background: transparent;
+    border-radius: 0.5em;
+    transition: 0.2s;
+}
+
+.receipt-texts > .buttons > .cancel:hover {
+    scale: 1.05;
+    color: rgb(82 112 255 / 100%);
+    border: 2px solid rgb(82 112 255 / 100%);
+}
+
+
+.receipt .receipt-img {
+    width: 25em;
+}

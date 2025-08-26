@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gemunu+Libre:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=The+Nautigal:wght@400;700&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+#RadialFrame {
+  --s: 300px;
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--s);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  padding-inline: calc(var(--s)/10) 0;
+  object-fit: cover;
+  border-radius: 20px;
+  transform: translate(-50%, -50%) perspective(350px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+
+.main-crcl1 {
+  width: 435px;
+  height: 435px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-crcl1 {
+  width: 435px;
+  height: 435px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.main-fcircle {
+  width: 435px;
+  height: 435px;
+  animation: rotateClockwise 40s linear infinite;
+}
+
+.main-crcl2 {
+  width: 400.2px;
+  height: 400.2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-scircle {
+  width: 400.2px;
+  height: 400.2px;
+  animation: rotateCounterClockwise 35s linear infinite;
+}
+
+.main-crcl3 {
+  width: 104.4px;
+  height: 104.4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-tcircle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.main-selectedcontent-title {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 34.8px;
+  color: #fff;
+
+}
+
+.main-selectedcontent-text {
+  position: absolute;
+  top: 75%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50.46px;
+  /* color: #FF0039; */
+  white-space: nowrap;
+
+}
+
+.main-selectedcontent-text.small-font {
+  font-size: 40px;
+  /* Adjust this value as needed */
+}
+
+.radial-options {
+  width: 435px;
+  height: 435px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  ;
+}
+
+.radial-option {
+  transition: 0.2s ease;
+}
+
+/* Define the pop-in animation */
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    /* Start from center */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    /* Expand to full size */
+    opacity: 1;
+  }
+}
+
+/* Apply the pop-in animation */
+.radial-option.pop-in {
+  animation: popIn 0.4s ease-in-out;
+  /* Smooth, gradual pop-in */
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+
+
+.radial-option svg {
+  transition: transform 0.2s ease, stroke-width 0.2s ease, fill 0.2s ease;
+  will-change: transform;
+}
+
+
+.radial-option:hover svg {
+  transform: scale(1.2);
+}
+
+.opt-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+@keyframes popIn2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.submenu-content-title {
+  position: absolute;
+  top: -15%;
+  left: 0%;
+  background-image: linear-gradient(to right top, #494848, #434142, #2e2d2d, #1a1a1a, #000000);
+  /* border: .1px solid white; */
+  box-sizing: border-box;
+
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+
+}
+
+.sub-option {
+  display: flex;
+  width: 52.2px;
+  height: 52.2px;
+  background: black;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+  animation: popIn2 0.3s ease-in-out;
+}
+
+.sub-option:hover {
+  background-image: linear-gradient(to right top, #595757, #434142, #2e2d2d, #1a1a1a, #000000);
+  border: 2px solid white;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.sub-opt-icon {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  color: #fff;
+  pointer-events: none;
+}
+
+.sub-opt-icon i,
+.sub-opt-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+.submenu-container_warp::-webkit-scrollbar {
+  width: 6px;
+  /* Width of the scroll bar */
+}
+
+.submenu-container_warp::-webkit-scrollbar-track {
+  background: #ffffff1a;
+  /* Background of the scroll track */
+}
+
+.submenu-container_warp::-webkit-scrollbar-thumb {
+  background-color: #FF0039;
+  /* Color of the scroll thumb */
+}
+
+.submenu-container_warp::-webkit-scrollbar-thumb:hover {
+  background-color: #ff0037a2;
+  /* Darker color on hover */
+}
+
+.nested-back-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 52.2px;
+  height: 52.2px;
+  opacity: 0.8;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: popIn 0.3s ease-in-out;
+  z-index: -1;
+}

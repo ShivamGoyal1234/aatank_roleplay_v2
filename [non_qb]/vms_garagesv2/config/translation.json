@@ -1,0 +1,2862 @@
+{
+    "EN": {
+        "currency": "$",
+        "buy_business": {
+            "header": "BUY BUSINESS",
+            "name": "Parking:",
+            "parking_spaces": "Number of parking spaces:",
+            "price": "Price:",
+            "important_infos": "Important informations:",
+            "buy_btn": "BUY FOR"
+        },
+        "bossmenu": {
+            "title": "Parking",
+            "sidebar": {
+                "main_title": "Main",
+                "main_description": "Home page, parking information..",
+                "history_sales_title": "Sales History",
+                "history_sales_description": "Sales history and customer data.."
+            },
+            "main": {
+                "menu_total_earned_header": "Total Earned:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Free Parking Spaces:",
+                "menu_occupied_parking_spaces_header": "Occupied Parking Spaces:",
+                "menu_parking_spaces_header": "Informations about parked vehicles and rented parking spaces.",
+                "menu_parking_spaces_title": "Parking Spaces",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "Space ID",
+                "table_owner": "Owner",
+                "table_vehicle": "Parked Vehicle",
+                "table_parking_date": "Parking Date",
+                "table_rent_end_date": "Rent End Date",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Rental period is over",
+                "menu_balance_header": "Balance:",
+                "menu_balance_btn_withdraw": "WITHDRAW",
+                "menu_balance_btn_deposit": "DEPOSIT",
+                "menu_sell_header": "Sell your business automatically.",
+                "menu_sell_title": "Sell Automatically",
+                "menu_sell_btn": "SELL FOR {0}{1}",
+                "menu_resell_header": "Resell parking to another citizen.",
+                "menu_resell_title": "Resell Parking",
+                "menu_resell_btn": "RESELL"
+            },
+            "sales_history": {
+                "table_date": "Sale Date",
+                "table_seller": "Seller",
+                "table_buyer": "Buyer",
+                "table_vehicle": "Vehicle Info",
+                "table_price": "Price"
+            }
+        },
+        "paystation": {
+            "title": "Pay Station",
+            "description": "Parking {0} is a paid parking lot costing {1}$ per hour.",
+            "provide_license_plate": "Enter the license plate number to search for a vehicle and pay for parking:",
+            "find_vehicle": "FIND VEHICLE",
+            "parking_cost": "Parking cost per hour:",
+            "ticket": {
+                "title": "PARKING TICKET",
+                "vehicle": "VEHICLE {0}",
+                "hours": "PARKING TIME - {0} HOURS",
+                "date": "DATE",
+                "from": "FROM",
+                "to": "TO",
+                "to_paid": "TO PAID",
+                "pay_cash": "CASH",
+                "pay_bank": "BANK",
+                "cancel": "CANCEL"
+            }
+        },
+        "parking_rent": {
+            "title": "Rent a parking space",
+            "bar_yours": "YOURS",
+            "bar_rented": "RENTED",
+            "bar_free": "FREE",
+            "selected_space": "Space:",
+            "parking_cost": "Parking cost per day:",
+            "select_time_title": "Rental Time:",
+            "select_time_description": "Select the time for which you want to rent this parking space.",
+            "day_to_select": "{0} Day",
+            "days_to_select": "{0} Days",
+            "select_days": "SELECT DAYS",
+            "rent_for": "RENT FOR {0}{1}.00",
+            "notice_period": "Notice period:",
+            "permanent_space": "Permanent"
+        },
+        "resell": {
+            "title": "Agreement on sale of shares of<br>{0}",
+            "date": "Concluded in Los Santos on {0}",
+            "seller": "<b>Seller</b>, by which, for the purposes of this agreement, is considered to be {0}.",
+            "buyer": "<b>Buyer</b>, by whom, for the purposes of this agreement, is deemed to be {0}, will pay fees of {1}{2} for 100% of the shares.",
+            "paragraph": "§1 Subject of the Agreement",
+            "contract_first_point": "Seller declares that it is the owner of the parking '{0}' registered in the register of entrepreneurs in Los Santos.",
+            "contract_second_point": "The Seller undertakes to transfer to the Buyer all rights and obligations related to the ownership of shares in the '{0}' parking, including the right to use the parking location and all assets associated with it.",
+            "seller_signature": "Seller's signature",
+            "buyer_signature": "Buyer's signature",
+            "give_contract_btn": "Forward the contract to the buyer"
+        },
+        "agreement": {
+            "select_option": "Select",
+            "companies_group": "Companies:",
+            "citizens_group": "Citizens:",
+            "citizen": "Citizen {0}",
+            "cash": "cash",
+            "bank": "wire transfer",
+            "town": "Los Santos",
+            "date": "(date, town)",
+            "title": "Vehicle Sale Agreement",
+            "paragraph_1_text": "The subject of this agreement is the transfer by the Seller to the Buyer {0} ownership rights of the {1} {2}.",
+            "paragraph_2_text": "The Seller declares that the {0} subject to this agreement is his exclusive property, is free from legal defects and third-party rights, that there are no ongoing proceedings involving this {1}, and that it is not subject to any security interests.",
+            "paragraph_3_text": "The parties agree on the sale price of the vehicle specified in §1 of this agreement in the amount of: {0}{1} in the form of {2}.<br>",
+            "paragraph_3_text_2": "The parties hereby confirm that the vehicle specified in §1 has been delivered to the Buyer, and the price has been paid by the Buyer to the Seller..",
+            "seller_signature": "Seller's signature",
+            "buyer_signature": "Buyer's signature",
+            "give_contract_btn": "Give the agreement"
+        },
+        "garage": {
+            "tag_garage": "GARAGE",
+            "tag_job_garage": "JOB GARAGE",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "MANAGE",
+            "transfer": "Transfer",
+            "transfer_for": "Transfer for {0}{1}",
+            "take_out": "Take Out",
+            "management": {
+                "manage_vehicles_btn": "MANAGE VEHICLES",
+                "select_owners": "Select Owner(s):",
+                "select_vehicle": "Select Vehicle:",
+                "citizen": "Citizen {0}",
+                "buy_vehicle": "Buy Vehicle",
+                "info_employee_vehicle": "Employee's ownership vehicle:",
+                "info_grade_vehicle": "Employee vehicle on the grade:",
+                "info_eech_employee_vehicle": "The vehicle is available for any employee."
+            },
+            "management_transfer": {
+                "transfer_title": "Transfer {0}",
+                "transfer_btn": "Transfer Vehicle"
+            }
+        },
+        "impound": {
+            "tag": "IMPOUND",
+            "impounded_by": "Impounded By: ",
+            "impound_date": "Date of impound: ",
+            "fine": "Fine: ",
+            "take_free": "Take vehicle",
+            "give_bill": "Give the bill",
+            "pay_cash": "Pay with cash {0}{1}",
+            "pay_bank": "Pay with bank {0}{1}",
+            "locate": "Locate",
+            "locate_by_cash": "Locate for {0}{1} with cash",
+            "locate_by_bank": "Locate for {0}{1} with bank",
+            "locate_by_plate_btn": "Locate Vehicle",
+            "bill": {
+                "title": "IMPOUND BILL",
+                "plate": "Plate:",
+                "impounded_by": "Impounded By:",
+                "fine_title": "Fine:",
+                "total": "TOTAL",
+                "pay_cash": "CASH",
+                "pay_bank": "BANK",
+                "cancel": "CANCEL"
+            },
+            "locate_by_plate": {
+                "title": "Locate",
+                "locate_btn": "Locate Vehicle"
+            }
+        },
+        "tow": {
+            "title": "Tow Menu",
+            "select_impound": "Select Impound:",
+            "plate_label": "Selected vehicle:",
+            "impound_label": "Impound:",
+            "fine_label": "Fine:",
+            "fine_amount_label": "Fine Amount:",
+            "submit_tow": "SUBMIT TOW"
+        },
+        "creator_menu": {
+            "main_header": "Select the type of parking",
+            "parking_menu_header": "Configure Parking",
+            "house_garage_menu_header": "Configure Housing Garage",
+            "garage_interior_menu_header": "Configure Garage Interior",
+            "label_house_garage": "House Garage",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garage",
+            "label_garage_interior": "Interior Garage",
+            "label_parking": "Parking",
+            "next_btn": "GO NEXT",
+            "save_btn": "SAVE FILE",
+            "routing_bucket": {
+                "section_routingbucket": "Routing Bucket",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "You do not need to enter anything here, if you want the routing bucket to be automatically selected, leave the field blank.",
+                "description_routingbucket": "Enter individual ID routing bucket."
+            },
+            "main_settings": {
+                "section_title": "Main Settinngs",
+                "title_label": "Label:",
+                "description_label": "",
+                "title_type": "Type:",
+                "description_type": "Select the type of vehicle for which this parking lot is created.",
+                "title_spaces": "Parking Spaces:",
+                "description_spaces": "Configure the positions of parking spaces.",
+                "button_spaces": "CONFIGURE",
+                "title_menu_point": "Menu Point:",
+                "description_menu_point": "Configure the positions garage menu point.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "CONFIGURE"
+            },
+            "garage_settings": {
+                "section_title": "Garage Settinngs",
+                "title_ped_coords": "Player Coords in menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "CONFIGURE",
+                "title_vehicle_coords": "Preview Vehicle in menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "CONFIGURE",
+                "title_camera_coords": "Camera Position in menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "CONFIGURE"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Spawn Point",
+                "description_spawn_point": "",
+                "button_spawn_point": "CONFIGURE",
+                "title_return_point": "Return Point",
+                "description_return_point": "",
+                "button_return_point": "CONFIGURE"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Check Area Occupied"
+            },
+            "parkingmeter": {
+                "section_title": "Parking Meter",
+                "title_price": "Price:",
+                "description_price": "Enter the price per hour of parking.",
+                "title_paystations": "Pay Stations:",
+                "description_paystations": "Configure the positions of parking meter locations.<br>* Move closer to the point to see the marker.",
+                "button_paystations": "CONFIGURE"
+            },
+            "rent": {
+                "section_title": "Rent Spaces",
+                "title_price": "Price:",
+                "description_price": "Enter the price per day of parking.",
+                "title_days": "Days:",
+                "description_days": "* Enter numbers separated by commas.",
+                "title_coords": "Menu Coords:",
+                "description_coords": "Configure the positions of rent menu locations.<br>* Move closer to the point to see the marker.",
+                "button_coords": "CONFIGURE"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Model:",
+                "description_model": "",
+                "title_animation": "Animation:",
+                "label_anim_dict": "Dictionary:",
+                "label_anim_name": "Name:",
+                "title_coords": "Coords:",
+                "description_coords": "Configure the positions of NPC.",
+                "button_coords": "CONFIGURE"
+            },
+            "company": {
+                "section_title": "Company",
+                "title_company": "Jobs:",
+                "help_company": "Enter job names separated by commas."
+            },
+            "gang": {
+                "section_title": "Gang",
+                "title_gang": "Gang:",
+                "help_gang": "Enter gang names separated by commas."
+            },
+            "allowed": {
+                "section_title": "Models Restrictions",
+                "title_models": "Models Restrictions:",
+                "description_models": "* Enter the names of the models allowed to park in this parking lot separated by commas"
+            },
+            "predefined": {
+                "section_title": "Predefined Models",
+                "title_models": "Predefined Models:",
+                "description_models": "* Enter the names of the models that will be available in this garage.<br>The garage then will be configured as <b>Job Garages with Predefined Vehicles</b>, no owned vehicles will be available in it."
+            }
+        }
+    },
+    "DE": {
+        "currency": "€",
+        "buy_business": {
+            "header": "UNTERNEHMEN KAUFEN",
+            "name": "Parkplatz:",
+            "parking_spaces": "Anzahl der Parkplätze:",
+            "price": "Preis:",
+            "important_infos": "Wichtige Informationen:",
+            "buy_btn": "KAUFEN FÜR"
+        },
+        "bossmenu": {
+            "title": "Parken",
+            "sidebar": {
+                "main_title": "Haupt",
+                "main_description": "Startseite, Parkplatzinformationen..",
+                "history_sales_title": "Verkaufshistorie",
+                "history_sales_description": "Verkaufshistorie und Kundendaten.."
+            },
+            "main": {
+                "menu_total_earned_header": "Insgesamt verdient:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Freie Parkplätze:",
+                "menu_occupied_parking_spaces_header": "Belegte Parkplätze:",
+                "menu_parking_spaces_header": "Informationen zu geparkten Fahrzeugen und vermieteten Parkplätzen.",
+                "menu_parking_spaces_title": "Parkplätze",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "Platz ID",
+                "table_owner": "Besitzer",
+                "table_vehicle": "Geparktes Fahrzeug",
+                "table_parking_date": "Parkdatum",
+                "table_rent_end_date": "Mietende-Datum",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Mietzeitraum ist abgelaufen",
+                "menu_balance_header": "Kontostand:",
+                "menu_balance_btn_withdraw": "ABHEBEN",
+                "menu_balance_btn_deposit": "EINZAHLEN",
+                "menu_sell_header": "Verkaufen Sie Ihr Unternehmen automatisch.",
+                "menu_sell_title": "Automatisch verkaufen",
+                "menu_sell_btn": "VERKAUFEN FÜR {0}{1}",
+                "menu_resell_header": "Parken an einen anderen Bürger weiterverkaufen.",
+                "menu_resell_title": "Parken weiterverkaufen",
+                "menu_resell_btn": "WEITERVERKAUFEN"
+            },
+            "sales_history": {
+                "table_date": "Verkaufsdatum",
+                "table_seller": "Verkäufer",
+                "table_buyer": "Käufer",
+                "table_vehicle": "Fahrzeuginformationen",
+                "table_price": "Preis"
+            }
+        },
+        "paystation": {
+            "title": "Bezahlschalter",
+            "description": "Parkplatz {0} ist ein kostenpflichtiger Parkplatz mit Kosten von {1}€ pro Stunde.",
+            "provide_license_plate": "Geben Sie das Kennzeichen ein, um ein Fahrzeug zu suchen und das Parken zu bezahlen:",
+            "find_vehicle": "FAHRZEUG FINDEN",
+            "parking_cost": "Parkkosten pro Stunde:",
+            "ticket": {
+                "title": "PARKTICKET",
+                "vehicle": "FAHRZEUG {0}",
+                "hours": "PARKZEIT - {0} STUNDEN",
+                "date": "DATUM",
+                "from": "VON",
+                "to": "ZU",
+                "to_paid": "ZU BEZAHLEN",
+                "pay_cash": "BAR",
+                "pay_bank": "ÜBERWEISUNG",
+                "cancel": "ABBRECHEN"
+            }
+        },
+        "parking_rent": {
+            "title": "Mieten Sie einen Parkplatz",
+            "bar_yours": "IHR",
+            "bar_rented": "VERMIETET",
+            "bar_free": "KOSTENLOS",
+            "selected_space": "Platz:",
+            "parking_cost": "Parkkosten pro Tag:",
+            "select_time_title": "Mietzeit:",
+            "select_time_description": "Wählen Sie die Zeit aus, für die Sie diesen Parkplatz mieten möchten.",
+            "day_to_select": "{0} Tag",
+            "days_to_select": "{0} Tage",
+            "select_days": "TAGE AUSWÄHLEN",
+            "rent_for": "MIETEN FÜR {0}{1}.00",
+            "notice_period": "Kündigungsfrist:",
+            "permanent_space": "Dauerhaft"
+        },
+        "resell": {
+            "title": "Vereinbarung über den Verkauf von Anteilen an<br>{0}",
+            "date": "Abgeschlossen in Los Santos am {0}",
+            "seller": "<b>Verkäufer</b>, der für diesen Vertrag als {0} angesehen wird.",
+            "buyer": "<b>Käufer</b>, der für diesen Vertrag als {0} betrachtet wird, zahlt Gebühren von {1}{2} für 100% der Anteile.",
+            "paragraph": "§1 Gegenstand des Vertrages",
+            "contract_first_point": "Der Verkäufer erklärt, dass er Eigentümer des Parkplatzes '{0}' ist, der im Unternehmensregister von Los Santos eingetragen ist.",
+            "contract_second_point": "Der Verkäufer verpflichtet sich, dem Käufer alle Rechte und Pflichten im Zusammenhang mit dem Besitz von Anteilen am Parkplatz '{0}', einschließlich des Rechts zur Nutzung des Parkplatzes und aller damit verbundenen Vermögenswerte, zu übertragen.",
+            "seller_signature": "Unterschrift des Verkäufers",
+            "buyer_signature": "Unterschrift des Käufers",
+            "give_contract_btn": "Vertrag an den Käufer weiterleiten"
+        },
+        "agreement": {
+            "select_option": "Auswählen",
+            "companies_group": "Unternehmen:",
+            "citizens_group": "Bürger:",
+            "citizen": "Bürger {0}",
+            "cash": "bar",
+            "bank": "Überweisung",
+            "town": "Los Santos",
+            "date": "(Datum, Stadt)",
+            "title": "Fahrzeugverkaufsvereinbarung",
+            "paragraph_1_text": "Gegenstand dieser Vereinbarung ist die Übertragung der Eigentumsrechte des Verkäufers auf den Käufer {0} des {1} {2}.",
+            "paragraph_2_text": "Der Verkäufer erklärt, dass der {0} Gegenstand dieser Vereinbarung sein ausschließliches Eigentum ist, frei von rechtlichen Mängeln und Rechten Dritter, dass es keine laufenden Verfahren gibt, die diesen {1} betreffen, und dass er keine Sicherungsrechte unterliegt.",
+            "paragraph_3_text": "Die Parteien einigen sich auf den Verkaufspreis des im §1 dieser Vereinbarung festgelegten Fahrzeugs in Höhe von: {0}{1} in Form von {2}.<br>",
+            "paragraph_3_text_2": "Die Parteien bestätigen hiermit, dass das im §1 genannte Fahrzeug dem Käufer übergeben wurde und der Preis vom Käufer an den Verkäufer gezahlt wurde..",
+            "seller_signature": "Unterschrift des Verkäufers",
+            "buyer_signature": "Unterschrift des Käufers",
+            "give_contract_btn": "Vereinbarung abgeben"
+        },
+        "garage": {
+            "tag_garage": "GARAGE",
+            "tag_job_garage": "JOB-GARAGE",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "VERWALTEN",
+            "transfer": "Übertragen",
+            "transfer_for": "Übertragen für {0}{1}",
+            "take_out": "Herausnehmen",
+            "management": {
+                "manage_vehicles_btn": "FAHRZEUGE VERWALTEN",
+                "select_owners": "Besitzer auswählen:",
+                "select_vehicle": "Fahrzeug auswählen:",
+                "citizen": "Bürger {0}",
+                "buy_vehicle": "Fahrzeug kaufen",
+                "info_employee_vehicle": "Fahrzeug im Besitz des Mitarbeiters:",
+                "info_grade_vehicle": "Mitarbeiterfahrzeug auf der Stufe:",
+                "info_eech_employee_vehicle": "Das Fahrzeug steht jedem Mitarbeiter zur Verfügung."
+            },
+            "management_transfer": {
+                "transfer_title": "Übertragung {0}",
+                "transfer_btn": "Fahrzeug übertragen"
+            }
+        },
+        "impound": {
+            "tag": "BESCHLAGNAHME",
+            "impounded_by": "Beschlagnahmt von: ",
+            "impound_date": "Beschlagnahmedatum: ",
+            "fine": "Bußgeld: ",
+            "take_free": "Fahrzeug nehmen",
+            "give_bill": "Rechnung ausstellen",
+            "pay_cash": "Mit Bargeld zahlen {0}{1}",
+            "pay_bank": "Mit Bank zahlen {0}{1}",
+            "locate": "Lokalisieren",
+            "locate_by_cash": "Lokalisieren für {0}{1} mit Bargeld",
+            "locate_by_bank": "Lokalisieren für {0}{1} mit Bank",
+            "locate_by_plate_btn": "Fahrzeug finden",
+            "bill": {
+                "title": "BESCHLAGNAHME-RECHNUNG",
+                "plate": "Kennzeichen:",
+                "impounded_by": "Beschlagnahmt von:",
+                "fine_title": "Bußgeld:",
+                "total": "GESAMT",
+                "pay_cash": "BARGELD",
+                "pay_bank": "BANK",
+                "cancel": "ABBRECHEN"
+            },
+            "locate_by_plate": {
+                "title": "Lokalisieren",
+                "locate_btn": "Fahrzeug finden"
+            }
+        },
+        "tow": {
+            "title": "Abschleppmenü",
+            "select_impound": "Beschlagnahme auswählen:",
+            "plate_label": "Ausgewähltes Fahrzeug:",
+            "impound_label": "Beschlagnahme:",
+            "fine_label": "Bußgeld:",
+            "fine_amount_label": "Bußgeldhöhe:",
+            "submit_tow": "ABSCHLEPPEN"
+        },
+        "creator_menu": {
+            "main_header": "Art des Parkens auswählen",
+            "parking_menu_header": "Parken konfigurieren",
+            "house_garage_menu_header": "Wohnhausgarage konfigurieren",
+            "garage_interior_menu_header": "Garageninterieur konfigurieren",
+            "label_house_garage": "Hausgarage",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garage",
+            "label_garage_interior": "Garageninnenraum",
+            "label_parking": "Parken",
+            "next_btn": "WEITER",
+            "save_btn": "DATEI SPEICHERN",
+            "routing_bucket": {
+                "section_routingbucket": "Routenbucket",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Hier müssen Sie nichts eingeben. Wenn Sie möchten, dass der Routing-Bucket automatisch ausgewählt wird, lassen Sie das Feld leer.",
+                "description_routingbucket": "Geben Sie eine individuelle ID für den Routenbucket ein."
+            },
+            "main_settings": {
+                "section_title": "Haupt-Einstellungen",
+                "title_label": "Bezeichnung:",
+                "description_label": "",
+                "title_type": "Typ:",
+                "description_type": "Wählen Sie den Fahrzeugtyp aus, für den dieser Parkplatz erstellt wurde.",
+                "title_spaces": "Parkplätze:",
+                "description_spaces": "Positionen der Parkplätze konfigurieren.",
+                "button_spaces": "KONFIGURIEREN",
+                "title_menu_point": "Menüpunkt:",
+                "description_menu_point": "Positionen des Garagenmenüpunkts konfigurieren.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "KONFIGURIEREN"
+            },
+            "garage_settings": {
+                "section_title": "Garagen-Einstellungen",
+                "title_ped_coords": "Spieler-Koordinaten im Menü",
+                "description_ped_coords": "",
+                "button_ped_coords": "KONFIGURIEREN",
+                "title_vehicle_coords": "Vorschau-Fahrzeug im Menü",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "KONFIGURIEREN",
+                "title_camera_coords": "Kameraposition im Menü",
+                "description_camera_coords": "",
+                "button_camera_coords": "KONFIGURIEREN"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Spawn-Punkt",
+                "description_spawn_point": "",
+                "button_spawn_point": "KONFIGURIEREN",
+                "title_return_point": "Rückkehrpunkt",
+                "description_return_point": "",
+                "button_return_point": "KONFIGURIEREN"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Besetzte Bereich überprüfen"
+            },
+            "parkingmeter": {
+                "section_title": "Parkuhr",
+                "title_price": "Preis:",
+                "description_price": "Geben Sie den Preis pro Stunde für das Parken ein.",
+                "title_paystations": "Bezahlschalter:",
+                "description_paystations": "Positionen der Parkuhrstandorte konfigurieren.<br>* Näher an den Punkt gehen, um den Marker zu sehen.",
+                "button_paystations": "KONFIGURIEREN"
+            },
+            "rent": {
+                "section_title": "Parkplätze vermieten",
+                "title_price": "Preis:",
+                "description_price": "Geben Sie den Preis pro Tag für das Parken ein.",
+                "title_days": "Tage:",
+                "description_days": "* Geben Sie Zahlen durch Kommas getrennt ein.",
+                "title_coords": "Menü-Koordinaten:",
+                "description_coords": "Positionen der Mietmenu-Orte konfigurieren.<br>* Näher an den Punkt gehen, um den Marker zu sehen.",
+                "button_coords": "KONFIGURIEREN"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Modell:",
+                "description_model": "",
+                "title_animation": "Animation:",
+                "label_anim_dict": "Wörterbuch:",
+                "label_anim_name": "Name:",
+                "title_coords": "Koordinaten:",
+                "description_coords": "Positionen des NPCs konfigurieren.",
+                "button_coords": "KONFIGURIEREN"
+            },
+            "company": {
+                "section_title": "Unternehmen",
+                "title_company": "Jobs:",
+                "help_company": "Geben Sie die Jobnamen durch Kommas getrennt ein."
+            },
+            "gang": {
+                "section_title": "Gang",
+                "title_gang": "Gang:",
+                "help_gang": "Geben Sie Gängenamen durch Kommas getrennt ein."
+            },
+            "allowed": {
+                "section_title": "Modelleinschränkungen",
+                "title_models": "Modelleinschränkungen:",
+                "description_models": "* Geben Sie die Namen der Modelle ein, die in diesem Parkplatz erlaubt sind, durch Kommas getrennt."
+            },
+            "predefined": {
+                "section_title": "Vordefinierte Modelle",
+                "title_models": "Vordefinierte Modelle:",
+                "description_models": "* Geben Sie die Namen der Modelle ein, die in dieser Garage verfügbar sein werden.<br>Die Garage wird dann als <b>Job-Garagen mit vordefinierten Fahrzeugen</b> konfiguriert, es werden keine eigenen Fahrzeuge darin verfügbar sein."
+            }
+        }
+    },
+    "FR": {
+        "currency": "€",
+        "buy_business": {
+            "header": "ACHETER ENTREPRISE",
+            "name": "Parking:",
+            "parking_spaces": "Nombre de places de parking:",
+            "price": "Prix:",
+            "important_infos": "Informations importantes:",
+            "buy_btn": "ACHETER POUR"
+        },
+        "bossmenu": {
+            "title": "Parking",
+            "sidebar": {
+                "main_title": "Principal",
+                "main_description": "Page d'accueil, informations sur le parking..",
+                "history_sales_title": "Historique des ventes",
+                "history_sales_description": "Historique des ventes et données des clients.."
+            },
+            "main": {
+                "menu_total_earned_header": "Total gagné:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Places de parking libres:",
+                "menu_occupied_parking_spaces_header": "Places de parking occupées:",
+                "menu_parking_spaces_header": "Informations sur les véhicules garés et les places de parking louées.",
+                "menu_parking_spaces_title": "Places de parking",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "ID de l'espace",
+                "table_owner": "Propriétaire",
+                "table_vehicle": "Véhicule garé",
+                "table_parking_date": "Date de stationnement",
+                "table_rent_end_date": "Date de fin de location",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 La période de location est terminée",
+                "menu_balance_header": "Solde:",
+                "menu_balance_btn_withdraw": "RETIRER",
+                "menu_balance_btn_deposit": "DÉPOSER",
+                "menu_sell_header": "Vendez automatiquement votre entreprise.",
+                "menu_sell_title": "Vendre automatiquement",
+                "menu_sell_btn": "VENDRE POUR {0}{1}",
+                "menu_resell_header": "Revendez le parking à un autre citoyen.",
+                "menu_resell_title": "Revendre le parking",
+                "menu_resell_btn": "REVENDRE"
+            },
+            "sales_history": {
+                "table_date": "Date de vente",
+                "table_seller": "Vendeur",
+                "table_buyer": "Acheteur",
+                "table_vehicle": "Info du véhicule",
+                "table_price": "Prix"
+            }
+        },
+        "paystation": {
+            "title": "Paiement au stationnement",
+            "description": "Le parking {0} est un parking payant coûtant {1}€ par heure.",
+            "provide_license_plate": "Entrez le numéro de plaque d'immatriculation pour rechercher un véhicule et payer le stationnement:",
+            "find_vehicle": "TROUVER LE VÉHICULE",
+            "parking_cost": "Coût du stationnement par heure:",
+            "ticket": {
+                "title": "TICKET DE PARKING",
+                "vehicle": "VÉHICULE {0}",
+                "hours": "TEMPS DE STATIONNEMENT - {0} HEURES",
+                "date": "DATE",
+                "from": "DE",
+                "to": "À",
+                "to_paid": "À PAYER",
+                "pay_cash": "LIQUIDE",
+                "pay_bank": "BANQUE",
+                "cancel": "ANNULER"
+            }
+        },
+        "parking_rent": {
+            "title": "Louer une place de parking",
+            "bar_yours": "VÔTRE",
+            "bar_rented": "LOUÉ",
+            "bar_free": "GRATUIT",
+            "selected_space": "Espace:",
+            "parking_cost": "Coût du stationnement par jour:",
+            "select_time_title": "Durée de la location:",
+            "select_time_description": "Sélectionnez la durée pour laquelle vous souhaitez louer cette place de parking.",
+            "day_to_select": "{0} Jour",
+            "days_to_select": "{0} Jours",
+            "select_days": "SÉLECTIONNER LES JOURS",
+            "rent_for": "LOUER POUR {0}{1}.00",
+            "notice_period": "Délai de préavis:",
+            "permanent_space": "Permanent"
+        },
+        "resell": {
+            "title": "Accord de vente des actions de<br>{0}",
+            "date": "Conclu à Los Santos le {0}",
+            "seller": "<b>Vendeur</b>, par lequel, aux fins du présent accord, est considéré comme étant {0}.",
+            "buyer": "<b>Acheteur</b>, par lequel, aux fins du présent accord, est réputé être {0}, devra payer des frais de {1}{2} pour 100% des actions.",
+            "paragraph": "§1 Objet de l'accord",
+            "contract_first_point": "Le Vendeur déclare être propriétaire du parking '{0}' enregistré au registre des entreprises à Los Santos.",
+            "contract_second_point": "Le Vendeur s'engage à transférer à l'Acheteur tous les droits et obligations liés à la propriété des actions dans le parking '{0}', y compris le droit d'utilisation de l'emplacement de parking et tous les actifs associés.",
+            "seller_signature": "Signature du vendeur",
+            "buyer_signature": "Signature de l'acheteur",
+            "give_contract_btn": "Transmettre le contrat à l'acheteur"
+        },
+        "agreement": {
+            "select_option": "Sélectionner",
+            "companies_group": "Entreprises:",
+            "citizens_group": "Citoyens:",
+            "citizen": "Citoyen {0}",
+            "cash": "argent liquide",
+            "bank": "virement bancaire",
+            "town": "Los Santos",
+            "date": "(date, ville)",
+            "title": "Accord de vente de véhicule",
+            "paragraph_1_text": "L'objet du présent accord est le transfert par le Vendeur à l'Acheteur {0} des droits de propriété du {1} {2}.",
+            "paragraph_2_text": "Le Vendeur déclare que le {0} objet du présent accord est sa propriété exclusive, est exempt de vices juridiques et de droits de tiers, qu'il n'y a pas de procédure en cours impliquant ce {1}, et qu'il n'est pas l'objet d'intérêts de sûreté.",
+            "paragraph_3_text": "Les parties conviennent du prix de vente du véhicule spécifié à la §1 de cet accord pour un montant de : {0}{1} sous forme de {2}.<br>",
+            "paragraph_3_text_2": "Les parties confirment par la présente que le véhicule spécifié à la §1 a été remis à l'Acheteur et que le prix a été payé par l'Acheteur au Vendeur..",
+            "seller_signature": "Signature du vendeur",
+            "buyer_signature": "Signature de l'acheteur",
+            "give_contract_btn": "Donner l'accord"
+        },
+        "garage": {
+            "tag_garage": "GARAGE",
+            "tag_job_garage": "GARAGE DE FONCTION",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "GÉRER",
+            "transfer": "Transférer",
+            "transfer_for": "Transférer pour {0}{1}",
+            "take_out": "Sortir",
+            "management": {
+                "manage_vehicles_btn": "GÉRER LES VÉHICULES",
+                "select_owners": "Sélectionner le(s) propriétaire(s):",
+                "select_vehicle": "Sélectionner un véhicule:",
+                "citizen": "Citoyen {0}",
+                "buy_vehicle": "Acheter un véhicule",
+                "info_employee_vehicle": "Véhicule de propriété de l'employé:",
+                "info_grade_vehicle": "Véhicule de l'employé au grade:",
+                "info_eech_employee_vehicle": "Le véhicule est disponible pour tout employé."
+            },
+            "management_transfer": {
+                "transfer_title": "Transfert {0}",
+                "transfer_btn": "Transférer le véhicule"
+            }
+        },
+        "impound": {
+            "tag": "POUNDRY",
+            "impounded_by": "Immobilisé par: ",
+            "impound_date": "Date de l'immobilisation: ",
+            "fine": "Amende: ",
+            "take_free": "Prendre le véhicule",
+            "give_bill": "Donner l'amende",
+            "pay_cash": "Payer en espèces {0}{1}",
+            "pay_bank": "Payer par virement {0}{1}",
+            "locate": "Localiser",
+            "locate_by_cash": "Localiser pour {0}{1} en espèces",
+            "locate_by_bank": "Localiser pour {0}{1} par virement",
+            "locate_by_plate_btn": "Localiser le véhicule",
+            "bill": {
+                "title": "FACTURE DE L'IMMOBILISATION",
+                "plate": "Plaque:",
+                "impounded_by": "Immobilisé par:",
+                "fine_title": "Amende:",
+                "total": "TOTAL",
+                "pay_cash": "ESPÈCES",
+                "pay_bank": "BANQUE",
+                "cancel": "ANNULER"
+            },
+            "locate_by_plate": {
+                "title": "Localiser",
+                "locate_btn": "Localiser le véhicule"
+            }
+        },
+        "tow": {
+            "title": "Menu de remorquage",
+            "select_impound": "Sélectionner l'immobilisation:",
+            "plate_label": "Véhicule sélectionné:",
+            "impound_label": "Immobilisation:",
+            "fine_label": "Amende:",
+            "fine_amount_label": "Montant de l'amende:",
+            "submit_tow": "ENVOYER REMORQUE"
+        },
+        "creator_menu": {
+            "main_header": "Sélectionnez le type de parking",
+            "parking_menu_header": "Configurer le parking",
+            "house_garage_menu_header": "Configurer le garage de maison",
+            "garage_interior_menu_header": "Configurer l'intérieur du garage",
+            "label_house_garage": "Garage de maison",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garage",
+            "label_garage_interior": "Intérieur du garage",
+            "label_parking": "Parking",
+            "next_btn": "ALLER À SUIVANT",
+            "save_btn": "ENREGISTRER LE FICHIER",
+            "routing_bucket": {
+                "section_routingbucket": "Routing Bucket",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Vous n'avez pas besoin d'entrer quoi que ce soit ici, si vous voulez que le seau de routage soit automatiquement sélectionné, laissez le champ vide.",
+                "description_routingbucket": "Entrer l'ID individuel du routing bucket."
+            },
+            "main_settings": {
+                "section_title": "Paramètres principaux",
+                "title_label": "Libellé:",
+                "description_label": "",
+                "title_type": "Type:",
+                "description_type": "Sélectionnez le type de véhicule pour lequel ce parking est créé.",
+                "title_spaces": "Places de parking:",
+                "description_spaces": "Configurer les positions des places de parking.",
+                "button_spaces": "CONFIGURER",
+                "title_menu_point": "Point de menu:",
+                "description_menu_point": "Configurer les points de menu du garage.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "CONFIGURER"
+            },
+            "garage_settings": {
+                "section_title": "Paramètres de garage",
+                "title_ped_coords": "Coordonnées joueur dans le menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "CONFIGURER",
+                "title_vehicle_coords": "Aperçu du véhicule dans le menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "CONFIGURER",
+                "title_camera_coords": "Position de la camera dans le menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "CONFIGURER"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Point d'apparition",
+                "description_spawn_point": "",
+                "button_spawn_point": "CONFIGURER",
+                "title_return_point": "Point de retour",
+                "description_return_point": "",
+                "button_return_point": "CONFIGURER"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Vérifier la zone occupée"
+            },
+            "parkingmeter": {
+                "section_title": "Horodateur",
+                "title_price": "Prix:",
+                "description_price": "Entrer le prix par heure de stationnement.",
+                "title_paystations": "Stations de paiement:",
+                "description_paystations": "Configurer les emplacements des horodateurs.<br>* Approchez-vous du point pour voir le marqueur.",
+                "button_paystations": "CONFIGURER"
+            },
+            "rent": {
+                "section_title": "Locations d'espaces",
+                "title_price": "Prix:",
+                "description_price": "Entrer le prix par jour de stationnement.",
+                "title_days": "Jours:",
+                "description_days": "* Entrer les chiffres séparés par des virgules.",
+                "title_coords": "Coordonnées du menu:",
+                "description_coords": "Configurer les positions des lieux pour louer.<br>* Approchez-vous du point pour voir le marqueur.",
+                "button_coords": "CONFIGURER"
+            },
+            "npc": {
+                "section_title": "PNJ",
+                "title_model": "Modèle:",
+                "description_model": "",
+                "title_animation": "Animation:",
+                "label_anim_dict": "Dictionnaire:",
+                "label_anim_name": "Nom:",
+                "title_coords": "Coords:",
+                "description_coords": "Configurer les positions des PNJ.",
+                "button_coords": "CONFIGURER"
+            },
+            "company": {
+                "section_title": "Entreprise",
+                "title_company": "Emplois:",
+                "help_company": "Entrer les noms d'emploi séparés par des virgules."
+            },
+            "gang": {
+                "section_title": "Gang",
+                "title_gang": "Gang :",
+                "help_gang": "Entrez les noms des gangs séparés par des virgules."
+            },
+            "allowed": {
+                "section_title": "Restrictions des modèles",
+                "title_models": "Restrictions des modèles:",
+                "description_models": "* Entrer les noms des modèles autorisés à se garer dans ce parking séparés par des virgules"
+            },
+            "predefined": {
+                "section_title": "Modèles prédéfinis",
+                "title_models": "Modèles prédéfinis:",
+                "description_models": "* Entrer les noms des modèles disponibles dans ce garage.<br>Le garage sera alors configuré comme <b>Garages de travail avec des véhicules prédéfinis</b>, aucun véhicule possédé ne sera disponible dedans."
+            }
+        }
+    },
+    "ES": {
+        "currency": "$",
+        "buy_business": {
+            "header": "COMPRAR NEGOCIO",
+            "name": "Estacionamiento:",
+            "parking_spaces": "Numero de plazas de estacionamiento:",
+            "price": "Precio:",
+            "important_infos": "Informaciones importantes:",
+            "buy_btn": "COMPRAR POR"
+        },
+        "bossmenu": {
+            "title": "Estacionamiento",
+            "sidebar": {
+                "main_title": "Principal",
+                "main_description": "Pagina principal, informacion del estacionamiento..",
+                "history_sales_title": "Historial de Ventas",
+                "history_sales_description": "Historial de ventas y datos de clientes.."
+            },
+            "main": {
+                "menu_total_earned_header": "Total Ganado:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Plazas de estacionamiento libres:",
+                "menu_occupied_parking_spaces_header": "Plazas de estacionamiento ocupadas:",
+                "menu_parking_spaces_header": "Informaciones sobre vehiculos estacionados y plazas de estacionamiento alquiladas.",
+                "menu_parking_spaces_title": "Plazas de Estacionamiento",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "ID de Espacio",
+                "table_owner": "Propietario",
+                "table_vehicle": "Vehiculo Estacionado",
+                "table_parking_date": "Fecha de Estacionamiento",
+                "table_rent_end_date": "Fecha de Fin de Alquiler",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 El periodo de alquiler ha terminado",
+                "menu_balance_header": "Balance:",
+                "menu_balance_btn_withdraw": "RETIRAR",
+                "menu_balance_btn_deposit": "DEPOSITAR",
+                "menu_sell_header": "Vender tu negocio automaticamente.",
+                "menu_sell_title": "Venta Automatica",
+                "menu_sell_btn": "VENDER POR {0}{1}",
+                "menu_resell_header": "Revender el estacionamiento a otro ciudadano.",
+                "menu_resell_title": "Revender Estacionamiento",
+                "menu_resell_btn": "REVENTA"
+            },
+            "sales_history": {
+                "table_date": "Fecha de Venta",
+                "table_seller": "Vendedor",
+                "table_buyer": "Comprador",
+                "table_vehicle": "Informacion del Vehiculo",
+                "table_price": "Precio"
+            }
+        },
+        "paystation": {
+            "title": "Estacion de Pago",
+            "description": "El estacionamiento {0} es un estacionamiento de pago que cuesta {1}$ por hora.",
+            "provide_license_plate": "Ingrese el numero de placa para buscar un vehiculo y pagar el estacionamiento:",
+            "find_vehicle": "ENCONTRAR VEHICULO",
+            "parking_cost": "Costo de estacionamiento por hora:",
+            "ticket": {
+                "title": "TICKET DE ESTACIONAMIENTO",
+                "vehicle": "VEHICULO {0}",
+                "hours": "TIEMPO DE ESTACIONAMIENTO - {0} HORAS",
+                "date": "FECHA",
+                "from": "DESDE",
+                "to": "HASTA",
+                "to_paid": "A PAGAR",
+                "pay_cash": "EFECTIVO",
+                "pay_bank": "BANCO",
+                "cancel": "CANCELAR"
+            }
+        },
+        "parking_rent": {
+            "title": "Alquilar una plaza de estacionamiento",
+            "bar_yours": "TUYA",
+            "bar_rented": "ALQUILADA",
+            "bar_free": "LIBRE",
+            "selected_space": "Espacio:",
+            "parking_cost": "Costo de estacionamiento por dia:",
+            "select_time_title": "Tiempo de Alquiler:",
+            "select_time_description": "Seleccione el tiempo por el cual desea alquilar esta plaza de estacionamiento.",
+            "day_to_select": "{0} Dia",
+            "days_to_select": "{0} Dias",
+            "select_days": "SELECCIONAR DIAS",
+            "rent_for": "ALQUILAR POR {0}{1}.00",
+            "notice_period": "Periodo de notificacion:",
+            "permanent_space": "Permanente"
+        },
+        "resell": {
+            "title": "Acuerdo de venta de acciones de<br>{0}",
+            "date": "Concluido en Los Santos el {0}",
+            "seller": "<b>Vendedor</b>, por lo cual, para los fines de este acuerdo, se considera ser {0}.",
+            "buyer": "<b>Comprador</b>, por quien, para los fines de este acuerdo, se considera ser {0}, pagara honorarios de {1}{2} por el 100% de las acciones.",
+            "paragraph": "§1 Objeto del Acuerdo",
+            "contract_first_point": "El vendedor declara que es el propietario del estacionamiento '{0}' registrado en el registro de empresarios en Los Santos.",
+            "contract_second_point": "El vendedor se compromete a transferir al comprador todos los derechos y obligaciones relacionados con la propiedad de acciones en el estacionamiento '{0}', incluido el derecho a usar la ubicacion del estacionamiento y todos los activos asociados con el.",
+            "seller_signature": "Firma del vendedor",
+            "buyer_signature": "Firma del comprador",
+            "give_contract_btn": "Entregar el contrato al comprador"
+        },
+        "agreement": {
+            "select_option": "Seleccionar",
+            "companies_group": "Empresas:",
+            "citizens_group": "Ciudadanos:",
+            "citizen": "Ciudadano {0}",
+            "cash": "efectivo",
+            "bank": "transferencia bancaria",
+            "town": "Los Santos",
+            "date": "(fecha, ciudad)",
+            "title": "Acuerdo de Venta de Vehiculos",
+            "paragraph_1_text": "El objeto de este acuerdo es la transferencia por parte del Vendedor al Comprador {0} de los derechos de propiedad del {1} {2}.",
+            "paragraph_2_text": "El Vendedor declara que el {0} objeto de este acuerdo es su propiedad exclusiva, esta libre de defectos legales y derechos de terceros, que no hay procedimientos en curso que involucren a este {1}, y que no esta sujeto a ningun interes de seguridad.",
+            "paragraph_3_text": "Las partes acuerdan el precio de venta del vehiculo especificado en §1 de este acuerdo en la cantidad de: {0}{1} en la forma de {2}.<br>",
+            "paragraph_3_text_2": "Las partes confirman que el vehiculo especificado en §1 ha sido entregado al Comprador, y el precio ha sido pagado por el Comprador al Vendedor.",
+            "seller_signature": "Firma del vendedor",
+            "buyer_signature": "Firma del comprador",
+            "give_contract_btn": "Entregar el acuerdo"
+        },
+        "garage": {
+            "tag_garage": "GARAJE",
+            "tag_job_garage": "GARAJE DE TRABAJO",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "GESTIONAR",
+            "transfer": "Transferir",
+            "transfer_for": "Transferir por {0}{1}",
+            "take_out": "Sacar",
+            "management": {
+                "manage_vehicles_btn": "GESTIONAR VEHICULOS",
+                "select_owners": "Seleccionar Propietario(s):",
+                "select_vehicle": "Seleccionar Vehiculo:",
+                "citizen": "Ciudadano {0}",
+                "buy_vehicle": "Comprar Vehiculo",
+                "info_employee_vehicle": "Vehiculo de propiedad del empleado:",
+                "info_grade_vehicle": "Vehiculo del empleado en el grado:",
+                "info_eech_employee_vehicle": "El vehiculo esta disponible para cualquier empleado."
+            },
+            "management_transfer": {
+                "transfer_title": "Transferir {0}",
+                "transfer_btn": "Transferir Vehiculo"
+            }
+        },
+        "impound": {
+            "tag": "DEPOSITO",
+            "impounded_by": "Depositado por: ",
+            "impound_date": "Fecha del deposito: ",
+            "fine": "Multa: ",
+            "take_free": "Sacar vehiculo",
+            "give_bill": "Dar la factura",
+            "pay_cash": "Pagar con efectivo {0}{1}",
+            "pay_bank": "Pagar con banco {0}{1}",
+            "locate": "Localizar",
+            "locate_by_cash": "Localizar por {0}{1} con efectivo",
+            "locate_by_bank": "Localizar por {0}{1} con banco",
+            "locate_by_plate_btn": "Localizar Vehiculo",
+            "bill": {
+                "title": "FACTURA DE DEPOSITO",
+                "plate": "Placa:",
+                "impounded_by": "Depositado por:",
+                "fine_title": "Multa:",
+                "total": "TOTAL",
+                "pay_cash": "EFECTIVO",
+                "pay_bank": "BANCO",
+                "cancel": "CANCELAR"
+            },
+            "locate_by_plate": {
+                "title": "Localizar",
+                "locate_btn": "Localizar Vehiculo"
+            }
+        },
+        "tow": {
+            "title": "Menu de Remolque",
+            "select_impound": "Seleccionar Deposito:",
+            "plate_label": "Vehiculo seleccionado:",
+            "impound_label": "Deposito:",
+            "fine_label": "Multa:",
+            "fine_amount_label": "Cantidad de la Multa:",
+            "submit_tow": "ENVIAR REMOLQUE"
+        },
+        "creator_menu": {
+            "main_header": "Selecciona el tipo de estacionamiento",
+            "parking_menu_header": "Configurar Estacionamiento",
+            "house_garage_menu_header": "Configurar Garaje de Casa",
+            "garage_interior_menu_header": "Configurar Interior de Garaje",
+            "label_house_garage": "Garaje de Casa",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garaje",
+            "label_garage_interior": "Interior de Garaje",
+            "label_parking": "Estacionamiento",
+            "next_btn": "SIGUIENTE",
+            "save_btn": "GUARDAR ARCHIVO",
+            "routing_bucket": {
+                "section_routingbucket": "Enrutamiento de Cubeta",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "No necesitas introducir nada aquí, si deseas que el bucket de enrutamiento se seleccione automáticamente, deja el campo en blanco.",
+                "description_routingbucket": "Ingresa el ID individual de la cubeta de enrutamiento."
+            },
+            "main_settings": {
+                "section_title": "Configuraciones Principales",
+                "title_label": "Etiqueta:",
+                "description_label": "",
+                "title_type": "Tipo:",
+                "description_type": "Selecciona el tipo de vehículo para el cual se crea este estacionamiento.",
+                "title_spaces": "Espacios de Estacionamiento:",
+                "description_spaces": "Configura las posiciones de los espacios de estacionamiento.",
+                "button_spaces": "CONFIGURAR",
+                "title_menu_point": "Punto de Menú:",
+                "description_menu_point": "Configura las posiciones del punto de menú de garaje.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "CONFIGURAR"
+            },
+            "garage_settings": {
+                "section_title": "Configuraciones de Garaje",
+                "title_ped_coords": "Coordenadas del Jugador en el menú",
+                "description_ped_coords": "",
+                "button_ped_coords": "CONFIGURAR",
+                "title_vehicle_coords": "Vista previa de Vehículo en el menú",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "CONFIGURAR",
+                "title_camera_coords": "Posición de Cámara en el menú",
+                "description_camera_coords": "",
+                "button_camera_coords": "CONFIGURAR"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Punto de Aparición",
+                "description_spawn_point": "",
+                "button_spawn_point": "CONFIGURAR",
+                "title_return_point": "Punto de Retorno",
+                "description_return_point": "",
+                "button_return_point": "CONFIGURAR"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Verificar Área Ocupada"
+            },
+            "parkingmeter": {
+                "section_title": "Parquímetro",
+                "title_price": "Precio:",
+                "description_price": "Ingresa el precio por hora de estacionamiento.",
+                "title_paystations": "Estaciones de Pago:",
+                "description_paystations": "Configura las posiciones de las ubicaciones de parquímetros.<br>* Acércate al punto para ver el marcador.",
+                "button_paystations": "CONFIGURAR"
+            },
+            "rent": {
+                "section_title": "Alquiler de Espacios",
+                "title_price": "Precio:",
+                "description_price": "Ingresa el precio por día de estacionamiento.",
+                "title_days": "Días:",
+                "description_days": "* Ingresa números separados por comas.",
+                "title_coords": "Coordenadas de Menú:",
+                "description_coords": "Configura las posiciones de las ubicaciones de menú de alquiler.<br>* Acércate al punto para ver el marcador.",
+                "button_coords": "CONFIGURAR"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Modelo:",
+                "description_model": "",
+                "title_animation": "Animación:",
+                "label_anim_dict": "Diccionario:",
+                "label_anim_name": "Nombre:",
+                "title_coords": "Coordenadas:",
+                "description_coords": "Configura las posiciones del NPC.",
+                "button_coords": "CONFIGURAR"
+            },
+            "company": {
+                "section_title": "Empresa",
+                "title_company": "Trabajos:",
+                "help_company": "Ingresa nombres de trabajos separados por comas."
+            },
+            "gang": {
+                "section_title": "Banda",
+                "title_gang": "Banda:",
+                "help_gang": "Ingresa nombres de bandas separados por comas."
+            },
+            "allowed": {
+                "section_title": "Restricciones de Modelos",
+                "title_models": "Restricciones de Modelos:",
+                "description_models": "* Ingresa los nombres de los modelos permitidos para estacionar en este estacionamiento separados por comas."
+            },
+            "predefined": {
+                "section_title": "Modelos Predefinidos",
+                "title_models": "Modelos Predefinidos:",
+                "description_models": "* Ingresa los nombres de los modelos que estarán disponibles en este garaje.<br>El garaje entonces será configurado como <b>Garajes de Trabajos con Vehículos Predefinidos</b>, no habrá vehículos propios disponibles en él."
+            }
+        }
+    },
+    "PT": {
+        "currency": "€",
+        "buy_business": {
+            "header": "COMPRAR NEGÓCIO",
+            "name": "Parking:",
+            "parking_spaces": "Número de lugares de estacionamento:",
+            "price": "Preço:",
+            "important_infos": "Informações importantes:",
+            "buy_btn": "COMPRAR POR"
+        },
+        "bossmenu": {
+            "title": "Parking de Estacionamento",
+            "sidebar": {
+                "main_title": "Principal",
+                "main_description": "Página inicial, informações de estacionamento..",
+                "history_sales_title": "Histórico de Vendas",
+                "history_sales_description": "Histórico de vendas e dados dos clientes.."
+            },
+            "main": {
+                "menu_total_earned_header": "Total Ganho:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Lugares de Estacionamento Livres:",
+                "menu_occupied_parking_spaces_header": "Lugares de Estacionamento Ocupados:",
+                "menu_parking_spaces_header": "Informações sobre veículos estacionados e lugares de estacionamento alugados.",
+                "menu_parking_spaces_title": "Lugares de Estacionamento",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "ID do Lugar",
+                "table_owner": "Proprietário",
+                "table_vehicle": "Veículo Estacionado",
+                "table_parking_date": "Data de Estacionamento",
+                "table_rent_end_date": "Data de fim do Aluguer",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Período de aluguer terminado",
+                "menu_balance_header": "Saldo:",
+                "menu_balance_btn_withdraw": "LEVANTAR",
+                "menu_balance_btn_deposit": "DEPOSITAR",
+                "menu_sell_header": "Vender o seu negócio automaticamente.",
+                "menu_sell_title": "Venda Automática",
+                "menu_sell_btn": "VENDER POR {0}{1}",
+                "menu_resell_header": "Revender estacionamento a outro cidadão.",
+                "menu_resell_title": "Revender Estacionamento",
+                "menu_resell_btn": "REVENDA"
+            },
+            "sales_history": {
+                "table_date": "Data de Venda",
+                "table_seller": "Vendedor",
+                "table_buyer": "Comprador",
+                "table_vehicle": "Informações do Veículo",
+                "table_price": "Preço"
+            }
+        },
+        "paystation": {
+            "title": "Estação de Pagamento",
+            "description": "O estacionamento {0} é um parque pago que custa {1}$ por hora.",
+            "provide_license_plate": "Introduza o número da matrícula para procurar um veículo e pagar o estacionamento:",
+            "find_vehicle": "PROCURAR VEÍCULO",
+            "parking_cost": "Custo de estacionamento por hora:",
+            "ticket": {
+                "title": "TIQUETE DE ESTACIONAMENTO",
+                "vehicle": "VEÍCULO {0}",
+                "hours": "TEMPO DE ESTACIONAMENTO - {0} HORAS",
+                "date": "DATA",
+                "from": "DE",
+                "to": "ATÉ",
+                "to_paid": "A PAGAR",
+                "pay_cash": "DINHEIRO",
+                "pay_bank": "BANCO",
+                "cancel": "CANCELAR"
+            }
+        },
+        "parking_rent": {
+            "title": "Alugar um lugar de estacionamento",
+            "bar_yours": "SEU",
+            "bar_rented": "ALUGADO",
+            "bar_free": "LIVRE",
+            "selected_space": "Lugar:",
+            "parking_cost": "Custo de estacionamento por dia:",
+            "select_time_title": "Tempo de Aluguer:",
+            "select_time_description": "Selecione o tempo pelo qual deseja alugar este lugar de estacionamento.",
+            "day_to_select": "{0} Dia",
+            "days_to_select": "{0} Dias",
+            "select_days": "SELECIONAR DIAS",
+            "rent_for": "ALUGAR POR {0}{1}.00",
+            "notice_period": "Período de aviso:",
+            "permanent_space": "Permanente"
+        },
+        "resell": {
+            "title": "Acordo de venda de ações de<br>{0}",
+            "date": "Celebrado em Los Santos a {0}",
+            "seller": "<b>Vendedor</b>, por quem, para os fins deste acordo, é considerado {0}.",
+            "buyer": "<b>Comprador</b>, por quem, para os fins deste acordo, é considerado {0}, pagará taxas de {1}{2} por 100% das ações.",
+            "paragraph": "§1 Objeto do Acordo",
+            "contract_first_point": "O Vendedor declara ser o proprietário do estacionamento '{0}' registado no registo de empresários em Los Santos.",
+            "contract_second_point": "O Vendedor compromete-se a transferir ao Comprador todos os direitos e obrigações relacionados com a propriedade de ações no estacionamento '{0}', incluindo o direito de usar o local do estacionamento e todos os bens associados.",
+            "seller_signature": "Assinatura do Vendedor",
+            "buyer_signature": "Assinatura do Comprador",
+            "give_contract_btn": "Entregar o contrato ao comprador"
+        },
+        "agreement": {
+            "select_option": "Selecionar",
+            "companies_group": "Empresas:",
+            "citizens_group": "Cidadãos:",
+            "citizen": "Cidadão {0}",
+            "cash": "dinheiro",
+            "bank": "transferência bancária",
+            "town": "Los Santos",
+            "date": "(data, cidade)",
+            "title": "Contrato de Venda de Veículo",
+            "paragraph_1_text": "O objeto deste acordo é a transferência pelo Vendedor ao Comprador {0} dos direitos de propriedade do {1} {2}.",
+            "paragraph_2_text": "O Vendedor declara que o {0} objeto deste acordo é sua propriedade exclusiva, está livre de defeitos legais e direitos de terceiros, que não existem processos em curso envolvendo este {1}, e que não está sujeito a quaisquer garantias.",
+            "paragraph_3_text": "As partes acordam no preço de venda do veículo especificado no §1 deste acordo no valor de: {0}{1} na forma de {2}.<br>",
+            "paragraph_3_text_2": "As partes confirmam que o veículo especificado no §1 foi entregue ao Comprador, e o preço foi pago pelo Comprador ao Vendedor..",
+            "seller_signature": "Assinatura do Vendedor",
+            "buyer_signature": "Assinatura do Comprador",
+            "give_contract_btn": "Entregar o acordo"
+        },
+        "garage": {
+            "tag_garage": "GARAGEM",
+            "tag_job_garage": "GARAGEM DO TRABALHO",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "GERIR",
+            "transfer": "Transferir",
+            "transfer_for": "Transferir por {0}{1}",
+            "take_out": "Retirar",
+            "management": {
+                "manage_vehicles_btn": "GERIR VEÍCULOS",
+                "select_owners": "Selecionar Proprietário(s):",
+                "select_vehicle": "Selecionar Veículo:",
+                "citizen": "Cidadão {0}",
+                "buy_vehicle": "Comprar Veículo",
+                "info_employee_vehicle": "Veículo de propriedade do funcionário:",
+                "info_grade_vehicle": "Veículo do funcionário no cargo:",
+                "info_eech_employee_vehicle": "O veículo está disponível para qualquer funcionário."
+            },
+            "management_transfer": {
+                "transfer_title": "Transferir {0}",
+                "transfer_btn": "Transferir Veículo"
+            }
+        },
+        "impound": {
+            "tag": "REBOQUE",
+            "impounded_by": "Rebocado por: ",
+            "impound_date": "Data de reboque: ",
+            "fine": "Multa: ",
+            "take_free": "Retirar veículo",
+            "give_bill": "Emitir fatura",
+            "pay_cash": "Pagar com dinheiro {0}{1}",
+            "pay_bank": "Pagar com banco {0}{1}",
+            "locate": "Localizar",
+            "locate_by_cash": "Localizar por {0}{1} em dinheiro",
+            "locate_by_bank": "Localizar por {0}{1} com banco",
+            "locate_by_plate_btn": "Localizar Veículo",
+            "bill": {
+                "title": "FATURA DE REBOQUE",
+                "plate": "Matrícula:",
+                "impounded_by": "Rebocado por:",
+                "fine_title": "Multa:",
+                "total": "TOTAL",
+                "pay_cash": "DINHEIRO",
+                "pay_bank": "BANCO",
+                "cancel": "CANCELAR"
+            },
+            "locate_by_plate": {
+                "title": "Localizar",
+                "locate_btn": "Localizar Veículo"
+            }
+        },
+        "tow": {
+            "title": "Menu de Reboque",
+            "select_impound": "Selecionar Reboque:",
+            "plate_label": "Veículo selecionado:",
+            "impound_label": "Reboque:",
+            "fine_label": "Multa:",
+            "fine_amount_label": "Valor da Multa:",
+            "submit_tow": "SUBMETER REBOQUE"
+        },
+        "creator_menu": {
+            "main_header": "Selecione o tipo de estacionamento",
+            "parking_menu_header": "Configurar Estacionamento",
+            "house_garage_menu_header": "Configurar Garagem da Casa",
+            "garage_interior_menu_header": "Configurar Interior da Garagem",
+            "label_house_garage": "Garagem da Casa",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garagem",
+            "label_garage_interior": "Interior da Garagem",
+            "label_parking": "Estacionamento",
+            "next_btn": "IR PARA PRÓXIMO",
+            "save_btn": "SALVAR ARQUIVO",
+            "routing_bucket": {
+                "section_routingbucket": "Bucket de Roteamento",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Não precisa digitar nada aqui, se deseja que o bucket de roteamento seja selecionado automaticamente, deixe o campo em branco.",
+                "description_routingbucket": "Insira o ID individual do bucket de roteamento."
+            },
+            "main_settings": {
+                "section_title": "Configurações Principais",
+                "title_label": "Rótulo:",
+                "description_label": "",
+                "title_type": "Tipo:",
+                "description_type": "Selecione o tipo de veículo para o qual este estacionamento foi criado.",
+                "title_spaces": "Vagas de Estacionamento:",
+                "description_spaces": "Configure as posições das vagas de estacionamento.",
+                "button_spaces": "CONFIGURAR",
+                "title_menu_point": "Ponto do Menu:",
+                "description_menu_point": "Configure as posições do ponto do menu da garagem.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "CONFIGURAR"
+            },
+            "garage_settings": {
+                "section_title": "Configurações da Garagem",
+                "title_ped_coords": "Coords do Jogador no menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "CONFIGURAR",
+                "title_vehicle_coords": "Visualizar Veículo no menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "CONFIGURAR",
+                "title_camera_coords": "Posição da Câmera no menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "CONFIGURAR"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Ponto de Spawn",
+                "description_spawn_point": "",
+                "button_spawn_point": "CONFIGURAR",
+                "title_return_point": "Ponto de Retorno",
+                "description_return_point": "",
+                "button_return_point": "CONFIGURAR"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Verificar Área Ocupada"
+            },
+            "parkingmeter": {
+                "section_title": "Parquímetro",
+                "title_price": "Preço:",
+                "description_price": "Insira o preço por hora do estacionamento.",
+                "title_paystations": "Postos de Pagamento:",
+                "description_paystations": "Configure as posições dos locais do parquímetro.<br>* Aproxime-se do ponto para ver o marcador.",
+                "button_paystations": "CONFIGURAR"
+            },
+            "rent": {
+                "section_title": "Alugar Vagas",
+                "title_price": "Preço:",
+                "description_price": "Insira o preço por dia do estacionamento.",
+                "title_days": "Dias:",
+                "description_days": "* Insira números separados por vírgulas.",
+                "title_coords": "Coords do Menu:",
+                "description_coords": "Configure as posições dos locais do menu de aluguel.<br>* Aproxime-se do ponto para ver o marcador.",
+                "button_coords": "CONFIGURAR"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Modelo:",
+                "description_model": "",
+                "title_animation": "Animação:",
+                "label_anim_dict": "Dicionário:",
+                "label_anim_name": "Nome:",
+                "title_coords": "Coords:",
+                "description_coords": "Configure as posições do NPC.",
+                "button_coords": "CONFIGURAR"
+            },
+            "company": {
+                "section_title": "Empresa",
+                "title_company": "Empregos:",
+                "help_company": "Insira nomes de empregos separados por vírgulas."
+            },
+            "gang": {
+                "section_title": "Gangue",
+                "title_gang": "Gangue:",
+                "help_gang": "Digite os nomes das gangues separados por vírgulas."
+            },
+            "allowed": {
+                "section_title": "Restrições de Modelos",
+                "title_models": "Restrições de Modelos:",
+                "description_models": "* Insira os nomes dos modelos permitidos para estacionar neste estacionamento separados por vírgulas"
+            },
+            "predefined": {
+                "section_title": "Modelos Predefinidos",
+                "title_models": "Modelos Predefinidos:",
+                "description_models": "* Insira os nomes dos modelos que estarão disponíveis nesta garagem.<br>A garagem então será configurada como <b>Garagens de Emprego com Veículos Predefinidos</b>, nenhum veículo próprio estará disponível nela."
+            }
+        }
+    },
+    "PL": {
+        "currency": "$",
+        "buy_business": {
+            "header": "KUP BIZNES",
+            "name": "Parking:",
+            "parking_spaces": "Liczba miejsc parkingowych:",
+            "price": "Cena:",
+            "important_infos": "Ważne informacje:",
+            "buy_btn": "KUP ZA"
+        },
+        "bossmenu": {
+            "title": "Parking",
+            "sidebar": {
+                "main_title": "Główna",
+                "main_description": "Strona główna, informacje o parkingu..",
+                "history_sales_title": "Sales History",
+                "history_sales_description": "Sales history and customer data.."
+            },
+            "main": {
+                "menu_total_earned_header": "Łącznie zarobione:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Wolne miejsca parkingowe:",
+                "menu_occupied_parking_spaces_header": "Zajęte miejsca parkingowe:",
+                "menu_parking_spaces_header": "Informacje o zaparkowanych pojazdach i wynajętych miejscach parkingowych.",
+                "menu_parking_spaces_title": "Miejsca parkingowe",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "ID",
+                "table_owner": "Właściciel",
+                "table_vehicle": "Pojazd",
+                "table_parking_date": "Data parkowania",
+                "table_rent_end_date": "Koniec wynajmu",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Okres wynajmu dobiegł końca",
+                "menu_balance_header": "Balans:",
+                "menu_balance_btn_withdraw": "WYPŁAĆ",
+                "menu_balance_btn_deposit": "WPŁAĆ",
+                "menu_sell_header": "Automatyczna sprzedaż.",
+                "menu_sell_title": "Sprzedaj",
+                "menu_sell_btn": "SPRZEDAJ ZA {0}{1}",
+                "menu_resell_header": "Odsprzedaż parkingu innemu obywatelowi.",
+                "menu_resell_title": "Odsprzedaż parkingu",
+                "menu_resell_btn": "ODSPRZEDAJ"
+            },
+            "sales_history": {
+                "table_date": "Sale Date",
+                "table_seller": "Seller",
+                "table_buyer": "Buyer",
+                "table_vehicle": "Vehicle Info",
+                "table_price": "Price"
+            }
+        },
+        "paystation": {
+            "title": "Parkometr",
+            "description": "Parking {0} to płatny parking kosztujący {1}$ za godzinę..",
+            "provide_license_plate": "Wprowadź numer rejestracyjny, aby wyszukać pojazd i zapłacić za parking:",
+            "find_vehicle": "ZNAJDŹ",
+            "parking_cost": "Cena za godzinę postoju:",
+            "ticket": {
+                "title": "BILET PARKINGOWY",
+                "vehicle": "POJAZD {0}",
+                "hours": "CZAS PARKOWANIA - {0} GODZIN",
+                "date": "DATA",
+                "from": "OD",
+                "to": "DO",
+                "to_paid": "DO ZAPŁATY",
+                "pay_cash": "GOTÓWKA",
+                "pay_bank": "BANK",
+                "cancel": "ANULUJ"
+            }
+        },
+        "parking_rent": {
+            "title": "Wynajem miejsca parkingowego",
+            "bar_yours": "TWOJE",
+            "bar_rented": "ZAJĘTE",
+            "bar_free": "WOLNE",
+            "selected_space": "Miejsce:",
+            "parking_cost": "Koszt parkingu za dzień:",
+            "select_time_title": "Czas wynajmu:",
+            "select_time_description": "Wybierz czas, na jaki chcesz wynająć to miejsce parkingowe..",
+            "day_to_select": "{0} Dzień",
+            "days_to_select": "{0} Dni",
+            "select_days": "WYBIERZ CZAS",
+            "rent_for": "WYNAJMIJ ZA {0}{1}.00",
+            "notice_period": "Okres wypowiedzenia:",
+            "permanent_space": "Na stałe"
+        },
+        "resell": {
+            "title": "Umowa sprzedaży udziałów<br>{0}",
+            "date": "Zawarte w Los Santos w dniu {0}",
+            "seller": "<b>Sprzedawca</b>, przez którego dla celów niniejszej umowy rozumie się {0}.",
+            "buyer": "<b>Kupujący</b>, przez którego, dla celów niniejszej umowy, rozumie się {0}, zapłaci opłaty w wysokości {1}{2} za 100% udziałów.",
+            "paragraph": "§1 Przedmiot Umowy",
+            "contract_first_point": "Sprzedający oświadcza, że jest właścicielem parkingu '{0}' zarejestrowanego w rejestrze przedsiębiorców w Los Santos.",
+            "contract_second_point": "Sprzedający zobowiązuje się przenieść na Kupującego wszelkie prawa i obowiązki związane z własnością udziałów w parkingu '{0}', w tym prawo do korzystania z miejsca parkingowego i wszystkich aktywów z nim związanych.",
+            "seller_signature": "Podpis sprzedawcy",
+            "buyer_signature": "Podpis kupującego",
+            "give_contract_btn": "Przekaż umowę kupującemu"
+        },
+        "agreement": {
+            "select_option": "Wybierz",
+            "companies_group": "Firmy:",
+            "citizens_group": "Obywatele:",
+            "citizen": "Obywatel {0}",
+            "cash": "gotówka",
+            "bank": "przelew",
+            "town": "Los Santos",
+            "date": "(data, miejscowość)",
+            "title": "Umowa sprzedaży pojazdu",
+            "paragraph_1_text": "Przedmiotem niniejszej umowy jest przeniesienie przez Sprzedającego na Kupującego {0} prawa własności {1} {2}.",
+            "paragraph_2_text": "Sprzedający oświadcza, że {0} będący przedmiotem niniejszej umowy stanowi jego wyłączną własność, jest wolny od wad prawnych oraz praw osób trzecich, że nie toczy się żadne postępowanie dotyczące tego {1} oraz że nie jest on przedmiotem żadnych zabezpieczeń.",
+            "paragraph_3_text": "Strony ustalają cenę sprzedaży pojazdu określonego w §1 niniejszej umowy w wysokości: {0}{1} w formie {2}.<br>.",
+            "paragraph_3_text_2": "Strony niniejszym potwierdzają, że pojazd określony w §1 został wydany Kupującemu, a cena została przez Kupującego zapłacona Sprzedającemu.",
+            "seller_signature": "Podpis sprzedawcy",
+            "buyer_signature": "Podpis kupującego",
+            "give_contract_btn": "Przekaż umowę kupującemu"
+        },
+        "garage": {
+            "tag_garage": "GARAŻ",
+            "tag_job_garage": "GARAŻ FIRMOWY",
+            "tag_gang_garage": "GARAŻ GANGOWY",
+            "manage_btn": "ZARZĄDZAJ",
+            "transfer": "Przenieś",
+            "transfer_for": "Przenieś za {0}{1}",
+            "take_out": "Wybierz",
+            "management": {
+                "manage_vehicles_btn": "ZARZĄDZANIE POJAZDAMI",
+                "select_owners": "Wybierz właściciela(ów):",
+                "select_vehicle": "Wybierz pojazd:",
+                "citizen": "Obywatel {0}",
+                "buy_vehicle": "Kup pojazd",
+                "info_employee_vehicle": "Pojazd własnościowy pracownika:",
+                "info_grade_vehicle": "Pojazd pracowniczy na stopniu:",
+                "info_eech_employee_vehicle": "Pojazd jest dostępny dla każdego pracownika."
+            },
+            "management_transfer": {
+                "transfer_title": "Przenieś {0}",
+                "transfer_btn": "Przenieś pojazd"
+            }
+        },
+        "impound": {
+            "tag": "ODHOLOWNIK",
+            "impounded_by": "Odholowany przez: ",
+            "impound_date": "Data odholowania: ",
+            "fine": "Tytuł grzywny: ",
+            "take_free": "Zabierz pojazd",
+            "give_bill": "Wystaw rachunek",
+            "pay_cash": "Zapłać gotówką {0}{1}",
+            "pay_bank": "Zapłać przelewem {0}{1}",
+            "locate": "Zlokalizuj",
+            "locate_by_cash": "Zlokalizuj za {0}{1} gotówką",
+            "locate_by_bank": "Zlokalizuj za {0}{1} przelewem",
+            "locate_by_plate_btn": "Zlokalizuj pojazd",
+            "bill": {
+                "title": "RACHUNEK ZA ODHOLOWANIE",
+                "plate": "Numer Rej.:",
+                "impounded_by": "Odholowany przez:",
+                "fine_title": "Tytuł grzywny:",
+                "total": "RAZEM",
+                "pay_cash": "GOTÓWKA",
+                "pay_bank": "PRZELEW",
+                "cancel": "ANULUJ"
+            },
+            "locate_by_plate": {
+                "title": "Lokalizuj",
+                "locate_btn": "Lokalizuj pojazd"
+            }
+        },
+        "tow": {
+            "title": "Menu holowania",
+            "select_impound": "Wybierz parking:",
+            "plate_label": "Wybrany pojazd:",
+            "impound_label": "Parking:",
+            "fine_label": "Tytuł grzywny:",
+            "fine_amount_label": "Kwota grzywny:",
+            "submit_tow": "ODHOLUJ POJAZD"
+        },
+        "creator_menu": {
+            "main_header": "Wybierz rodzaj parkingu",
+            "parking_menu_header": "Konfiguruj Parking",
+            "house_garage_menu_header": "Konfiguruj Garaż Domowy",
+            "garage_interior_menu_header": "Konfiguruj Wnętrze Garażu",
+            "label_house_garage": "Garaż Domowy",
+            "label_house_garage_menu": "Garaż Domowy w Menu",
+            "label_garage": "Garaż",
+            "label_garage_interior": "Wnętrze Garażu",
+            "label_parking": "Parking",
+            "next_btn": "DALEJ",
+            "save_btn": "ZAPISZ PLIK",
+            "routing_bucket": {
+                "section_routingbucket": "Routing Bucket",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Nie musisz tutaj nic wpisywać, jeśli chcesz, aby kosz z routingu został automatycznie wybrany, pozostaw pole puste.",
+                "description_routingbucket": "Wprowadź indywidualne ID routing bucketa."
+            },
+            "main_settings": {
+                "section_title": "Główne Ustawienia",
+                "title_label": "Etykieta:",
+                "description_label": "",
+                "title_type": "Rodzaj:",
+                "description_type": "Wybierz rodzaj pojazdu, dla którego tworzony jest ten parking.",
+                "title_spaces": "Miejsca Parkingowe:",
+                "description_spaces": "Skonfiguruj pozycje miejsc parkingowych.",
+                "button_spaces": "SKONFIGURUJ",
+                "title_menu_point": "Punkt Menu:",
+                "description_menu_point": "Skonfiguruj pozycje punktu menu garażu.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "SKONFIGURUJ"
+            },
+            "garage_settings": {
+                "section_title": "Ustawienia Garażu",
+                "title_ped_coords": "Współrzędne Gracza w menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "SKONFIGURUJ",
+                "title_vehicle_coords": "Podgląd Pojazdu w menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "SKONFIGURUJ",
+                "title_camera_coords": "Pozycja Kamery w menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "SKONFIGURUJ"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Punkt Spawna",
+                "description_spawn_point": "",
+                "button_spawn_point": "SKONFIGURUJ",
+                "title_return_point": "Punkt Powrotu",
+                "description_return_point": "",
+                "button_return_point": "SKONFIGURUJ"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Sprawdź Obszar Zajęty"
+            },
+            "parkingmeter": {
+                "section_title": "Parkomat",
+                "title_price": "Cena:",
+                "description_price": "Wprowadź cenę za godzinę parkowania.",
+                "title_paystations": "Automaty Płatnicze:",
+                "description_paystations": "Skonfiguruj pozycje miejsc parkometrów.<br>* Przejdź bliżej punktu, aby zobaczyć znacznik.",
+                "button_paystations": "SKONFIGURUJ"
+            },
+            "rent": {
+                "section_title": "Wynajmij Miejsca",
+                "title_price": "Cena:",
+                "description_price": "Wprowadź cenę za dzień parkowania.",
+                "title_days": "Dni:",
+                "description_days": "* Wprowadź liczby rozdzielone przecinkami.",
+                "title_coords": "Współrzędne Menu:",
+                "description_coords": "Skonfiguruj pozycje miejsc menu wynajmu.<br>* Przejdź bliżej punktu, aby zobaczyć znacznik.",
+                "button_coords": "SKONFIGURUJ"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Model:",
+                "description_model": "",
+                "title_animation": "Animacja:",
+                "label_anim_dict": "Dictionary:",
+                "label_anim_name": "Name:",
+                "title_coords": "Współrzędne:",
+                "description_coords": "Skonfiguruj pozycje NPC.",
+                "button_coords": "SKONFIGURUJ"
+            },
+            "company": {
+                "section_title": "Firma",
+                "title_company": "Stanowiska Pracy:",
+                "help_company": "Wprowadź nazwy stanowisk pracy rozdzielone przecinkami."
+            },
+            "gang": {
+                "section_title": "Gang",
+                "title_gang": "Gang:",
+                "help_gang": "Wpisz nazwy gangów oddzielone przecinkami."
+            },
+            "allowed": {
+                "section_title": "Ograniczenia Modeli",
+                "title_models": "Ograniczenia Modeli:",
+                "description_models": "* Wprowadź nazwy modeli, które mają zezwolenie na parkowanie na tym parkingu rozdzielone przecinkami."
+            },
+            "predefined": {
+                "section_title": "Predefiniowane Modele",
+                "title_models": "Predefiniowane Modele:",
+                "description_models": "* Wprowadź nazwy modeli, które będą dostępne w tym garażu.<br>Garaż zostanie skonfigurowany jako <b>Garaże Pracy z Predefiniowanymi Pojazdami</b>, nie będą dostępne w nim żadne pojazdy własne."
+            }
+        }
+    },
+    "CZ": {
+        "currency": "$",
+        "buy_business": {
+            "header": "ZAKOUPIT FIRMU",
+            "name": "Parkoviste:",
+            "parking_spaces": "Pocet mist:",
+            "price": "Cena:",
+            "important_infos": "Dulezite informace:",
+            "buy_btn": "ZAKOUPIT"
+        },
+        "bossmenu": {
+            "title": "Parkoviste",
+            "sidebar": {
+                "main_title": "Hlavni",
+                "main_description": "Domovni stranka, parkovaci informace..",
+                "history_sales_title": "Historie Prodeje",
+                "history_sales_description": "Historie Prodeje a data uzivatelu.."
+            },
+            "main": {
+                "menu_total_earned_header": "Celkove Vydelano:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Zdarma Parkovaci Mista:",
+                "menu_occupied_parking_spaces_header": "Obsazena Parkovaci Mista:",
+                "menu_parking_spaces_header": "Informace o zaparkovanych vozidlech a pronajatych parkovacich mistech.",
+                "menu_parking_spaces_title": "Parkovaci Mista",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "Misto ID",
+                "table_owner": "Majitel",
+                "table_vehicle": "Zaparkovane Vozidlo",
+                "table_parking_date": "Datum parkovani",
+                "table_rent_end_date": "Datum ukonceni pronajmu",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Doba pronajmu skoncila",
+                "menu_balance_header": "Balanc:",
+                "menu_balance_btn_withdraw": "VYBRAT",
+                "menu_balance_btn_deposit": "VKLAD",
+                "menu_sell_header": "Automaticky prodej tvoji firmy.",
+                "menu_sell_title": "Prodej automaticky",
+                "menu_sell_btn": "PRODAT ZA {0}{1}",
+                "menu_resell_header": "Resell parkoviste pro dalsiho hrace.",
+                "menu_resell_title": "Resell Parkoviste",
+                "menu_resell_btn": "RESELL"
+            },
+            "sales_history": {
+                "table_date": "Datum Prodeje",
+                "table_seller": "Prodejce",
+                "table_buyer": "Kupujici",
+                "table_vehicle": "Info o Vozidle",
+                "table_price": "Cena"
+            }
+        },
+        "paystation": {
+            "title": "Vratnice",
+            "description": "Parkovani {0} je placene parkoviste, cena je {1}$ za hodinu.",
+            "provide_license_plate": "Zadej cislo SPZ pro vyhledani vozidla a zaplaceni parkovani:",
+            "find_vehicle": "NAJIT VOZIDLO",
+            "parking_cost": "Cena parkovani za hodinu:",
+            "ticket": {
+                "title": "PARKOVACI LISTEK",
+                "vehicle": "VOZIDLO {0}",
+                "hours": "CAS PARKOVANI - {0} HODIN",
+                "date": "DATUM",
+                "from": "OD",
+                "to": "DO",
+                "to_paid": "K ZAPLACENI",
+                "pay_cash": "HOTOVOST",
+                "pay_bank": "BANKA",
+                "cancel": "ZRUSIT"
+            }
+        },
+        "parking_rent": {
+            "title": "Pronajem parkovaciho mista",
+            "bar_yours": "TVOJE",
+            "bar_rented": "PRONAJATO",
+            "bar_free": "VOLNE",
+            "selected_space": "Mist:",
+            "parking_cost": "Cena parkovani za den:",
+            "select_time_title": "Doba Pronajmu:",
+            "select_time_description": "Vyber dobu, na kterou chces pronajmout toto parkovaci misto.",
+            "day_to_select": "{0} Den",
+            "days_to_select": "{0} Dnu",
+            "select_days": "VYBER DNY",
+            "rent_for": "PRONAJMI NA {0}{1}.00",
+            "notice_period": "Vypovedni lhuta:",
+            "permanent_space": "Permanenti"
+        },
+        "resell": {
+            "title": "Dohoda o prodeji akcii<br>{0}",
+            "date": "Uzavreno v Los Santos dne {0}",
+            "seller": "<b>Prodejce</b>, kterym se pro ucely teto dohody povazuje {0}.",
+            "buyer": "<b>Kupujici</b>, kterym se pro ucely teto dohody povazuje {0}, zaplati poplatky ve vysi {1}{2} za 100% akcii.",
+            "paragraph": "§1 Predmet Dohody",
+            "contract_first_point": "Prodejce prohlasuje, ze je vlastnikem parkoviste '{0}' zaregistrovaneho v registru podnikatelu v Los Santos.",
+            "contract_second_point": "Prodejce se zavazuje prevazat na Kupujiciho vsechna prava a povinnosti souvisejici s vlastnictvim akcii v parkovisti '{0}', vcetne prava na uzivani mista pro parkovani a vsech aktiv s tim spojenych.",
+            "seller_signature": "Podpis prodejce",
+            "buyer_signature": "Podpis kupujiciho",
+            "give_contract_btn": "Poslat smlouvu kupujicimu"
+        },
+        "agreement": {
+            "select_option": "Vyber",
+            "companies_group": "Firma:",
+            "citizens_group": "Obcan:",
+            "citizen": "Obcan {0}",
+            "cash": "Hotovost",
+            "bank": "Bankovni prevod",
+            "town": "Los Santos",
+            "date": "(datum, mesto)",
+            "title": "Dohoda o Prodeji Vozidla",
+            "paragraph_1_text": "Predmetem teto dohody je prevod vlastnickych prav Prodejcem na Kupujiciho {0} vlastnickych prav k {1} {2}.",
+            "paragraph_2_text": "Prodejce prohlasuje, ze {0} predmet teto dohody je jeho vyhradnim vlastnictvim, je bez pravnich vad a prav tretich stran, ze neprobiha zadne rizeni tykajici se tohoto {1}, a ze neni predmetem zadnych zabezpecovacich zajmu.",
+            "paragraph_3_text": "Strany se dohodly na prodejni cene vozidla specifikovane v §1 teto dohody ve vysi: {0}{1} ve forme {2}.<br>",
+            "paragraph_3_text_2": "Strany timto potvrzuji, ze vozidlo specifikovane v §1 bylo predano Kupujicimu a cena byla zaplacena Kupujicim Prodejci.",
+            "seller_signature": "Podpis prodejce",
+            "buyer_signature": "Podpis kupujiciho",
+            "give_contract_btn": "Dat smlouvu o prodeji"
+        },
+        "garage": {
+            "tag_garage": "GARAZ",
+            "tag_job_garage": "JOB GARAZ",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "SPRAVOVAT",
+            "transfer": "Prevod",
+            "transfer_for": "Prevod za {0}{1}",
+            "take_out": "Vytahnout vozidlo",
+            "management": {
+                "manage_vehicles_btn": "SPRAVOVAT VOZIDLA",
+                "select_owners": "Vyber Vlastnika:",
+                "select_vehicle": "Vyber Vozidlo:",
+                "citizen": "Obcan {0}",
+                "buy_vehicle": "Koupit Vozidlo",
+                "info_employee_vehicle": "Vozidlo ve vlastnictvi zamestnance:",
+                "info_grade_vehicle": "Vozidlo zamestnance na hodnosti:",
+                "info_eech_employee_vehicle": "Vozidlo je k dispozici pro jakehokoliv zamestnance."
+            },
+            "management_transfer": {
+                "transfer_title": "Prevod {0}",
+                "transfer_btn": "Prevest Vozidlo"
+            }
+        },
+        "impound": {
+            "tag": "ODTAHOVKA",
+            "impounded_by": "Zabavil: ",
+            "impound_date": "Datum zabaveni: ",
+            "fine": "Pokuta: ",
+            "take_free": "Vzit vozidlo",
+            "give_bill": "Dat fakturu",
+            "pay_cash": "Zaplatit hotove {0}{1}",
+            "pay_bank": "Zaplatit bankou {0}{1}",
+            "locate": "Najit",
+            "locate_by_cash": "Najit za {0}{1} hotove",
+            "locate_by_bank": "Najit za {0}{1} bankou",
+            "locate_by_plate_btn": "Najit Vozidlo",
+            "bill": {
+                "title": "FAKTURA ZA ZABAVENI",
+                "plate": "SPZ:",
+                "impounded_by": "Zabavil:",
+                "fine_title": "Pokuta:",
+                "total": "CELKEM",
+                "pay_cash": "HOTOVOST",
+                "pay_bank": "BANKA",
+                "cancel": "ZRUSIT"
+            },
+            "locate_by_plate": {
+                "title": "Najit",
+                "locate_btn": "Najit Vozidlo"
+            }
+        },
+        "tow": {
+            "title": "MENU ODTAHOVKY",
+            "select_impound": "Vyber Zabaveni:",
+            "plate_label": "Vybrane vozidlo:",
+            "impound_label": "Zabaveni:",
+            "fine_label": "Pokuta:",
+            "fine_amount_label": "Cena Pokuty:",
+            "submit_tow": "ODESLAT ODTAH"
+        },
+        "creator_menu": {
+            "main_header": "Vyberte typ parkování",
+            "parking_menu_header": "Konfigurovat parkování",
+            "house_garage_menu_header": "Konfigurovat garáž u domu",
+            "garage_interior_menu_header": "Konfigurovat interiér garáže",
+            "label_house_garage": "Garáž u domu",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garáž",
+            "label_garage_interior": "Interiér garáže",
+            "label_parking": "Parkování",
+            "next_btn": "POKRAČOVAT",
+            "save_btn": "ULOŽIT SOUBOR",
+            "routing_bucket": {
+                "section_routingbucket": "Směrovací kbelík",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Sem nemusíte nic zadávat, pokud chcete, aby bylo automaticky vybráno směrovací vědro, ponechte pole prázdné.",
+                "description_routingbucket": "Zadejte individuální ID směrovacího kbelíku."
+            },
+            "main_settings": {
+                "section_title": "Hlavní nastavení",
+                "title_label": "Název:",
+                "description_label": "",
+                "title_type": "Typ:",
+                "description_type": "Vyberte typ vozidla, pro které je tato parkovací plocha vytvořena.",
+                "title_spaces": "Parkovací místa:",
+                "description_spaces": "Nakonfigurujte pozice parkovacích míst.",
+                "button_spaces": "NASTAVIT",
+                "title_menu_point": "Bod v menu:",
+                "description_menu_point": "Nakonfigurujte pozice bodů v garážovém menu.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "NASTAVIT"
+            },
+            "garage_settings": {
+                "section_title": "Nastavení garáže",
+                "title_ped_coords": "Souřadnice hráče v menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "NASTAVIT",
+                "title_vehicle_coords": "Náhled vozidla v menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "NASTAVIT",
+                "title_camera_coords": "Pozice kamery v menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "NASTAVIT"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Bod narození",
+                "description_spawn_point": "",
+                "button_spawn_point": "NASTAVIT",
+                "title_return_point": "Bod návratu",
+                "description_return_point": "",
+                "button_return_point": "NASTAVIT"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Kontrola obsazené oblasti"
+            },
+            "parkingmeter": {
+                "section_title": "Parkovací automat",
+                "title_price": "Cena:",
+                "description_price": "Zadejte cenu za hodinu parkování.",
+                "title_paystations": "Platné stanice:",
+                "description_paystations": "Nakonfigurujte pozice parkovacích automatů.<br>* Přibližte se k bodu, abyste viděli značku.",
+                "button_paystations": "NASTAVIT"
+            },
+            "rent": {
+                "section_title": "Pronájem míst",
+                "title_price": "Cena:",
+                "description_price": "Zadejte cenu za den parkování.",
+                "title_days": "Dny:",
+                "description_days": "* Zadejte čísla oddělená čárkami.",
+                "title_coords": "Souřadnice v menu:",
+                "description_coords": "Nastavte pozice míst pronájmu.<br>* Přibližte se k bodu, abyste viděli značku.",
+                "button_coords": "NASTAVIT"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Model:",
+                "description_model": "",
+                "title_animation": "Animace:",
+                "label_anim_dict": "Slovník:",
+                "label_anim_name": "Jméno:",
+                "title_coords": "Souřadnice:",
+                "description_coords": "Nakonfigurujte pozice NPC.",
+                "button_coords": "NASTAVIT"
+            },
+            "company": {
+                "section_title": "Firma",
+                "title_company": "Zaměstnání:",
+                "help_company": "Zadejte názvy zaměstnání oddělené čárkami."
+            },
+            "gang": {
+                "section_title": "Gang",
+                "title_gang": "Gang:",
+                "help_gang": "Zadejte názvy gangů oddělené čárkami."
+            },
+            "allowed": {
+                "section_title": "Omezení modelů",
+                "title_models": "Omezení modelů:",
+                "description_models": "* Zadejte názvy povolených modelů k parkování na této parkovací ploše oddělené čárkami."
+            },
+            "predefined": {
+                "section_title": "Předdefinované modely",
+                "title_models": "Předdefinované modely:",
+                "description_models": "* Zadejte názvy modelů, které budou k dispozici v této garáži.<br>Garáž bude pak nakonfigurována jako <b>Garáže zaměstnanců s předdefinovanými vozidly</b>, nebudou v ní k dispozici vlastní vozidla."
+            }
+        }
+    },
+    "IT": {
+        "currency": "$",
+        "buy_business": {
+            "header": "ACQUISTA ATTIVITÀ",
+            "name": "Parcheggio:",
+            "parking_spaces": "Numero di posti auto:",
+            "price": "Prezzo:",
+            "important_infos": "Informazioni importanti:",
+            "buy_btn": "ACQUISTA PER"
+        },
+        "bossmenu": {
+            "title": "Parcheggio",
+            "sidebar": {
+                "main_title": "Principale",
+                "main_description": "Pagina principale, informazioni sul parcheggio..",
+                "history_sales_title": "Storico vendite",
+                "history_sales_description": "Storico vendite e dati dei clienti.."
+            },
+            "main": {
+                "menu_total_earned_header": "Totale guadagnato:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Posti auto liberi:",
+                "menu_occupied_parking_spaces_header": "Posti auto occupati:",
+                "menu_parking_spaces_header": "Informazioni sui veicoli parcheggiati e sui posti auto affittati.",
+                "menu_parking_spaces_title": "Posti auto",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "ID posto",
+                "table_owner": "Proprietario",
+                "table_vehicle": "Veicolo parcheggiato",
+                "table_parking_date": "Data di parcheggio",
+                "table_rent_end_date": "Data di fine affitto",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Periodo di affitto terminato",
+                "menu_balance_header": "Saldo:",
+                "menu_balance_btn_withdraw": "PRELEVA",
+                "menu_balance_btn_deposit": "DEPOSITA",
+                "menu_sell_header": "Vendi la tua attività automaticamente.",
+                "menu_sell_title": "Vendi automaticamente",
+                "menu_sell_btn": "VENDI PER {0}{1}",
+                "menu_resell_header": "Rivendi il parcheggio a un altro cittadino.",
+                "menu_resell_title": "Rivendi parcheggio",
+                "menu_resell_btn": "RIVENDE"
+            },
+            "sales_history": {
+                "table_date": "Data di vendita",
+                "table_seller": "Venditore",
+                "table_buyer": "Acquirente",
+                "table_vehicle": "Info veicolo",
+                "table_price": "Prezzo"
+            }
+        },
+        "paystation": {
+            "title": "Stazione di pagamento",
+            "description": "Il parcheggio {0} è un parcheggio a pagamento con un costo di {1}$ all'ora.",
+            "provide_license_plate": "Inserisci il numero di targa per cercare un veicolo e pagare il parcheggio:",
+            "find_vehicle": "TROVA VEICOLO",
+            "parking_cost": "Costo del parcheggio all'ora:",
+            "ticket": {
+                "title": "BIGLIETTO PARCHEGGIO",
+                "vehicle": "VEICOLO {0}",
+                "hours": "TEMPO DI PARCHEGGIO - {0} ORE",
+                "date": "DATA",
+                "from": "DA",
+                "to": "A",
+                "to_paid": "DA PAGARE",
+                "pay_cash": "CONTANTI",
+                "pay_bank": "BANCA",
+                "cancel": "ANNULLA"
+            }
+        },
+        "parking_rent": {
+            "title": "Affitta un posto auto",
+            "bar_yours": "TUO",
+            "bar_rented": "AFFITTATO",
+            "bar_free": "LIBERO",
+            "selected_space": "Spazio:",
+            "parking_cost": "Costo del parcheggio al giorno:",
+            "select_time_title": "Tempo di affitto:",
+            "select_time_description": "Seleziona il tempo per cui desideri affittare questo posto auto.",
+            "day_to_select": "{0} Giorno",
+            "days_to_select": "{0} Giorni",
+            "select_days": "SELEZIONA GIORNI",
+            "rent_for": "AFFITTA PER {0}{1}.00",
+            "notice_period": "Periodo di preavviso:",
+            "permanent_space": "Permanente"
+        },
+        "resell": {
+            "title": "Accordo sulla vendita di quote di<br>{0}",
+            "date": "Concluso a Los Santos il {0}",
+            "seller": "<b>Venditore</b>, che per gli scopi di questo accordo è considerato essere {0}.",
+            "buyer": "<b>Acquirente</b>, che per gli scopi di questo accordo è considerato essere {0}, pagherà una commissione di {1}{2} per il 100% delle quote.",
+            "paragraph": "§1 Oggetto dell'accordo",
+            "contract_first_point": "Il Venditore dichiara di essere il proprietario del parcheggio '{0}' registrato nel registro degli imprenditori di Los Santos.",
+            "contract_second_point": "Il Venditore si impegna a trasferire all'Acquirente tutti i diritti e gli obblighi relativi alla proprietà delle quote del parcheggio '{0}', compreso il diritto di utilizzare la posizione del parcheggio e tutti i beni associati ad esso.",
+            "seller_signature": "Firma del venditore",
+            "buyer_signature": "Firma dell'acquirente",
+            "give_contract_btn": "Trasmetti il contratto all'acquirente"
+        },
+        "agreement": {
+            "select_option": "Seleziona",
+            "companies_group": "Aziende:",
+            "citizens_group": "Cittadini:",
+            "citizen": "Cittadino {0}",
+            "cash": "contanti",
+            "bank": "bonifico bancario",
+            "town": "Los Santos",
+            "date": "(data, città)",
+            "title": "Accordo di vendita del veicolo",
+            "paragraph_1_text": "L'oggetto di questo accordo è il trasferimento da parte del Venditore all'Acquirente {0} diritti di proprietà del {1} {2}.",
+            "paragraph_2_text": "Il Venditore dichiara che il {0} oggetto di questo accordo è di sua esclusiva proprietà, è libero da difetti legali e diritti di terzi, che non ci sono procedimenti in corso relativi a questo {1} e che non è soggetto a interessi di sicurezza.",
+            "paragraph_3_text": "Le parti concordano sul prezzo di vendita del veicolo specificato nel §1 di questo accordo per l'importo di: {0}{1} sotto forma di {2}.<br>",
+            "paragraph_3_text_2": "Le parti confermano che il veicolo specificato nel §1 è stato consegnato all'Acquirente e che il prezzo è stato pagato dall'Acquirente al Venditore.",
+            "seller_signature": "Firma del venditore",
+            "buyer_signature": "Firma dell'acquirente",
+            "give_contract_btn": "Trasmetti l'accordo"
+        },
+        "garage": {
+            "tag_garage": "GARAGE",
+            "tag_job_garage": "GARAGE DEL LAVORO",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "GESTISCI",
+            "transfer": "Trasferisci",
+            "transfer_for": "Trasferisci per {0}{1}",
+            "take_out": "Ritirare",
+            "management": {
+                "manage_vehicles_btn": "GESTISCI VEICOLI",
+                "select_owners": "Seleziona proprietario/i:",
+                "select_vehicle": "Seleziona veicolo:",
+                "citizen": "Cittadino {0}",
+                "buy_vehicle": "Acquista veicolo",
+                "info_employee_vehicle": "Veicolo di proprietà del dipendente:",
+                "info_grade_vehicle": "Veicolo del dipendente per grado:",
+                "info_eech_employee_vehicle": "Il veicolo è disponibile per qualsiasi dipendente."
+            },
+            "management_transfer": {
+                "transfer_title": "Trasferisci {0}",
+                "transfer_btn": "Trasferisci veicolo"
+            }
+        },
+        "impound": {
+            "tag": "DEPOSITO",
+            "impounded_by": "Sequestrato da: ",
+            "impound_date": "Data del sequestro: ",
+            "fine": "Multa: ",
+            "take_free": "Ritira veicolo",
+            "give_bill": "Fornisci la fattura",
+            "pay_cash": "Paga in contanti {0}{1}",
+            "pay_bank": "Paga con banca {0}{1}",
+            "locate": "Localizza",
+            "locate_by_cash": "Localizza per {0}{1} in contanti",
+            "locate_by_bank": "Localizza per {0}{1} con banca",
+            "locate_by_plate_btn": "Localizza veicolo",
+            "bill": {
+                "title": "FATTURA DEL DEPOSITO",
+                "plate": "Targa:",
+                "impounded_by": "Sequestrato da:",
+                "fine_title": "Multa:",
+                "total": "TOTALE",
+                "pay_cash": "CONTANTI",
+                "pay_bank": "BANCA",
+                "cancel": "ANNULLA"
+            },
+            "locate_by_plate": {
+                "title": "Localizza",
+                "locate_btn": "Localizza veicolo"
+            }
+        },
+        "tow": {
+            "title": "Menu Rimorchio",
+            "select_impound": "Seleziona deposito:",
+            "plate_label": "Veicolo selezionato:",
+            "impound_label": "Deposito:",
+            "fine_label": "Multa:",
+            "fine_amount_label": "Importo della multa:",
+            "submit_tow": "CONFERMA RIMORCHIO"
+        },
+        "creator_menu": {
+            "main_header": "Seleziona il tipo di parcheggio",
+            "parking_menu_header": "Configura Parcheggio",
+            "house_garage_menu_header": "Configura Garage Abitativo",
+            "garage_interior_menu_header": "Configura Interno Garage",
+            "label_house_garage": "Garage Abitativo",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garage",
+            "label_garage_interior": "Interno Garage",
+            "label_parking": "Parcheggio",
+            "next_btn": "Vai Avanti",
+            "save_btn": "Salva File",
+            "routing_bucket": {
+                "section_routingbucket": "Secchio di Instradamento",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Non è necessario inserire nulla qui, se desideri che il routing bucket venga selezionato automaticamente, lascia il campo vuoto.",
+                "description_routingbucket": "Inserisci l'ID individuale del secchio di instradamento."
+            },
+            "main_settings": {
+                "section_title": "Impostazioni Principali",
+                "title_label": "Etichetta:",
+                "description_label": "",
+                "title_type": "Tipo:",
+                "description_type": "Seleziona il tipo di veicolo per il quale è stato creato questo parcheggio.",
+                "title_spaces": "Posti Auto:",
+                "description_spaces": "Configura le posizioni dei posti auto.",
+                "button_spaces": "CONFIGURA",
+                "title_menu_point": "Punto Menu:",
+                "description_menu_point": "Configura le posizioni del punto di menu del garage.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "CONFIGURA"
+            },
+            "garage_settings": {
+                "section_title": "Impostazioni Garage",
+                "title_ped_coords": "Coordinate Giocatore nel menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "CONFIGURA",
+                "title_vehicle_coords": "Anteprima Veicolo nel menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "CONFIGURA",
+                "title_camera_coords": "Posizione Fotocamera nel menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "CONFIGURA"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Punto di Spawn",
+                "description_spawn_point": "",
+                "button_spawn_point": "CONFIGURA",
+                "title_return_point": "Punto di Ritorno",
+                "description_return_point": "",
+                "button_return_point": "CONFIGURA"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Controlla Area Occupata"
+            },
+            "parkingmeter": {
+                "section_title": "Parcometro",
+                "title_price": "Prezzo:",
+                "description_price": "Inserisci il prezzo all'ora del parcheggio.",
+                "title_paystations": "Postazioni di Pagamento:",
+                "description_paystations": "Configura le posizioni delle stazioni di pagamento del parchimetro.<br>* Avvicinati al punto per vedere il marcatore.",
+                "button_paystations": "CONFIGURA"
+            },
+            "rent": {
+                "section_title": "Affitto Spazi",
+                "title_price": "Prezzo:",
+                "description_price": "Inserisci il prezzo al giorno del parcheggio.",
+                "title_days": "Giorni:",
+                "description_days": "* Inserisci numeri separati da virgole.",
+                "title_coords": "Coordinate Menu:",
+                "description_coords": "Configura le posizioni dei menu di affitto.<br>* Avvicinati al punto per vedere il marcatore.",
+                "button_coords": "CONFIGURA"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Modello:",
+                "description_model": "",
+                "title_animation": "Animazione:",
+                "label_anim_dict": "Dizionario:",
+                "label_anim_name": "Nome:",
+                "title_coords": "Coordinate:",
+                "description_coords": "Configura le posizioni degli NPC.",
+                "button_coords": "CONFIGURA"
+            },
+            "company": {
+                "section_title": "Azienda",
+                "title_company": "Lavori:",
+                "help_company": "Inserisci i nomi dei lavori separati da virgole."
+            },
+            "gang": {
+                "section_title": "Gang",
+                "title_gang": "Gang:",
+                "help_gang": "Inserisci i nomi delle gang separati da virgole."
+            },
+            "allowed": {
+                "section_title": "Limitazioni Modelli",
+                "title_models": "Limitazioni Modelli:",
+                "description_models": "* Inserisci i nomi dei modelli autorizzati a parcheggiare in questo parcheggio separati da virgole"
+            },
+            "predefined": {
+                "section_title": "Modelli Predefiniti",
+                "title_models": "Modelli Predefiniti:",
+                "description_models": "* Inserisci i nomi dei modelli che saranno disponibili in questo garage.<br>Il garage verrà quindi configurato come <b>Garage con Veicoli Predefiniti per Lavori</b>, non saranno disponibili veicoli di proprietà."
+            }
+        }
+    },
+    "NL": {
+        "currency": "$",
+        "buy_business": {
+            "header": "KOOP BEDRIJF",
+            "name": "Parkeren:",
+            "parking_spaces": "Aantal parkeerplaatsen:",
+            "price": "Prijs:",
+            "important_infos": "Belangrijke informatie:",
+            "buy_btn": "KOOP VOOR"
+        },
+        "bossmenu": {
+            "title": "Parkeren",
+            "sidebar": {
+                "main_title": "Hoofd",
+                "main_description": "Homepagina, parkeerinformatie..",
+                "history_sales_title": "Verkoopgeschiedenis",
+                "history_sales_description": "Verkoopgeschiedenis en klantgegevens.."
+            },
+            "main": {
+                "menu_total_earned_header": "Totaal Verdiend:",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "Vrije Parkeerplaatsen:",
+                "menu_occupied_parking_spaces_header": "Bezette Parkeerplaatsen:",
+                "menu_parking_spaces_header": "Informatie over geparkeerde voertuigen en gehuurde parkeerplaatsen.",
+                "menu_parking_spaces_title": "Parkeerplaatsen",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "Plaats ID",
+                "table_owner": "Eigenaar",
+                "table_vehicle": "Geparkeerd Voertuig",
+                "table_parking_date": "Parkeerdatum",
+                "table_rent_end_date": "Einddatum Huur",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 Huurperiode is voorbij",
+                "menu_balance_header": "Balans:",
+                "menu_balance_btn_withdraw": "OPNEMEN",
+                "menu_balance_btn_deposit": "STORTEN",
+                "menu_sell_header": "Verkoop je bedrijf automatisch.",
+                "menu_sell_title": "Automatisch Verkopen",
+                "menu_sell_btn": "VERKOOP VOOR {0}{1}",
+                "menu_resell_header": "Verkoop parkeerplaats door aan een andere burger.",
+                "menu_resell_title": "Verkoop Parkeerplaats Door",
+                "menu_resell_btn": "DOORVERKOPEN"
+            },
+            "sales_history": {
+                "table_date": "Verkoopdatum",
+                "table_seller": "Verkoper",
+                "table_buyer": "Koper",
+                "table_vehicle": "Voertuiginformatie",
+                "table_price": "Prijs"
+            }
+        },
+        "paystation": {
+            "title": "Betaalautomaat",
+            "description": "Parkeren {0} is een betaald parkeerterrein dat {1}€ per uur kost.",
+            "provide_license_plate": "Voer het kenteken in om een voertuig te zoeken en te betalen voor parkeren:",
+            "find_vehicle": "VOERTUIG ZOEKEN",
+            "parking_cost": "Parkeerkosten per uur:",
+            "ticket": {
+                "title": "PARKEERTICKET",
+                "vehicle": "VOERTUIG {0}",
+                "hours": "PARKEERTIJD - {0} UREN",
+                "date": "DATUM",
+                "from": "VAN",
+                "to": "TOT",
+                "to_paid": "TE BETALEN",
+                "pay_cash": "CONTANT",
+                "pay_bank": "BANK",
+                "cancel": "ANNULEER"
+            }
+        },
+        "parking_rent": {
+            "title": "Huur een parkeerplaats",
+            "bar_yours": "VAN JOU",
+            "bar_rented": "VERHUURD",
+            "bar_free": "VRIJ",
+            "selected_space": "Plaats:",
+            "parking_cost": "Parkeerkosten per dag:",
+            "select_time_title": "Huurperiode:",
+            "select_time_description": "Selecteer de tijdsduur voor het huren van deze parkeerplaats.",
+            "day_to_select": "{0} Dag",
+            "days_to_select": "{0} Dagen",
+            "select_days": "SELECTEER DAGEN",
+            "rent_for": "HUUR VOOR {0}{1}.00",
+            "notice_period": "Opzegtermijn:",
+            "permanent_space": "Permanent"
+        },
+        "resell": {
+            "title": "Overeenkomst voor verkoop van aandelen van<br>{0}",
+            "date": "Gesloten in Los Santos op {0}",
+            "seller": "<b>Verkoper</b>, voor de doeleinden van deze overeenkomst, wordt beschouwd als {0}.",
+            "buyer": "<b>Koper</b>, voor de doeleinden van deze overeenkomst, wordt geacht te zijn {0}, zal kosten betalen van {1}{2} voor 100% van de aandelen.",
+            "paragraph": "§1 Onderwerp van de Overeenkomst",
+            "contract_first_point": "Verkoper verklaart dat hij eigenaar is van de parkeerplaats '{0}' die is geregistreerd in het handelsregister van Los Santos.",
+            "contract_second_point": "De Verkoper verbindt zich ertoe om alle rechten en verplichtingen met betrekking tot het eigendom van aandelen in de '{0}' parkeerplaats, inclusief het recht om de parkeerlokatie en alle bijbehorende activa te gebruiken, aan de Koper over te dragen.",
+            "seller_signature": "Handtekening Verkoper",
+            "buyer_signature": "Handtekening Koper",
+            "give_contract_btn": "Geef het contract aan de koper"
+        },
+        "agreement": {
+            "select_option": "Selecteer",
+            "companies_group": "Bedrijven:",
+            "citizens_group": "Burgers:",
+            "citizen": "Burger {0}",
+            "cash": "contant",
+            "bank": "overboeking",
+            "town": "Los Santos",
+            "date": "(datum, plaats)",
+            "title": "Voertuig Koopovereenkomst",
+            "paragraph_1_text": "Het onderwerp van deze overeenkomst is de overdracht door de Verkoper aan de Koper {0} eigendomsrechten van de {1} {2}.",
+            "paragraph_2_text": "De Verkoper verklaart dat de {0} die het onderwerp is van deze overeenkomst zijn exclusieve eigendom is, vrij van juridische gebreken en rechten van derden, dat er geen lopende procedures zijn met betrekking tot deze {1}, en dat het niet onderworpen is aan enige zekerheidsrechten.",
+            "paragraph_3_text": "De partijen komen overeen over de verkoopprijs van het voertuig gespecificeerd in §1 van deze overeenkomst ter hoogte van: {0}{1} in de vorm van {2}.<br>",
+            "paragraph_3_text_2": "De partijen bevestigen hierbij dat het in §1 gespecificeerde voertuig aan de Koper is geleverd en dat de prijs door de Koper aan de Verkoper is betaald.",
+            "seller_signature": "Handtekening Verkoper",
+            "buyer_signature": "Handtekening Koper",
+            "give_contract_btn": "Geef de overeenkomst"
+        },
+        "garage": {
+            "tag_garage": "GARAGE",
+            "tag_job_garage": "WERKGARAGE",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "BEHEREN",
+            "transfer": "Overdragen",
+            "transfer_for": "Overdragen voor {0}{1}",
+            "take_out": "Uitnemen",
+            "management": {
+                "manage_vehicles_btn": "BEHEER VOERTUIGEN",
+                "select_owners": "Selecteer Eigenaar(s):",
+                "select_vehicle": "Selecteer Voertuig:",
+                "citizen": "Burger {0}",
+                "buy_vehicle": "Koop Voertuig",
+                "info_employee_vehicle": "Voertuig eigendom van werknemer:",
+                "info_grade_vehicle": "Werknemersvoertuig op niveau:",
+                "info_eech_employee_vehicle": "Het voertuig is beschikbaar voor elke werknemer."
+            },
+            "management_transfer": {
+                "transfer_title": "Overdragen {0}",
+                "transfer_btn": "Voertuig Overdragen"
+            }
+        },
+        "impound": {
+            "tag": "INBESLAGNAME",
+            "impounded_by": "Inbeslaggenomen Door: ",
+            "impound_date": "Datum van inbeslagname: ",
+            "fine": "Boete: ",
+            "take_free": "Neem voertuig",
+            "give_bill": "Geef de rekening",
+            "pay_cash": "Betaal contant {0}{1}",
+            "pay_bank": "Betaal met bank {0}{1}",
+            "locate": "Lokaliseer",
+            "locate_by_cash": "Lokaliseer voor {0}{1} contant",
+            "locate_by_bank": "Lokaliseer voor {0}{1} met bank",
+            "locate_by_plate_btn": "Voertuig Lokaliseren",
+            "bill": {
+                "title": "INBESLAGNAME REKENING",
+                "plate": "Kenteken:",
+                "impounded_by": "Inbeslaggenomen Door:",
+                "fine_title": "Boete:",
+                "total": "TOTAAL",
+                "pay_cash": "CONTANT",
+                "pay_bank": "BANK",
+                "cancel": "ANNULEER"
+            },
+            "locate_by_plate": {
+                "title": "Lokaliseer",
+                "locate_btn": "Voertuig Lokaliseren"
+            }
+        },
+        "tow": {
+            "title": "Sleepmenu",
+            "select_impound": "Selecteer Inbeslagname:",
+            "plate_label": "Geselecteerd voertuig:",
+            "impound_label": "Inbeslagname:",
+            "fine_label": "Boete:",
+            "fine_amount_label": "Boetebedrag:",
+            "submit_tow": "SLEEPEN INDIENEN"
+        },
+        "creator_menu": {
+            "main_header": "Selecteer het type parkeergelegenheid",
+            "parking_menu_header": "Parkeergelegenheid configureren",
+            "house_garage_menu_header": "Woninggarage configureren",
+            "garage_interior_menu_header": "Garage-interieur configureren",
+            "label_house_garage": "Woninggarage",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "Garage",
+            "label_garage_interior": "Interieur garage",
+            "label_parking": "Parkeergelegenheid",
+            "next_btn": "GA VERDER",
+            "save_btn": "BESTAND OPSLAAN",
+            "routing_bucket": {
+                "section_routingbucket": "Routing Bucket",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "Hier hoef je niets in te vullen. Als je wilt dat de routing bucket automatisch wordt geselecteerd, laat het veld dan leeg.",
+                "description_routingbucket": "Voer individuele ID van routing bucket in."
+            },
+            "main_settings": {
+                "section_title": "Belangrijkste instellingen",
+                "title_label": "Label:",
+                "description_label": "",
+                "title_type": "Type:",
+                "description_type": "Selecteer het type voertuig waarvoor deze parkeerplaats is gemaakt.",
+                "title_spaces": "Parkeerplaatsen:",
+                "description_spaces": "Configureer de posities van de parkeerplaatsen.",
+                "button_spaces": "CONFIGUREREN",
+                "title_menu_point": "Menupunt:",
+                "description_menu_point": "Configureer de posities van het garagemenu-punt.",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "CONFIGUREREN"
+            },
+            "garage_settings": {
+                "section_title": "Garage-instellingen",
+                "title_ped_coords": "Spelercoördinaten in menu",
+                "description_ped_coords": "",
+                "button_ped_coords": "CONFIGUREREN",
+                "title_vehicle_coords": "Voorbeeldvoertuig in menu",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "CONFIGUREREN",
+                "title_camera_coords": "Camerapositie in menu",
+                "description_camera_coords": "",
+                "button_camera_coords": "CONFIGUREREN"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "Spaarpunt",
+                "description_spawn_point": "",
+                "button_spawn_point": "CONFIGUREREN",
+                "title_return_point": "Terugkeerpunt",
+                "description_return_point": "",
+                "button_return_point": "CONFIGUREREN"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "Controleer bezette ruimte"
+            },
+            "parkingmeter": {
+                "section_title": "Parkeermeter",
+                "title_price": "Prijs:",
+                "description_price": "Voer de prijs per uur van parkeren in.",
+                "title_paystations": "Betaalstations:",
+                "description_paystations": "Configureer de posities van parkeermeter-locaties.<br>* Ga dichter bij het punt om de markering te zien.",
+                "button_paystations": "CONFIGUREREN"
+            },
+            "rent": {
+                "section_title": "Verhuur van ruimtes",
+                "title_price": "Prijs:",
+                "description_price": "Voer de prijs per dag van parkeren in.",
+                "title_days": "Dagen:",
+                "description_days": "* Voer nummers gescheiden door komma's in.",
+                "title_coords": "Menu-coördinaten:",
+                "description_coords": "Configureer de posities van verhuurmenu-locaties.<br>* Ga dichter bij het punt om de markering te zien.",
+                "button_coords": "CONFIGUREREN"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "Model:",
+                "description_model": "",
+                "title_animation": "Animatie:",
+                "label_anim_dict": "Woordenboek:",
+                "label_anim_name": "Naam:",
+                "title_coords": "Coördinaten:",
+                "description_coords": "Configureer de posities van NPC.",
+                "button_coords": "CONFIGUREREN"
+            },
+            "company": {
+                "section_title": "Bedrijf",
+                "title_company": "Banen:",
+                "help_company": "Voer bedrijfsnamen gescheiden door komma's in."
+            },
+            "gang": {
+                "section_title": "Bende",
+                "title_gang": "Bende:",
+                "help_gang": "Voer bende namen in gescheiden door komma's."
+            },
+            "allowed": {
+                "section_title": "Modelbeperkingen",
+                "title_models": "Modelbeperkingen:",
+                "description_models": "* Voer de namen van de modellen in die zijn toegestaan om op deze parkeerplaats te parkeren, gescheiden door komma's"
+            },
+            "predefined": {
+                "section_title": "Vooraf gedefinieerde modellen",
+                "title_models": "Vooraf gedefinieerde modellen:",
+                "description_models": "* Voer de namen van de modellen in die beschikbaar zullen zijn in deze garage.<br>De garage wordt dan geconfigureerd als <b>Garages met vooraf gedefinieerde voertuigen</b>, geen eigendomsvoertuigen zullen beschikbaar zijn."
+            }
+        }
+    },
+    "ZH": {
+        "currency": "¥",
+        "buy_business": {
+            "header": "购买业务",
+            "name": "停车：",
+            "parking_spaces": "停车位数量：",
+            "price": "价格：",
+            "important_infos": "重要信息：",
+            "buy_btn": "购买"
+        },
+        "bossmenu": {
+            "title": "停车",
+            "sidebar": {
+                "main_title": "主页",
+                "main_description": "主页，停车信息..",
+                "history_sales_title": "销售历史",
+                "history_sales_description": "销售历史和客户信息.."
+            },
+            "main": {
+                "menu_total_earned_header": "总收入：",
+                "menu_prices_header": "Prices:",
+                "menu_free_parking_spaces_header": "空闲停车位：",
+                "menu_occupied_parking_spaces_header": "占用停车位：",
+                "menu_parking_spaces_header": "停车车辆和租赁停车位信息。",
+                "menu_parking_spaces_title": "停车位",
+                "price_per_day_label": "Price per Day",
+                "price_for_infinity_label": "Price for Infinity",
+                "prices_recommended": "Recommended: {0}{1}",
+                "update_price": "UPDATE",
+                "table_parking_id": "位置 ID",
+                "table_owner": "车主",
+                "table_vehicle": "停放车辆",
+                "table_parking_date": "停车日期",
+                "table_rent_end_date": "租赁结束日期",
+                "no_owner_of_parking_space": "-",
+                "no_rent_date": "🔴 租赁期已过",
+                "menu_balance_header": "余额：",
+                "menu_balance_btn_withdraw": "取款",
+                "menu_balance_btn_deposit": "存款",
+                "menu_sell_header": "自动出售您的业务。",
+                "menu_sell_title": "自动出售",
+                "menu_sell_btn": "出售 {0}{1}",
+                "menu_resell_header": "将停车位转售给其他玩家。",
+                "menu_resell_title": "转售停车位",
+                "menu_resell_btn": "转售"
+            },
+            "sales_history": {
+                "table_date": "销售日期",
+                "table_seller": "卖家",
+                "table_buyer": "买家",
+                "table_vehicle": "车辆信息",
+                "table_price": "价格"
+            }
+        },
+        "paystation": {
+            "title": "支付站",
+            "description": "停车场 {0} 是一个收费停车场，每小时收费 {1} 元。",
+            "provide_license_plate": "输入车牌号以查找车辆并支付停车费：",
+            "find_vehicle": "查找车辆",
+            "parking_cost": "每小时停车费：",
+            "ticket": {
+                "title": "停车票",
+                "vehicle": "车辆 {0}",
+                "hours": "停车时间 - {0} 小时",
+                "date": "日期",
+                "from": "从",
+                "to": "到",
+                "to_paid": "应付",
+                "pay_cash": "现金",
+                "pay_bank": "银行",
+                "cancel": "取消"
+            }
+        },
+        "parking_rent": {
+            "title": "租用停车位",
+            "bar_yours": "你的",
+            "bar_rented": "已租",
+            "bar_free": "空闲",
+            "selected_space": "位置：",
+            "parking_cost": "每日停车费用：",
+            "select_time_title": "租赁期限：",
+            "select_time_description": "选择租用此停车位的时间长度。",
+            "day_to_select": "{0} 天",
+            "days_to_select": "{0} 天",
+            "select_days": "选择天数",
+            "rent_for": "租用 {0}{1}.00",
+            "notice_period": "通知期限：",
+            "permanent_space": "永久"
+        },
+        "resell": {
+            "title": "股份转让协议<br>{0}",
+            "date": "在洛圣都签署于 {0}",
+            "seller": "<b>卖家</b>，在本协议中被视为 {0}。",
+            "buyer": "<b>买家</b>，在本协议中被视为 {0}，将支付 {1}{2} 以购买 100% 的股份。",
+            "paragraph": "§1 协议内容",
+            "contract_first_point": "卖方声明其拥有注册在洛圣都商业登记处的停车位 '{0}'。",
+            "contract_second_point": "卖方同意将所有关于 '{0}' 停车位的权益和义务，包括使用停车位置及其所有附属资产的权利，转让给买方。",
+            "seller_signature": "卖家签名",
+            "buyer_signature": "买家签名",
+            "give_contract_btn": "交给买方合同"
+        },
+        "agreement": {
+            "select_option": "选择",
+            "companies_group": "公司：",
+            "citizens_group": "市民：",
+            "citizen": "市民 {0}",
+            "cash": "现金",
+            "bank": "转账",
+            "town": "洛圣都",
+            "date": "(日期，地点)",
+            "title": "车辆购买协议",
+            "paragraph_1_text": "本协议的内容是卖方将 {0} 对 {1} {2} 的所有权转让给买方。",
+            "paragraph_2_text": "卖方声明，作为本协议的标的物的 {0} 是其独占财产，不存在法律缺陷和第三方权利，且无正在进行的程序，且未受任何担保权利的约束。",
+            "paragraph_3_text": "双方同意本协议第 §1 节所述的车辆销售价格为：{0}{1} 以 {2} 形式支付。<br>",
+            "paragraph_3_text_2": "双方确认，第 §1 节所述的车辆已交付给买方，并且价格已由买方支付给卖方。",
+            "seller_signature": "卖家签名",
+            "buyer_signature": "买家签名",
+            "give_contract_btn": "交合同"
+        },
+        "garage": {
+            "tag_garage": "车库",
+            "tag_job_garage": "工作车库",
+            "tag_gang_garage": "GANG GARAGE",
+            "manage_btn": "管理",
+            "transfer": "转让",
+            "transfer_for": "转让给 {0}{1}",
+            "take_out": "取出",
+            "management": {
+                "manage_vehicles_btn": "管理车辆",
+                "select_owners": "选择车主：",
+                "select_vehicle": "选择车辆：",
+                "citizen": "市民 {0}",
+                "buy_vehicle": "购买车辆",
+                "info_employee_vehicle": "员工车辆：",
+                "info_grade_vehicle": "员工等级车辆：",
+                "info_eech_employee_vehicle": "该车辆对所有员工开放。"
+            },
+            "management_transfer": {
+                "transfer_title": "转让 {0}",
+                "transfer_btn": "转让车辆"
+            }
+        },
+        "impound": {
+            "tag": "扣押",
+            "impounded_by": "扣押者： ",
+            "impound_date": "扣押日期： ",
+            "fine": "罚款：",
+            "take_free": "取回车辆",
+            "give_bill": "发票",
+            "pay_cash": "现金支付 {0}{1}",
+            "pay_bank": "银行支付 {0}{1}",
+            "locate": "定位",
+            "locate_by_cash": "现金定位 {0}{1}",
+            "locate_by_bank": "银行定位 {0}{1}",
+            "locate_by_plate_btn": "定位车辆",
+            "bill": {
+                "title": "扣押账单",
+                "plate": "车牌：",
+                "impounded_by": "扣押者：",
+                "fine_title": "罚款：",
+                "total": "总计",
+                "pay_cash": "现金",
+                "pay_bank": "银行",
+                "cancel": "取消"
+            },
+            "locate_by_plate": {
+                "title": "定位",
+                "locate_btn": "定位车辆"
+            }
+        },
+        "tow": {
+            "title": "拖车菜单",
+            "select_impound": "选择扣押：",
+            "plate_label": "选定车辆：",
+            "impound_label": "扣押：",
+            "fine_label": "罚款：",
+            "fine_amount_label": "罚款金额：",
+            "submit_tow": "提交拖车"
+        },
+        "creator_menu": {
+            "main_header": "选择停车类型",
+            "parking_menu_header": "配置停车",
+            "house_garage_menu_header": "配置住宅车库",
+            "garage_interior_menu_header": "配置车库内部",
+            "label_house_garage": "住宅车库",
+            "label_house_garage_menu": "House Garage Menu",
+            "label_garage": "车库",
+            "label_garage_interior": "车库内部",
+            "label_parking": "停车",
+            "next_btn": "下一步",
+            "save_btn": "保存文件",
+            "routing_bucket": {
+                "section_routingbucket": "路由桶",
+                "title_routingbucket": "ID:",
+                "help_routingbucket": "在这里不需要输入任何内容，如果你想让路由桶自动选择，请将字段留空。",
+                "description_routingbucket": "输入单独的ID路由桶。"
+            },
+            "main_settings": {
+                "section_title": "主设置",
+                "title_label": "标签:",
+                "description_label": "",
+                "title_type": "类型:",
+                "description_type": "选择为哪种车辆创建这个停车场。",
+                "title_spaces": "停车位:",
+                "description_spaces": "配置停车位的位置。",
+                "button_spaces": "配置",
+                "title_menu_point": "菜单点:",
+                "description_menu_point": "配置车库菜单点的位置。",
+                "title_vehicles_limit": "Vehicles Limit:",
+                "description_vehicles_limit": "Set the maximum number of parked vehicles",
+                "button_menu_point": "配置"
+            },
+            "garage_settings": {
+                "section_title": "车库设置",
+                "title_ped_coords": "菜单中的玩家坐标",
+                "description_ped_coords": "",
+                "button_ped_coords": "配置",
+                "title_vehicle_coords": "菜单中的预览车辆",
+                "description_vehicle_coords": "",
+                "button_vehicle_coords": "配置",
+                "title_camera_coords": "菜单中的摄像头位置",
+                "description_camera_coords": "",
+                "button_camera_coords": "配置"
+            },
+            "garage2_settings": {
+                "title_spawn_point": "生成点",
+                "description_spawn_point": "",
+                "button_spawn_point": "配置",
+                "title_return_point": "返回点",
+                "description_return_point": "",
+                "button_return_point": "CONFIGURE"
+            },
+            "check_area_occupied_settings": {
+                "section_title": "检查区域占用"
+            },
+            "parkingmeter": {
+                "section_title": "停车计费器",
+                "title_price": "价格:",
+                "description_price": "输入每小时的停车费。",
+                "title_paystations": "付款站:",
+                "description_paystations": "配置停车计费器位置。<br> *靠近点查看标记。",
+                "button_paystations": "配置"
+            },
+            "rent": {
+                "section_title": "租赁空间",
+                "title_price": "价格:",
+                "description_price": "输入每天的停车费。",
+                "title_days": "天数:",
+                "description_days": "*用逗号分隔的数字。",
+                "title_coords": "菜单坐标:",
+                "description_coords": "配置租赁菜单位置。<br> *靠近点查看标记。",
+                "button_coords": "配置"
+            },
+            "npc": {
+                "section_title": "NPC",
+                "title_model": "模型:",
+                "description_model": "",
+                "title_animation": "动画:",
+                "label_anim_dict": "字典:",
+                "label_anim_name": "名称:",
+                "title_coords": "坐标:",
+                "description_coords": "配置NPC的位置。",
+                "button_coords": "配置"
+            },
+            "company": {
+                "section_title": "公司",
+                "title_company": "工作:",
+                "help_company": "用逗号分隔的工作名称。"
+            },
+            "gang": {
+                "section_title": "帮派",
+                "title_gang": "帮派：",
+                "help_gang": "用逗号分隔输入帮派名称。"
+            },
+            "allowed": {
+                "section_title": "模型限制",
+                "title_models": "模型限制:",
+                "description_models": "*用逗号分隔的允许在此停车场停放的模型名称。"
+            },
+            "predefined": {
+                "section_title": "预定义模型",
+                "title_models": "预定义模型:",
+                "description_models": "* 输入将在此车库中可用的模型名称。<br>然后车库将配置为 <b>具有预定义车辆的作业车库</b>，其中不会提供拥有的车辆。"
+            }
+        }
+    }
+}

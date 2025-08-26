@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deathmatch</title>
+
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="shortcut icon" href="./images/logos/favicon.png" type="image/x-icon" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Include own Javascript -->
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/landingPage.js"></script>
+  <script type="module" src="./js/createPage.js"></script>
+  <script type="module" src="./js/teamPage.js"></script>
+  <script type="module" src="./js/passwordPage.js"></script>
+</head>
+
+
+<body menu="hidden" background="#00000000">
+  <section class="password">
+    <div class="password-form">
+      <forma class="flex flex-col">
+        <span class="flex flex-col" id="private-room">
+          <p>Enter the password for the</p>
+          <h1 id="lobby-name-password">"abc" lobby</h1>
+        </span>
+
+        <div class="input-group attention" visibility="hidden" id="password-visibility-toggle-status-password">
+          <input autocomplete="off" type="text" name="password" id="password-input-password" maxlength="16">
+          <span class="show-hide" id="password-visibility-toggle-btn-password">
+            <img class="eye-close" src="images/icons/tabler-icon-eye-off.svg" alt="">
+            <img class="eye-open" src="images/icons/tabler-icon-eye.svg" alt="">
+          </span>
+        </div>
+
+        <div class="btn-container grid">
+          <a id="close-btn-password" class="cta-2">
+            <img src="./images/icons/tabler-icon-arrow-left.svg" alt="" />
+            <p id="cancel-password">Cancel</p>
+          </a>
+          <button class="cta" id="join-lobby-btn-password">
+            <p id="join-password">Join Lobby</p>
+          </button>
+        </div>
+      </forma>
+    </div>
+  </section>
+  <section class="landing">
+    <img class="background-image" src="./images/images/image 16.png" alt="" />
+    <div class="blur-background-overlay"></div>
+    <div class="main flex flex-col gap-8">
+      <div class="top-bar w-full flex justify-between">
+        <a class="logo flex gap-2 items-center" id="menu-title">
+          <img src="./images/logos/logo.png" alt="" />
+          <h1>Deathmatch</h1>
+        </a>
+
+        <a id="close-btn-landing" class="close-btn flex add-cursor">
+          <img src="./images/icons/tabler-icon-x.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="wrapper grid gap-6">
+        <a id="createlobby-btn" class="cta-2 create-lobby-cta">
+          <img src="./images/icons/tabler-icon-plus.svg" alt="" />
+          <p>Create your lobby</p>
+        </a>
+        <div class="lobbies flex flex-col gap-6">
+          <!-- Javascript generates the lobby elements from the json file -->
+        </div>
+
+        <div class="search-filter-container w-full grid gap-6 h-full">
+          <div class="input-group gap-2">
+            <input id="search-lobby" placeholder="Search by Name..." class="search-input" type="text" />
+            <button class="search-btn cta-2" id="search-lobby-btn">
+              <img src="./images/icons/tabler-icon-search.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="filters gap-6">
+            <div class="filter-options gap-2">
+              <span class="font-bold" id="sort-by">Sort by</span>
+              <div class="grid gap-2" sorting="atoz">
+                <span id="sort-by-a-to-z" class="check-wrapper">
+                  <span class="checkbox">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12L10 17L20 7" stroke="#f7fbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+
+                  <span class="title" id="name-order-1">Name A > Z</span>
+                </span>
+                <span id="sort-by-z-to-a" class="check-wrapper">
+                  <span class="checkbox">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12L10 17L20 7" stroke="#f7fbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+
+                  <span class="title" id="name-order-2">Name Z > A</span>
+                </span>
+              </div>
+            </div>
+            <div class="filter-options">
+              <span class="font-bold" id="filter-search">Filter</span>
+              <div class="map-gun-filter flex flex-col gap-2">
+                <span class="font-bold opacity-60" id="filter-maps">Maps</span>
+                <div class="slider-wrapper items-center gap-2">
+                  <div class="image">
+                    <img id="mapImage" src="./images/maps/all.png" alt="" />
+                  </div>
+                  <div class="navigation items-center gap-1">
+                    <span id="map-prev" class="prev nav-btn">
+                      <img src="./images/icons/tabler-icon-chevron-left.svg" alt="" />
+                    </span>
+                    <span id="mapName" class="name truncate">All</span>
+                    <span id="map-next" class="next nav-btn">
+                      <img src="./images/icons/tabler-icon-chevron-right.svg" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="map-gun-filter flex flex-col gap-2">
+                <span class="font-bold opacity-60" id="filter-guns">Guns</span>
+                <div class="slider-wrapper items-center gap-2">
+                  <div class="image gun-image">
+                    <img id="gunImage" src="./images/guns/all.png" alt="" />
+                  </div>
+                  <div class="navigation items-center gap-1">
+                    <span id="gun-prev" class="prev nav-btn">
+                      <img src="./images/icons/tabler-icon-chevron-left.svg" alt="" />
+                    </span>
+                    <span id="gunName" class="name truncate">All</span>
+                    <span id="gun-next" class="next nav-btn">
+                      <img src="./images/icons/tabler-icon-chevron-right.svg" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="create">
+    <img class="background-image" src="./images/images/image 16.png" alt="" />
+    <div class="blur-background-overlay"></div>
+    <div class="main flex flex-col gap-8">
+      <div class="top-bar w-full flex justify-between">
+        <a class="logo flex gap-2 items-center" id="menu-title-2">
+          <img src="./images/logos/logo.png" alt="" />
+          <h1>Deathmatch</h1>
+        </a>
+
+        <a id="close-btn-create" class="close-btn flex add-cursor">
+          <img src="./images/icons/tabler-icon-x.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="wrapper create-lobby grid gap-6">
+        <a id="backtolist-btn" class="cta-2 create-lobby-cta add-cursor">
+          <img src="./images/icons/tabler-icon-arrow-left.svg" alt="" />
+          <p>Back to lobby</p>
+        </a>
+
+        <div class="match-details">
+          <span class="heading font-bold" id="match-details-lng">Match details</span>
+          <div class="input-group" id="input-name-group">
+            <label for="">Name (min. 4 Char):</label>
+            <input class="attention" type="text" id="create-form-name" maxlength="16" placeholder="f.e. Quasars Lobby">
+          </div>
+
+          <div class="input-group" id="match-password-lng">
+            <label for="">Password:</label>
+            <input type="text" id="create-form-password" class="attention" maxlength="16" placeholder="Leave empty for no password">
+          </div>
+
+          <div class="input-group" id="match-rounds-lng">
+            <label for="">Rounds:</label>
+            <span class="number-input relative">
+              <input autocomplete="off" id="create-form-rounds" value="1" class="text" type="none" />
+              <span id="create-form-rounds-up" class="up">
+                <img src="./images/icons/tabler-icon-chevron-up.svg" alt="" />
+              </span>
+              <span id="create-form-rounds-down" class="down">
+                <img src="./images/icons/tabler-icon-chevron-down.svg" alt="" />
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <div class="lobby-map-gun">
+          <span class="heading font-bold" id="choose-map">Choose A Map</span>
+
+          <div id="create-form-map" class="map-selector gap-2 flex flex-col">
+            <img class="map-image" src="./images/maps/cargo.png" alt="">
+
+            <div class="navigation items-center gap-1">
+              <span class="prev nav-btn">
+                <img src="./images/icons/tabler-icon-chevron-left.svg" alt="" />
+              </span>
+              <span class="name truncate">Cargo</span>
+              <span class="next nav-btn">
+                <img src="./images/icons/tabler-icon-chevron-right.svg" alt="" />
+              </span>
+            </div>
+
+            <hr class="mb-2 mt-2">
+          </div>
+
+          <div id="create-form-gun" class="slider-wrapper items-center gap-2">
+            <div class="image gun-image">
+              <img src="./images/guns/advancedrifle.png" alt="" />
+            </div>
+            <div class="navigation items-center gap-1">
+              <span class="prev nav-btn">
+                <img src="./images/icons/tabler-icon-chevron-left.svg" alt="" />
+              </span>
+              <span class="name truncate">Advanced Rifle</span>
+              <span class="next nav-btn">
+                <img src="./images/icons/tabler-icon-chevron-right.svg" alt="" />
+              </span>
+            </div>
+            <hr class="mb-2">
+          </div>
+
+          <button id="create-form-submit" class="cta w-full">Create the game</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="team">
+    <img class="background-image" src="./images/images/image 16.png" alt="" />
+    <div class="blur-background-overlay"></div>
+    <div class="main flex flex-col gap-8">
+      <div class="top-bar w-full flex justify-between">
+        <a class="logo flex gap-2 items-center" id="menu-title-3">
+          <img src="./images/logos/logo.png" alt="" />
+          <h1>Deathmatch</h1>
+        </a>
+
+        <a id="close-btn-team" class="close-btn flex add-cursor">
+          <img src="./images/icons/tabler-icon-x.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="team-selection">
+        <div class="cover w-full relative flex items-center justify-center">
+          <div class="team-cover-selector flex flex-col gap-4">
+            <div class="team-info-s">
+              <div class="heading font-bold text-xl gap-4" id="select-team">Select your Team</div>
+              <div class="teams flex gap-16 align-center justify-center">
+                <div id="join-one-team" class="team">
+                  <span class="team-name uppercase" id="select-team-blue">Team Ice</span>
+                  <button>
+                    <img class="check-marker" src="./images//icons/selected-marker.svg" alt="">
+                    <img class="team-image" src="./images//teams/team-a.png" alt="" />
+                  </button>
+                </div>
+                <span class="text-3xl font-bold vs uppercase">VS</span>
+                <div id="join-two-team" class="team">
+                  <span class="team-name uppercase" id="select-team-red">Team Fire</span>
+                  <button>
+                    <img class="check-marker" src="./images//icons/selected-marker.svg" alt="">
+                    <img class="team-image" src="./images//teams/the-fire-team.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <input type="text" hidden readonly id="selected-team">
+          </div>
+        </div>
+
+        <div class="team-details-actions">
+          <div id="team-a" class="team flex overflow-hidden flex-col gap-2 pt-2">
+            <span class="title font-bold" id="title-one-team">Opponents Team</span>
+            <list id="team-one-list" class="flex flex-col gap-2">
+              <span class="player-name truncate">Player Name</span>
+            </list>
+          </div>
+          <div class="actions flex gap-4">
+            <a class="cta-2" id="leave-btn-team">
+              <img src="./images/icons/tabler-icon-arrow-left.svg" alt="" />
+              <h1>Leave</h1>
+            </a>
+
+            <button id="start-btn-team" class="cta"></button>
+          </div>
+
+          <div id="team-b" class="team flex overflow-hidden flex-col gap-2 pt-2 oponents">
+            <span class="title font-bold" id="title-two-team">Your Team</span>
+            <list id="team-two-list" class="flex flex-col gap-2">
+
+            </list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingame Hud -->
+  <section class="characterscreen" visibility="hidden" team="two">
+    <div class="teamone">
+      <h1>Team Ice</h1>
+    </div>
+    <div class="teamtwo">
+      <h1>Team Fire</h1>
+    </div>
+  </section>
+  <section class="hud" visibility="hidden">
+    <h1 class="timer">-:--</h1>
+    <div class="rounds">
+      <h1><span class="played"> 1</span> / <span class="total">-</span></h1>
+      <h2>Rounds</h2>
+    </div>
+    <div class="kills">
+      <h1 class="one">
+        <a id="first-team-name">Fire Team:</a>
+        <span>0</span>
+      </h1>
+      <div></div>
+      <h1 class="two">
+        <a id="second-team-name">Ice Team:</a>
+        <span>0</span>
+      </h1>
+    </div>
+  </section>
+  <section id="intro" class="intro hidden">
+    <article id="intro-server-container">
+      <p id="intro-server-name">QUASAR ROLEPLAY</p>
+    </article>
+  </section>
+  <section id="intro-logo" class="intro hidden">
+    <figure id="intro-top"></figure>
+    <figure id="intro-bottom"></figure>
+    <article id="intro-logo-container" class="hidden">
+      <img src="./images/logos/logo.png" alt="Deathmatch" />
+    </article>
+  </section>
+</body>
+
+</html>

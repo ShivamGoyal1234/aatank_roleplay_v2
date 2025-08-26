@@ -1,0 +1,9 @@
+This prop (bzzz_onion) must be installed from https://bzzz.tebex.io/package/5887685
+
+Installation steps:
+1. Download the prop from the Tebex store
+2. Extract the files to your server resources folder
+3. Add "ensure bzzz_onion" to your server.cfg
+4. Restart your server
+
+This prop is required for the Farming job in the Forge Jobs resource.
