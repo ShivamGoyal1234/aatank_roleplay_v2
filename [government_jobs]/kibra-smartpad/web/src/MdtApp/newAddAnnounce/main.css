@@ -1,0 +1,123 @@
+.mdt-addannouncemodal {
+    background-color: #00000091;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mdt-addannouncemodal.show {
+    transition: .5s;
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+
+.mdt-announcemodal-container {
+    background-color: #101010;
+    width: 25rem;
+    height: fit-content;
+    padding-bottom: 1.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: .5rem;
+    transform: scale(0.95);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.modal-white {
+    background-color: #d7d7d7 !important;
+}
+
+.close-announce-modal {
+    cursor: pointer;
+    color: #bfbfbf;
+    position:absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.2rem;
+}
+
+.header-label {
+    color: #c9c9c9;
+    font-family: SF Pro, sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+    left: 1.5rem;
+    top: 1.5rem;
+}
+
+.header-label-br {
+    width: 88%;
+    margin: auto;
+    margin-top: 2rem;
+    border-bottom: 1px solid #292929;
+}
+
+.enterprise {
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    background-color: transparent;
+}
+
+.label-sp {
+    color: #878787;
+    font-family: 'SF PRO DISPLAY';
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.enterprise input {
+    padding-left: 1rem;
+    width: 92%;
+    height: 2.5rem;
+    background: transparent;
+    font-family: 'SF PRO DISPLAY';
+    color: #ddd;
+    border: 1px solid #333333;
+    border-radius: 3px;
+    margin-top: .5rem;
+    transition: .5s;
+}
+
+.enterprise input:focus {
+    outline: 0;
+}
+
+.enterprise button {
+    background-color: #348370;
+    height: 3rem;
+    border-radius: 3px;
+    color: #dfdfdf;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'SF Pro Display';
+    transition: .5s;
+    width: 97%;
+    border: 1px solid transparent;
+}
+
+.enterprise button:hover {
+    transition: .5s;
+    background-color: #276153;
+}

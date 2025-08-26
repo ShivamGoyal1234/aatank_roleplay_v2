@@ -1,0 +1,267 @@
+.tablet-frame-homescreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  user-select: none;
+  z-index: 1;
+}
+
+
+.tablet-frame-homescreen-header {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.header-icons {
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.header-icon-part {
+    background-color: transparent;
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    height: 2rem;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.header-icon-time-part {
+    background-color: transparent;
+    width: fit-content;
+    height: 2rem;
+    margin-top: .9rem;
+    margin-left: .4rem;
+}
+
+.time-string {
+       font-family: 'SF PRO DISPLAY';
+    color: #fff;
+    font-weight: 00;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-size: .9rem;
+}
+
+.timeShareder {
+      background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-count {
+    font-family: SF Pro;
+    font-weight: 600;
+    color: #fff;
+    font-size: 4.5rem;
+}
+
+.time-descript {
+    color: #fdfdfd;
+    font-family: 'SF Pro Display';
+    font-weight: 200;
+}
+
+.apps-container {
+     background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0rem;
+    width: 54rem;
+    margin: 4rem auto 0;
+}
+
+.app-box {
+    width: 5rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+  
+  .app-icon {
+    background-size: cover;
+    background-position: center;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: filter 0.3s ease; /* Geçiş efekti ekledik */
+  }
+  
+  .app-icon:hover {
+    filter: brightness(70%); /* İkonu %30 karartır */
+  }
+  
+  .app-name {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 400;
+    font-family: Inter;
+    text-align: center;
+  }
+  
+  .fastbar {
+        position: absolute;
+    left: 0;
+    margin: auto;
+    right: 0;
+    bottom: 2rem;
+    padding-right: 1rem;
+    z-index: 100;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    display: flex;
+    background: linear-gradient(0deg, #6660 0%, #6660 100%), rgba(51, 51, 51, 0.35);
+    background-blend-mode: color-dodge, normal;
+    backdrop-filter: blur(75px);
+    width: fit-content;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fastbar-app {
+      background-color: transparent;
+    margin-left: 1rem;
+  }
+
+  .widget-icon {
+    width: 155px;
+  height: 155px;
+  flex-shrink: 0;
+  border-radius: 21.67px;
+  background: linear-gradient(180deg, #3EAEDE 0%, #1C86B4 100%);
+  }
+
+
+  .weather-widget {
+     width: 120px;
+    height: 120px;
+    background: linear-gradient(to right bottom, rgb(50, 183, 231), rgb(29, 147, 210));
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    flex: 0 0 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.weather-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.weather-location {
+      font-size: 12px;
+    margin-top: .4rem;
+    font-family: 'SF Pro Text';
+    margin-left: .5rem;
+    opacity: 0.85;
+}
+
+.weather-temp {
+     font-size: 2rem;
+    font-weight: 500;
+}
+
+.weather-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-icon {
+  font-size: 1.5rem;
+}
+
+.weather-desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+}
+
+.weather-range {
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+
+.mail-widgets {
+     background-color: #0e0e0e;
+    width: 318px;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 138px;
+}
+
+.mail-widgets-header {
+     color: #ddd;
+    font-family: 'SF Pro Text';
+    font-size: 13px;
+    height: 1.5rem;
+    margin-top: .8rem;
+    border-bottom: 1px solid #2e2e2e;
+    width: 88%;
+}
+
+.mail-boxes {
+     background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+    height: 6rem;
+    overflow: auto;
+}
+
+.mail-item {
+    background-color: transparent;
+    width: 87%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'SF PRO TEXT';
+    color: #bdbdbd;
+    margin: auto;
+    flex-direction: column;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.mail-hex {
+       font-weight: 500;
+    color: #fff;
+    font-size: 12px;
+}
+
+.mail-cor {
+      color: #cfcfcf;
+    font-weight: 100;
+    padding-top: .2rem;
+    font-size: 11px;
+}

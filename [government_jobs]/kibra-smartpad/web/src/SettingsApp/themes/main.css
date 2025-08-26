@@ -1,0 +1,192 @@
+.theme-page-screen {
+    background-color: transparent;
+    width: 105%;
+    user-select: none;
+    height: 100%;
+    color: #fff !important;
+}
+
+.theme-page-screen.lightmode {
+    color: #333333 !important;
+}
+
+.themes-page-header {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    position: relative;
+    font-size: 20px;
+    left: 2rem;
+    top: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132.836%;
+}
+
+.theme-select-part {
+    width: 93%;
+    height: 37rem;
+    position: relative;
+    left: 2rem;
+    top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.dark-or-white-part {
+    background: transparent;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-or-white-part-item {
+    border-radius: 4px;
+    background: #1414145c;
+    width: 100%;
+    color: #ddd !important;
+    height: 4rem;
+    margin-top: .3rem;
+    transition: .5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark-or-white-part-item.lightmode {
+    background-color: #f5f5f5 !important;
+    color: #333333 !important;
+}
+
+.dark-or-white-part-item:hover {
+    transition: .5s;
+    background: #191a1e98;
+}
+
+.dark-or-white-string {
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 1rem;
+    font-family: SF Pro, sans-serif;
+}
+
+.selectedThemeCircle {
+    border-radius: 50px;
+    background: #83c564;
+    width: 19px;
+    margin-right: 1rem;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.wallpaper-part-header {
+    font-family: SF Pro, sans-serif;
+    font-size: 15px;
+    position:relative;
+    top: 1rem;
+}
+
+.wallpaper-list.lightmode {
+    background-color: #f5f5f5 !important;
+}
+
+.wallpaper-list {
+    background: #0e0e0e;
+    border-radius: 4px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    top: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 0;
+    gap: 1rem;
+}
+
+.wallpaper-list-item {
+    background: url("<path-to-image>") lightgray 50% / cover no-repeat;
+    width: 225px;
+    height: 126px;
+    border-radius: 6px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    left: 1rem;
+    top: .78rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.wallpaper-list-item-selected {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #83C564;
+}
+
+.loading-circle2 {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.custom-map {
+    display: flex;
+    justify-content: flex-start;
+} 
+
+.input-url {
+    background-color: #10101017;
+    padding-left: 1rem;
+    width: 11rem;
+    height: 2rem;
+    margin-top: 1.8rem;
+    font-family: SF Pro Display;
+    border: 1px solid #181818;
+    border-radius: 3px;
+    color: #999;
+}
+
+.input-url:focus {
+    outline: 0;
+}
+
+.input-but {
+    background-color: #008054;
+    font-family: SF Pro Display;
+    color: #ddd;
+    width: 2.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 2.5rem;
+    margin-top: 1.6rem;
+}
+

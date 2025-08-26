@@ -1,0 +1,355 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  height: 100vh;         
+  user-select: none;
+}
+
+
+/* .tablet-frame {
+  width: 1138px;
+  height: 768px;
+  border: 5px solid #040404;
+  border-radius: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  background: #07080C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: auto;
+} */
+
+.tablet-frame {
+     width: 1400px;
+    height: 858px;
+    border: 5px solid #040404;
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    background: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: filter .2s ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+
+.tablet-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 166px;
+  height: 30px;
+  background-color: #000;
+  user-select: none;
+  cursor: grab;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+}
+
+button, 
+a, 
+div:focus, 
+div:active {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 1440px) {
+    .tablet-frame {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 1024px) {
+    .tablet-frame {
+        transform: scale(0.8);
+    }
+}
+
+@font-face {
+  font-family: 'SF Pro Regular';
+  src: url('/web/public/fonts/sfproregular.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/web/build/fonts/SFPro.OTF') format('truetype'); 
+
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Normal';
+    src: url('/web/build/fonts/sfnormal.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro SemihBold';
+    src: url('/web/build/fonts/sfprosemibold.ttf') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bumbbled';
+    src: url('/web/build/fonts/Bumbbled.otf');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+@font-face {
+    font-family: 'SF Med';
+    src: url('/web/build/fonts/sfpromed.OTF');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+@font-face{font-family:'SF Pro Text';font-weight:300;font-style:normal;src:url('/fonts/SF-Pro-Text-Light.otf') format('opentype')}
+@font-face{font-family:'SF Pro Text';font-weight:400;font-style:normal;src:url('/fonts/SF-Pro-Text-Regular.otf') format('opentype')}
+@font-face{font-family:'SF Pro Text';font-weight:500;font-style:normal;src:url('/fonts/SF-Pro-Text-Medium.otf') format('opentype')}
+body{font-family:'SF Pro Text',sans-serif}
+
+  
+.home-indicator {
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transform: translateX(-50%);
+    width: 186px;
+    height: 3px;
+    background: rgb(255 255 255 / 81%);
+    border-radius: 10px;
+}
+
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 81vh;
+    /* background: url('./build/blurred-background.jpg') no-repeat center center; */
+    /* background-size: cover; */
+  }
+  
+  .loading-circle {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    z-index: 100;
+    height: 80px;
+    animation: scaleIn 0.5s ease-in-out forwards;
+  }
+  
+  .loading-circle div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    animation: loading-circle 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  .loading-circle div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  
+  .loading-circle div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  
+  @keyframes loading-circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Ölçek Animasyonu */
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.95); /* Küçük boyutta başla */
+      opacity: 0; /* Saydam başla */
+    }
+    100% {
+      transform: scale(1); /* Normal boyuta büyü */
+      opacity: 1; /* Tam görünebilir */
+    }
+  }
+  
+  .loading-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.creating-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./build/background.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  font-family: 'SF Pro Display', sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  opacity: 0;
+  transform: scale(0.98);
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.creating-frame.show {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+
+.loading-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.loading-bar {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  max-width: 300px;
+  background: #8d8d8d;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.loading-bar-progress {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  animation: load 5s infinite;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.app-opening {
+  animation: openApp 0.5s ease-out forwards;
+}
+
+@keyframes openApp {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* App kapanırken */
+.app-closing {
+  animation: closeApp 0.5s ease-in forwards;
+}
+
+@keyframes closeApp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.battery {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.battery-shell {
+       width: 21px;
+    height: 7px;
+    border: 2px solid white;
+    border-radius: 3px;
+    right: .3rem;
+    position: relative;
+    background: #585858;
+    overflow: hidden;
+}
+
+.battery-shell::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: -5px;
+  width: 4px;
+  height: 8px;
+  background: white;
+  border-radius: 1px;
+}
+
+.battery-level {
+  height: 100%;
+  transition: width 0.5s;
+  background-color: rgb(227 227 227);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.battery-percent {
+  font-size: 10px;
+  color: white;
+}

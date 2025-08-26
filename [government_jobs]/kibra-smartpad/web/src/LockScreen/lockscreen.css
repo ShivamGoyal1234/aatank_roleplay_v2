@@ -1,0 +1,430 @@
+.tablet-frame-lockscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/build/colorful-background.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.status-bar {
+     position: absolute;
+    top: 0px;
+    left: 0;
+    width: 99%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.wifi-icon {
+    font-size: 13px;
+    color: #fff;
+    margin-left: 31px;
+    background: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+.battery-icon {
+    font-size: 13px;
+    color: #fff;
+    margin-right: 31px;
+    background: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Lockscreen container */
+.lockscreen-info {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+/* Saat stili */
+.lockscreen-time {
+       font-family: 'SF Pro Text';
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lockscreen-date {
+  font-family: 'SF Pro', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.notification {
+    animation: slide-in 0.5s ease-out; /* Bildirim girişi için animasyon */
+}
+
+.notification-container {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 350px; /* Genişliği biraz küçültüldü */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Bildirimler arasındaki boşluk azaltıldı */
+  z-index: 10;
+}
+
+.notification {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px; /* Köşeler biraz daha yuvarlak */
+  padding: 8px 12px; /* İçerik boşluğu azaltıldı */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* İkon ve metin arasındaki boşluk azaltıldı */
+  color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Gölge daha hafif */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.notification-icon img {
+  width: 32px; /* İkon boyutu küçültüldü */
+  height: 32px;
+  border-radius: 8px; /* Köşeler daha az yuvarlak */
+  object-fit: cover;
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Başlık ve içerik arasındaki boşluk azaltıldı */
+  font-family: 'SF Pro', sans-serif;
+}
+
+.notification-title {
+  font-size: 14px; /* Başlık boyutu küçültüldü */
+  font-weight: 500; /* Hafifçe kalınlaştırıldı */
+}
+
+.notification-body {
+  font-size: 12px; 
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 15rem;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    height: fit-content;
+    color: #fff;
+    transform: translateY(50px);
+  }
+  
+  .avatar-container {
+    margin-bottom: 20px;
+  }
+  
+  .user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .username {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'SF Pro', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  
+  .password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+  
+  .password-input {
+    width: 65%;
+    padding: 10px;
+    margin-left: 1rem;
+    border-radius: 14px;
+    background: transparent;
+    color: #fff;
+    border: 1px;
+    font-size: 13px;
+    font-family: 'SF Pro', sans-serif;
+    text-align: left;
+    outline: none;
+  }
+  
+  .password-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .password-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 28px;
+    position: relative;
+  }
+
+ .password-submit {
+    width: 18px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    color: #d1d1d1;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+.newpadscreen-frame {
+  background-color: #0000005c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.newpadscreen-frame-text {
+  font-family: 'Bumbbled', sans-serif;
+  font-size: 9rem;
+  position: relative;
+  top: 12rem;
+  color: transparent; /* İç kısmı transparan yapar */
+  -webkit-text-stroke: 2px #ffffff; /* Kenar çizgisini beyaz yapar */
+  cursor: pointer;
+  transition: color 0.5s ease, -webkit-text-stroke-color 0.5s ease;
+}
+
+
+
+@keyframes slideInOut {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+  20% {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 1; 
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; 
+  }
+}
+
+.newpadscreen-setuptext {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: max-content;
+  height: max-content;
+  color: #dbdbdb;
+  font-family: "Sf Pro";
+  font-weight: 500;
+  font-size: 1rem;
+  transform: translateX(-100%); 
+  animation: slideInOut 5s ease-in-out forwards;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+.lock-icon {
+  font-size: 24px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.lock-icon i {
+  font-size: 24px;
+}
+
+.lock-icon .fa-lock {
+  color: #fff;
+}
+
+.lock-icon .fa-unlock {
+  color: #fff;
+}
+
+.forgot {
+     font-family: 'SF Pro Text';
+    color: #ddd;
+    transition: .5s;
+    margin-top: 1rem;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.forgot:hover {
+  transition: .5s;
+  color: #fff;
+}
+
+.modal-backdrop2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-frame2 {
+  background: #141414;
+  width: 90%;
+  max-width: 320px;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.closexz {
+  position:absolute;
+  right: .5rem;
+  top: .5rem;
+}
+
+.modal-title2 {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'SF Pro Display';
+  color: #ababab;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.modal-content2 input {
+  width: 91%;
+  padding: 10px 14px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  color: #ddd;
+  background: #0e0e0e;
+  font-family: 'SF Pro Display';
+  margin-top: .6rem;
+  font-size: 16px;
+  outline: none;
+}
+
+.delete-x {
+    color: #ddd;
+    position: absolute;
+    left: 55.5rem;
+    top: 21rem;
+    z-index: 100;
+}
+
+.helal {
+  color: #ddd;
+  font-family: SF Pro Display;
+}
+
+.modal-content2 button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: #007aff;
+  color: #fff;
+  font-family: 'SF PRO DISPLAY';
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal-content2 button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.shake {
+  animation: shake 0.3s;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 80% {
+    transform: translateX(-5px);
+  }
+  40%, 60% {
+    transform: translateX(5px);
+  }
+}

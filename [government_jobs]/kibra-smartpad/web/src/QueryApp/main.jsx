@@ -1,0 +1,289 @@
+import React, {useEffect, useState} from 'react'
+import './main.css';
+import { useNui, callNui } from '../nui';
+import { motion, AnimatePresence } from "framer-motion";
+
+const QueryApp = ({allGallery, galleryLastPhoto, lang, customState}) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [screenshotUrl, setScreenshotUrl] = useState(null);
+    const [flashEffect, setFlashEffect] = useState(false);
+    const [lastPhoto, setLastPhoto] = useState('');
+    const [currentMode, setMode] = useState('photo');
+    const [isRecording, setIsRecording] = useState(false);
+    const [videoStartTime, setVideoStartTime] = useState(null); // Video başlangıç zamanı
+    const [videoDuration, setVideoDuration] = useState("00:00"); // Sayaç
+    const [videoTime, setVideoTime] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        if (allGallery && allGallery.length > 0) {
+            const last = allGallery[allGallery.length - 1];
+
+            if (last.type === 'video') {
+                extractFirstFrame(last.url, (frameUrl) => {
+                    setLastPhoto(frameUrl);
+                });
+            } else {
+                setLastPhoto(last.url);
+            }
+        } else {
+            setLastPhoto("web/public/black.png");
+        }
+    }, [allGallery]);
+
+
+
+
+    const updateMode = (mode) => {
+        setMode(mode);
+    }
+
+    useEffect(() => {
+        useNui("updateLastPhoto", (data) => {
+            if (data.url.endsWith(".webm")) {
+                extractFirstFrame(data.url);
+            } else {
+                setLastPhoto(data.url);
+            }
+        });
+    }, []);
+
+    const openModal = (index) => {
+        setCurrentIndex(index);
+        setIsModalOpen(true);
+    };
+
+    const nextMedia = () => {
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex >= allGallery.length - 1) return prevIndex;
+            return prevIndex + 1;
+        });
+    };
+    
+    const prevMedia = () => {
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex <= 0) return prevIndex; 
+            return prevIndex - 1;
+        });
+    };
+    
+    const extractFirstFrame = (videoUrl) => {
+        const video = document.createElement("video");
+        video.src = videoUrl;
+        video.crossOrigin = "anonymous"; 
+        video.muted = true;
+        video.preload = "auto";
+    
+        video.onloadeddata = () => {
+            video.currentTime = 0; 
+        };
+    
+        video.onseeked = () => {
+            const canvas = document.createElement("canvas");
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+            const imageUrl = canvas.toDataURL("image/png");
+            setLastPhoto(imageUrl);
+        };
+    
+        video.onerror = () => console.error("❌ Video yüklenirken hata oluştu!");
+    };
+    
+
+    useEffect(()=>{
+        const handleKeyPress=event=>{
+          if(event.key==="Enter"){
+            if(currentMode==="photo"){
+              takeScreenshot()
+            }else{
+              isRecording?stopVideoRecording():startVideoRecording()
+            }
+          }
+        }
+        window.addEventListener("keydown",handleKeyPress)
+        return()=>window.removeEventListener("keydown",handleKeyPress)
+      },[currentMode,isRecording])
+      
+
+    useEffect(() => {
+        const minutes = String(Math.floor(videoTime / 60)).padStart(2, "0");
+        const seconds = String(videoTime % 60).padStart(2, "0");
+        setVideoDuration(`${minutes}:${seconds}`);
+    }, [videoTime]);
+    
+
+    useEffect(() => {
+        const checkCanvasInterval = setInterval(() => {
+            const canvas = document.getElementById("gameview-canvas");
+            if (canvas && window.MainRender) {
+                window.MainRender.renderToTarget(canvas);
+                clearInterval(checkCanvasInterval);
+
+                setTimeout(() => {
+                    const ctx = canvas.getContext("2d");
+                    const pixelData = ctx.getImageData(0, 0, 1, 1).data;
+                }, 2000);
+            }
+        }, 500);
+
+        return () => clearInterval(checkCanvasInterval);
+    }, []);
+    
+
+    const [isTakingScreenshot, setIsTakingScreenshot] = useState(false);
+
+    const takeScreenshot = async () => {
+        try {
+            if (!window.MainRender) {
+                return;
+            }
+            if (isTakingScreenshot) {
+                return;
+            }
+            setIsTakingScreenshot(true);
+            setFlashEffect(true);
+            let imageUrl = await window.MainRender.requestScreenshot();
+            setIsTakingScreenshot(false);
+            setScreenshotUrl(imageUrl);
+            callNui('SaveGalleryPhoto', {
+                url: imageUrl,
+                type: 'photo',
+                custom: customState
+            }, function(x){
+                if(x){
+                    setLastPhoto(imageUrl);
+                }
+            })
+            setTimeout(() => setFlashEffect(false), 300);
+        } catch (error) {
+            setIsTakingScreenshot(false);
+            setFlashEffect(false);
+        }
+    };
+
+    const startVideoRecording = () => {
+        if (!window.MainRender || isRecording) return;
+    
+        setIsRecording(true);
+        setVideoStartTime(Date.now());
+        setVideoTime(0); // Sayaçı sıfırla
+    
+        window.MainRender.startRecording(); 
+    
+        const interval = setInterval(() => {
+            setVideoTime(prevTime => prevTime + 1);
+        }, 1000);
+    
+        setTimeout(() => clearInterval(interval), 60000); // Maks 1 dk sonra sıfırlasın (İstersen kaldırabilirsin)
+    };
+    
+    const stopVideoRecording = () => {
+        if (!window.MainRender || !isRecording) return;
+    
+        setIsRecording(false);
+        setVideoStartTime(null);
+        setVideoTime(0); 
+        setVideoDuration("00:00");
+        
+        window.MainRender.stopRecording();
+    };
+    
+    return (
+        <div className='CameraAppContainer'>
+           <div className={`flash-overlay ${flashEffect ? "active" : ""}`}>
+                {flashEffect && (
+                    <div className="flash-loading">
+                        <div className="loading-circle"></div>
+                    </div>
+                )}
+            </div>
+            <canvas id="gameview-canvas"></canvas> 
+            {/* <div className='camera-app-topbar'>
+                <div className='camera-app-topbar-icons'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                        <path d="M0 3.31091L1.45455 4.76545C5.06909 1.15091 10.9309 1.15091 14.5455 4.76545L16 3.31091C11.5855 -1.10364 4.42182 -1.10364 0 3.31091ZM5.81818 9.12909L8 11.3109L10.1818 9.12909C9.89557 8.84208 9.55551 8.61437 9.18112 8.459C8.80672 8.30363 8.40535 8.22365 8 8.22365C7.59465 8.22365 7.19328 8.30363 6.81888 8.459C6.44449 8.61437 6.10443 8.84208 5.81818 9.12909ZM2.90909 6.22L4.36364 7.67454C5.32834 6.71064 6.63627 6.1692 8 6.1692C9.36373 6.1692 10.6717 6.71064 11.6364 7.67454L13.0909 6.22C10.2836 3.41273 5.72364 3.41273 2.90909 6.22Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                        <path d="M14.375 0C15.2038 0 15.9987 0.316071 16.5847 0.87868C17.1708 1.44129 17.5 2.20435 17.5 3V3.9996L18.9587 4.0032C19.2349 4.0032 19.4998 4.10851 19.695 4.29598C19.8903 4.48344 20 4.73769 20 5.0028V7.0032C20 7.26831 19.8903 7.52256 19.695 7.71002C19.4998 7.89749 19.2349 8.0028 18.9587 8.0028L17.5 8.0004V9C17.5 9.79565 17.1708 10.5587 16.5847 11.1213C15.9987 11.6839 15.2038 12 14.375 12H3.125C2.2962 12 1.50134 11.6839 0.915291 11.1213C0.32924 10.5587 0 9.79565 0 9V3C0 2.20435 0.32924 1.44129 0.915291 0.87868C1.50134 0.316071 2.2962 0 3.125 0H14.375ZM14.6875 1.1352H3.125C2.3125 1.1352 1.36875 1.7304 1.26 2.4912L1.25 2.6352V9.2292C1.25 10.0056 1.865 10.6452 2.6525 10.722L2.8125 10.7292H14.6875C15.0741 10.7291 15.4469 10.5914 15.7339 10.3427C16.0209 10.094 16.2017 9.75199 16.2412 9.3828L16.25 9.2292V2.6352C16.2499 2.26406 16.1064 1.90614 15.8474 1.63064C15.5883 1.35513 15.2321 1.18161 14.8475 1.1436L14.6875 1.1352ZM3.5425 2.3388H12.705C13.2387 2.3388 13.6775 2.7204 13.7425 3.2148L13.75 3.3408V8.5332C13.7502 8.77726 13.6576 9.01299 13.4896 9.19615C13.3216 9.37931 13.0897 9.49731 12.8375 9.528L12.7063 9.5352H3.54375C3.28931 9.53568 3.04345 9.44691 2.8524 9.2856C2.66134 9.12428 2.53824 8.90152 2.50625 8.6592L2.5 8.532V3.3408C2.5 2.8296 2.89875 2.4084 3.4125 2.346L3.5425 2.3388Z" fill="white"/>
+                    </svg>
+                </div>
+                <div className="camera-modes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                        <path d="M3.66802 17.9983C3.31802 17.9983 3.04802 17.6883 3.09802 17.3383L3.99802 10.9983H0.498018C-0.381982 10.9983 0.168018 10.2483 0.188018 10.2183C1.44802 7.98826 3.33802 4.68826 5.83802 0.288255C5.90532 0.172797 6.01061 0.0842806 6.13592 0.0378206C6.26123 -0.00863935 6.39877 -0.0101616 6.52508 0.0335136C6.65138 0.0771888 6.75861 0.163353 6.82845 0.277294C6.89829 0.391234 6.92641 0.525886 6.90802 0.658256L6.00802 6.99826H9.51802C9.91802 6.99826 10.138 7.18826 9.91802 7.65826C6.62802 13.3983 4.71802 16.7483 4.16802 17.7083C4.06802 17.8883 3.87802 17.9983 3.66802 17.9983Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="8" viewBox="0 0 24 8" fill="none">
+                        <path d="M24.0059 3.33333V2C24.0059 0.933333 23.0725 0 22.0059 0H17.3392V8H19.3392V5.33333H20.8059L22.0059 8H24.0059L22.8059 5.2C23.4725 4.8 24.0059 4.13333 24.0059 3.33333ZM22.0059 3.33333H19.3392V2H22.0059V3.33333ZM4.67253 2.66667H2.00586V0H0.00585938V8H2.00586V4.66667H4.67253V8H6.67253V0H4.67253V2.66667ZM13.3392 0H8.67253V8H13.3392C14.4059 8 15.3392 7.06667 15.3392 6V2C15.3392 0.933333 14.4059 0 13.3392 0ZM13.3392 6H10.6725V2H13.3392V6Z" fill="white" fill-opacity="0.35"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                        <path d="M10.416 0C9.66297 0 8.94083 0.29912 8.40839 0.831558C7.87596 1.364 7.57684 2.08614 7.57684 2.83912V6.62461C7.57684 7.37759 7.87596 8.09973 8.40839 8.63216C8.94083 9.1646 9.66297 9.46372 10.416 9.46372C11.1689 9.46372 11.8911 9.1646 12.4235 8.63216C12.956 8.09973 13.2551 7.37759 13.2551 6.62461V2.83912C13.2551 2.08614 12.956 1.364 12.4235 0.831558C11.8911 0.29912 11.1689 0 10.416 0ZM11.8355 6.62461C11.8355 7.0011 11.686 7.36217 11.4197 7.62839C11.1535 7.8946 10.7924 8.04416 10.416 8.04416C10.0395 8.04416 9.67839 7.8946 9.41217 7.62839C9.14596 7.36217 8.9964 7.0011 8.9964 6.62461V2.83912C8.9964 2.46263 9.14596 2.10156 9.41217 1.83534C9.67839 1.56912 10.0395 1.41956 10.416 1.41956C10.7924 1.41956 11.1535 1.56912 11.4197 1.83534C11.686 2.10156 11.8355 2.46263 11.8355 2.83912V6.62461ZM0.00585938 11.9479C0.00585938 11.6215 0.270844 11.3565 0.597342 11.3565H3.67589C3.83276 11.3565 3.98321 11.4188 4.09413 11.5297C4.20506 11.6406 4.26737 11.7911 4.26737 11.9479C4.26737 12.1048 4.20506 12.2553 4.09413 12.3662C3.98321 12.4771 3.83276 12.5394 3.67589 12.5394H1.18882V14.1956H3.19987C3.35674 14.1956 3.50718 14.2579 3.61811 14.3688C3.72903 14.4797 3.79135 14.6302 3.79135 14.7871C3.79135 14.9439 3.72903 15.0944 3.61811 15.2053C3.50718 15.3162 3.35674 15.3785 3.19987 15.3785H1.18882V17.4085C1.18882 17.5654 1.12651 17.7158 1.01558 17.8268C0.904659 17.9377 0.754213 18 0.597342 18C0.440471 18 0.290025 17.9377 0.179101 17.8268C0.0681761 17.7158 0.00585937 17.5654 0.00585938 17.4085V11.9479ZM6.03898 11.3565C5.71248 11.3565 5.4475 11.6215 5.4475 11.9479V17.4085C5.4475 17.5654 5.50982 17.7158 5.62074 17.8268C5.73167 17.9377 5.88211 18 6.03898 18C6.19585 18 6.3463 17.9377 6.45722 17.8268C6.56815 17.7158 6.63047 17.5654 6.63047 17.4085V15.3785H7.69513C8.22849 15.3785 8.74001 15.1667 9.11715 14.7895C9.4943 14.4124 9.70617 13.9009 9.70617 13.3675C9.70617 12.8341 9.4943 12.3226 9.11715 11.9455C8.74001 11.5683 8.22849 11.3565 7.69513 11.3565H6.03898ZM7.69513 14.1956H6.63047V12.5394H7.69513C7.91475 12.5394 8.12538 12.6267 8.28067 12.782C8.43597 12.9373 8.52321 13.1479 8.52321 13.3675C8.52321 13.5871 8.43597 13.7978 8.28067 13.953C8.12538 14.1083 7.91475 14.1956 7.69513 14.1956ZM11.8355 13.323C11.8355 12.8901 12.1861 12.5394 12.6191 12.5394H13.3734C13.6999 12.5394 13.9648 12.8044 13.9648 13.1309C13.9648 13.2878 14.0272 13.4382 14.1381 13.5492C14.249 13.6601 14.3995 13.7224 14.5563 13.7224C14.7132 13.7224 14.8636 13.6601 14.9746 13.5492C15.0855 13.4382 15.1478 13.2878 15.1478 13.1309C15.1478 12.6603 14.9609 12.209 14.6281 11.8762C14.2953 11.5434 13.844 11.3565 13.3734 11.3565H12.6191C12.3583 11.3524 12.0993 11.4003 11.8572 11.4973C11.6151 11.5943 11.3947 11.7385 11.2089 11.9215C11.023 12.1045 10.8754 12.3226 10.7747 12.5632C10.6739 12.8038 10.622 13.062 10.622 13.3228C10.622 13.5836 10.6739 13.8418 10.7747 14.0824C10.8754 14.323 11.023 14.5411 11.2089 14.7241C11.3947 14.9071 11.6151 15.0513 11.8572 15.1483C12.0993 15.2453 12.3583 15.2932 12.6191 15.2891H13.2106C13.4074 15.294 13.5945 15.3757 13.732 15.5167C13.8695 15.6576 13.9464 15.8467 13.9464 16.0436C13.9464 16.2405 13.8695 16.4296 13.732 16.5706C13.5945 16.7115 13.4074 16.7932 13.2106 16.7981H12.427C12.1005 16.7981 11.8355 16.5331 11.8355 16.2066C11.8355 16.0498 11.7732 15.8993 11.6623 15.7884C11.5513 15.6775 11.4009 15.6151 11.244 15.6151C11.0872 15.6151 10.9367 15.6775 10.8258 15.7884C10.7149 15.8993 10.6525 16.0498 10.6525 16.2066C10.6525 16.6772 10.8395 17.1286 11.1723 17.4613C11.505 17.7941 11.9564 17.9811 12.427 17.9811H13.2106C13.7244 17.9811 14.2172 17.7769 14.5806 17.4136C14.9439 17.0503 15.1481 16.5575 15.1481 16.0436C15.1481 15.5298 14.9439 15.037 14.5806 14.6736C14.2172 14.3103 13.7244 14.1062 13.2106 14.1062H12.6191C12.4114 14.1062 12.2121 14.0237 12.0652 13.8768C11.9183 13.73 11.8356 13.5308 11.8355 13.323ZM2.37179 2.83912C2.37179 2.46263 2.52135 2.10156 2.78757 1.83534C3.05379 1.56912 3.41486 1.41956 3.79135 1.41956C4.16784 1.41956 4.52891 1.56912 4.79513 1.83534C5.06135 2.10156 5.21091 2.46263 5.21091 2.83912C5.21091 3.02736 5.28569 3.2079 5.4188 3.34101C5.55191 3.47412 5.73244 3.5489 5.92069 3.5489C6.10893 3.5489 6.28947 3.47412 6.42257 3.34101C6.55568 3.2079 6.63047 3.02736 6.63047 2.83912C6.63047 2.08614 6.33135 1.364 5.79891 0.831558C5.26647 0.29912 4.54433 0 3.79135 0C3.03837 0 2.31623 0.29912 1.78379 0.831558C1.25135 1.364 0.952232 2.08614 0.952232 2.83912V6.7429C0.952232 6.78265 0.955386 6.82177 0.961696 6.86025C1.01277 7.47299 1.26139 8.0526 1.67017 8.5119C2.07894 8.97121 2.62578 9.2854 3.22846 9.40723C3.83113 9.52906 4.45707 9.45195 5.01216 9.18748C5.56724 8.92302 6.02147 8.48549 6.30654 7.9407C6.59161 7.39591 6.69212 6.7733 6.59294 6.16648C6.49377 5.55967 6.20028 5.00144 5.7566 4.57575C5.31293 4.15006 4.74305 3.87991 4.13265 3.80592C3.52225 3.73193 2.90432 3.8581 2.37179 4.16546V2.83912ZM2.37179 6.62461C2.37179 6.24812 2.52135 5.88704 2.78757 5.62083C3.05379 5.35461 3.41486 5.20505 3.79135 5.20505C4.16784 5.20505 4.52891 5.35461 4.79513 5.62083C5.06135 5.88704 5.21091 6.24812 5.21091 6.62461C5.21091 7.0011 5.06135 7.36217 4.79513 7.62839C4.52891 7.8946 4.16784 8.04416 3.79135 8.04416C3.41486 8.04416 3.05379 7.8946 2.78757 7.62839C2.52135 7.36217 2.37179 7.0011 2.37179 6.62461Z" fill="white"/>
+                    </svg>
+                </div>
+            </div> */}
+            {currentMode === "video" && isRecording && (
+                <div className="video-time">{videoDuration}</div>
+            )}
+            <div className='camera-bottom-bar'>
+                 <div className='cover-o'>
+                    <i className="fa-solid fa-arrows-rotate"></i>
+                </div>
+                {currentMode === "photo" ? (
+                    <div onClick={takeScreenshot} className="camera-button-radius">
+                        <div className="camera-capture"></div>
+                    </div>
+                ) : (
+                    <div
+                        onClick={isRecording ? stopVideoRecording : startVideoRecording}
+                        className={`camera-button-radius ${isRecording ? "recording" : ""}`}
+                    >
+                        <div className={`camera-capture ${isRecording ? "red" : "white"}`}></div>
+                    </div>
+                )}
+                <div onClick={() => openModal(allGallery.length - 1)} className='camera-last-photo'>
+                    <img src={lastPhoto}></img>
+                </div>
+                 <div className='camera-modes-bar'>
+                    <div onClick={() => updateMode('photo')} className={`camera-mode-but ${currentMode == 'photo' ? 'selectedmode' : ''}`}>
+                        {lang.photo}
+                    </div>
+                    {customState !== 'forMdt' ? 
+                        <div onClick={() => updateMode('video')} className={`camera-mode-but ${currentMode == 'video' ? 'selectedmode' : ''}`}>
+                            {lang.video}
+                        </div>
+                    : ''}
+                </div>
+            </div>
+
+            <AnimatePresence>
+                {isModalOpen && (
+                    <motion.div 
+                        className='camera-app-minigallery'
+                        initial={{ opacity: 0, scale: 0.8, y: -50 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.8, y: 50 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                    >
+                        {allGallery[currentIndex].type == 'photo' ? 
+                            <img src={allGallery[currentIndex].url}></img> 
+                        : 
+                            <video src={allGallery[currentIndex].url} controls />
+                        }
+
+                        <div onClick={() => setIsModalOpen(false)} className='camera-app-close'><i className="fa-solid fa-xmark"></i></div>
+                        <div onClick={() => prevMedia()} style={{left: '2rem'}} className='minigallery-button'>
+                            <i className="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div onClick={() => nextMedia()} style={{right: '2rem'}} className='minigallery-button'>
+                            <i className="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    )
+};
+
+export default QueryApp;

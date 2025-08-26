@@ -1,0 +1,174 @@
+.password-screen-frame {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.password-enter-container {
+    background-color: #f5f5f5;
+    width: 28rem;
+    height: fit-content;
+    padding-bottom: 3rem;
+    position: absolute;
+    color: #000;
+    border-radius: 13px;
+    left: 0rem;
+    display: flex;
+    right: 0;
+    align-items: center;
+    top: 0;
+    flex-direction: column;
+    bottom: 0;
+    margin: auto;
+}
+
+.password-enter-container.dark {
+    background-color: #0a0a0a !important;
+    color: #b9b9b9 !important;
+}
+
+.password-entry.dark {
+    background-color: #0f0f10 !important;
+    color: #adadad !important;
+}
+
+.enter-tablet-pass {
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 3rem;
+}
+
+.verify-info {
+    font-family: 'SF Pro Display';
+    font-weight: 500;
+    font-size: 14px;
+    color: #878787;
+    margin-top: .5rem;
+}
+
+.password-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lightgray;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dot.filled {
+    background-color: gray;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/web/build/fonts/SFPro.OTF') format('truetype'); 
+
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Normal';
+    src: url('/web/build/fonts/sfnormal.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro SemihBold';
+    src: url('/web/build/fonts/sfprosemibold.ttf') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bumbbled';
+    src: url('/web/build/fonts/Bumbbled.otf');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+@font-face {
+    font-family: 'SF Med';
+    src: url('/web/build/fonts/sfpromed.OTF');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+.password-settings {
+    background-color: transparent;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+}
+
+.password-label {
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-size: 1.3rem;
+    position: relative;
+    left: 1.5rem;
+    top: 1.5rem;
+}
+
+.password-entry {
+    background: #f5f5f5;
+    width: 90%;
+    height: 3rem;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    color: #000;
+    left: 1.5rem;
+    margin-top: .5rem;
+    top: 2rem;
+}
+
+.password-entry:hover {
+    transition: .5s;
+    background-color: #cecece;
+}
+
+.password-entry div {
+    font-family: 'SF Pro Display';
+    font-size: 13px;
+    padding: 16px;
+}
+
+.password-screen-frame.opened {
+    display: block;
+}
+
+.password-screen-frame.hidden {
+    display: none;
+}
+
+.passiptal {
+    border: 1px;
+    font-family: 'SF PRO DISPLAY';
+    color: #5a5a5a;
+    font-weight: 400;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+}

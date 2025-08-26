@@ -1,0 +1,37 @@
+.clock-widget {
+     width: 120px;
+    height: 120px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-face {
+  fill: white;
+  stroke: none;
+}
+.tick {
+  stroke: black;
+  stroke-width: 1;
+}
+.hour-hand {
+  stroke: black;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.minute-hand {
+  stroke: black;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.second-hand {
+  stroke: orange;
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+.center-dot {
+  fill: orange;
+}

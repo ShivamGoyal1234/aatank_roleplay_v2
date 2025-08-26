@@ -1,0 +1,413 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('assets/fonts/SFPro.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Normal';
+    src: url('assets/fonts/sfnormal.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro SemihBold';
+    src: url('assets/fonts/sfprosemibold.ttf') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bumbbled';
+    src: url('assets/fonts/Bumbbled.otf');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+@font-face {
+    font-family: 'SF Med';
+    src: url('assets/fonts/sfpromed.OTF');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+.createwanted-container {
+    background-color: #00000091;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.createwanted-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.create-wanted-box {
+    background-color: #101010;
+    width: 34rem;
+    border-radius: 7px;
+    transform: scale(0.95);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    align-items: center;
+    height: fit-content;
+    padding-bottom: 1rem;
+}
+
+.createwanted-container.show .create-wanted-box {
+    transform: scale(1);
+}
+
+.criminal-record-title {
+    background: transparent;
+    font-family: SF Pro Text;
+    color: #c5c5c5;
+    position: relative;
+    width: 93%;
+    border-bottom: 1px solid #343439;
+    height: 1.7rem;
+    font-size: 18px;
+    top: 1rem;
+}
+
+.criminal-record-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: transparent;
+    width: 93%;
+    height: fit-content;
+    margin-top: 1.5rem;
+    overflow-y: auto;
+}
+
+.record-box {
+    flex: 0 0 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+  
+  
+  
+
+.record-box span {
+    color: #757575;
+    font-family: SF Pro Text;
+    font-size: 15px;
+}
+
+.record-box input {
+    padding-left: 1rem;
+    height: 2.3rem;
+    font-family: SF Pro Text;
+    color: #ddd;
+    background: #19191a;
+    border: 1px solid #333333;
+    border-radius: 2px;
+    margin-top: .5rem;
+}
+
+.record-box input:focus {
+    outline: 0;
+}
+
+
+.criminal-record-title i:hover {
+    transition: .5s;
+    color: #fff;
+}
+
+.crime-list-v2 {
+    width: 100%;
+    height: 13.15rem;
+    overflow-y: auto;
+    background: #101012;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.crime-list-v2 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    font-size: 13px;
+    transition: .5s;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    padding-left: 1rem;
+    font-family: SF Pro Text;
+  }
+
+  .crime-list-v2 div:hover {
+    background-color: #2c2c2c;
+  }
+  .crime-list-v2 div.selected {
+    border: 2px solid #007bff;
+  }
+  
+  .selected-penalty {
+    background-color: rgba(255, 0, 0, 0.5) !important; /* Hafif kırmızı ton */
+    color: white;
+    transition: .2s;
+}
+
+.textar {
+    background-color: transparent;
+    width: 10rem;
+}
+
+.descriptionpart {
+    width: 100%;
+    background-color: transparent;
+    height: fit-content;
+    font-family: SF Pro Text;
+    flex-direction: column;
+    display: flex;
+}
+
+.descriptionpart span {
+    color: #707070;
+    font-weight: 560;
+}
+
+.descriptionpart input {
+    background-color: transparent;
+    border: 1px solid #272727;
+    height: 2.5rem;
+    margin-top: .5rem;
+    padding-left: 1rem;
+    color: #ddd;
+    border-radius: 2px;
+}
+
+.descriptionpart input:focus {
+    outline: 0;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.listed-details {
+    background-color: transparent;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: .1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Soldan hizalama */
+    gap: 0.5rem; /* Elemanlar arasına boşluk ekler */
+    margin-top: .5rem;
+}
+
+.listed-detail-takePhoto {
+    width: 2.5rem;
+    height: 100%;
+    border-radius: .1rem;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 1rem;
+    color: #777777;
+}
+
+
+.listed-detail-takePhoto:hover {
+    transition: .5s;
+    background-color:#1a1a1a;
+}
+
+.listed-detail-takePhoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: .1rem;
+}
+
+.create-new-wanted-person {
+    border-radius: .1rem;
+    background-color: #1b7d61;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: SF Pro Text;
+    font-size: 1rem;
+    color: #fff;
+    justify-content: center;
+}
+
+.wanted-type-box {
+    background-color: transparent;
+    width: 93%;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.wanted-type-box span {
+    color: #ddd;
+    font-family: SF Pro Text;
+    font-size: .8rem;
+}
+
+.checkbox-container {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    top: .7rem;
+    background: transparent;
+    align-items: center;
+}
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    font-size: 16px;
+    color: #ccc;
+    font-weight: 500;
+  }
+  
+  .hidden-checkbox {
+    display: none;
+  }
+  
+  .custom-checkbox {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  
+  .custom-checkbox.checked {
+    border-color: #3399ff;
+    position: relative;
+  }
+  
+  .custom-checkbox.checked::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #3399ff;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .checkbox-text {
+    color: white;
+  }
+  
+  .checkbox-label input:checked + .custom-checkbox {
+    border-color: #3399ff;
+  }
+  
+
+  .listref {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    background: rgb(24 24 24);
+    border: 1px solid rgb(51 51 51);
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 13px;
+    color: #ddd;
+    font-family: SF Pro Text;
+    max-height: 150px;
+    overflow-y: auto;
+    transition: opacity 0.3s;
+    opacity: 1;
+  }
+
+  .listref li {
+    padding: 8px;
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 1px solid #2f2f2f;
+  }
+
+  .listref li:hover {
+    transition: .5s;
+    background-color: rgb(30 30 30);
+  }
+
+  .dropdown-listx {
+    position: absolute;
+    background: #222;
+    top: 100%;
+    left: 0;
+    color: #ddd;
+    font-family: SF Pro Text;
+    width: 100%;
+    z-index: 10;
+     list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+    font-size: 13px;
+    border: 1px solid #444;
+    max-height: 200px;
+    transition: .5s;
+    overflow-y: auto;
+    transform-box: fill-box;
+}
+
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: #333;
+    transition: .5s;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #999;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

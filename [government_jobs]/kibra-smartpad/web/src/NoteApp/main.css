@@ -1,0 +1,336 @@
+/* Genel */
+.notes-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.notes-container.light {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+.notes-container.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+.notes-canvas {
+       touch-action: none !important;
+    width: 100% !important;
+    height: 39rem !important;
+    margin-left: 0rem;
+    border: 0.0625rem solid rgb(26, 26, 26) !important;
+    border-radius: 0.25rem !important;
+}
+
+
+/* HEADER */
+/* .header-icon-part {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 5;
+}
+
+.header-icons {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.header-icons svg {
+  fill: #fff;
+  transition: transform 0.2s ease;
+}
+
+.header-icons:hover svg {
+  transform: scale(1.1);
+} */
+
+/* SIDEBAR */
+.notes-sidebar {
+  width: 280px;
+  margin-top: 3rem; /* header altından başlasın */
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  padding: 1rem 0.5rem;
+}
+
+.notes-sidebar.light {
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+}
+
+.notes-sidebar.dark {
+  background: #0c0c0c;
+  border-right: 1px solid #333;
+}
+
+.notes-sidebar button {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.8rem;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.notes-sidebar.light button {
+  border-bottom-color: #ccc;
+}
+
+.notes-sidebar.dark button {
+  border-bottom-color: #333;
+}
+
+.notes-sidebar button:hover {
+  background-color: #e6b80010;
+  color: #e6b800;
+}
+
+.note-item {
+       margin-bottom: 0.4rem;
+    border-radius: 2px;
+    width: 15rem;
+    padding-bottom: .6rem;
+    margin-left: 1rem;
+    padding-top: .4rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note-item.light {
+  background: #fefefe;
+  color: #111;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.note-item.dark {
+     color: #ababab;
+    border-bottom: 1px solid #3e3e3e;
+}
+
+.note-item.selected.light {
+  background-color: #fffbeb;
+  font-weight: 600;
+}
+
+.note-item.selected.dark {
+  color: #fff;
+  font-weight: 600;
+}
+
+.note-item:hover {
+  transform: translateX(2px);
+}
+
+/* MAIN PANEL */
+.notes-main {
+  flex: 1;
+  padding: 1.5rem 1rem 1rem 1rem;
+  position: relative;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.notes-main.light {
+  background-color: #fffefc;
+}
+
+.notes-main.dark {
+  background-color: #0c0c0c;
+}
+
+/* TOOLBAR */
+.notes-toolbar {
+    display: flex;
+    align-items: center;
+    margin-left: 17rem;
+    margin-bottom: 1rem;
+}
+
+.note-title-input {
+     flex: 1;
+    background: transparent;
+    font-family: 'SF Pro Display';
+    color: inherit;
+    border: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.note-title-input::placeholder {
+  color: rgba(200, 200, 200, 0.6);
+}
+
+.note-title-input:focus {
+  outline: none;
+  border-bottom-color: #e6b800;
+}
+
+/* ICONLAR */
+.floating-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.mode-toggle-icon {
+     width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: .7rem;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-toggle-icon:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.mode-toggle-icon.active {
+  border: 2px solid #e6b800;
+  color: #e6b800;
+}
+
+/* CONTENT ALANI */
+.notes-content {
+    flex: 1;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 66.7rem;
+    position: relative;
+    left: 17rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.notes-content.light {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.notes-content.dark {
+  background: #0e0e0e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* TEXTAREA */
+.notes-textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  resize: none;
+  font-family: 'SF Pro Display';
+  border: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  outline: none;
+  margin-top: 2.5rem;
+  background-color: transparent;
+  transition: color 0.2s ease;
+  padding: 0.5rem;
+}
+
+.notes-textarea.light {
+  color: #111;
+}
+
+.notes-textarea.dark {
+  color: #eee;
+}
+
+/* ÇİZİM KAPSAYICI */
+.drawing-wrapper {
+     margin-top: 3rem;
+    height: calc(100% - 3rem);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 66rem;
+}
+
+/* MODAL (gerekirse) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: #fff;
+}
+
+.modal-box button {
+  padding: 0.6rem 1.2rem;
+  background-color: #e6b800;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #121212;
+}
+
+.modal-box button:hover {
+  background-color: #ffcc00;
+}

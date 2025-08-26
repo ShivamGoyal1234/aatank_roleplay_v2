@@ -1,0 +1,115 @@
+.crime-table-container {
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  border-radius: 9px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.crime-table-container h2 {
+  text-align: center;
+  font-family: 'SF Pro Display';
+  color: #d7d7d7;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.crime-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.crime-tabs button {
+  padding: 8px 16px;
+  background: #1b1d25;
+  border: 1px solid #2a2d35;
+  color: #bdbdbd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'SF Pro Display';
+  transition: 0.3s ease;
+}
+
+.crime-tabs button:hover {
+  background: #2a2d35;
+}
+
+.crime-tabs button.active {
+  background: #13151c;
+  color: white;
+  border: 1px solid #3b3f48;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #13151c;
+  padding: 0px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #2a2d35;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  font-family: 'SF Pro Display';
+}
+
+.crime-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; 
+}
+
+.crime-table th,
+.crime-table td {
+  padding: 12px 15px;
+  text-align: left;
+  transition: .5s;
+  background: #13151c;
+  color: #cdcdcd;
+}
+
+.crime-table th {
+  background: #13151c;
+  color: #8d8d8d;
+  border: 1px solid transparent;
+}
+
+.crime-table tr:nth-child(even) td {
+  background: #1b1d25;
+}
+
+.crime-table tr:hover td {
+  background: #15171d;
+  transition: .5s;
+}
+
+.crime-table th:first-child {
+  border-top-left-radius: 8px; 
+}
+
+.crime-table th:last-child {
+  border-top-right-radius: 8px; 
+}
+
+.crime-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px; 
+}
+
+.crime-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px; 
+}
+
+.crime-table-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+}

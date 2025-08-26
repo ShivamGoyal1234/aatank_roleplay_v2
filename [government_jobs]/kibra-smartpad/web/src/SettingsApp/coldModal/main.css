@@ -1,0 +1,71 @@
+.nm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.nm-modal {
+       background: #fff;
+    border-radius: 14px;
+    width: fit-content;
+    max-width: 309px;
+    min-width: 15rem;
+    padding: 20px;
+    font-family: SF Pro Text;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+.nm-header {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.nm-message {
+     font-size: 13px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.nm-buttons {
+      display: flex;
+    flex-direction: column;
+    border-top: 1px solid #d1d1d6;
+}
+
+.nm-button {
+     flex: 1;
+    padding: 10px 0;
+    border: none;
+    font-size: 17px;
+    color: #007AFF;
+    font-family: 'SF Pro Text';
+    background: transparent;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

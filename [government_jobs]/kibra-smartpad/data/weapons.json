@@ -1,0 +1,569 @@
+[
+    {
+        "name": "Snowball Launcher",
+        "type": "WEAPON_SNOWLAUNCHER",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Compact Grenade Launcher",
+        "type": "WEAPON_COMPACTLAUNCHER",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Minigun",
+        "type": "WEAPON_MINIGUN",
+        "licenseType": "mg"
+    },
+    {
+        "name": "Tear Gas Launcher",
+        "type": "WEAPON_GRENADELAUNCHER_SMOKE",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Homing Launcher",
+        "type": "WEAPON_HOMINGLAUNCHER",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Railgun",
+        "type": "WEAPON_RAILGUN",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Firework Launcher",
+        "type": "WEAPON_FIREWORK",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Grenade Launcher",
+        "type": "WEAPON_GRENADELAUNCHER",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "RPG",
+        "type": "WEAPON_RPG",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Widowmaker",
+        "type": "WEAPON_RAYMINIGUN",
+        "licenseType": "mg"
+    },
+    {
+        "name": "Compact EMP Launcher",
+        "type": "WEAPON_EMPLAUNCHER",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Railgun",
+        "type": "WEAPON_RAILGUNXM3",
+        "licenseType": "launcher"
+    },
+    {
+        "name": "Combat Shotgun",
+        "type": "WEAPON_COMBATSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Sweeper Shotgun",
+        "type": "WEAPON_AUTOSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Pump Shotgun",
+        "type": "WEAPON_PUMPSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Heavy Shotgun",
+        "type": "WEAPON_HEAVYSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Pump Shotgun Mk II",
+        "type": "WEAPON_PUMPSHOTGUN_MK2",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Sawed-Off Shotgun",
+        "type": "WEAPON_SAWNOFFSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Bullpup Shotgun",
+        "type": "WEAPON_BULLPUPSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Assault Shotgun",
+        "type": "WEAPON_ASSAULTSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Double Barrel Shotgun",
+        "type": "WEAPON_DBSHOTGUN",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Sniper Rifle",
+        "type": "WEAPON_SNIPERRIFLE",
+        "licenseType": "sniper"
+    },
+    {
+        "name": "Heavy Sniper Mk II",
+        "type": "WEAPON_HEAVYSNIPER_MK2",
+        "licenseType": "sniper"
+    },
+    {
+        "name": "Heavy Sniper",
+        "type": "WEAPON_HEAVYSNIPER",
+        "licenseType": "sniper"
+    },
+    {
+        "name": "Marksman Rifle Mk II",
+        "type": "WEAPON_MARKSMANRIFLE_MK2",
+        "licenseType": "sniper"
+    },
+    {
+        "name": "Precision Rifle",
+        "type": "WEAPON_PRECISIONRIFLE",
+        "licenseType": "sniper"
+    },
+    {
+        "name": "Musket",
+        "type": "WEAPON_MUSKET",
+        "licenseType": "shotgun"
+    },
+    {
+        "name": "Marksman Rifle",
+        "type": "WEAPON_MARKSMANRIFLE",
+        "licenseType": "sniper"
+    },
+    {
+        "name": "Fire Extinguisher",
+        "type": "WEAPON_FIREEXTINGUISHER",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Snowball",
+        "type": "WEAPON_SNOWBALL",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Ball",
+        "type": "WEAPON_BALL",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Molotov",
+        "type": "WEAPON_MOLOTOV",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Sticky Bomb",
+        "type": "WEAPON_STICKYBOMB",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Flare",
+        "type": "WEAPON_FLARE",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Grenade",
+        "type": "WEAPON_GRENADE",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "BZ Gas",
+        "type": "WEAPON_BZGAS",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Proximity Mine",
+        "type": "WEAPON_PROXMINE",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Pipe Bomb",
+        "type": "WEAPON_PIPEBOMB",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Acid Package",
+        "type": "WEAPON_ACIDPACKAGE",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Tear Gas",
+        "type": "WEAPON_SMOKEGRENADE",
+        "licenseType": "explosive"
+    },
+    {
+        "name": "Vintage Pistol",
+        "type": "WEAPON_VINTAGEPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Pistol",
+        "type": "WEAPON_PISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "WM 29 Pistol",
+        "type": "WEAPON_PISTOLXM3",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "AP Pistol",
+        "type": "WEAPON_APPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Ceramic Pistol",
+        "type": "WEAPON_CERAMICPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Flare Gun",
+        "type": "WEAPON_FLAREGUN",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Perico Pistol",
+        "type": "WEAPON_GADGETPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Combat Pistol",
+        "type": "WEAPON_COMBATPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "SNS Pistol Mk II",
+        "type": "WEAPON_SNSPISTOL_MK2",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Navy Revolver",
+        "type": "WEAPON_NAVYREVOLVER",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Double-Action Revolver",
+        "type": "WEAPON_DOUBLEACTION",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Pistol .50",
+        "type": "WEAPON_PISTOL50",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Up-n-Atomizer",
+        "type": "WEAPON_RAYPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "SNS Pistol",
+        "type": "WEAPON_SNSPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Pistol Mk II",
+        "type": "WEAPON_PISTOL_MK2",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Heavy Revolver",
+        "type": "WEAPON_REVOLVER",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Heavy Revolver Mk II",
+        "type": "WEAPON_REVOLVER_MK2",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Heavy Pistol",
+        "type": "WEAPON_HEAVYPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Marksman Pistol",
+        "type": "WEAPON_MARKSMANPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Combat PDW",
+        "type": "WEAPON_COMBATPDW",
+        "licenseType": "smg"
+    },
+    {
+        "name": "Micro SMG",
+        "type": "WEAPON_MICROSMG",
+        "licenseType": "smg"
+    },
+    {
+        "name": "Tactical SMG",
+        "type": "WEAPON_TECPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "SMG",
+        "type": "WEAPON_SMG",
+        "licenseType": "smg"
+    },
+    {
+        "name": "SMG Mk II",
+        "type": "WEAPON_SMG_MK2",
+        "licenseType": "smg"
+    },
+    {
+        "name": "Mini SMG",
+        "type": "WEAPON_MINISMG",
+        "licenseType": "smg"
+    },
+    {
+        "name": "Machine Pistol",
+        "type": "WEAPON_MACHINEPISTOL",
+        "licenseType": "handgun"
+    },
+    {
+        "name": "Assault SMG",
+        "type": "WEAPON_ASSAULTSMG",
+        "licenseType": "smg"
+    },
+    {
+        "name": "Fertilizer Can",
+        "type": "WEAPON_FERTILIZERCAN",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Jerry Can",
+        "type": "WEAPON_PETROLCAN",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Hazardous Jerry Can",
+        "type": "WEAPON_HAZARDCAN",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Pipe Wrench",
+        "type": "WEAPON_WRENCH",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Stone Hatchet",
+        "type": "WEAPON_STONE_HATCHET",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Golf Club",
+        "type": "WEAPON_GOLFCLUB",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Hammer",
+        "type": "WEAPON_HAMMER",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Candy Cane",
+        "type": "WEAPON_CANDYCANE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Nightstick",
+        "type": "WEAPON_NIGHTSTICK",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Crowbar",
+        "type": "WEAPON_CROWBAR",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Flashlight",
+        "type": "WEAPON_FLASHLIGHT",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Antique Cavalry Dagger",
+        "type": "WEAPON_DAGGER",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Pool Cue",
+        "type": "WEAPON_POOLCUE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Baseball Bat",
+        "type": "WEAPON_BAT",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Knife",
+        "type": "WEAPON_KNIFE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Battle Axe",
+        "type": "WEAPON_BATTLEAXE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "The Shocker",
+        "type": "WEAPON_STUNROD",
+        "licenseType": "other"
+    },
+    {
+        "name": "Machete",
+        "type": "WEAPON_MACHETE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Switchblade",
+        "type": "WEAPON_SWITCHBLADE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Hatchet",
+        "type": "WEAPON_HATCHET",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Bottle",
+        "type": "WEAPON_BOTTLE",
+        "licenseType": "melee"
+    },
+    {
+        "name": "Hacking Device",
+        "type": "WEAPON_HACKINGDEVICE",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Stun Gun",
+        "type": "WEAPON_STUNGUN",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Stun Gun",
+        "type": "WEAPON_STUNGUN_MP",
+        "licenseType": "nonlethal"
+    },
+    {
+        "name": "Assault Rifle Mk II",
+        "type": "WEAPON_ASSAULTRIFLE_MK2",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Compact Rifle",
+        "type": "WEAPON_COMPACTRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Battle Rifle",
+        "type": "WEAPON_BATTLERIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Bullpup Rifle",
+        "type": "WEAPON_BULLPUPRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Carbine Rifle",
+        "type": "WEAPON_CARBINERIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Bullpup Rifle Mk II",
+        "type": "WEAPON_BULLPUPRIFLE_MK2",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Special Carbine Mk II",
+        "type": "WEAPON_SPECIALCARBINE_MK2",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Military Rifle",
+        "type": "WEAPON_MILITARYRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Advanced Rifle",
+        "type": "WEAPON_ADVANCEDRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Assault Rifle",
+        "type": "WEAPON_ASSAULTRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Special Carbine",
+        "type": "WEAPON_SPECIALCARBINE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Heavy Rifle",
+        "type": "WEAPON_HEAVYRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Service Carbine",
+        "type": "WEAPON_TACTICALRIFLE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Carbine Rifle Mk II",
+        "type": "WEAPON_CARBINERIFLE_MK2",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Unholy Hellbringer",
+        "type": "WEAPON_RAYCARBINE",
+        "licenseType": "rifle"
+    },
+    {
+        "name": "Gusenberg Sweeper",
+        "type": "WEAPON_GUSENBERG",
+        "licenseType": "smg"
+    },
+    {
+        "name": "Combat MG",
+        "type": "WEAPON_COMBATMG",
+        "licenseType": "mg"
+    },
+    {
+        "name": "MG",
+        "type": "WEAPON_MG",
+        "licenseType": "mg"
+    },
+    {
+        "name": "Combat MG Mk II",
+        "type": "WEAPON_COMBATMG_MK2",
+        "licenseType": "mg"
+    },
+    {
+        "name": "Unarmed",
+        "type": "WEAPON_UNARMED",
+        "licenseType": "nonlethal"
+    },
+
+    {
+        "name": "Knuckle Duster",
+        "type": "WEAPON_KNUCKLE",
+        "licenseType": "melee"
+    },
+    
+    {
+        "name": "Metal Detector",
+        "type": "WEAPON_METALDETECTOR",
+        "licenseType": "nonlethal"
+    }
+]

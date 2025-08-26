@@ -1,0 +1,198 @@
+.settings-wallpaper-box {
+       background-color: #ffffff1a;
+    width: 41rem;
+    display: flex;
+    align-items: center;
+    font-family: SF Pro Display;
+    color: #fff;
+    justify-content: center;
+    flex-direction: column;
+    height: 23rem;
+    border-radius: 30px;
+    margin-top: 2rem;
+}
+
+.wallpaper-ti {
+       margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute;
+    top: 4rem;
+}
+
+.wallpaper-info {
+    color: #808080 !important;
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 1.7rem;
+}
+
+.wallpaper-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.wallpapers {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 35rem;
+    margin: auto;
+    padding: 0px 0;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+}
+
+.wallpapers::-webkit-scrollbar {
+    display: none;
+}
+
+.wallpaper-img:hover {
+    transform: scale(1.05);
+}
+
+.chevron-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #444;
+    z-index: 1;
+}
+
+.chevron-btn.left {
+    position: absolute;
+    left: 1rem;
+}
+
+.chevron-btn.right {
+    position: absolute;
+    right: 1rem;
+}
+
+.save-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.wallpaper-container {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.wallpaper-img {
+       width: 16rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.wallpaper-container.selected .wallpaper-img {
+    transform: scale(1.05);
+}
+
+.tick-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.wallpaper-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 10px;
+}
+
+.dotx {
+       width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #7b7b7b;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dotx.active {
+    background-color: #fff; /* aktif: beyaz */
+    transform: scale(1.3);
+}
+
+.dotx.active.light {
+    background-color: #000000; /* aktif: beyaz */
+    transform: scale(1.3);
+}
+
+.setxz {
+       font-family: SF Pro Display;
+    font-size: 13px;
+    position: relative;
+    top: .5rem;
+}
+
+
+.custom-back {
+    background-color: transparent;
+    width: 60%;
+    color: #ddd;
+    height: 10rem;
+    margin-top: 1rem;
+}
+
+.op-put {
+     background-color: transparent;
+    border: 1px solid transparent;
+    font-family: 'SF Pro Display';
+    margin-left: .5rem;
+    color: #ddd;
+}
+
+.op-put:focus {
+    outline: 0;
+}
+
+.right--xx {
+       position: absolute;
+    background: white;
+    justify-content: center;
+    display: flex;
+    border-radius: 100%;
+    color: black;
+    padding: .4rem;
+    transition: .5s;
+    align-items: center;
+    right: 1rem;
+    font-size: 11px;
+}
+
+.right--xx:hover {
+    transition: .5s;
+    transform: scale(1.2);
+}

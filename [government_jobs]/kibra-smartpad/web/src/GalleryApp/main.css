@@ -1,0 +1,405 @@
+.gallery-app-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #0B0B0B 0%, rgba(11, 11, 11, 0.30) 69%, rgba(11, 11, 11, 0.00) 100%);
+    background-size: cover; /* Resmi kırpmadan ekranı kaplamasını sağlar */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+    z-index: 1;
+}
+
+.gallery-app-topbar {
+    width: 100%;
+    height: 4rem;
+    z-index: 300;
+    position: absolute;
+    background: transparent;
+}
+
+.gallery-top-bar-icons {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+    padding: 21px;
+    gap: 1rem;
+}
+
+.gallery-photo-list {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    overflow: auto;
+    height: 44rem;
+    align-content: start;
+
+    flex-wrap: wrap;
+    gap: 3px;
+    z-index: 1;
+}
+
+.gallery-photo-list::before {
+     content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.gallery-photo-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    overflow: hidden;
+    cursor: pointer;
+    width: 137px;
+    box-sizing: border-box;
+    height: 137px;
+    position: relative;
+    z-index: 20;
+}
+
+.gallery-photo-list-item.selected {
+    transform: scale(0.95);
+}
+
+.gallery-photo-list-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    vertical-align: top;
+}
+
+.date-gallerymedia {
+  position: absolute;
+  top: 1rem;
+  left: 8rem;
+  font-size: 11px;
+  font-family: SF Pro Display;
+  color: #818181;
+}
+
+.delete-photo-b {
+  color: #ddd;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.delete-photo-b:hover {
+  transition: .5s;
+  color: #acacac;
+}
+
+.photo-selected-checkmark {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  background-color: #57DD74;
+  color: white;
+  display: flex;
+  font-size: 12px !important;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.gallery-actions {
+    position: fixed;
+    bottom: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    font-family: 'SF PRO DISPLAY';
+    gap: 10px;
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 12px;
+    z-index: 999;
+}
+
+.gallery-actions button {
+  background: transparent;
+  color: #585858;
+  border: 1px solid #1e1e1e;
+  font-size: 16px;
+  height: 3rem;
+  width: fit-content;
+  font-family: 'SF PRO DISPLAY';
+  padding: 14px 21px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 24px;
+}
+
+.gallery-delete:hover {
+    background: rgba(182, 182, 182, 0.7);
+    transition: .5s;
+    color:#000;
+}
+
+.gallery-share:hover {
+    transition: .5s;
+    color:#000;
+    background: rgba(182, 182, 182, 0.7);
+}
+
+.gallery-photo-infos {
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+    position: fixed; /* Sabit kalmasını sağladık */
+    display: flex;
+    top: 4rem;
+    pointer-events: none;
+    left: 3rem;
+    flex-direction: column;
+    z-index: 6000;
+    font-family: SF Pro Text;
+}
+
+
+.galler-photo-infos-label {
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132.836%; /* 34.537px */
+}
+
+.galler-photo-infos-label2 {
+    color: #8D8D8D;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132.836%; /* 21.254px */
+}
+
+/* Modal Arka Plan */
+.share-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    font-family: SF Pro, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .share-modal.dark {
+    background-color: #222 !important;
+    color: #fff !important;
+  }
+
+  /* Modal İçerik */
+  .share-modal {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: SF Pro, sans-serif;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Modal Açıkken Aktif Animasyon */
+  .share-modal-overlay.show {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+  }
+  
+  .share-modal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Modal Header */
+  .share-modal-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'SF Pro Display';
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .share-item span {
+    margin-top: .7rem;
+  }
+
+  /* Kapatma Butonu */
+  .share-done-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #245ecd;
+    font-family: 'SF Pro Display';
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* Kişiler ve Cihazlar */
+  .share-section {
+    margin-top: 15px;
+  }
+
+  .share-section h3 {
+    font-family: SF Pro, sans-serif;
+    font-weight: 600;
+  }
+  
+  .share-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .share-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .share-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: lightgray;
+  }
+  
+
+/* Büyük Resim Modalı */
+.image-viewer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.image-viewer-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-viewer {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewer-image {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.viewer-close {
+  position: absolute;
+  top: 14px;
+  right: 8.5rem;
+  background: none;
+  border: none;
+  z-index: 100;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.viewer-prev, .viewer-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  color: #bfbfbf;
+  transition: .5s;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.viewer-prev {
+    left: 4rem;
+}
+
+.viewer-next {
+    right: 4rem;
+}
+
+.viewer-prev:hover, .viewer-next:hover {
+    transition: .5s;
+    color: #fff;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-overlay i {
+  color: white;
+  font-size: 24px;
+}
+
+
+.viewer-video {
+     max-width: 89%;
+    max-height: 86%;
+    border-radius: 10px;
+}

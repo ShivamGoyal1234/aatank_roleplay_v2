@@ -1,0 +1,569 @@
+.bil-container {
+    background-color: transparent;
+    width: 100%;
+    height: 54rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bil-left-bar {
+      background-color: #0e0e0e;
+    width: 16rem;
+    height: 92%;
+    flex-direction: column;
+    float: left;
+    color: #fff;
+    font-family: SF Pro Text;
+    top: 3rem;
+    position: relative;
+    display: flex;
+    left: 1rem;
+    border: 1px solid #181818;
+    border-radius: 2rem;
+}
+
+.bil-title-appz {
+    font-family: SF Pro Text;
+    font-size: 22px;
+    position: relative;
+    left: 1.5rem;
+    top: 1.3rem;
+    font-weight: 500;
+}
+
+.bil-spanxz {
+    color: gray;
+    position: relative;
+    left: 1.5rem;
+    font-size: 13px;
+    top: 1.4rem;
+}
+
+.bil-spanler {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    margin-top: 3rem;
+}
+
+.bil-middle-part {
+       background-color: transparent;
+    width: 74%;
+    height: 49rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    left: 2rem;
+    top: 3rem;
+}
+
+.bil-showedAllBillings {
+       width: 65rem;
+    height: 3rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    color: #a9a9a9;
+    font-family: SF Pro Text;
+    background-color: #0e0e0e;
+}
+
+.bil-title-boo {
+    margin-left: 1.5rem;
+    font-size: 13px;
+}
+
+.bil-showed-list {
+       background-color: transparent;
+    width: 100%;
+    height: 41rem;
+    display: inline-block;
+    overflow: auto;
+    padding-top: 0.5rem;
+}
+
+.bil-invoice-card {
+      font-family: 'SF Pro Text', sans-serif;
+    background: #0e0e0e;
+    border-radius: 12px;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 16px;
+    margin: 8px 0;
+    min-height: 77px;
+}
+
+.bil-invoice-card:hover {
+    transition: .5s;
+    background-color: #00ffa617;
+    z-index: 100;
+    transform: scale(0.99);
+}
+
+.bil-invoice-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.bil-invoice-row.bil-headerx {
+    font-size: 13px;
+    color: #8e8e93;
+    margin-bottom: 10px;
+}
+
+.bil-invoice-row.bil-body {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.bil-invoice-row.bil-overtime {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.bil-invoice-row.bil-footer {
+    font-size: 12px;
+    color: #636366;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Fatura numarası ve tarihi */
+.bil-invoice-no {
+    font-weight: 600;
+    color: #8e8e93;
+}
+
+.bil-invoice-date {
+    color: #8e8e93;
+}
+
+/* Müşteri adı ve tutar */
+.bil-customer-name {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.bil-invoice-amount {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Gecikme durumu */
+.bil-overdue-days {
+    color: #ff9500;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.bil-updated-amount {
+    color: #ff3b30;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Due date */
+.bil-due-date {
+    color: #636366;
+    font-size: 12px;
+    text-align: left;
+}
+
+/* Durum etiketleri */
+.bil-status {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: right;
+    display: inline-block;
+}
+
+.bil-status.bil-pending {
+    background-color: #ff950015;
+    color: #ff9500;
+}
+
+.bil-status.bil-paid {
+    background-color: #07cf8d15;
+    color: #07cf8d;
+}
+
+.bil-status.bil-late {
+    background-color: #ff3b3015;
+    color: #ff3b30;
+}
+
+.bil-createinm {
+    color: gray;
+    text-transform: uppercase;
+    position: relative;
+    top: 2rem;
+    margin-left: 1.5rem;
+    font-size: 11px;
+}
+
+.bil-create-box {
+    background-color: transparent;
+    width: 66rem;
+    height: 53rem;
+    overflow: auto;
+}
+
+.bil-data-data {
+    background-color: transparent;
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    justify-content: center;
+    height: fit-content;
+}
+
+.bil-cucu {
+    color: gray;
+    margin-left: 1.5rem;
+    font-size: 13px;
+    margin-top: 1rem;
+}
+
+.bil-cucu2 {
+    color: gray;
+    font-size: 13px;
+    margin-top: 1rem;
+}
+
+.bil-player-dropdown-container {
+    position: relative;
+    width: 100%;
+    margin-left: 1.5rem;
+    height: 3rem;
+    border-radius: 8px;
+    margin-top: .5rem;
+    color: #ddd !important;
+    background: #141414;
+}
+
+.bil-player-dropdown-input {
+    width: 100%;
+    color: #ddd !important;
+    height: 100%;
+    padding-left: 1rem;
+    border: 1px;
+    font-family: 'SF Pro Text';
+    background: transparent;
+}
+
+.bil-player-dropdown-input:focus {
+    outline: 0;
+}
+
+.bil-player-dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: .5rem;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease;
+    background: #1d1d1d;
+    border: 1px solid #313131;
+    z-index: 1000;
+}
+
+.bil-player-dropdown-list.bil-closed {
+    max-height: 0;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.bil-player-dropdown-item {
+    padding: 12px;
+    font-size: 13px;
+    font-family: 'SF Pro Text';
+    color: #b2b2b2;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bil-player-dropdown-item:hover {
+    background-color: #2a2a2a;
+}
+
+.bil-invoice-date-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.bil-invoice-date-label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.bil-invoice-date-input {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-family: 'SF Pro Text';
+    color: #ddd;
+    margin-left: 1.4rem;
+    font-size: 13px;
+    margin-top: .7rem;
+    border: 1px;
+    background: #141414;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.bil-invoice-date-input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.bil-items-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    background: transparent;
+}
+
+.bil-item-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.bil-item-row input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    background: #141414;
+    color: #ddd;
+    border-radius: 4px;
+    font-family: 'SF Pro Text';
+    font-size: 13px;
+}
+
+.bil-item-row input:focus {
+    outline: 0;
+}
+
+.bil-item-row button {
+    background: transparent;
+    border: none;
+    color: #f00;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bil-item-row button:hover {
+    background: #1f1f1f;
+    border-radius: 4px;
+}
+
+.bil-add-item-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #1f1f1f;
+    color: #ddd;
+    font-family: 'SF Pro Text';
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bil-add-item-btn:hover {
+    background: #2a2a2a;
+}
+
+.bil-summary-box {
+    margin: 1rem 1.5rem;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #141414;
+}
+
+.bil-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 13px;
+    color: #ddd;
+    font-family: 'SF Pro Text';
+}
+
+.bil-summary-row.bil-total {
+    font-weight: 600;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #2a2a2a;
+    font-size: 15px;
+}
+
+.bil-summary-row input {
+    width: 4rem;
+    padding: 0.3rem;
+    border: none;
+    background: #1f1f1f;
+    color: #ddd;
+    border-radius: 4px;
+    font-family: 'SF Pro Text';
+    font-size: 13px;
+    text-align: right;
+    margin: 0 0.5rem;
+}
+
+.bil-summary-row input:focus {
+    outline: 0;
+    background: #2a2a2a;
+}
+
+.bil-notes-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.bil-notes-box textarea {
+    width: calc(100% - 3rem);
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background: #141414;
+    color: #ddd;
+    font-family: 'SF Pro Text';
+    font-size: 13px;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.bil-notes-box textarea:focus {
+    outline: none;
+    background: #1a1a1a;
+}
+
+.bil-create-invoice {
+    width: 98%;
+    height: 3rem;
+    border-radius: 7px;
+    display: flex;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 1rem;
+    margin-left: 1.4rem;
+    transition: .5s;
+    background-color: #109c64;
+    align-items: center;
+    justify-content: center;
+    font-family: 'SF Pro Text';
+    font-weight: 500;
+}
+
+.bil-create-invoice:hover {
+    transition: .5s;
+    transform: scale(0.98);
+    background-color: #0e8556;
+}
+
+/* Settings item için özel classlar */
+.bil-settings-item {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    margin: 0.3rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bil-settings-item:hover {
+    background-color: #1a1a1a;
+}
+
+.bil-settings-item.bil-selectedra {
+    background-color: #1f1f1f;
+}
+
+.bil-setting-item-logo {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.8rem;
+}
+
+.bil-setting-item-logo.bil-green2 {
+    color: #07cf8d;
+}
+
+.bil-setting-item-logo.bil-gray {
+    color: #636366;
+}
+
+.bil-app-namex {
+    font-size: 14px;
+    color: #ddd;
+    font-family: 'SF Pro Text';
+}
+
+/* Header icon styles */
+.bil-header-icon-time-part {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-family: 'SF Pro Text';
+    font-size: 14px;
+}
+
+.bil-time-string {
+    color: #fff;
+}
+
+.bil-header-icon-part {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.bil-header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+}

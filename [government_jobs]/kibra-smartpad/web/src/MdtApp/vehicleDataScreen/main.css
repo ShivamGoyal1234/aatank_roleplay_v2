@@ -1,0 +1,361 @@
+/* .mdt-citizenprofile-page {
+    background-color: transparent;
+    width: 100%;
+    height: 82%;
+    border-radius: .3rem;
+}
+
+.mdt-citizenprofile-page img {
+    width: 19rem;
+    height: 19rem;
+    margin-top: 1rem;
+    margin-left: .7rem;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    background-color: #1c1c1c;
+    border-radius: .5rem;      
+}
+
+.mdt-citizenprofile-page-left {
+    background: transparent;
+    width: 59.7%;
+    float: left;
+    margin-top: .6rem;
+    height: 18.4rem;
+}
+
+.player-info-item {
+    width: 31.5%;
+    height: 69.5px;
+    margin-left: .5rem;
+    margin-top: .5rem;
+    float: left;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+    background: #17181C;
+}
+
+.player-item-info-name {
+    color: #777684;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    margin-left: 1rem;
+    margin-bottom: .2rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.player-item-info-data {
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 1rem;
+}
+
+.wrong {
+    color: #F44 !important;
+}
+
+.mdt-citizenprofile-page-bottom {
+    width: 96.5%;
+    height: 18rem;
+    float: left;
+    margin-left: .8rem;
+    background: transparent;
+}
+
+.page-bottom-title {
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container {
+    max-width: 818px;
+    margin: 7px auto;
+    border-radius: 8px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+  
+.header h1 {
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+  
+.add-button {
+    border-radius: 6px;
+    background: #FF3434;    
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    transition: background-color 0.3s ease;
+}
+  
+.add-button:hover {
+    background-color: #ff3333;
+}
+
+.table-container {
+    max-height: 215px;
+    overflow: auto;
+    border-radius: 8px;
+    background-color: transparent;
+    margin-top: 2px;
+}
+
+.table {
+    width: 100%;
+    background: transparent;
+    border-collapse: separate;
+    cursor: pointer;
+    border-spacing: 0 5px;
+    border-radius: 8px;
+    color: #d1d1d1;
+}
+  
+.table th,
+.table td {
+    text-align: left;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.table th {
+    background-color: #17181C;
+    color: #737373;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 2px;
+}
+
+.table td {
+    background-color: #17181C;
+    white-space: nowrap;
+}
+
+.table tr:hover td {
+    background-color: #2a2b31;
+    transition: background-color 0.2s ease;
+}
+
+.table td:last-child {
+    text-align: left;
+}
+
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: -.2rem;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+    width: 90vh;
+    height: 79vh;
+    background: #00000078;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  } 
+  
+  .modal-content-large {
+    background: #1e1f24;
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    font-family: "SF Pro Display", sans-serif;
+  }
+  
+  .modal-overlay.show .modal-content-large {
+    transform: scale(1);
+  }
+  
+  .modal-content-large h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #ccc;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    width: 96%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #2a2b31;
+    color: #fff;
+  }
+  
+  .form-group input:focus {
+    outline: 0;
+  }
+  
+  .crime-list {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    background: #2a2b31;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  .crime-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    border-bottom: 1px solid #444;
+  }
+  
+  .crime-item:hover {
+    background: #444;
+  }
+  
+  .crime-price {
+    font-weight: bold;
+    color: #ff3434;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .cancel-btn,
+  .submit-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .cancel-btn {
+    background: #444;
+    color: #fff;
+  }
+  
+  .cancel-btn:hover {
+    background: #555;
+  }
+  
+  .submit-btn {
+    background: #ff3434;
+    color: #fff;
+  }
+  
+  .submit-btn:hover {
+    background: #ff1111;
+  }
+  
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  
+  
+  .cancel-btn,
+  .submit-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .cancel-btn {
+    background: #444;
+    color: #fff;
+  }
+  
+  .cancel-btn:hover {
+    background: #555;
+  }
+  
+  .submit-btn {
+    background: #ff3434;
+    color: #fff;
+  }
+  
+  .submit-btn:hover {
+    background: #ff1111;
+  }
+  
+
+  .back-button {
+    float: right;
+    position: absolute;
+    right: 11.5rem;
+    background: #6a6868;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 4rem;
+    border-radius: 8px;
+    height: 3rem;
+  } */

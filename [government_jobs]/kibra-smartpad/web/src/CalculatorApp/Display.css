@@ -1,0 +1,53 @@
+.component-display {
+  background: linear-gradient(135deg, #1f1f1f, #121212);
+  color: #fff;
+  text-align: right;
+  font-weight: 300;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  height: 25rem;
+  transition: background 0.3s ease;
+}
+
+.component-display:hover {
+  background: linear-gradient(135deg, #292929, #1a1a1a);
+}
+
+.component-display > div {
+  font-size: clamp(2rem, 10vw, 6rem);
+  line-height: 1;
+  margin: 0.5rem;
+}
+
+
+@media (min-width: 200px) and (min-height: 200px) {
+  .component-display > div {
+    font-size: 60px;
+    padding: 20px 16px 0 10px;
+  }
+}
+
+@media (min-width: 300px) and (min-height: 200px) {
+  .component-display > div {
+    font-size: 70px;
+    padding: 20px 22px 0 10px;
+  }
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+  .component-display > div {
+    font-size: 80px;
+    padding: 20px 30px 0 15px;
+  }
+}
+
+@media (min-width: 800px) and (min-height: 800px) {
+  .component-display > div {
+    font-size: 100px;
+    padding: 20px 40px 0 20px;
+  }
+}

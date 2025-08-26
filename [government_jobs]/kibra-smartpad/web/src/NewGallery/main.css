@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/web/build/fonts/SFPro.OTF') format('truetype'); 
+
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Normal';
+    src: url('/web/build/fonts/sfnormal.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro SemihBold';
+    src: url('/web/build/fonts/sfprosemibold.ttf') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bumbbled';
+    src: url('/web/build/fonts/Bumbbled.otf');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+@font-face {
+    font-family: 'SF Med';
+    src: url('/web/build/fonts/sfpromed.OTF');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+.new-gallery-container {
+      background-color: transparent;
+    width: 100%;
+    height: 54rem;
+}
+
+.new-gallery-left-bar {
+        background-color: #0e0e0e;
+    width: 15rem;
+    height: 49.7rem;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    border: 1px solid #1e1e1e;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-text {
+    font-family: SF Pro Display;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.edit-text:hover {
+    transition: .5s;
+    color: #fff;
+    box-shadow: #fff;
+}
+
+.photo-bar {
+       background-color: transparent;
+    width: 11.7rem;
+    border-radius: 32px;
+    cursor: pointer;
+    height: 2.7rem;
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 1rem;
+    align-items: center;
+    display: flex;
+    margin-left: 1.2rem;
+    color: #e3e3e3;
+    font-family: 'SF Pro Display';
+}
+
+.selected-bar {
+      color: #009fff;
+    transition: .5s;
+    background-color: #3b3b3b;
+}
+
+.albums-text {
+       font-family: SF Pro Display;
+    color: gray;
+    font-size: 13px;
+    margin-left: 2.2rem;
+    margin-top: 1rem;
+}
+
+.new-gallery-middle-part {
+      background-color: transparent;
+    width: 70rem;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+    overflow: auto;
+    height: 50rem;
+}
+
+.new-gallery-middle-part::before {
+       content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 81%;
+    margin-left: 16.5rem;
+    height: 20rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.arc {
+       font-family: SF Pro Display;
+    color: #fff;
+    font-size: 21px;
+    position: relative;
+    font-weight: 600;
+    left: 1rem;
+}
+
+.arc-x {
+        font-family: SF Pro Display;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    left: 1rem;
+}
+
+
+.photo-item {
+      background-color: transparent;
+    width: 9.9rem;
+    height: 9rem;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    top: 3rem;
+    margin-top: 0.1rem;
+    margin-left: .1rem;
+}
+
+.photo-item img {
+     width: 100%;
+    border-radius: 2px;
+    height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.5); opacity: 0 }
+  to   { transform: scale(1);   opacity: 1 }
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 4px;
+    animation: scaleUp 0.3s ease-out forwards;
+}
+
+.backs {
+       background-color: #00000066;
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    font-size: 13px;
+    height: 2.7rem;
+    gap: 38px;
+    z-index: 100;
+    align-items: center;
+    left: 6rem;
+    border-radius: 6rem;
+    top: 6rem;
+    position: absolute;
+}
+
+.backs .ri {
+    color: #ddd;
+    cursor: pointer;
+    transition: transform .3s ease, color .5s ease;
+}
+
+.backs .ri:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.date-info {
+       background-color: transparent;
+    width: 12rem;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'SF Pro Display';
+    align-items: center;
+    top: 7rem;
+    position: absolute;
+    z-index: 100;
+}
+
+.location {
+      color: #d7d7d7;
+    margin-bottom: .2rem;
+    font-size: 13px;
+}
+
+.datez {
+    color: #ddd;
+    font-size: 10px;
+}
+
+.myposx {
+       position: absolute;
+    left: 7rem;
+    cursor: pointer;
+    color: #ddd;
+    margin: auto;
+    font-size: 2rem;
+    z-index: 500;
+}
+
+.myposx-rig {
+    position: absolute;
+    right: 7rem;
+    cursor: pointer;
+    color: #ddd;
+    margin: auto;
+    font-size: 2rem;
+    z-index: 500;
+}
+
+.airdrop-modal {
+       background-color: #1a1a1a;
+    width: 26rem;
+    height: 19rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    bottom: 0;
+    border-radius: 1rem;
+    z-index: 90900;
+     transform-origin: center;
+  transform: scale(0.5);
+  opacity: 0;
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.airdrop-header {
+       width: 91%;
+    height: 3rem;
+    display: flex;
+    margin: auto;
+    border-bottom: 1px solid #292929;
+}
+
+.airdrop-header img {
+        height: 2rem;
+    border-radius: 100%;
+    margin-top: .5rem;
+    width: 2rem;
+}
+
+.airdropx {
+        color: #656565;
+    font-family: SF Pro Display;
+    margin-top: .6rem;
+    font-size: 11px;
+    margin-left: .5rem;
+}
+
+.airdx {
+      color: #ddd;
+    font-family: SF Pro Display;
+    font-size: 13px;
+    margin-left: .5rem;
+}
+
+.close-aidrop {
+      background-color: transparent;
+    border: 1px solid #434343;
+    width: 2rem;
+    height: 2rem;
+    float: right;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: .4rem;
+    right: .5rem;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 100%;
+    transition: .5s;
+}
+
+.close-aidrop:hover {
+    transition: .5s;
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.2);
+}
+
+.device-list {
+       background-color: transparent;
+    width: 26rem;
+    height: 15rem;
+    overflow: auto;
+}
+
+.device-list-item {
+        width: 6rem;
+    height: 6rem;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    background-color: transparent;
+    float: left;
+}
+
+.device-list-item img {
+       display: block;
+    width: 5rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+.cname {
+      color: #fff;
+    font-family: SF Pro Display;
+    font-size: 11px;
+    margin-top: .5rem;
+}
+
+.album-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: album-fadeIn 0.3s ease forwards;
+  z-index: 999;
+}
+
+.album-modal-content {
+    background: #161616;
+    color: white;
+    padding: 2rem;
+    border-radius: 26px;
+    width: 15rem;
+    max-width: 90%;
+    animation: album-scaleIn 0.3s ease forwards;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.albu-tit {
+        font-family: 'SF PRO DISPLAY';
+    font-size: 15px;
+    color: #ddd;
+    margin: 0;
+}
+
+.album-inputx {
+     width: 100%;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border: none;
+    width: 14rem;
+    margin-left: -0.2rem;
+    border-radius: 19px;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    background: #ffffff05;
+    color: white;
+}
+
+.album-inputx:focus {
+    outline: 0;
+}
+
+.album-modal-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.albot {
+        padding: 0.5rem 1rem;
+    border: none;
+    width: 10rem;
+    height: 2.2rem;
+    cursor: pointer;
+    background: #444;
+    font-family: SF Pro Display;
+    color: white;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+
+.album-btn {
+      padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background: #444;
+    font-family: SF Pro Display;
+    color: white;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+
+.album-btn:hover {
+  background: #666;
+}
+
+@keyframes album-fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes album-scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.delete-album {
+       background-color: #ff4343;
+    width: 1rem;
+    height: 1rem;
+    transition: .5s;
+    cursor: pointer;
+    margin-right: .5rem;
+    margin-left: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    
+}
+
+.album-input {
+        width: 8rem;
+    background: transparent;
+    color: #fff;
+    font-family: 'SF PRO DISPLAY';
+    border: 1px solid transparent;
+    font-size: 14px;
+}
+
+.album-input:focus {
+    outline: 0;
+}
+
+.save-btn {
+        width: fit-content;
+    background: #9f9f9f;
+    font-family: 'SF PRO DISPLAY';
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px;
+}
+
+/* seçili foto üzerinde gri overlay ve check */
+.photo-item.selected {
+  position: relative;
+  filter: brightness(0.7);
+}
+
+.photo-item .select-check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  background: #0072ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 10;
+}
+
+/* sil butonu */
+.delete-selected-btn {
+      position: absolute;
+    top: 5rem;
+    right: 1rem;
+    background: transparent;
+    color: #ddd;
+    font-size: 15px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: .5s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.delete-selected-btn:hover {
+    transition:.5s;
+    color: #fff;
+}
+
+.addtoalbum-btn {
+     position: absolute;
+    top: 5rem;
+    right: 4.5rem;
+    background: transparent;
+    color: #ddd;
+    border: none;
+    font-size: 15px;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.album-select-modal {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1002;
+}
+
+.album-select-content {
+      background: #141414;
+    color: #fff;
+    border-radius: 8px;
+    width: 300px;
+    padding-bottom: 1rem;
+}
+
+.album-select-content h3 {
+        font-family: 'SF PRO DISPLAY';
+    color: #c5c5c5;
+    padding-left: 1.5rem;
+}
+
+
+.album-option {
+      padding: 0.5rem;
+    cursor: pointer;
+    color: #ddd;
+    background: #121212;
+    margin: auto;
+    border-radius: 7px;
+    width: 14.5rem;
+    font-family: 'SF PRO DISPLAY';
+    border-bottom: 1px solid #484848;
+    transition: .5s;
+}
+
+.album-option:hover { background: #0277c5; transition: .5s;}
+
+.photo-list {
+      background-color: transparent;
+    width: 100%;
+    height: 49rem;
+    overflow: auto;
+}

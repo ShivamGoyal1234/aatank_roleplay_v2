@@ -1,0 +1,342 @@
+.settings-app-frame {
+      background-color: transparent;
+    width: 100%;
+    height: 54rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.settings-app-frame.light {
+    background-color: #e6e6e6 !important;
+}
+
+.settings-app-left-bar.light {
+    background-color: #ffffff !important;
+    color: black !important;
+    border: 1px;
+}
+
+.settings-app-left-bar {
+      background-color: #0e0e0e;
+    width: 16rem;
+    height: 93%;
+    flex-direction: column;
+    margin-top: 3rem;
+    display: flex;
+    color: #fff;
+    position: absolute;
+    left: 1rem;
+    border: 1px solid #181818;
+    border-radius: 2rem;
+}
+
+.settings-item.light {
+    color: #3d3d3d !important;
+}
+
+.appa-title {
+      font-family: SF Pro Display;
+    font-weight: 600;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    font-size: 24px;
+    margin: 0;
+}
+
+.logar-part {
+      display: flex;
+    justify-content: flex-start;
+    width: 79%;
+    margin: auto;
+    height: 4rem;
+    background-color: transparent;
+    margin-top: 3rem;
+}
+
+.hesap-title.li {
+    color: black !important;
+}
+
+.hesap-title {
+       font-family: 'SF Pro Display';
+    color: #fff;
+    position: relative;
+    top: .4rem;
+    left: .7rem;
+}
+
+.hesap-info-txt {
+    font-family: 'SF Pro Display';
+    color: #818181;
+    position: relative;
+    top: .5rem;
+    left: .7rem;
+    font-size: 13px;
+}
+
+.logar-part img {
+        width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+
+.settings {
+     background-color: transparent;
+    width: 87%;
+    height: 39rem;
+    position: absolute;
+    left: 1rem;
+    top: 9rem;
+}
+
+.setting-item-logo {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    font-size: 11px;
+    color: #fff;
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: #FF9500;
+}
+
+.setting-item-logo.blue {
+    background-color: #007AFF;
+    transition: .5s;
+}
+
+.setting-item-logo.gray {
+    background-color: #909094;
+        transition: .5s;
+}
+
+.setting-item-logo.green {
+    background-color: #34C759;
+        transition: .5s;
+}
+
+.setting-item-logo.green2 {
+    background-color: #15a966;
+    color: white;
+        transition: .5s;
+}
+
+.settings-item {
+      background-color: transparent;
+    width: 100%;
+    height: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.app-namex {
+    font-family: SF Pro Display;
+    margin-left: .5rem;
+    font-size: 14px;
+}
+
+.settings-item.selected.light {
+    background-color: #0000001c;
+}
+
+.settings-item.selected {
+      background-color: #ffffff1c;
+    transition: .5s;
+    border-radius: 4rem;
+    font-weight: 500;
+    color: #0087ff !important;
+}
+
+.settings-item.selectedt {
+       color: #ffd400 !important;
+    background: #ffd4001f;
+    border-radius: 10rem;
+}
+
+.settings-item.selectedra {
+    color: #00ffbc !important;
+    background: #00ff9e1f;
+    border-radius: 10rem;
+}
+
+.settings-app-general-header.light {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.settings-app-general-items.light {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.settings-bottom.light {
+    background-color: #2a2a2a28 !important;
+}
+
+.settings-wallpaper-box.light {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.li {
+    color: black !important;
+}
+
+.plane-toggle {
+    display: inline-block;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    height: 20px;
+}
+
+.plane-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.plane-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.plane-slider:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.plane-toggle input:checked + .plane-slider {
+    background-color: #00b894;
+}
+
+.plane-toggle input:checked + .plane-slider:before {
+    transform: translateX(20px);
+}
+
+.settings-app-main-part {
+       background-color: transparent;
+    width: 78%;
+    height: 50rem;
+    position: absolute;
+    left: 18rem;
+    top: 3rem;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.settings-app-general-header {
+     background-color: #ffffff1a;
+    width: 41rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    flex-direction: column;
+    height: 9rem;
+    border-radius: 30px;
+    margin-top: 2rem;
+}
+
+.gen-title {
+    font-family: SF Pro Display;
+    font-weight: 600;
+    margin-top: .7rem;
+}
+
+.genx-span {
+    color: #a1a1a1;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.settings-app-general-items {
+    width: 40rem;
+    height: 9.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #ddd;
+    border-radius: 23px;
+    background-color: #1a1a1a;
+}
+
+.settings-app-general-item {
+      background-color: transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.settings-app-general-item.light {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.settings-tabbar {
+    background-color: #8a8a8a;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 14px;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-tabbar.white {
+    background-color: #fff !important;
+    color: rgb(0, 140, 255);
+}
+
+.settings-bottom {
+    width: 89%;
+    height: .1px;
+    margin: auto;
+    background-color: #333333;
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+}
+
+.op-name {
+    font-family: SF Pro Display;
+    font-size: 13px;
+    margin-left: .5rem;
+}
+
+.right--x {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 11px;
+}

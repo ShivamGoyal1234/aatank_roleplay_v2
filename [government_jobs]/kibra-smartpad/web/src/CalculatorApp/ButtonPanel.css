@@ -1,0 +1,38 @@
+.component-button-panel {
+     gap: .6rem;
+    height: 17rem;
+    width: 78rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    margin-top: 4rem;
+    background: #0e0e0e;
+    border-radius: 1rem;
+}
+
+/* .component-button-panel > div {
+  flex: 1 1 calc(33% - 0.75rem);
+  display: flex;
+} */
+
+.component-button-panel Button {
+      flex: 1;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    color: #fff;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-family: inherit;
+    height: 7rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.component-button-panel Button:hover {
+  background: linear-gradient(135deg, #2a2a2a, #3c3c3c);
+  transform: translateY(-2px);
+}
+

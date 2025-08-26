@@ -1,0 +1,250 @@
+.map-app-frame {
+    background-color: transparent;
+    width: 100%;
+    height: 54rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.leaflet-marker-icon {
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+}
+
+
+.share-location-part {
+      background-color: #1b1b1be8;
+    width: 16rem;
+    flex-direction: column;
+    height: fit-content;
+    display: flex;
+    z-index: 100;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+}
+
+.map-app-title {
+       color: #fff;
+    font-family: SF Pro Text;
+    position: relative;
+    left: 2rem;
+    font-size: 23px;
+    top: 1rem;
+}
+
+.spanlab {
+      font-family: SF Pro Text;
+    color: gray;
+    font-size: 13px;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+}
+
+.fav-loc {
+      display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    width: 13rem;
+    overflow-x: auto;
+    position: relative;
+    top: 3rem;
+    left: 1.9rem;
+}
+
+.fav-loc-item {
+    flex: 0 0 auto;
+    width: 2.7rem;
+    height: 2.7rem;
+    border: 1px solid #525252;
+    border-radius: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.fav-loc-item:hover {
+    transition: .5s;
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+.fav-loc-item img {
+    width: 1rem;
+    height: 1rem;
+        object-fit: contain;
+
+}
+
+.share-button {
+     position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    background: #005e7b80;
+    justify-content: center;
+    color: #00bfff;
+    width: 90%;
+    font-size: 13px;
+    height: 2.6rem;
+    cursor: pointer;
+    margin-left: .8rem;
+    margin-top: 3.5rem;
+}
+
+.share-button i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* main.css */
+
+/* Overlay for modal backdrop */
+.mapapp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+}
+
+/* Show overlay when active */
+.mapapp-modal-overlay.mapapp-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal content container */
+.mapapp-modal-content {
+    background: #171717;
+    padding: 1.5rem;
+    font-family: 'SF Pro Text';
+    border-radius: 0.75rem;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate modal content in when overlay is shown */
+.mapapp-modal-overlay.mapapp-show .mapapp-modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Header title inside modal */
+.mapapp-modal-content h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #d3d3d3;
+    text-align: center;
+}
+
+/* Each player item in list */
+.mapapp-player-item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #383838;
+    border-radius: 4px;
+    color: #cccccc;
+    transition: background 0.2s;
+}
+
+.mapapp-player-item:hover {
+  background: #005e7b80;
+}
+
+/* Close button inside modal */
+.mapapp-close-modal {
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  transition: color 0.2s;
+}
+.mapapp-close-modal:hover {
+  color: #fff;
+}
+
+/* Share button outside modal */
+.mapapp-share-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  user-select: none;
+  transition: background 0.2s;
+}
+.mapapp-share-button i {
+  margin-right: 0.5rem;
+}
+.mapapp-share-button:hover {
+  background: #0056b3;
+}
+
+/* Label above share button */
+.mapapp-modal-spanlab {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.showLocax {
+     background-color: transparent;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 3rem;
+    font-family: SF Pro Text;
+}
+
+.markerpoint {
+     position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    background: #ffffff24;
+    justify-content: center;
+    color: #ffffff;
+    width: 88%;
+    font-size: 12px;
+    height: 2.6rem;
+    cursor: pointer;
+    margin-top: 0;
+}

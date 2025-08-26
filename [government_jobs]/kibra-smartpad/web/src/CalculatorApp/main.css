@@ -1,0 +1,15 @@
+.component-app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.calcular-component {
+      width: 88rem;
+    border-radius: 1rem;
+    right: 0;
+    top: 0rem;
+    position: absolute;
+    left: 0rem;
+}

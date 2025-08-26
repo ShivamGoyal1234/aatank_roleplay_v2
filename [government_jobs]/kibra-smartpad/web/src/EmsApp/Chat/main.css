@@ -1,0 +1,127 @@
+/* EMSChat.css */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display'), url('/fonts/SF-Pro-Display.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ems-chat {
+       display: flex;
+    flex-direction: column;
+    height: 78%;
+    margin-top: 1rem;
+    width: 64rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    padding: 1rem;
+    background: transparent;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.ems-chat-header {
+      background-color: rgb(24 24 24);
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    height: 3rem;
+}
+
+.ems-heax {
+    color: #fff;
+    font-family: SF Pro Display;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.ems-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 31rem;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.msg {
+     position: relative;
+    max-width: 60%;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border-radius: 20px;
+    background: #2c2c2e;
+    color: #d1d1d6;
+    line-height: 1.4;
+    align-self: flex-start;
+}
+
+.mine {
+  align-self: flex-end;
+  background: #ff3b30;
+  color: #fff;
+}
+
+.timestamp {
+      position: absolute;
+    bottom: -19px;
+    right: 12px;
+    font-size: 10px;
+    opacity: 0.4;
+}
+
+.sender {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.timestamp {
+      position: absolute;
+    bottom: -18px;
+    width: fit-content;
+    right: -6px;
+    font-size: 10px;
+    opacity: 0.4;
+}
+
+.ems-input {
+     display: flex;
+    align-items: center;
+    border-radius: 7px;
+    padding: 12px 16px;
+    background: rgb(24 24 24);
+}
+
+.ems-input input {
+     flex: 1;
+    padding: 11px 14px;
+    background: #ffffff08;
+    border: none;
+    font-family: 'SF Pro Display';
+    border-radius: 7px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.ems-input input::placeholder {
+  color: #7a7a7e;
+}
+
+.ems-input button {
+  margin-left: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #0a84ff;
+}
+
+.ems-input button:hover {
+  opacity: 0.8;
+}

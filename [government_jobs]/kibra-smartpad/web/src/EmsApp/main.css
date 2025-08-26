@@ -1,0 +1,490 @@
+.EmsApp-Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.EmsApp-LoginPart {
+    background-color: transparent;
+    width: 26rem;
+    height: 31rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 1px;
+}
+
+.EmsApp-LoginPart img {
+      width: 6rem;
+    height: 6rem;
+}
+
+.welcome-text {
+      color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    width: 16rem;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 3rem;
+    line-height: 132.836%;
+}
+
+.info-text {
+      color: #9598A3;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132.836%;
+}
+
+.password-box {
+      width: 322px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+    border-radius: 110px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.password-box input {
+       color: #838383;
+    background: transparent;
+    leading-trim: both;
+    text-edge: cap;
+    margin-left: 2rem;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 15px;
+    font-style: normal;
+    margin-top: 1.1rem;
+    border: 1px;
+    font-weight: 400;
+    line-height: 132.836%;
+}
+
+.password-box input:focus {
+    outline: 0;
+}
+
+.EmsApp-Dashboard {
+       background: transparent;
+    width: 100%;
+    height: 49rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.map-title {
+      font-family: SF Pro Display;
+    color: #cbcbcb;
+    font-weight: 600;
+    position: relative;
+    bottom: .5rem;
+}
+
+.paramedicList {
+       background-color: transparent;
+    width: 18rem;
+    height: 16rem;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+    margin-top: .5rem;
+}
+
+.param-ea {
+      width: 100%;
+    height: 3rem;
+    background-color: #141414;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.param-ea-title {
+       color: #c3c3c3;
+    font-weight: 600;
+    margin-left: 1rem;
+    font-size: 15px;
+    font-family: SF Pro Display;
+}
+
+.paramed-list {
+       background-color: transparent;
+    width: 100%;
+    height: 81%;
+    overflow: auto;
+    justify-content: center;
+    gap: 8px;
+    display: flex;
+}
+
+.paramed-list-item {
+       width: 94%;
+    height: 52px;
+    margin-top: .5rem;
+    border-radius: 5px;
+    border: 1.6px solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.inx-pa {
+       display: flex;
+    justify-content: center;
+    background: transparent;
+    width: 14rem;
+    flex-direction: column;
+}
+
+.inx-asq {
+       font-family: SF Pro Display;
+    color: #d1d1d1;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.inx-asqx {
+     font-family: SF Pro Display;
+    color: #818181;
+    font-size: 13px;
+    margin-left: 1rem;
+}
+
+.map-title2 {
+       font-family: SF Pro Display;
+    color: #cdcdcd;
+    top: .5rem;
+    font-weight: 600;
+    position: relative;
+    bottom: .5rem;
+}
+
+.EmsApp-LeftBar {
+         width: 19rem;
+    height: 100%;
+    margin-top: 1rem;
+    border-right: 1px solid #181818;
+    float: left;
+}
+
+.EmsApp-LeftBar-Header {
+      background: transparent;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #181818;
+    border-top: 1px solid #181818;
+}
+
+.EmsApp-LeftBar-Header img {
+        width: 4rem;
+    height: 4rem;
+    position: relative;
+    margin-left: 1.5rem;
+    flex-shrink: 0;
+}
+
+.title-ems {
+        color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132.836%;
+}
+
+.desc-ems {
+    color: #7D7D7D;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132.836%; /* 18.597px */
+}
+
+.EmsApp-LeftBar-MainPanel {
+    background-color: transparent;
+    width: 100%;
+    height: 43rem;
+}
+
+.EmsApp-PartOne {
+       background-color: transparent;
+    width: 100%;
+    height: 86%;
+    margin-top: 1rem;
+}
+
+.EmsApp-PartOne-Header {
+      background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 3rem;
+}
+
+.EmsApp-SubBox {
+      width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    justify-content: center;
+    border-radius: 6px;
+    background: #151515;
+}
+
+.part-x {
+      color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 1rem;
+    line-height: normal;
+}
+
+.EmsApp-List {
+       background-color: transparent;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+}
+
+.EmsApp-List-Item {
+     width: 85%;
+    border-radius: 10px;
+    background: #101010;
+    height: 157px;
+    margin-top: .5rem;
+    display: flex;
+    margin-left: 1.5rem;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.time-clause {
+       color: #464646;
+    text-align: left;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    position: relative;
+    left: 1rem;
+    top: .8rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.alert-title {
+      color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    line-height: normal;
+}
+
+.alert-detail-box {
+      border-radius: 0px 0px 8px 8px;
+    background: #151515;
+    width: 96%;
+    height: 80px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 8px;
+    top: .3rem;
+    flex-shrink: 0;
+}
+
+.alert-detail-str{
+      color: #9B9B9B;
+    font-family: SF Pro Text;
+    font-size: 13px;
+    margin-left: .7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.EmsApp-MiddleDashboard {
+    width: 78%;
+    height: 100%;
+}
+
+.EmsApp-MiddleHeader {
+    width: 100%;
+    height: 6rem;
+    border-top: 1px solid #181818;
+    margin-top: .98rem;
+    background-color: transparent;
+    gap: 4px;
+    align-items: center;
+    border-bottom: 1px solid #181818;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-title {
+    color: #5A5A5A;
+    font-family: SF Pro Text;
+    font-size: 15px;
+    font-style: normal;
+    margin-left: 3rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .5s;
+    line-height: normal;
+}
+
+.menu-title.selected {
+    color: #fff;
+    transition: .5s;
+}
+
+.menu-title:hover {
+    transition: .5s;
+    color: #fff;
+}
+
+.paramedics-team {
+        background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    gap: 8px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.paramedic-team-item {
+     width: 250px;
+    height: 300px;
+    margin-top: .5rem;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    flex-direction: column;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.paramedic-team-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0.00) 0%, #101010 100%);
+  z-index: 1;
+}
+
+.job-grade {
+    color: #9B9B9B;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.worker-name {
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.search-player {
+       background-color: #101010;
+    width: 21rem;
+    position: absolute;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    right: 1rem;
+    height: 3rem;
+    /* border: 1px solid #353535; */
+    border-radius: 9px;
+}
+
+.search-player input:focus {
+    outline: 0;
+}
+
+.manisalar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+}
+
+.search-player input {
+      background: transparent;
+    width: 10rem;
+    height: 100%;
+    color: #FFF;
+    margin-left: .6rem;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    border: 1px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dropdown{z-index: 100; border: 1px solid transparent; color:#ddd; list-style:none;margin:0;padding:0.5rem;background:#101010; transition: .7s;border:1px solid #ccc;border-radius:4px;position:absolute;top:100%;left:0;width:100%;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s ease,opacity .3s ease}
+.dropdown.open{    max-height: 151px;
+    opacity: 1;
+    border: 1px;
+    width: 20rem;
+    margin-top: .5rem;}
+.dropdown li{padding:.5rem;cursor:pointer; font-family: 'SF Pro Display'}
+.dropdown li:hover{background:#101010; color: #fff; transition: .7s;}

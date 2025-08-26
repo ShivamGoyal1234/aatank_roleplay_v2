@@ -1,0 +1,1205 @@
+.mdt-app-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #101010;
+    background-size: cover;
+    z-index: 1;
+}
+
+.mdt-app-frame-white {
+    background-color: #dfdfdf !important;
+}
+
+.mdt-app-frame-alt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 40rem;
+    background: url('./build/mdt-back.png') no-repeat center center;
+    background-size: cover;
+}
+
+button, 
+a, 
+div:focus, 
+div:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.mdt-overview-part {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.mdt-overview-part.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.mdt-app-login-screen {
+    width: 27rem;
+    height: 31rem;
+    position: absolute;
+    background: transparent;
+    left: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.mdt-app-logo {
+    width: 10rem;
+    height: 10rem;
+    background: url('./build/mdt-minilogo.png') no-repeat center center;
+}
+
+.mdt-login-screen-text {
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    margin-top: 5rem;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132.836%; /* 26.567px */
+}
+
+.mdt-login-screen-desc {
+    color: #9598A3;
+    text-align: center;
+    leading-trim: both;
+    margin-top: 1rem;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132.836%; /* 18.597px */
+}
+
+.password-entered {
+    width: 322px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 1rem;
+    border-radius: 110px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.password-entered input {
+    border: 1px solid transparent;
+    font-family: SF Pro;
+    margin-left: 2rem;
+    color: #fff;
+    background: transparent;
+}
+
+.password-entered input:focus {
+    outline: 0;
+}
+
+.login-mdt-panel {
+    background-color: transparent;
+    width: 1rem;
+    cursor: pointer;
+    height: 1.5rem;
+    position:absolute;
+    right: 2rem;
+}
+
+.login-mdt-panel span {
+    color: #c5c5c5 !important;
+}
+
+.mdt-app-panelscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-size: cover;
+    z-index: 1;
+}
+
+.mdt-app-panelscreen-main {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 3rem;
+    border-top: 1px solid #1e1e1e;
+}
+
+.mdt-left-panel {
+    background-color: #0808080a;
+    width: 21.5rem;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #181818;
+}
+
+
+.mdt-left-mainpart {
+    background-color: transparent;
+    width: 100%;
+    height: 5.4rem;
+    border-bottom: 1px solid #1e1e1e;
+    display: flex; /* Flexbox ekliyoruz */
+    align-items: center; /* Dikeyde ortalama */
+}
+
+.leftmain {
+    border-bottom: 1px solid #cbcbcb !important;
+    border-right: 1px solid #cbcbcb !important;
+    border-top: 1px solid #cbcbcb !important;
+}
+
+.mdt-left-mainpart img {
+    width: 3.8rem;
+    margin-left: 1.5rem; /* Sol kenardan boşluk */
+}
+
+.mdt-left-logo-content {
+    display: flex; /* Flexbox aktif */
+    flex-direction: column; /* İçerikleri dikey hizala */
+    margin-left: 1rem; /* Logo ile metin arasındaki boşluk */
+}
+
+.mdt-left-logo-header {
+    color: #fff;
+    font-family: "SF Pro", sans-serif;
+    font-size: 1.2rem;
+}
+
+.mdt-left-dark {
+    color: #000 !important;
+}
+
+.mdt-left-logo-subheader {
+    color: #999;
+    font-family: "SF Pro", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 0.2rem; /* Header ile arasında hafif boşluk */
+}
+
+.notifications-box {
+    background: transparent;
+    width: 100%;
+    height: 81%;
+    display: flex;
+    flex-direction: column; /* İçerikleri dikey sırala */
+    gap: 1rem; /* Aralarında 1rem boşluk bırak */
+}
+
+.announce-box {
+    background: transparent;
+    width: 100%;
+    height: auto; /* Yüksekliği içeriğe göre ayarla */
+}
+
+.announcebox-header {
+    background: transparent;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem; /* Icon ve label arasındaki boşluk */
+}
+
+.announcebox-header-icon {
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    background: #151515;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.actionwhite {
+    background-color: #bbbbbb !important;
+    color: #000 !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.announcebox-header-label {
+    color: #e3e3e3;
+    font-family: 'SF Pro Display';
+    font-size: 15px;
+    margin-left: 0.5rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header-white {
+    color: #000 !important;
+}
+
+.anbox-hd-lbl {
+    color: #4a4a4a !important;
+}
+
+.announcebox-notifications::-webkit-scrollbar{
+    width:0px;
+    background:#18191D;
+    border-radius:4px;
+}
+
+.announcebox-notifications {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    width: 100%;
+    margin-top: .7rem;
+    height: 266px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+
+.announcebox-notify-item {
+    width: 81%;
+    height: auto;
+    border-radius: 10px;
+    background: #151515;
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+    transform: none;
+    filter: none;
+    color: #FFF;
+    font-family: "SF Pro Display", sans-serif;
+}
+
+.announcebox-notify-item-white {
+    background-color: #c7c7c7 !important;
+}
+
+.text-white {
+    color: #444444 !important;
+}
+
+.announcebox-timestamp {
+    font-size: 0.75rem;
+    color: #64666F;
+    margin-bottom: 0.5rem;
+}
+
+.announcebox-header {
+    font-size: .9rem;
+    color: #7d7d7d;
+    margin-bottom: 1rem;
+}
+
+.announcebox-header-bold {
+    font-weight: 700;
+    color: #fff;
+}
+
+.announcebox-dark {
+    color: #262626 !important;
+}
+
+.announcebox-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.announcebox-detail {
+    display: flex;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    font-weight: 400;
+    color: #BDBDBD;
+}
+
+.detail-label-white {
+    color: #4c4c4c !important;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #FFF;
+}
+
+.detail-white {
+    color: #383838 !important;
+}
+
+.announcebox-notify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.announcebox-badge {
+    border-radius: 4px;
+    background: rgba(225, 70, 70, 0.25);
+    color: #FF3434;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.announcebox-user {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.thedark {
+    background-color: #bfbfbf !important;
+}
+
+.announcebox-username {
+    color: #FFF177;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.announcebox-user svg path {
+    fill: #FFF177;
+}
+
+.anbox-user-white {
+    color: #2a2a2a !important;
+}
+
+.announcebox-notify-content {
+    color: #BDBDBD;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.2rem;
+}
+
+.announcebox-notify-date {
+    font-size: 0.7rem;
+    color: #64666F;
+}
+
+.mdt-homepage-box {
+    background: transparent;
+    width: 76%;
+    position: relative;
+    z-index: 2;
+    height: 94%;
+}
+
+.mdt-homepage-box-header {
+    background: transparent;
+    width: 100%;
+    height: 5.4rem;
+    border-bottom: 1px solid #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding-left: 2rem;
+}
+
+.mdt-homepage-box-header-item {
+    color: #5A5A5A;
+    font-family: SF Pro Text;
+    cursor: pointer;
+    transition: .4s;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 1.5rem; 
+}
+
+.selected {
+    color: #fff !important;
+    transition: .4s;
+}
+
+.mdt-homepage-box-header-item:hover {
+    transition: .4s;
+    color: #fff;
+}
+
+.mdt-homepage-box-subbox {
+    background-color: transparent;
+    width: 100%;
+    height: 19.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mdt-homepage-box-subbox-item {
+    background-color: transparent;
+    width: 21.5rem;
+    height: 99%;
+    margin-left: .1rem;
+}
+
+.mdt-homepage-box-subbox-item-header {
+    background-color: transparent;
+    width: 100%;
+    height: 3rem;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+iframe {
+    position: relative;
+    z-index: 1; /* Diğer elemanların üzerinde düzgün render */
+}
+
+.announcebox-header-righticon {
+    margin-left: auto; /* Sağ tarafa itmek için */
+    cursor: pointer;
+}
+
+.box-lists {
+    width: 100%;
+    height: 16.7rem;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: .5rem;
+    flex-shrink: 0;
+    flex-direction: column;
+    overflow-y:auto;
+    scrollbar-width:thin;
+    scrollbar-color:#444 #18191D;
+    overflow: auto;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.box-lists::-webkit-scrollbar{
+    width:4px;
+    background:#18191D;
+    border-radius:4px;
+  }
+  .box-lists::-webkit-scrollbar-thumb{
+    background:#2C2D31;
+    border-radius:4px;
+  }
+
+  .box-lists::-webkit-scrollbar-track{
+    background:#18191D;
+    border-radius:4px;
+  }
+
+.box-lists-item {
+    border-radius: 6px;
+    background: #151515;
+    width: 90%;
+    height: 64px;
+    margin-left: 0rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-lists-item-icon {
+    color: #5A5A5A;
+    display: flex;
+    cursor: pointer;
+    margin-right: 1.2rem;
+    align-items: center;
+}
+
+
+.box-lists-item input {
+    background: transparent;
+    width: 100%;
+    border: 1px solid transparent;
+    font-family: 'SF Pro', sans-serif;
+    color: #ddd;
+    height: 1rem;
+    padding: 8px;
+}
+
+.box-lists-item input:focus {
+    outline: 0;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%); /* Yukarıdan başla */
+        opacity: 0; /* Görünmez */
+    }
+    to {
+        transform: translateY(0); /* Normal konumuna gelir */
+        opacity: 1; /* Görünür olur */
+    }
+}
+
+.box-lists-item-content {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.box-lists-item-image {
+    width: 48px;
+    margin-left: .6rem;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.box-lists-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-lists-item-title {
+    color: #FFF;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-family: "SF Pro Display", sans-serif;
+}
+
+.dark-title {
+    color: #1e1e1e !important; 
+}
+
+.box-lists-item-subtitle {
+    color: #9B9B9B;
+    font-size: 0.7rem;
+    margin-top: .2rem;
+    margin-left: 1rem;
+    font-family: "SF Pro Display", sans-serif;
+}
+
+.slide-down {
+    animation: slideDown 0.3s ease-out; /* Animasyon adı, süresi ve yumuşak geçiş */
+    opacity: 1;
+}
+
+.imx {
+    color: #64666E;
+}
+
+.wanted-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+    font-family: "SF Pro Display", sans-serif;
+}
+
+.wanted-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1d1f24;
+    border: 1px solid #2c2f35;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wanted-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.wanted-title {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.wanted-subtitle {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #b0b3b8;
+}
+
+.info-btn {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.info-btn:hover {
+    background-color: #d62839;
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    font-family: "SF Pro Display", sans-serif;
+
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-overlay-weapon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    font-family: "SF Pro Display", sans-serif;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #17181C;
+    color: #FFF;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.modal-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.modal-photo {
+    width: 150px;
+    height: 164px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-details h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #3a3d44;
+    padding-bottom: 0.5rem;
+}
+
+.modal-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #b0b3b8;
+}
+
+.close-btn {
+    background-color: #e63946;
+    color: #fff;
+    width: fit-content;
+    border: none;
+    border-radius: 22px;
+    font-family: 'SF PRO DISPLAY';
+    font-size: .9rem;
+    float: right;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #d62839;
+}
+
+.weapon-license-container {
+    background-color: #0d0d0e;
+    width: 34rem;
+    height: 37rem;
+    position: absolute;
+    border-radius: .34rem;
+    margin: auto;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.weapon-license-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.weapon-license-header {
+    width: 92%;
+    height: 2.3rem;
+    border-bottom: 1px solid #252525;
+    display: flex;
+    margin: auto;
+    margin-top: .5rem;
+    font-size: 1.1rem;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'SF PRO DISPLAY';
+    color: #c1c1c1;
+}
+
+.weapon-license-desc {
+    font-family: 'SF Pro', sans-serif;
+    color: #707687;
+    padding-top: .2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.weapon-license-part {
+    background-color: transparent;
+    margin: auto;
+    width: 91%;
+    flex-direction: column;
+    height: 86%;
+}
+
+.weapon-license-addpart {
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    display: flex;
+}
+
+.weapon-license-addpart-label {
+    font-family: 'SF Pro', sans-serif;
+    color: #8f9ca7;
+    font-size: .9rem;
+}
+
+.weapon-license-descv {
+    font-size: .67rem;
+    font-family: 'SF Pro', sans-serif;
+    text-transform: uppercase;
+    padding-top: .2rem;
+    color: #707687;
+}
+
+.weapon-givable-licenses {
+    background-color: transparent;
+    width: 100%;
+    height: 192px;
+    border-radius: .3rem;
+    overflow: auto;
+}
+
+.player-item {
+    background-color: #15171e;
+    width: 99%;
+    height: 3rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .2rem;
+    margin-top: .5rem;
+}
+
+.player-item:hover, .player-weapon:hover {
+    transition: .5s;
+    background-color: #0a0b0f;
+}
+
+.player-item img {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-left: .25rem;
+    border-radius: .3rem;
+}
+
+.player-item-infos {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: .5rem;
+    flex-direction: column;
+}
+
+.player-item-infos-pname {
+    color: #fff;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 300;
+    position:relative;
+    left: .4rem;
+    top:.5rem;
+}
+
+.player-item-infos-pcitizenid {
+    font-size: .67rem;
+    font-family: 'SF Pro', sans-serif;
+    text-transform: uppercase;
+    position:relative;
+    left: .5rem;
+    top:.55rem;
+    color: #707687;
+}
+
+.player-weapon {
+    background-color: transparent;
+    width: 99%;
+    height: 2.2rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    transition: .5s;
+    border: 1px solid #393939;
+    border-radius: .2rem;
+    margin-top: .5rem;
+}
+
+.player-weapon span {
+    color: #dbdbdb;
+    font-family: SF Med, sans;
+    padding-left: 1rem;
+}
+
+.give-license-button {
+    border-radius: 4px;
+    background: #6a76a1;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+    font-family: 'SF PRO DISPLAY';
+    justify-content: center;
+    width: 100%;
+    margin-top: .5rem;
+    height: 55px;
+}
+
+.give-license-button:hover {
+    transition: .5s;
+    background: #4b69d3;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    background: #21242b;
+    border-radius: .2rem;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    margin-top: .5rem;
+    float: left;
+    position: relative;
+    left: -.5rem;
+    margin-left: .5rem;
+    padding-left: .5rem;
+    width: fit-content;
+    padding-right: 2rem;
+    gap: 17px;
+  }
+  
+  .radio-container input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    transition: all 0.3s ease; /* Yumuşama efekti */
+  }
+  
+  .radio-container input[type="radio"]:checked {
+    background-color: white;
+    border-color: white;
+  }
+  
+  .radio-container input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease; /* Yumuşama efekti */
+  }
+  
+  .radio-container label {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+  }
+
+.close-model {
+    color: #858689;
+    float: right;
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+}
+
+.dropdown-menuv {
+    position: absolute;
+    background: rgb(13 15 21);
+    border-radius: 8px;
+    overflow: hidden;
+    left: 41rem;
+    font-size: .8rem;
+    color: #afafaf;
+    top: 4rem;
+    font-family: 'SF Pro Display';
+    z-index: 100;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  .dropx-white {
+    background: rgb(213 213 213) !important;
+    color: #000000 !important;
+  }
+  
+  .dropdown-menuv.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .dropdown-menuv div {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menuv div:hover {
+    background: rgba(126, 126, 126, 0.1);
+    transition: .5s;
+  }
+
+  .duty-toggle {
+    margin-left: auto;
+    margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    background: #1f2127;
+    border: 1px solid #2b2e36;
+    height: 34px;
+    padding: 0 10px 0 6px;
+    border-radius: 999px;
+  }
+  .duty-toggle.on { background: #15341f; border-color: #1f6a33; }
+  .duty-toggle.off { background: #2a1a1a; border-color: #6a1f1f; }
+  .duty-toggle .dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #8a8a8a;
+    transition: background .2s ease;
+  }
+  .duty-toggle.on .dot { background: #28c76f; }
+  .duty-toggle.off .dot { background: #e25555; }
+  .duty-toggle span { color: #cdd3dc; font-weight: 700; font-size: 12px; font-family: 'SF Pro Display'; }
+
+  .license-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+.license-modal-content {
+    height: auto;
+    background: #121212;
+    color: #e0e0e0;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 420px;
+    font-family: "SF Pro Display", sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.3s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+
+.license-modal-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #1dd3a9;
+}
+
+.license-modal-content h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #1dd3a9;
+}
+
+.ayir {
+    width: 100%;
+    border-bottom: 1px solid #333;
+    margin: 1rem 0;
+}
+
+.parts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.partone {
+    text-align: left;
+}
+
+.partone h3 {
+    margin: 0 0 0.3rem;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.partone span {
+    color: #f0f0f0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.close-btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #1dd3a9;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #17b89b;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+
+.fotolar {
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    height: fit-content;
+}
+
+.photos {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.photos img {
+    width: 150px;
+    height: auto;
+    margin-top: .5rem;
+    margin-left: .5rem;
+    position: relative;
+    left: -.5rem;
+    border: 1px solid #424242;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+  
+
+  .status-pending {
+  color: #cb9739;
+  font-weight: 500;
+}
+
+.status-wanted {
+    color: #f15555;
+    font-weight: 600;
+}

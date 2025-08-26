@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('assets/fonts/SFPro.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Normal';
+    src: url('assets/fonts/sfnormal.OTF') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro SemihBold';
+    src: url('assets/fonts/sfprosemibold.ttf') format('truetype');
+    font-weight: 400; /* Normal ağırlık */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bumbbled';
+    src: url('assets/fonts/Bumbbled.otf');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+@font-face {
+    font-family: 'SF Med';
+    src: url('assets/fonts/sfpromed.OTF');
+    font-weight: 400;
+    font-style: 'normal';
+}
+
+.criminalrecord-container {
+    background-color: #00000091;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.criminalrecord-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.criminal-record-box {
+    background-color: #131314;
+    width: 37rem;
+    border-radius: 7px;
+    transform: scale(0.95);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    align-items: center;
+    height: fit-content;
+}
+
+.criminalrecord-container.show .criminal-record-box {
+    transform: scale(1);
+}
+
+.criminal-record-title {
+    background: transparent;
+    font-family: SF Pro, sans-serif;
+    color: #c5c5c5;
+    position: relative;
+    width: 90%;
+    border-bottom: 1px solid #343439;
+    height: 1.7rem;
+    font-size: 18px;
+    top: 1rem;
+}
+
+.criminal-details {
+    background-color: transparent;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 2rem;
+}
+
+.criminal-data-part {
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.criminal-data-part-label {
+    font-family: SF Pro, sans-serif;
+    color: #b6b6b7;
+    font-size: 14px;
+}
+
+.criminal-data-part-offender {
+    background-color: transparent;
+    width: 100%;
+    height: 4.3rem;
+    border: 1px solid #34343b;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: .5rem;
+    border-radius: 3px;
+}
+
+.criminal-data-part-offender img {
+    width: 3.66rem;
+    height: 3.66rem;
+    padding-left: .3rem;
+    padding-top: .3rem;
+    border-radius: 6px;
+}
+
+.criminal-detail-part {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 1rem;
+    height: 100%;
+}
+
+.criminal-offender-name {
+    font-family: SF Pro, sans-serif;
+    color: #fff;
+}
+
+.criminal-offender-cid {
+    font-family: SF Pro, sans-serif;
+    color: #b0b0b7;
+    font-size: 11px;
+    padding-top: .2rem;
+}
+
+.search-offence {
+    background-color: transparent;
+    width: 100%;
+    height: 2.3rem;
+    margin-top: .5rem;
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #34343b;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-offence i {
+    padding-left: .7rem;
+    font-size: 11px;
+    cursor: pointer;
+    color: #63636f;
+}
+
+.search-offence input {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #cfcfcf;
+    padding-left: .5rem;
+    font-family: SF Pro, sans-serif;
+}
+
+.search-offence input:focus {
+    outline: 0;
+}
+
+.newcrime-list {
+    background-color: transparent;
+    width: 101%;
+    height: 9rem;
+    overflow: auto;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newcrime-list-item {
+    background-color: transparent;
+    width: 99%;
+    height: 2.6rem;
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #35353d;
+    cursor: pointer;
+    border-radius: 2px;
+    flex-shrink: 0; 
+}
+
+.newcrime-list-item i {
+    padding-left: .7rem;
+    color: gray;
+    font-size: 14px;
+}
+
+.crime-name {
+    background-color: transparent;
+    width: 67%;
+    font-family: SF Pro, sans-serif;
+    padding-left: .6rem;
+    font-size: 13px;
+    color: gray;
+}
+
+.crime-bedel {
+    background-color: transparent;
+    width: 20%;
+    font-family: SF Pro, sans-serif;
+    padding-left: .6rem;
+    text-align: right;
+    font-size: 13px;
+    color: #dd6868;
+}
+
+.datetime-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: .5rem;
+    gap: 1rem;
+  }
+  
+  .datetime-input {
+    padding: 0.5rem;
+    color: #919191;
+    border: 1px solid #393941;
+    background: #212127;
+    font-size: 12px;
+    border-radius: 4px;
+    font-family: 'SF PRO DISPLAY';
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .datetime-input:focus {
+    border-color: #007bff; /* Odaklanıldığında mavi çerçeve */
+  }
+  
+  .date-input {
+    width: 50%;
+  }
+  
+  .time-input {
+    width: 50%; 
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none; 
+}
+
+.evidences-list {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 2.4rem;
+}
+
+.evidence-list-item {
+    background-color: #2c2c2f;
+    width: fit-content;
+    height: 100%;
+    margin-top: .5rem;
+    cursor: pointer;
+    margin-left: .5rem;
+    padding-left: .5rem;
+    color: #b5b5b5;
+    padding-right: .5rem;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: SF Pro, sans-serif;
+    position: relative;
+    left: -0.5rem;
+    border-radius: 3px;
+}
+
+.create-criminalrecord {
+    background-color: #359d76;
+    width: 100%;
+    height: 3rem;
+    color: #fbfbfb;
+    display: flex;
+    margin-top: 1.2rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: SF Pro, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.criminal-record-title i:hover {
+    transition: .5s;
+    color: #fff;
+}
+
+.total-fine {
+    color: #ddd;
+    font-family: SF Pro Display;
+}

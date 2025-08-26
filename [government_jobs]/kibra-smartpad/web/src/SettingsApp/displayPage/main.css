@@ -1,0 +1,312 @@
+.setpage-themepart {
+      background-color: #ffffff1a;
+    width: 41rem;
+    display: flex;
+    align-items: center;
+    font-family: SF Pro Display;
+    color: #fff;
+    flex-direction: column;
+    height: 18rem;
+    border-radius: 30px;
+    margin-top: 2rem;
+}
+
+.setpage-x {
+    color: #a8a8a8;
+    font-family: 'SF PRO DISPLAY';
+    font-size: 14px;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.setpage-themes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+    margin-top: 3rem;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.setpage-themes-item {
+    width: 1rem;
+    height: 90%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.setpage-themepart {
+    background-color: #1c1c1e;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
+.theme-optionx {
+    position: relative;
+    width: 100%;
+    max-width: 120px;
+    overflow: hidden;
+    height: 105%;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.theme-optionx img {
+     width: 7rem;
+    height: 10rem;
+    border-radius: 16px;
+}
+
+.theme-option.selected {
+    border: 2px solid #0a84ff;
+}
+
+.theme-check {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #0a84ff;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.theme-auto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0a84ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.theme-nam {
+     font-size: 13px;
+    position: relative;
+    top: .5rem;
+}
+
+.theme-nam.li {
+    color: black !important;
+}
+
+
+.theme-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: #1c1c1e;
+    transition: border 0.3s;
+}
+
+.theme-radio input {
+    display: none;
+}
+
+.theme-preview {
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.theme-preview.light {
+    background: linear-gradient(135deg, #fbeee6, #ffb8b8);
+}
+
+.theme-preview.dark {
+    background: linear-gradient(135deg, #121212, #2c2c2e);
+}
+
+.theme-radio span {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.theme-radio.checked::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: fadeDot 0.2s ease forwards;
+}
+
+
+@keyframes fadeInIcon {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.theme-indicator.seced {
+    background-color: #00b0ff;
+    border-color: #00b0ff;
+}
+
+
+.theme-indicator {
+    position: absolute;
+    top: 13rem;
+    right: 48px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #000000;
+    opacity: 0;
+    animation: fadeInIcon 0.2s ease forwards;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.devsirme {
+       font-family: SF Pro Display;
+    color: #ffffff;
+    text-align: center;
+}
+
+.brightness-box {
+    padding: 16px;
+    background-color: #1c1c1e;
+    border-radius: 12px;
+    margin-top: 16px;
+    color: #ccc;
+}
+
+.brightness-title {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.brightness-slider-wrap {
+       display: flex;
+    align-items: center;
+    width: 40rem;
+    gap: 12px;
+}
+
+.brightness-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #0a84ff 0%, #0a84ff 50%, #333 50%, #333 100%);
+    outline: none;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.setpage-themepart.light {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.brightness-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.brightness-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.dim-icon, .bright-icon {
+    font-size: 18px;
+    color: #aaa;
+}

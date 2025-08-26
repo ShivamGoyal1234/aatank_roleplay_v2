@@ -1,0 +1,593 @@
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/web/build/fonts/SFPro.OTF') format('truetype'); 
+
+  font-weight: 400; /* Normal ağırlık */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Normal';
+  src: url('/web/build/fonts/sfnormal.OTF') format('truetype');
+  font-weight: 400; /* Normal ağırlık */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro SemihBold';
+  src: url('/web/build/fonts/sfprosemibold.ttf') format('truetype');
+  font-weight: 400; /* Normal ağırlık */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bumbbled';
+  src: url('/web/build/fonts/Bumbbled.otf');
+  font-weight: 400;
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'SF Med';
+  src: url('/web/build/fonts/sfpromed.OTF');
+  font-weight: 400;
+  font-style: 'normal';
+}
+
+.officers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    display: flex;
+    padding: 14px 14px;
+    align-items: center;
+    gap: 8px;
+    font-family: 'SF Pro Display';
+    align-self: stretch;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: transparent;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #fff;
+  }
+
+  .search-bar input:focus {
+    outline: 0;
+  }
+  
+  .search-btn {
+    padding: 14px 20px;
+    background-color: #007bff;
+    border: none;
+    transition: .5s;
+    font-family: 'SF Pro Display';
+
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-btn:hover {
+    transition: .5s;
+    background-color: #455fbe;
+  }
+  
+  .toggle-switch {
+    display: flex;
+    padding: 13px 10px;
+    align-items: center;
+    border: 1px solid #242427;
+    font-family: 'SF Pro Display';
+    border-radius: 5px;
+    gap: 15px;
+  }
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .slider3 {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .slider3::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+  }
+  
+  input:checked + .slider3 {
+    background: #007bff;
+  }
+  
+  input:checked + .slider3::before {
+    transform: translateX(20px);
+  }
+  
+  .toggle-label {
+    color: #ccc;
+  }
+  
+  .table-wrapper {
+    font-family: SF Pro Text;
+
+    border-radius: 12px;
+    background-color: #1e1f24; /* Tablonun dış rengini belirler */
+  }
+  
+  .officers-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+  }
+  
+  .officers-table th,
+  .officers-table td {
+    text-align: left;
+    padding: 16px;
+    border-radius: 3px;
+    transition: .5s;
+    background-color: #0d0f15;
+    color: #d1d1d1;
+  }
+  
+  .officers-table th {
+    color: #737373;
+    font-size: 14px;
+    transition: .5s;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .officers-table tbody tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  .officers-table tbody tr:hover td {
+    background-color: #2a2b31;
+    transition: .5s;
+  }
+  
+  .officer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .officer-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: .5rem;
+    margin-top: .5rem;
+    object-fit: cover;
+    border: 1px solid #333;
+  }
+  
+  .officer-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: .43rem;
+  }
+  
+  .officer-status {
+    margin: 0;
+    font-size: 13px;
+    color: #aaa;
+  }
+  
+  .officer-status.in-office {
+    color: #a72828;
+  }
+  
+  .officer-status.on-duty {
+    color: #37af2c;
+  }
+  
+  select {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px 12px;
+    background-color: #0d0f15;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 32px;
+  }
+  
+  select:hover {
+    border-color: #666;
+    background-color: #15171c;
+  }
+  
+  select:focus {
+    border-color: #888;
+    box-shadow: 0 0 0 2px #ffffff22;
+    outline: none;
+  }
+  
+  select option {
+    background-color: #1e1f24;
+    color: #fff;
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-part {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  padding: 0px 14px;
+  height: 3rem;
+  align-items: center;
+  width: 41rem;
+  gap: 9px;
+  align-self: stretch;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.search-white {
+  border: 1px solid 1px solid rgb(0 0 0 / 5%);
+}
+
+.inpat {
+  color: rgba(255, 255, 255, 0.30);
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  background: transparent;
+  font-weight: 400;
+  line-height: 24px;
+  border: 1px solid transparent;
+}
+
+.inpat:focus {
+  outline: 0;
+}
+
+.search-button {
+  border-radius: 8px;
+  background: #5E81FF;
+  display: inline-flex;
+  padding: 11px 27px;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  height: 1.6rem;
+  border: 1px solid transparent;
+  margin-left: 1rem;
+  margin-top: -0.1rem;
+  gap: 8px;
+  transition: .5s;
+  color: #FFF;
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.search-button:hover {
+  transition: .5s;
+  border: 1px solid #5E81FF;
+  color: #5E81FF;
+}
+
+.bothofthem {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.showactiveoffc {
+  display: inline-flex;
+  padding: 10px 14px;
+  align-items: center;
+  margin-left: 1rem;
+  gap: 8px;
+  height: 1.8rem;
+  border-radius: 8px;
+  border: 1px solid rgb(143 143 143 / 15%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #FFF;
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.switch2 {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+  margin-bottom: 0rem;
+  }
+  
+  .switch2 input {
+    opacity: 0; 
+    width: 0; 
+    height: 0; 
+  }
+  
+  /* The slider */
+  .slider2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2C2C2C;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider2::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 9%;
+    right: 1%;
+    top: 9%;
+    bottom: 0px;
+    background-color: white;
+    transition: all 0.4s ease 0s;
+    border-radius: 50%;
+  }
+  
+  /* Toggle ON state */
+  input:checked + .slider2 {
+    background-color: #4caf50;     /* Customize ON color */
+  }
+  
+  input:checked + .slider2::before {
+    transform: translateX(15px);
+  }
+
+  .yenimenum {
+    background-color: transparent;
+    width: 100%;
+    overflow: auto;
+    height: 38rem;
+    margin-top: .8rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px 12px 0px 0px;
+  }
+
+  .vc {
+    background-color: #c5c5c5 !important;
+    color: #000 !important;
+  }
+
+  .vcx {
+    border: 1px solid #d5d5d5 !important;
+    background: #bfbfbf !important;
+  }
+
+  .border-white {
+    border: 1px solid  #c9c9c9 !important;
+  }
+
+  .border-whitex {
+    border-bottom: 1px solid  #c9c9c9 !important;
+  }
+
+  .white-hed {
+    background-color: #c7c7c7 !important;
+  }
+
+  .black-text {
+    color: #000000 !important;
+  }
+
+  .onlinec {
+    color: #2ac57e !important;
+  }
+
+  .yenimenum-header {
+    border-radius: 12px 12px 0px 0px;
+    background: #141414;
+    width: 100%;
+    height: 66px;
+    display: flex;
+  }
+
+  .header-menx {
+    font-family: SF Pro Display;
+    color: #AFAFAF;
+    background: transparent;
+    align-items: center;
+    display: flex;
+    padding-left: 1.5rem;
+  }
+
+  .like-man {
+    width: 98%;
+    background: transparent;
+    height: 4rem;
+    display: flex;
+    border-bottom: 1px solid #17181C;
+  }
+
+  .like-man-part {
+    background-color: transparent;
+    height: 100%;
+  }
+
+  .like-manx {
+    display: flex;
+    position: relative;
+    left: 1.5rem;
+    top: .7rem;
+  }
+
+  .like-manxv {
+    display: flex;
+    flex-direction: column;
+    color: #dddddd;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    margin-top: .3rem;
+    font-style: normal;
+    line-height: normal;
+    margin-left: 1rem;
+  }
+
+  .dropbown {
+    display: flex;
+    width: 143px;
+    height: 20px;
+    padding: 10px 14px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #151516;
+    color: #b5b5b5;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: SF Pro Text;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+
+.citizenid {
+  display: flex;
+  width: 76px;
+  height: 23px;
+  padding: 10px 4px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  align-items: center;
+  color: #FFF;
+  leading-trim: both;
+  justify-content: center;
+  text-edge: cap;
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.dropbown {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.dropbown svg {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.dropbown.open svg {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu3 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #1e1e1e;
+  font-size: 12px;
+  font-family: SF 'Roboto';
+  background: #121212;
+  border-radius: 4px;
+  max-height: 150px;
+  transition: max-height .3s ease;
+  overflow-y: auto;
+  list-style: none;
+  padding: 5px 0;
+  margin: 5px 0 0;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  z-index: 1000;
+}
+
+.dropdown-menu3.open {
+  max-height: 300px;
+}
+.dropdown-item3 {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.dropdown-item3:hover {
+  background: #3b3b3b;
+}

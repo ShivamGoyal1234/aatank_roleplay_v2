@@ -1,0 +1,219 @@
+.patient-profile-container {
+      background-color: transparent;
+    width: 100%;
+    height: 42rem;
+}
+
+.title-patient {
+       color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+    line-height: normal;
+}
+
+.bosanmis {
+      background: transparent;
+    width: 100%;
+    height: 93%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 2rem;
+    top: 1rem;
+}
+
+.patient-profile-part {
+        width: 330px;
+    height: 603px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    background: #101010;
+    flex-shrink: 0;
+}
+
+.patient-profile-part img {
+       width: 301px;
+    height: 180px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    flex-shrink: 0;
+    border-radius: 6px;
+}
+
+.patient-name {
+      color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    line-height: normal;
+}
+
+.patient-data-label {
+    color: #777684;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.patient-data-string {
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.patient-box {
+    display: flex;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    flex-direction: column;
+}
+
+.patient-history {
+      width: 705px;
+    height: 37.5rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background-color: transparent;
+}
+
+.patient-history-part {
+    background-color: transparent;
+    width: 100%;
+    height: 208px;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #101010;
+}
+
+.patient-history-part-header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    background: #101010;
+}
+
+.h-title {
+      color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    line-height: normal;
+}
+
+.patient-content {
+         background-color: transparent;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    height: 8.5rem;
+}
+
+.patient-content-item {
+           background-color: transparent;
+    width: 94%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: 7rem;
+}
+
+.patient-content-info-part {
+       color: #727272;
+    font-family: SF Pro Text;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: .5rem;
+    position: relative;
+    left: -0.5rem;
+    line-height: normal;
+    padding: 6px;
+    width: fit-content;
+    border-radius: 2px;
+    background: rgba(155, 155, 155, 0.04);
+    flex-shrink: 0;
+}
+
+.doctor-note {
+      color: #f9f9f9;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    position: relative;
+    top: .5rem;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+textarea {
+    color: #ddd;
+    font-family: SF Pro Display;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.patient-content-table-item {
+    background: #101010;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.th-table {
+    color: #737373;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    text-align: left;
+    margin-left: 1rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.add-note {
+       width: fit-content;
+    height: 41px;
+    border-radius: 4px;
+    background: #D8282F;
+    flex-shrink: 0;
+    display: flex;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
